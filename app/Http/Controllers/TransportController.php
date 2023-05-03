@@ -10,7 +10,7 @@ use App\Models\depositor;
 use App\Models\User;
 use App\Models\transport_type;
 use Illuminate\Support\Facades\Auth;
-use Barryvdh\DomPDF\Facade\PDF;
+//use Barryvdh\DomPDF\Facade\PDF;
 use Dompdf\Options;
 use Dompdf\Dompdf;
 use Illuminate\Support\Facades\Storage;
@@ -22,6 +22,7 @@ use App\Models\Department;
 use App\Models\agency;
 use App\Models\agency_branch_department;
 use App\Models\branch;
+use \PDF;
 
 
 

@@ -36,7 +36,7 @@
     <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">ฝ่าย</div>
     <div class="col-sm-9">
-    <input class="form-control" type="text"  value="{{Auth::user()->department->Dpmname}}" disabled>
+    <input class="form-control" type="text"  value="{{Auth::user()->department->Dpmname ?? 'No department name'}}" disabled>
     </div>
     </div>
     @endif

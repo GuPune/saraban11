@@ -176,8 +176,8 @@ public function editclaim(Request $request , $id){
                     // $department = Department::where('branch','12')->get();
                     $agency = agency::all();
                     $branch  = branch::orderby('agency','ASC')->get();
-                    $department = Department::orderby('branch','DESC')->orderby('Dpmname','ASC')->groupBy('Dpmname')->selectRaw('count(*) as total, Dpmname')->get();
-                    // $department = Department::all();
+                //    $department = Department::groupBy('Dpmname')->orderby('branch','DESC')->orderby('Dpmname','ASC')->selectRaw('count(*) as total, Dpmname')->get();
+                    $department = Department::all();
                     return view('claim.editclaim',compact('user','agency','branch','department','prefix'));
                 }
 
@@ -186,10 +186,10 @@ public function updateclaim(Request $request , $id){
                     //ตรวจสอบข้อมูล
                     $request->validate(
                         [
-                            'email'=>'required|unique:users',
+                            //'email'=>'required|unique:users',
                         ],
                         [
-                            'email.unique'=>'You have already entered this information.'
+                          //  'email.unique'=>'You have already entered this information.'
                         ]
                     );
                     $update = User::find($id)->update([

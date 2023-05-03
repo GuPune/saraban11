@@ -15,11 +15,11 @@
       }
 </style>
 <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-light elevation-4">
+ <aside class="main-sidebar sidebar-dark-light elevation-4 ">
     <!-- Brand Logo --> 
     <a href="#" class="brand-link py-3">
          <img src="{{ asset('dist/img/logo.png') }}" alt="Logo" class="brand-image img-circle elevation-3">
-     <div class="brand-text font-weight-light">ระบบสารบรรณ</div>
+     <div class="brand-text font-weight-light">ระบบสารบรรณ (User)</div>
     </a>
 
 
@@ -27,7 +27,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
  <div class="d-flex"> 
-     <div class="brand-link py-3" ><h6>   
+     <!-- <div class="brand-link py-3" ><h6>   
      @if(Auth::user()->Image==null) 
      <i class="bi bi-person-circle" style="font-size:35px;margin-left:3px"></i>
       @else
@@ -35,11 +35,11 @@
       @endif
       <span class="brand-text font-weight-light" style="margin-left:10px;">{{Auth::user()->name}} {{Auth::user()->Lastname}} USER</span>
       </div> </h6>
-      </div>
+      </div> -->
 
 
       <!-- SidebarSearch Form -->
-      <div class="form-inline">
+      <!-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -48,14 +48,14 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               
         <!--  หน้าแรก -->
-        @foreach($setallow as $home)
+        <!-- @foreach($setallow as $home)
            @if($home->id==1)
               @if($home->userstatus==1)
             <li class="nav-item">
@@ -71,7 +71,7 @@
         @endif
 
         @endif
-        @endforeach
+        @endforeach -->
 
               
             <!-- แจ้งเตือนใหม่ -->
@@ -372,10 +372,9 @@
     <!-- /.sidebar -->
   </aside>
 
-  <!-- jQuery -->
-<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+  <!-- jQuery (3 line beside home butt and slide animation) -->
+<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>  
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
+<!-- AdminLTE App  (3 line beside home butt) and slide animation -->
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-

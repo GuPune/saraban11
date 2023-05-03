@@ -14,7 +14,7 @@ use App\Models\depositor;
 use App\Models\Bookout;
 use App\Models\agency_branch_department;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade\PDF;
+//use Barryvdh\DomPDF\Facade\PDF;
 use Dompdf\Options;
 use Dompdf\Dompdf;
 use PhpOffice\PhpWord\TemplateProcessor;
@@ -23,6 +23,7 @@ use Doctrine\Inflector\Rules\Word;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic;
 use Illuminate\Support\Str;
+use \PDF;
 
 
 
