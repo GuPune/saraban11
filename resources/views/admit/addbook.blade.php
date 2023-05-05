@@ -45,7 +45,7 @@
                                         <div class="col-sm-2 col-form-label">ฝ่าย/สาขา : </div>
                                             <div class="col-sm-9">
                                                 <select class="form-control" name="Edepartmentbranch"   disabled>
-                                                    <option selected>{{Auth::user()->department->Dpmname}}/{{Auth::user()->branch->branche_name}}</option>
+                                                    <option selected>{{Auth::user()->department->Dpmname ?? 'Unknown'}}/{{Auth::user()->branch->branche_name}}</option>
                                                 </select>
                                             </div>
                                     </div>
@@ -173,7 +173,7 @@
                             </div>
                         <!-- /card -->
                         </div>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-left:20px">
                                 <button class="btn btn-success" type="submit" style="margin-right:10px">บันทึก</button>
                                 @if(Auth::user()->role==0)
                                 <a href="{{route('admituser')}}" class="btn btn-secondary" type="button">ยกเลิก</a>

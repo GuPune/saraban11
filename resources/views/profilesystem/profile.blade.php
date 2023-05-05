@@ -7,7 +7,7 @@
     /* font-family: 'Open Sans', sans-serif; */
     padding: 0px !important;
     margin: 0px !important;
-    font-size: 14px;
+    font-size: 16px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -74,7 +74,7 @@
 .profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
     background: #f8f7f5 !important;
     border-left: 5px solid #FF833C;
-    color: #89817f !important;
+    color: #000 !important;
 }
 
 .profile-nav ul > li:last-child > a:last-child {
@@ -116,8 +116,7 @@
     background: #525252;
     color: #fff;
     text-align: center;
-    font-style: italic;
-    padding: 40px 110px;
+    padding: 20px 100px;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     font-size: 16px;
@@ -153,6 +152,29 @@
         width: 200px;
         height: 200px;
       }
+.m-btn {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border-left: 5px solid #FF833C;
+  font-size: 16px;
+  padding-top:10px;
+  transition: 0.2s all;
+  color: #000;
+
+}
+
+.s-irregularColorMove:hover {
+  color: #fff; /* text color after hover */
+  background-color: #FF833C;
+  border-top:1px solid;
+  border-right:1px solid;
+  border-bottom:1px solid;
+  border-color: black;
+}
+
 
 </style>
 
@@ -185,9 +207,11 @@
                                
 
                             <ul class="nav nav-pills nav-stacked">
-                                <li class="active"><a type="button" href="#" class="btn btn-light"> <i class="fa fa-user"></i>ข้อมูล</a></li>
-                                    <li class="active"><a type="button" href="{{url('/profile/editprofile/'.Auth::user()->id)}}"  class="btn btn-light"> <i class="fa fa-edit"></i>แก้ไขข้อมูลส่วนตัว</a></li>
+                                    <a href="{{url('/profile/editprofile/'.Auth::user()->id)}}" class="m-btn s-irregularColorMove">
+                                        <i class="fa fa-edit" style="color:black; margin-right:10px;"></i>แก้ไขข้อมูลส่วนตัว
+                                    </a>
                             </ul>
+                            
                         </div>
                     </div>
                         <div class="profile-info col-md-9">
@@ -195,11 +219,12 @@
                                 </footer>
                             </div>
                             <div class="panel">
-                                <div class="bio-graph-heading"></div>
+                                <div class="bio-graph-heading">
+                                    <h1><i class="fa fa-user" style="color:black; margin-right:10px; color:#fff"></i>ข้อมูลส่วนตัว</h1>
+                                </div>
                                 <div class="card" >
-                                    <div class="panel-body bio-graph-info" style="margin:20px">
-                                    <h1>ข้อมูลส่วนตัว</h1>
-                                    <div class="row">
+                                    <div class="panel-body bio-graph-info" style="margin:20px; color:black">
+                                    <div class="row" style="color:rgb(48,48,48)">
                                         <div class="bio-row">
                                             <p><span>ชื่อ :</span>{{Auth::user()->Prefix}} {{Auth::user()->name}} </p>
                                         </div>
@@ -215,10 +240,10 @@
                                         </div>
 
                                         <div class="bio-row">
-                                            <p><span>แผนก : </span>{{Auth::user()->department->Dpmname}} </p>
+                                            <p><span>แผนก : </span>{{Auth::user()->department->Dpmname ?? ''}} </p>
                                         </div>
                                         <div class="bio-row">
-                                            <p><span>ระดับผู้ใช้ : </span>{{Auth::user()->level->levelname}}</p>
+                                            <p><span>ระดับผู้ใช้ : </span>{{Auth::user()->level->levelname ?? ''}}</p>
                                         </div>
                                         <div class="bio-row">
                                             <p><span>อีเมล : </span>{{Auth::user()->email}} </p>
@@ -226,7 +251,7 @@
                                         <div class="bio-row">
                                             <p><span>เบอร์โทรศัพท์ : </span> {{Auth::user()->Tel}} </p>
                                         </div>
-                                        <div class="bio-row">
+                                        <div class="bio-row" >
                                             <p><span>ที่อยู่ : </span> {{Auth::user()->address}}</p>
                                         </div>
                                     </div>
