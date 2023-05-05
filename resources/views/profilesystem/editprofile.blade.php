@@ -219,7 +219,7 @@
 
                                 @else
                                 <div class="col-md-12"><label class="labels">แผนก</label>
-                                <input type="text" class="form-control"  value="{{$user->department->Dpmname}}" disabled>
+                                <input type="text" class="form-control"  value="{{$user->department->Dpmname ?? 'Unknown'}}" disabled>
                                 @endif
                                 <input type="hidden" class="form-control" name="Department" value="{{$user->Department}}" >
                                 </div>
