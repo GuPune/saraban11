@@ -192,7 +192,7 @@
 
                                 <div class="col-md-12"><label class="labels">แผนก</label>
                                 <select class="form-control" name="Department" id="department"  required>
-                                            <option value="{{$user->Department}}" >{{$user->department->Dpmname}}</option>
+                                            <option value="{{$user->Department}}" >{{$user->department->Dpmname ?? 'Unknown'}}</option>
                                                
                                         </select>
                                 </div>
