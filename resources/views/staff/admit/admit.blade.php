@@ -339,7 +339,7 @@ function selectAll() {
                                                             @if($reply->id==17&&$reply->staffstatus==1)
                                                             <form action="{{url('/admit/statuswait/'.$row->id)}}" method="post" enctype="multipart/form-data">
                                                             @csrf
-                                                            <td class="text-center checkbox" style="margin:20px"> <input class="form-check-input" type="checkbox"  value="2" name="chk[{{$row->id}}]" id="checkall" ></td>
+                                                            <td class="text-center checkbox" style="margin:20px"> <input class="form-check-input" type="checkbox" style="position:unset" value="2" name="chk[{{$row->id}}]" id="checkall" ></td>
                                                             @else
 
                                                             @endif
