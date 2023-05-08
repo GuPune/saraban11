@@ -115,8 +115,8 @@
                     <form action="/admit/user" method="GET">          
                        <div class="mb-3 row">
                          <div class="container input-group" style="width: 30rem;">
-                               คำค้นหา  &nbsp;
-                            <input type="search" name="search" id ="serach" placeholder="Search" aria-label="Search" class="form-control">
+                                 &nbsp;
+                            <input type="search" name="search" id ="serach" placeholder="คำค้นหา" aria-label="Search" class="form-control">
                                &nbsp;<button class="btn btn-1" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
                                &nbsp;<button type="reset" class="btn btn-3"><i class="fa fa-times"></i></button>
                          </div>
@@ -166,7 +166,8 @@ function selectAll() {
                                             <div class="alert alert-danger text-center" role="alert">
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
-                                            @else 
+                                            @else
+                                            <div style="overflow-x:auto;"> 
                                             <table class="table table-bordered table-sm" >
                                                     <thead class="box1 text-white text-center">
                                                         <tr>
@@ -433,7 +434,8 @@ function selectAll() {
                                                         </tr>
                                                         @endforeach
                                                     </tbody>
-                                                </table> 
+                                                </table>
+                                                </div> 
                                                 <!-- ตอบรับ -->
                                                 @foreach($setallow as $reply)
                                                             @if($reply->id==17&&$reply->userstatus==1)
@@ -458,7 +460,8 @@ function selectAll() {
                                             <div class="alert alert-danger text-center" role="alert">
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
-                                            @else 
+                                            @else
+                                            <div style="overflow-x:auto;"> 
                                             <table class="table table-bordered table-sm" >
                                                     <thead class="box1 text-white text-center">
                                                         <tr>
@@ -760,6 +763,7 @@ function selectAll() {
                                                         @endforeach
                                                     </tbody>
                                                 </table>
+                                                </div>
                                                 <div class="d-flex justify-content-center">
                                                 {{$tb2->appends(['รอตอบรับ' => $tb1->currentPage()])->links()}} 
                                                 </div> 
@@ -773,7 +777,8 @@ function selectAll() {
                                             <div class="alert alert-danger text-center" role="alert">
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
-                                      @else 
+                                      @else
+                                    <div style="overflow-x:auto;"> 
                                     <table class="table table-bordered table-sm" >
                                     <thead class="box1 text-white text-center">
                                                         <tr>
@@ -1018,6 +1023,7 @@ function selectAll() {
                                                     @endforeach
                                                     </tbody>
                                                 </table>
+                                                </div>
                                                 <div class="d-flex justify-content-center">
                                                 {{$tb3->appends(['ดำเนินการแล้ว' => $tb4->currentPage()])->links()}} 
                                             </div> 
@@ -1032,7 +1038,8 @@ function selectAll() {
                                             <div class="alert alert-danger text-center" role="alert">
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
-                                            @else 
+                                            @else
+                                    <div style="overflow-x:auto;"> 
                                     <table class="table table-bordered table-sm"  >
                                     <thead class="box1 text-white text-center">
                                                             <td>ลำดับ</td>
@@ -1211,6 +1218,7 @@ function selectAll() {
                                                         @endforeach
                                                     </tbody>
                                                 </table>
+                                                </div>
                                                 <div class="d-flex justify-content-center">
                                                 {{$tb4->appends(['ไม่ตอบรับ' => $tb3->currentPage()])->links()}} 
                                             </div> 

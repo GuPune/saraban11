@@ -87,8 +87,8 @@
                     <form action="/user/information" method="GET">
                        <div class="mb-3 row">
                          <div class="container input-group" style="width: 30rem;">
-                               คำค้นหา  &nbsp;
-                            <input type="search" name="search" placeholder="Search" aria-label="Search" class="form-control">
+                                 &nbsp;
+                            <input type="search" name="search" placeholder="คำค้นหา" aria-label="Search" class="form-control">
                                &nbsp;<button class="btn btn-1" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
                                &nbsp;<button type="reset" class="btn btn-3"><i class="fa fa-times"></i></button>
                          </div>
@@ -127,6 +127,7 @@
                                             <div class="tab-content" id="custom-tabs-five-tabContent">
                                             <!-- table user-->
                                                 <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab" >
+                                                <div style="overflow-x:auto;">
                                                 <table  class="table table-hover">
                                                         <thead class="">
                                                             <tr>
@@ -189,6 +190,7 @@
                                                         </tbody>
 
                                                     </table>
+                                                    </div>
                                                 <div class="d-flex justify-content-center" >
                                                 {{$tb3->appends(['tb2' => $tb2->currentPage()])->links()}}
 
@@ -198,6 +200,7 @@
 
                                             <!-- table staff-->
                                                 <div class="tab-pane fade" id="staff" role="tabpanel" aria-labelledby="staff-tab" >
+                                                <div style="overflow-x:auto;">
                                                 <table class="table table-hover ">
                                                         <thead >
                                                             <tr>
@@ -246,6 +249,7 @@
                                                             @endforeach
                                                         </tbody>
                                                     </table>
+                                                    </div>
                                                     <div class="d-flex justify-content-center" >
                                                     {{$tb2->appends(['tb3' => $tb3->currentPage()])->links()}}
                                                 </div>
@@ -254,6 +258,7 @@
 
                                                 <!-- table admin-->
                                                 <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab" >
+                                                <div style="overflow-x:auto;">
                                                 <table class="table table-hover ">
                                                 <thead >
                                                                     <tr>
@@ -300,6 +305,7 @@
                                                                 @endforeach
                                                                 </tbody>
                                                             </table>
+                                                            </div>
                                                        <div class="d-flex justify-content-center" >
                                                     {{$tb1->appends(['tb2' => $tb2->currentPage()])->links()}}
                                                          </div>

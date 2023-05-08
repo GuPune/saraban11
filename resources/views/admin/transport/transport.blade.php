@@ -61,6 +61,67 @@
     border:none;
 }
 
+:root {
+  --color-light: rgb(203 213 225);
+  --color-mid: #FF833C;
+  --color-dark: rgb(71 85 105);
+}
+.iconDiv {
+  height: 46px;
+  width: 36px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
+}
+.iconSVG {
+  height: 36px;
+  aspect-ratio: 1 / 1;
+}
+.iconDiv:hover,
+.iconDiv:focus-visible {
+  width: 180px;
+  background-color: var(--color-mid);
+  transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
+}
+.iconDiv:focus-visible {
+  outline: 1px solid var(--color-mid);
+  outline-offset: 4px;
+}
+.iconDiv:active {
+  opacity: 0.9;
+}
+.iconDiv::after {
+  content: attr(tooltip);
+  margin-left: 12px;
+  animation: fadeIn 600ms linear forwards;
+}
+.spacer {
+  flex-grow: 1;
+}
+.divider {
+  height: 36px;
+  width: 1px;
+  margin: 24px 18px;
+  background-color: var(--color-dark);
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 
 </style>
@@ -76,8 +137,24 @@
                     </div>
                     @foreach($setallow as $export)
                     @if($export->id==27&&$export->adminstatus==1)
-                    <div class="p-2">
+                    <!-- <div class="p-2">
                     <a href="{{url('/transport/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
+                    </div> -->
+                    <div class="p-2 flex-grow-1 " style="text-align:right;">
+                        <a href="{{ route('addtransport') }}" style="color:black">
+                            <div class="iconDiv" tooltip="เพิ่มข้อมูลการขนส่ง" tabindex="0">
+                                <div class="iconSVG">
+                                    <i class='fas fa-folder-plus' style='font-size:28px'></i>
+                                </div>
+                            </div>
+                        </a> 
+                        <a href="{{url('/transport/export')}}"  style="color:black">
+                            <div class="iconDiv" tooltip="บันทึกข้อมูล" tabindex="0">
+                                <div class="iconSVG">
+                                    <i class='fas fa-file-download' style='font-size:28px'></i>
+                                </div>
+                            </div>
+                        </a>             
                     </div>
                     @else
 
@@ -89,8 +166,8 @@
            <form action="/transport/admin" method="GET">          
             <div class="mb-3 row">
                          <div class="container input-group" style="width: 30rem;">
-                               คำค้นหา  &nbsp;
-                            <input type="search" name="search" placeholder="Search" aria-label="Search" class="form-control">
+                                 &nbsp;
+                            <input type="search" name="search" placeholder="คำค้นหา" aria-label="Search" class="form-control">
                                &nbsp;<button class="btn btn-1" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
                                &nbsp;<button type="reset" class="btn btn-3"><i class="fa fa-times"></i></button>
                          </div>
@@ -121,6 +198,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div> 
                             @else 
+                <div style="overflow-x:auto;">
                 <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>
@@ -439,7 +517,9 @@
                                     </tr>                      
                                 </tbody>
                                 @endforeach
-                            </table> <br>
+                            </table> 
+                            </div>
+                            <br>
                     <div class="d-flex justify-content-center">
                     {{$transport->appends(['transport' => $transportwait->currentPage()])->links()}}
                     </div> 
@@ -453,6 +533,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div> 
                             @else 
+                            <div style="overflow-x:auto;">
                 <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>
@@ -687,7 +768,9 @@
                                     </tr>                      
                                 </tbody>
                                 @endforeach
-                            </table><br>
+                            </table>
+                            </div>
+                            <br>
                     <div class="d-flex justify-content-center" id="links">
                     {{$transportwait->appends(['transportwait' => $transport->currentPage()])->links()}}
                     </div>  

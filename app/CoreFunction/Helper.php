@@ -15,7 +15,7 @@ class Helper extends Model
         $getmo = Depart::where('Dpmid',$id)->first();
 
 
-        return $getmo->Dpmname;
+        return $getmo->Dpmname ?? 'Unknown';
     }
 
 
