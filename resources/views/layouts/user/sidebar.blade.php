@@ -15,7 +15,7 @@
       }
 </style>
 <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-light elevation-4 ">
+ <aside class="main-sidebar sidebar-dark-light elevation-4 " style="opacity: 0.9;">
     <!-- Brand Logo --> 
     <a href="#" class="brand-link py-3">
          <img src="{{ asset('dist/img/logo.png') }}" alt="Logo" class="brand-image img-circle elevation-3">
@@ -55,7 +55,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               
         <!--  หน้าแรก -->
-        <!-- @foreach($setallow as $home)
+        @foreach($setallow as $home)
            @if($home->id==1)
               @if($home->userstatus==1)
             <li class="nav-item">
@@ -71,7 +71,7 @@
         @endif
 
         @endif
-        @endforeach -->
+        @endforeach
 
               
             <!-- แจ้งเตือนใหม่ -->
@@ -296,7 +296,7 @@
          <!-- ตั้งค่าข้อมูลส่วนตัว -->
          @foreach($setallow as $profile)
            @if($profile->id==11&&$profile->userstatus==1)
-          <li class="nav-item">
+          <li class="nav-item" >
             <a href="{{route('profile')}}" class="nav-link">
             <i class="nav-icon bi bi-gear"></i>
               <p>
@@ -355,7 +355,7 @@
           @endif
           @endforeach
 
-          <li class="nav-item"> 
+          <li class="nav-item" > 
           <form method="POST" action="{{ route('logout') }}" class="nav-link"x-data>                  
                 <a href="{{ route('logout') }}"  @click.prevent="$root.submit();">
                                 @csrf
@@ -365,6 +365,8 @@
               </p>                 
              </a>
             </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
