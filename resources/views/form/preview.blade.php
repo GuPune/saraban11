@@ -595,7 +595,7 @@
             <div class=" footer">
             <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px;font-size:16px;">
-            สอบถามได้ที่
+            ติดต่อ ประสานงาน
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px;font-size:16px;">
             ชื่อ&nbsp;{{$ctname}}

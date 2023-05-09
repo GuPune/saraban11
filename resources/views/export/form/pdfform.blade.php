@@ -195,7 +195,7 @@
 
             <div style="border: 1px solid #000000; overflow: auto; width: 280px; height:auto;">
             <div class="d-flex justify-content-start"  style="margin-left: 10px;font-size:16px;">
-            สอบถามได้ที่
+            ติดต่อ ประสานงาน
             </div>
             <div style="margin-left:10px;font-size:16px;">
             ชื่อ&nbsp;{{$form->ctname}} 
