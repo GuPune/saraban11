@@ -45,50 +45,55 @@
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
                                 @csrf      
             <div class="d-flex justify-content-end">
-            เลขที่หนังสือ&nbsp; @if(Auth::user()->department->Dpmname ??'ไอที')
+
+            <!-- query Dpname in Departments table by Department in user table -->
+            <?php $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');?> <!-- {{$shortname}} -->
+
+            เลขที่หนังสือ&nbsp; @if($shortname == 'ไอที')
                               ITI/@if($iti==null){{ __('001') }}@elseif($iti<=8)00{{$iti+1}}@elseif($iti>=9)0{{$iti+1}}@elseif($iti>=99){{$iti+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'บัญชี')
+                              @elseif($shortname == 'บัญชี')
                               ACC/@if($acc==null){{ __('001') }}@elseif($acc<=8)00{{$acc+1}}@elseif($acc>=9)0{{$acc+1}}@elseif($acc>=99){{$acc+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'จัดซื้อ')
+                              @elseif($shortname == 'จัดซื้อ')
                               PUR/@if($pur==null){{ __('001') }}@elseif($pur<=8)00{{$pur+1}}@elseif($pur>=9)0{{$pur+1}}@elseif($pur>=99){{$pur+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'บุคคล')
+                              @elseif($shortname=='บุคคล')
                               HR/@if($hr==null){{ __('001') }}@elseif($hr<=8)00{{$hr+1}}@elseif($hr>=9)0{{$hr+1}}@elseif($hr>=99){{$hr+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'ธุรการ')
+                              @elseif($shortname =='ธุรการ')
                               AD/@if($ad==null){{ __('001') }}@elseif($ad<=8)00{{$ad+1}}@elseif($ad>=9)0{{$ad+1}}@elseif($ad>=99){{$ad+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
                               
-                              @elseif(Auth::user()->department->Dpmname??'การเงิน')
+                              @elseif($shortname =='การเงิน')
                               FIN/@if($fin==null){{ __('001') }}@elseif($fin<=8)00{{$fin+1}}@elseif($fin>=9)0{{$fin+1}}@elseif($fin>=99){{$fin+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
                               
-                              @elseif(Auth::user()->department->Dpmname??'มาร์เก็ตติ้ง')
+                              @elseif($shortname =='การตลาด')
                               MKT/@if($mkt==null){{ __('001') }}@elseif($mkt<=8)00{{$mkt+1}}@elseif($mkt>=9)0{{$mkt+1}}@elseif($mkt>=99){{$mkt+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
                               
-                              @elseif(Auth::user()->department->Dpmname??'บริหารงานพัฒนาผลิตภัณฑ์')
+                              @elseif($shortname=='บริหารงานพัฒนาผลิตภัณฑ์')
                               ITD/@if($itd==null){{ __('001') }}@elseif($itd<=8)00{{$itd+1}}@elseif($itd>=9)0{{$itd+1}}@elseif($itd>=99){{$itd+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
                               
-                              @elseif(Auth::user()->department->Dpmname??'เซลล์')
+                              @elseif($shortname=='เซลล์')
                               SALE/@if($sale==null){{ __('001') }}@elseif($sale<=8)00{{$sale+1}}@elseif($sale>=9)0{{$sale+1}}@elseif($sale>=99){{$sale+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'กฎหมาย')
+                              @elseif($shortname =='กฎหมาย')
                               LEG/@if($leg==null){{ __('001') }}@elseif($leg<=8)00{{$leg+1}}@elseif($leg>=9)0{{$leg+1}}@elseif($leg>=99){{$leg+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'ส่วนงานเลขานุการ')
+                              @elseif($shortname =='ส่วนงานเลขานุการ')
                               CS/@if($cs==null){{ __('001') }}@elseif($cs<=8)00{{$cs+1}}@elseif($cs>=9)0{{$cs+1}}@elseif($cs>=99){{$cs+1}}@endif/@if($total==null){{ __('001') }} @elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'ส่วนงานบริหารงานคุณภาพ')
+                              @elseif($shortname =='ส่วนงานบริหารงานคุณภาพ')
                               ISO/@if($iso==null){{ __('001') }}@elseif($iso<=8)00{{$iso+1}}@elseif($iso>=9)0{{$iso+1}}@elseif($iso>=99){{$iso+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
-                              @elseif(Auth::user()->department->Dpmname??'บริหารงานโครงการ')
+                              @elseif($shortname =='บริหารงานโครงการ')
                               PM/@if($pm==null){{ __('001') }}@elseif($pm<=8)00{{$pm+1}}@elseif($pm>=9)0{{$pm+1}}@elseif($pm>=99){{$pm+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
-
+                              
                               @endif
+
             </div>
 
             <div class="d-flex justify-content-end">
-            @if(Auth::user()->department->Dpmname ??'ไอที')
+            @if($shortname == 'ไอที')
                               <input type="hidden" value="ITI" class="form-control" style="width: 60px" name="fdepartment">
                             @if($iti==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -111,7 +116,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
 
-                            @elseif(Auth::user()->department->Dpmname=='บัญชี')
+                            @elseif($shortname=='บัญชี')
                               <input type="hidden" value="ACC" class="form-control" style="width: 60px" name="fdepartment">
                             @if($acc==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -134,7 +139,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
 
-                            @elseif(Auth::user()->department->Dpmname=='จัดซื้อ')
+                            @elseif($shortname=='จัดซื้อ')
                             <input type="hidden" value="PUR" class="form-control" style="width: 60px" name="fdepartment">
                             @if($pur==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -156,7 +161,7 @@
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
-                            @elseif(Auth::user()->department->Dpmname=='บุคคล')
+                            @elseif($shortname=='บุคคล')
                             <input type="hidden" value="HR" class="form-control" style="width: 60px" name="fdepartment">
                             @if($hr==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -179,7 +184,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
 
-                            @elseif(Auth::user()->department->Dpmname=='ธุรการ')
+                            @elseif($shortname=='ธุรการ')
                             <input type="hidden" value="AD" class="form-control" style="width: 60px" name="fdepartment">
                             @if($ad==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -202,7 +207,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                             
 
-                            @elseif(Auth::user()->department->Dpmname=='การเงิน')
+                            @elseif($shortname=='การเงิน')
                             <input type="hidden" value="FIN" class="form-control" style="width: 60px" name="fdepartment">
                             @if($fin==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -225,7 +230,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                             
 
-                            @elseif(Auth::user()->department->Dpmname=='มาร์เก็ตติ้ง')
+                            @elseif($shortname=='มาร์เก็ตติ้ง')
                             <input type="hidden" value="MKT" class="form-control" style="width: 60px" name="fdepartment">
                             @if($mkt==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -247,7 +252,7 @@
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
-                            @elseif(Auth::user()->department->Dpmname=='บริหารงานพัฒนาผลิตภัณฑ์')
+                            @elseif($shortname=='บริหารงานพัฒนาผลิตภัณฑ์')
                             <input type="hidden" value="ITD" class="form-control" style="width: 60px" name="fdepartment">
                             @if($itd==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -270,7 +275,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
 
-                            @elseif(Auth::user()->department->Dpmname=='เซลล์')
+                            @elseif($shortname=='เซลล์')
                             <input type="hidden" value="SALE" class="form-control" style="width: 70px" name="fdepartment">
                             @if($sale==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -293,7 +298,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                           
 
-                            @elseif(Auth::user()->department->Dpmname=='กฎหมาย')
+                            @elseif($shortname=='กฎหมาย')
                             <input type="hidden" value="LEG" class="form-control" style="width: 60px" name="fdepartment">
                             @if($leg==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -316,7 +321,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                           
 
-                            @elseif(Auth::user()->department->Dpmname=='ส่วนงานเลขานุการ')
+                            @elseif($shortname=='ส่วนงานเลขานุการ')
                             <input type="hidden" value="CS" class="form-control" style="width: 60px" name="fdepartment">
                             @if($cs==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -339,7 +344,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
 
-                            @elseif(Auth::user()->department->Dpmname=='ส่วนงานบริหารงานคุณภาพ')
+                            @elseif($shortname=='ส่วนงานบริหารงานคุณภาพ')
                             <input type="hidden" value="ISO" class="form-control" style="width: 60px" name="fdepartment">
                             @if($iso==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -362,7 +367,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                           
 
-                            @elseif(Auth::user()->department->Dpmname=='บริหารงานโครงการ')
+                            @elseif($shortname=='บริหารงานโครงการ')
                             <input type="hidden" value="PM" class="form-control" style="width: 60px" name="fdepartment">
                             @if($pm==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">

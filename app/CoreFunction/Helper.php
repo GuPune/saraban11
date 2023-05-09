@@ -12,10 +12,10 @@ class Helper extends Model
 
 
         $data = $id;
-        $getmo = Depart::where('Dpmid',$id)->first();
+        $getmo = Depart::where('Dpmid',$data)->first();
 
 
-        return $getmo->Dpmname ?? 'Unknown';
+        return $getmo->Dpmname;
     }
 
 

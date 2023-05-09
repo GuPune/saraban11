@@ -29,6 +29,8 @@
     </div>
     </div>
 
+    <!-- query Dpname in Departments table by Department in user table -->
+    <?php $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');?> <!-- {{$shortname}} -->
 
     @if(Auth::user()->Department==null)
     <input class="form-control" type="hidden">
@@ -36,7 +38,7 @@
     <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">ฝ่าย</div>
     <div class="col-sm-9">
-    <input class="form-control" type="text"  value="{{Auth::user()->department->Dpmname ?? 'No department name'}}" disabled>
+    <input class="form-control" type="text"  value="{{$shortname ?? 'Unknown Dpname'}}" disabled>
     </div>
     </div>
     @endif

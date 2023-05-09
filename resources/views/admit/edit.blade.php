@@ -1,6 +1,9 @@
 @extends('layouts.menu.app')
 @section('content')
 
+<!-- query Dpname in Departments table by Department in user table -->
+<?php $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');?> <!-- {{$shortname}} -->
+
         <div class="content-wrapper">
             <div class="content-header">
                 <div class="container-fluid py-2">
@@ -43,7 +46,7 @@
                                         <div class="col-sm-2 col-form-label">ฝ่าย/สาขา : </div>
                                             <div class="col-sm-9">
                                                 <select class="form-control"  value="{{$admit->Edepartmentbranch}}" name="Edepartmentbranch"   disabled>
-                                                    <option selected>{{Auth::user()->department->Dpmname}}/{{Auth::user()->branch->branche_name}}</option>
+                                                    <option selected>{{$shortname}}/{{Auth::user()->branch->branche_name}}</option>
                                                 </select>
                                             </div>
                                     </div>
