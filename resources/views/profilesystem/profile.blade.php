@@ -178,6 +178,10 @@
 
 </style>
 
+<!-- query Dpname in Departments table by Department in user table -->
+<?php $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');?> <!-- {{$shortname}} -->
+
+
         <div class="content-wrapper">
             <div class="content-header">
             <div class="container-fluid py-4">
@@ -240,7 +244,7 @@
                                         </div>
 
                                         <div class="bio-row">
-                                            <p><span>แผนก : </span>{{Auth::user()->department->Dpmname ?? ''}} </p>
+                                            <p><span>แผนก : </span>{{$shortname}}</p>
                                         </div>
                                         <div class="bio-row">
                                             <p><span>ระดับผู้ใช้ : </span>{{Auth::user()->level->levelname ?? ''}}</p>
