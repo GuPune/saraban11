@@ -141,7 +141,7 @@
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px">
-            ติดต่อ ประสานงาน
+            ติดต่อประสานงาน
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px">
             ชื่อ&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 200px" name="ctname" required>
