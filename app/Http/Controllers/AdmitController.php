@@ -22,8 +22,14 @@ use Illuminate\Support\Facades\Auth;
 
 class AdmitController extends Controller
 {
+
+
+    
 public function admituser(Request $request)
-    {
+    {   
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $admit = admit::Join('statuses', 'admits.Estatus', '=', 'statuses.Sid')->select('admits.Estatus')->get();
         $agency = agency::all();
         $admitstory = admitstory::all();
@@ -125,6 +131,9 @@ public function admituser(Request $request)
 public function statuswait(Request $request , $id)
   {
     $role=Auth::user()->role;
+    if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
         foreach(request()->input('chk', []) as $index => $chk) {
     $update = admit::find($index)->update([
         // 'item_id' => request()->input('item_id')[$index],
@@ -139,6 +148,9 @@ public function statuswait(Request $request , $id)
  }
 public function pdfexport(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
     $admit = admit::Join('statuses', 'admits.Estatus', '=', 'statuses.Sid')->select('admits.Estatus')->get();
     $agency = agency::all();
     $admitstory = admitstory::all();
@@ -164,6 +176,9 @@ public function pdfexport(Request $request)
  }
 public function admitfile($id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
 
         $admit = admit::find($id);
         return view('admit.fileadmit',compact('admit'));
@@ -171,6 +186,9 @@ public function admitfile($id)
 
 public function updatefile(Request $request,$id)
   {
+    if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
      //ตรวจสอบข้อมูล
      $request->validate(
         [
@@ -209,6 +227,9 @@ public function updatefile(Request $request,$id)
 
 public function admitexport(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $role=Auth::user()->role;
           // select search
         if ($request->isMethod('post'))
@@ -326,6 +347,9 @@ public function admitexport(Request $request)
 
 public function statusaccept(Request $request , $id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
     date_default_timezone_set("Asia/Bangkok");
     $myDate= date('Y-m-d');
     $myYear = date('Y', strtotime($myDate));
@@ -343,6 +367,9 @@ public function statusaccept(Request $request , $id)
 
 public function statusno(Request $request , $id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
     $update = admit::find($id)->update([
         'Enote'=>$request->Enote,
         'Estatus'=>'4' //สถานะไปรอตอบรับ 2
@@ -353,6 +380,9 @@ public function statusno(Request $request , $id)
 
 public function admitstaff(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $admit = admit::Join('statuses', 'admits.Estatus', '=', 'statuses.Sid')->select('admits.Estatus')->get();
         $agency = agency::all();
         $admitstory = admitstory::all();
@@ -427,6 +457,9 @@ public function admitstaff(Request $request)
 
 public function admitadmin(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $admit = admit::Join('statuses', 'admits.Estatus', '=', 'statuses.Sid')->select('admits.Estatus')->get();
         $agency = agency::all();
         $admitstory = admitstory::all();
@@ -503,6 +536,9 @@ public function admitadmin(Request $request)
 // editadmit get
 public function editpageadmit($id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $admit = admit::find($id);
         $agency = agency::all();
         $story = admitstory::all();
@@ -513,10 +549,14 @@ public function editpageadmit($id)
 // updateadmit post
 public function editadmit(Request $request , $id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
+        $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');
         $role=Auth::user()->role;
         $update = admit::find($id)->update([
             'Eagency'=>Auth::user()->agency->agency_name,
-            'Edepartmentbranch'=>Auth::user()->department->Dpmname.'/'.Auth::user()->branch->branche_name,
+            'Edepartmentbranch'=>$shortname.'/'.Auth::user()->branch->branche_name,
             'Eagency_receive'=>$request->Eagency_receive,
             'Ebranch_receive'=>$request->Ebranch_receive,
             'Edepartment_receive'=>$request->Edepartment_receive,
@@ -549,6 +589,9 @@ public function editadmit(Request $request , $id)
 //เริ่มหน้าaddbook
 public function getbranch(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
 
   $cid=$request->post('cid');
     //  if($cid=='1'){
@@ -578,6 +621,9 @@ public function getbranch(Request $request)
 
 public function getdepartment(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
      $sid=$request->post('sid');
     //  if($sid=='12'){
     //     $department= Department::where('branch',0)->get();
@@ -602,6 +648,9 @@ public function getdepartment(Request $request)
 // addbook get
 public function addbook()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $agency = agency::all();
         $story = admitstory::all();
         $admitagency = admitagency::all();
@@ -611,6 +660,9 @@ public function addbook()
 
 public function story(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $story = admitstory::all();
         return response()->json($story);
        // return view('admit.addbook',compact('agency','story','admitagency','admitcount'));
@@ -618,6 +670,9 @@ public function story(Request $request)
 
 public function savestory(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
  $amagency = new admitstory();
  $amagency-> amstory_name = $request->amstory_name;
  $amagency ->save();
@@ -629,6 +684,9 @@ public function savestory(Request $request)
 
 public function saveadmitagency(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
     //  \Log::info($request->all());
     $amagency = new admitagency();
     $amagency-> amagency_name = $request->amagency_name;
@@ -639,6 +697,9 @@ public function saveadmitagency(Request $request)
 
 public function admitagency(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $admitagency = admitagency::all();
         return response()->json($admitagency);
        // return view('admit.addbook',compact('agency','story','admitagency','admitcount'));
@@ -646,14 +707,18 @@ public function admitagency(Request $request)
 
 //บันทึกข้อมูลหนังสือ addbook post
 public function store(Request $request){
+    if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
 
+        $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');
 
         $role=Auth::user()->role;
         //บันทึกข้อมูล
         $data = array();
         $data["Ename"] = Auth::user()->name.' '.Auth::user()->Lastname;
         $data["Eagency"] = Auth::user()->agency->agency_name;
-        $data["Edepartmentbranch"] = Auth::user()->department->Dpmname.'/'.Auth::user()->branch->branche_name;
+        $data["Edepartmentbranch"] = $shortname.'/'.Auth::user()->branch->branche_name;
         $data["Edate_receive"] = $request->Edate_receive;
         $data["Edate_out"] = $request->Edate_out;
         $data["Eagency_receive"] = $request->Eagency_receive;
@@ -685,6 +750,9 @@ public function store(Request $request){
 
 public function addagency(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
     $amagency = new admitagency();
     $amagency-> amagency_name = $request->amagency_name;
     $amagency ->save();
@@ -692,6 +760,9 @@ public function addagency(Request $request)
  }
 public function addstory(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
     $amstory = new admitstory();
     $amstory-> amstory_name = $request->amstory_name;
     $amstory ->save();

@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Auth;
 class AgencyController extends Controller
 {
     public function agency(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         return view('agency.agency');
     }
 
     public function addagency(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $agency = agency::all();
         // $agency = agency::whereBetween('agency_id', [1, 4])->get();
         // $agency1 = agency::whereNotIn('agency_id', [1,2,3,4])->get();
@@ -23,6 +29,9 @@ class AgencyController extends Controller
     }
 
     public function showagency(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $agency = agency::all();
         $branch = branch::all();
         $department = department::all();
@@ -31,6 +40,9 @@ class AgencyController extends Controller
 
 
     public function storeagency(Request $request){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $request->validate(
             [
                 'agency_name'=>'required'
@@ -47,6 +59,9 @@ class AgencyController extends Controller
     }
 
     public function addbranch(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $agency = agency::all();
         $branch = branch::Join('agencies', 'branches.agency', '=', 'agencies.agency_id')
         ->orderby('agency_name','ASC')->orderby('branche_name','ASC')->get();
@@ -54,6 +69,9 @@ class AgencyController extends Controller
     }
 
     public function databranch(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $agency = agency::all();
         $branch = branch::Join('agencies', 'branches.agency', '=', 'agencies.agency_id')
         ->orderby('agency_name','ASC')->orderby('branche_name','ASC')->get();
@@ -61,6 +79,9 @@ class AgencyController extends Controller
     }
 
     public function storebranch(Request $request){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $request->validate(
             [
                 'branch_name'=>'required'
@@ -78,6 +99,9 @@ class AgencyController extends Controller
     }
 
     public function adddepartment(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $branch = branch::Join('agencies', 'branches.agency', '=', 'agencies.agency_id')->orderby('agency_name','ASC')->get();
         $agency = agency::all();
         $department = department::Join('branches', 'departments.branch', '=', 'branches.branche_id')->
@@ -87,6 +111,9 @@ class AgencyController extends Controller
     }
 
     public function datadepartment(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $branch = branch::Join('agencies', 'branches.agency', '=', 'agencies.agency_id')->orderby('agency_name','ASC')->get();
         $agency = agency::all();
         $department = department::Join('branches', 'departments.branch', '=', 'branches.branche_id')->
@@ -96,6 +123,9 @@ class AgencyController extends Controller
     }
 
     public function storedepartment(Request $request){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         $request->validate(
             [
                 'Dpmname'=>'required'
@@ -113,18 +143,27 @@ class AgencyController extends Controller
 
     //ลบข้อมูลในตารางหน่วยงาน
     public function destroy($agency_id){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         agency::where('agency_id',$agency_id)->delete();
         return redirect()->back();     
     }
 
     //ลบข้อมูลในตารางสาขา
     public function destroybranch($branche_id){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         branch::where('branche_id',$branche_id)->delete();
         return redirect()->back();     
     }
 
     //ลบข้อมูลในตารางแผนก
     public function destroydepartment($Dpmid){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         department::where('Dpmid',$Dpmid)->delete();
         return redirect()->back();     
     }

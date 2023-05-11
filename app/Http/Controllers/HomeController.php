@@ -18,6 +18,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 class HomeController extends Controller
 {
     public function index(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
+
        $role=Auth::user()->role;
 
        if($role=='0')
@@ -61,6 +64,8 @@ class HomeController extends Controller
 
     public function home()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $role=Auth::user()->role;
 
 

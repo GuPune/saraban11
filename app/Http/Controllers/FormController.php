@@ -37,6 +37,8 @@ class FormController extends Controller
 
     public function formiddrives()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
@@ -64,6 +66,8 @@ class FormController extends Controller
 
     public function formIDD()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
@@ -82,6 +86,8 @@ class FormController extends Controller
 
     public function formINS()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
@@ -100,6 +106,8 @@ class FormController extends Controller
 
     public function formTZ()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
@@ -118,6 +126,8 @@ class FormController extends Controller
 
 public function preview()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
         $data10 = date("y-m-d");
@@ -130,6 +140,8 @@ public function preview()
 
 public function viewpdfform(Request $request,$id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::all();
         $form = Form::find($id);
         return view('form.editform',compact('user','form'));
@@ -137,6 +149,8 @@ public function viewpdfform(Request $request,$id)
 
 public function pdfform(Request $request,$id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $role=Auth::user()->role;
         $user = User::all();
         // $form = Form::find($id);
@@ -171,6 +185,8 @@ public function pdfform(Request $request,$id)
 //addsenbook
 public function add(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
 
         // dd($request->story);
         $forms1 = new Form;
@@ -339,6 +355,8 @@ public function add(Request $request)
     //form/add
 public function store(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $data = [
             // 'id' => $forms->id,
             'user_id' => Auth::user()->id,
@@ -414,6 +432,8 @@ public function store(Request $request)
 
 public function exportpdfform(Request $request,$id)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     $form = Form::find($id);
     $pdf = PDF::loadView('export.form.pdfform', compact('form'));
     $pdf->getDomPDF()->setHttpContext(
@@ -431,6 +451,8 @@ public function exportpdfform(Request $request,$id)
 
 public function getbranch(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
        
      $cid=$request->post('cid'); 
      if($cid=='1'){
@@ -458,6 +480,8 @@ public function getbranch(Request $request)
    
 public function getdepartment(Request $request)
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
      $sid=$request->post('sid');
      if($sid=='12'){
         $department= Department::where('branch',0)->get();
@@ -479,6 +503,8 @@ public function getdepartment(Request $request)
 
 public function word($id)
 {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     $formiddrives = Form::findOrFail($id);
     // iddrives
     if($formiddrives->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)'){
@@ -523,6 +549,8 @@ public function word($id)
 }
 
 public function index(){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
         // $departments = Department::all();
         // // $forms = Form::all();
         // $user = User::all();

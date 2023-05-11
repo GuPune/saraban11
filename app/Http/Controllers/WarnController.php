@@ -18,6 +18,8 @@ class WarnController extends Controller
 {
     public function warn()
     {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $role=Auth::user()->role;
         // user
         if($role=='0')

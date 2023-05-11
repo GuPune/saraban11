@@ -31,6 +31,8 @@ class TransportController extends Controller
 {
 
   public function addtransport(){
+    if (!Auth::check()) {
+      return redirect()->route('lget');}
 
     $transport =transport::all();
     $user =User::all();
@@ -45,6 +47,8 @@ class TransportController extends Controller
 
 public function store(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
       $role=Auth::user()->role;
 
         $transport = new transport();
@@ -80,6 +84,8 @@ public function store(Request $request)
 
 public function transportadmin(Request $request)
   {
+    if (!Auth::check()) {
+      return redirect()->route('lget');}
 
       $search = $request->input('search');
       $searchdate = $request->input('searchdate');
@@ -132,6 +138,8 @@ public function transportadmin(Request $request)
   }
 public function transportuser(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
       $transportcount = transport::all()->count();
       $depositor = depositor::all();
       $transport_types = transport_type::all();
@@ -165,6 +173,8 @@ public function transportuser(Request $request)
 
 public function transportstaff(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
 
         $search = $request->input('search');
         $searchdate = $request->input('searchdate');
@@ -219,6 +229,8 @@ public function transportstaff(Request $request)
 
 public function transportexport(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
       $role=Auth::user()->role;
           // select search
         if ($request->isMethod('post'))
@@ -330,12 +342,16 @@ public function transportexport(Request $request)
 
 public function depositor(Request $request)
       {
+        if (!Auth::check()) {
+          return redirect()->route('lget');}
           $depositor = depositor::all();
           return response()->json($depositor);
       }
   
 public function savedepositor(Request $request)
       {
+        if (!Auth::check()) {
+          return redirect()->route('lget');}
   $trdepositor = new depositor();
   $trdepositor-> depositor_name = $request->depositor_name;
   $trdepositor ->save();
@@ -344,6 +360,8 @@ public function savedepositor(Request $request)
 
 public function edittransport($id)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
         $transport= transport::find($id);  
         $depositor=depositor::all();
         $transport_types = transport_type::all();
@@ -353,6 +371,8 @@ public function edittransport($id)
 // user update
 public function updatetransport(Request $request , $id)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
       $role=Auth::user()->role;
         $update = transport::find($id)->update([
           'trnumber'=>$request->trnumber,
@@ -385,6 +405,8 @@ public function updatetransport(Request $request , $id)
 // staff update
 public function transportadd(Request $request , $id)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
         $update = transport::find($id)->update([
             'trdelivery'=>$request->trdelivery,
             'trdatesent'=>$request->trdatesent,
@@ -400,6 +422,8 @@ public function transportadd(Request $request , $id)
 // add ผู้ฝากส่ง modal
 public function adddepositor1(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
         $depositor = new depositor();
         $depositor-> depositor_name = $request->depositor_name;
         $depositor ->save();

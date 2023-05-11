@@ -20,6 +20,8 @@ use Illuminate\Pagination\Paginator;
 class InformationUserController extends Controller
 {   // แก้ไขข้อมูลส่วนตัว profile admin
     public function editprofileadmin($id){
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $user = User::find($id);
         $prefix = Prefix::all();
         $agency = Agency::all();
@@ -30,6 +32,8 @@ class InformationUserController extends Controller
 
     //อัปเดตข้อมูลส่วนตัว profile admin
     public function update(Request $request , $id){
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
         $update1 = User::find($id)->update([
             'prefix'=>$request->prefix,
             'name'=>$request->name,
@@ -46,6 +50,8 @@ class InformationUserController extends Controller
         //***ข้อมูลผู้ใช้ user/staff/admin (ตารางแสดงข้อมูลผู้ใช้) ***/
         // ข้อมูลผู้ใช้แสดงในตาราง
 public function claim(Request $request){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     // $transportexecuted= transport::
     // where('trsid','3')
     // ->where('trnumber','LIKE','%'.$request->search.'%')
@@ -146,6 +152,8 @@ public function claim(Request $request){
 
         //เพิ่มข้อมูลผู้ใช้
 public function addclaim(){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $prefix = Prefix::all();
             $agency = Agency::all();
             $branch = Branch::all();
@@ -155,6 +163,8 @@ public function addclaim(){
 
            //บันทึกอมูลผู้ใช้
 public function addclaimuser(Request $request){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             //บันทึกข้อมูล
             $data = array();
             $data["Prefix"] = $request->Prefix;
@@ -175,6 +185,8 @@ public function addclaimuser(Request $request){
 
         //edit ข้อมูลผู้ใช้ claim staff
 public function editclaim(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $user = User::find($id);
             $agency = Agency::all();
             $branch = Branch::all();
@@ -185,6 +197,8 @@ public function editclaim(Request $request , $id){
 
         // อัปเดตข้อมูลผู้ใช้ claim staff tb3
 public function updateclaim(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $update = User::find($id)->update([
                 'name'=>$request->name,
                 'Lastname'=>$request->Lastname,
@@ -200,6 +214,8 @@ public function updateclaim(Request $request , $id){
 
         //edit ข้อมูลผู้ใช้ claim staff
 public function editclaimstaff(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $tb2 = User::find($id);
             $agency = Agency::all();
             $branch = Branch::all();
@@ -210,6 +226,8 @@ public function editclaimstaff(Request $request , $id){
 
         // อัปเดตข้อมูลผู้ใช้ claim staff tb3
 public function updateclaimtb2(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $update = User::find($id)->update([
                 'name'=>$request->name,
                 'surname'=>$request->surname,
@@ -225,6 +243,8 @@ public function updateclaimtb2(Request $request , $id){
 
         //edit ข้อมูลผู้ใช้ claim user
 public function editclaimuser(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $tb3 = User::find($id);
             $agency = Agency::all();
             $branch = Branch::all();
@@ -235,6 +255,8 @@ public function editclaimuser(Request $request , $id){
 
         // อัปเดตข้อมูลผู้ใช้ claim user tb3
 public function updateclaimtb3(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
             $update = User::find($id)->update([
                 'name'=>$request->name,
                 'surname'=>$request->surname,

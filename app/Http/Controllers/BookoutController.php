@@ -25,6 +25,9 @@ class BookoutController extends Controller
 {
 public function bookoutadmin(Request $request)
   {
+    if (!Auth::check()) {
+      return redirect()->route('lget');
+  }
 
     $search = $request->input('search');
     $searchdate = $request->input('searchdate');
@@ -84,6 +87,9 @@ public function bookoutadmin(Request $request)
   }
 public function bookoutstaff(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
 
       $search = $request->input('search');
       $searchdate = $request->input('searchdate');
@@ -144,6 +150,9 @@ public function bookoutstaff(Request $request)
 
 public function bookoutuser(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
       $agency= agency::all();
       $depositor = depositor::all();
       $dpm=Auth::user()->Department;
@@ -216,6 +225,9 @@ public function bookoutuser(Request $request)
    
 public function bookoutexport(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
       $role=Auth::user()->role;
           // select search
         if ($request->isMethod('post'))
@@ -332,6 +344,9 @@ public function bookoutexport(Request $request)
 // update
 public function bookoutadd(Request $request , $id)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
       $role=Auth::user()->role;
         $update = Bookout::find($id)->update([
             'Oag_receive'=>$request->Oag_receive,
@@ -358,6 +373,9 @@ public function bookoutadd(Request $request , $id)
 
 
 public function edit($id){
+  if (!Auth::check()) {
+    return redirect()->route('lget');
+}
       $bookout = Bookout::find($id);
       $agency = agency::all();
       $transports = transport::all();
@@ -367,12 +385,18 @@ public function edit($id){
 
 public function addsendbook(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
       return view('bookout.addsendbook');
     }
     
 
 public function store(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');
+    }
       $role=Auth::user()->role;
         $bookout = new Bookout();
         $bookout->user_id = Auth::user()->id;
@@ -422,6 +446,9 @@ public function store(Request $request)
 //เพิ่มหนังสือตอบกลับ
 public function statusbookout(Request $request,$id)
   {
+    if (!Auth::check()) {
+      return redirect()->route('lget');
+  }
      //ตรวจสอบข้อมูล
      $request->validate(
       [
@@ -461,6 +488,9 @@ public function statusbookout(Request $request,$id)
 
 public function adddepositor(Request $request)
  {
+  if (!Auth::check()) {
+    return redirect()->route('lget');
+  }
     $depositor = new depositor();
     $depositor-> depositor_name = $request->depositor_name;
     $depositor ->save();
@@ -471,6 +501,8 @@ public function adddepositor(Request $request)
 // ไม่ใช้แล้ว
 public function getbranch(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
        
      $cid=$request->post('cid'); 
      if($cid=='1'){
@@ -499,6 +531,8 @@ public function getbranch(Request $request)
     
 public function getdepartment(Request $request)
     {
+      if (!Auth::check()) {
+        return redirect()->route('lget');}
      $sid=$request->post('sid');
      if($sid=='12'){
         $department= Department::where('branch',0)->get();

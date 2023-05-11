@@ -9,6 +9,9 @@ use App\Models\User;
 class AllowController extends Controller
 {
     public function allow(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
 
         $allow =permissions::all();
         $user =User::all();
@@ -16,6 +19,9 @@ class AllowController extends Controller
     }
 
     public function allowstatus(){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
             // 14ออกจากระบบ 8เพิ่มรายละเอียดที่ไม่เอาเพราะต้องกรอกฟอร์มถึงจะเข้าหน้านั้นได้
         // admin
         $allowadminsidebar =permissions::whereBetween('id', [1, 7])->orwhereBetween('id', [9, 13])->orwhereBetween('id', [28, 31])->get();
@@ -42,6 +48,9 @@ class AllowController extends Controller
 
     //  change status
     public function changeStatus(Request $request , $id){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         {
             $getStatus = permissions::select('adminstatus')->where('id',$id)->first();
             if($getStatus->adminstatus==1){
@@ -57,6 +66,9 @@ class AllowController extends Controller
 
 
     public function changeStatusstaff(Request $request , $id){
+        if (!Auth::check()) {
+            return redirect()->route('lget');
+        }
         {
             $getStatus = permissions::select('staffstatus')->where('id',$id)->first();
             if($getStatus->staffstatus==1){
@@ -71,6 +83,9 @@ class AllowController extends Controller
 
     public function changeStatususer(Request $request , $id){
         {
+            if (!Auth::check()) {
+                return redirect()->route('lget');
+            }
             $getStatus = permissions::select('userstatus')->where('id',$id)->first();
             if($getStatus->userstatus==1){
                 $userstatus = 0;
