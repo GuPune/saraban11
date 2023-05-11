@@ -27,7 +27,7 @@ use App\Http\Controllers\AgencyController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('lget');;
 
 // Route::get('/home/user', function () {return view('user.home'); })->name('homeuser');;
 Route::get('/home',[HomeController::class,'home'])->name('home');

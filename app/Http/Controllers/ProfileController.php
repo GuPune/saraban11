@@ -16,19 +16,28 @@ use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
+
 public function profile(){
         $user =User::all();
-
-        return view('profilesystem.profile',compact('user'));
+        if (Auth::check()) {
+            return view('profilesystem.profile',compact('user'));
+        } else {
+            return redirect()->route('lget');
+        }
+        
     }
 
+
 public function editprofile($id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     $user = User::find($id);
     $prefix = Prefix::all();
     $level = level::all();
     $agency = agency::all();
     $branch  = branch::orderby('agency','ASC')->get();
-    $department = Department::orderby('branch','DESC')->orderby('Dpmname','ASC')->groupBy('Dpmname')->selectRaw('count(*) as total, Dpmname')->get();
+    //$department = Department::orderby('branch','DESC')->orderby('Dpmname','ASC')->groupBy('Dpmname')->selectRaw('count(*) as total, Dpmname')->get();
+    $department = Department::all();
     // $agency = agency::where('agency_name','บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)')->get();
     // $branch  = branch::where('branche_name','สำนักงานใหญ่')->get();
     // $department = Department::where('branch','12')->get();
@@ -37,6 +46,8 @@ public function editprofile($id){
   }
 
 public function update(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     $update1 = User::find($id)->update([
         'Prefix'=>$request->Prefix,
         'name'=>$request->name,
@@ -53,6 +64,8 @@ public function update(Request $request , $id){
 
 public function updateImage(Request $request,$id)
         {
+            if (!Auth::check()) {
+                return redirect()->route('lget');}
             //ตรวจสอบข้อมูล
             $request->validate(
                 [
@@ -79,6 +92,8 @@ public function updateImage(Request $request,$id)
         }
 
 public function claim(Request $request){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
                     $tb1 = User::
                     where('role','2')
                     ->Where(function($q) use ($request){
@@ -120,7 +135,8 @@ public function claim(Request $request){
 
 //เพิ่มข้อมูลผู้ใช้
 public function addclaim()
-                {
+                {if (!Auth::check()) {
+                    return redirect()->route('lget');}
                     $prefix = Prefix::all();
                     $agency = agency::all();
                     $branch  = branch::orderby('agency','ASC')->get();
@@ -136,6 +152,8 @@ public function addclaim()
 
 //บันทึกอมูลผู้ใช้
 public function addclaimuser(Request $request){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
 
                 //ตรวจสอบข้อมูล
                 $request->validate(
@@ -167,6 +185,8 @@ public function addclaimuser(Request $request){
 
 //edit ข้อมูลผู้ใช้ claim staff
 public function editclaim(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
 
 
                     $user = User::find($id);
@@ -183,6 +203,8 @@ public function editclaim(Request $request , $id){
 
 // อัปเดตข้อมูลผู้ใช้ claim staff tb3
 public function updateclaim(Request $request , $id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
                     //ตรวจสอบข้อมูล
                     $request->validate(
                         [
@@ -209,20 +231,28 @@ public function updateclaim(Request $request , $id){
 
 //ลบข้อมูลในตารางผู้ใช้ user/staff/admin
 public function destroy($id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
                 User::find($id)->delete();
                 return redirect()->route('claim')->with('success',"ลบข้อมูลเรียบร้อย");
    }
 public function register1(){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
                     return view('register1');
                 }
 
 //หน้าแก้ไขข้อมูลส่วนตัว
 public function editepassword(){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     return view('staff.editprofile');
 }
 
 // หน้าแก้ไขรหัสผ่าน
 public function changepassword($id){
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     $user = User::find($id);
     return view('profilesystem.changepassword',compact('user'));
 }
@@ -230,6 +260,8 @@ public function changepassword($id){
 // อัปเดรตรหัสผ่าน
 public function updatepassword(Request $request, $id)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
     # Validation
     $request->validate([
         'old_password' => 'required',
@@ -254,6 +286,8 @@ public function updatepassword(Request $request, $id)
 
 public function getbranch(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
  $cid=$request->post('cid');
   $branch= branch::where('agency',$cid)->get();
   $html='<option value="">กรุณาเลือกสาขา</option>';
@@ -265,6 +299,8 @@ public function getbranch(Request $request)
 
 public function getdepartment(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
   $sid=$request->post('sid');
   $department= Department::where('branch',$sid)->get();
   $html='<option value="" >กรุณาเลือกฝ่าย</option>';
@@ -275,6 +311,8 @@ public function getdepartment(Request $request)
  }
 public function getbranch1(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
 
  $cid=$request->post('cid');
   $branch= branch::where('agency',$cid)->get();
@@ -287,6 +325,8 @@ public function getbranch1(Request $request)
 
 public function getdepartment1(Request $request)
  {
+    if (!Auth::check()) {
+        return redirect()->route('lget');}
   $sid=$request->post('sid');
   $department= Department::where('branch',$sid)->get();
   $html='<option value="" >กรุณาเลือกฝ่าย</option>';
