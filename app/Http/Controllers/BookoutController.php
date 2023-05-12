@@ -446,9 +446,7 @@ public function store(Request $request)
 //เพิ่มหนังสือตอบกลับ
 public function statusbookout(Request $request,$id)
   {
-    if (!Auth::check()) {
-      return redirect()->route('lget');
-  }
+     dd($request->all());
      //ตรวจสอบข้อมูล
      $request->validate(
       [

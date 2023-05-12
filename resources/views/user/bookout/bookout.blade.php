@@ -870,11 +870,13 @@
                                                     <br>
                                                     <h5> กรุณาเพิ่มหนังสือตอบกลับ </h5><br>
                                                     <div class="mb-3 row">
+                                                    <div class="mb-2 row">
                                                     <div class="col-sm-3 col-form-label">อัปโหลด</div>
                                                         <div class="col-sm-8">
                                                             <input type="file" class = "form-control" name="File" placeholder="File"value="{{$row->Oupload}}">
                                                         </div>
                                                     </div>
+                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 10Mb</div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
                                                     @enderror   
@@ -890,6 +892,7 @@
                                                             <input type="file" class="form-control" name="File"  placeholder="File"value="{{$row->Oupload}}">
                                                         </div>
                                                     </div> 
+                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 10Mb</div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
                                                     @enderror
