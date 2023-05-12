@@ -446,7 +446,7 @@ public function store(Request $request)
 //เพิ่มหนังสือตอบกลับ
 public function statusbookout(Request $request,$id)
   {
-     dd($request->all());
+    
      //ตรวจสอบข้อมูล
      $request->validate(
       [
