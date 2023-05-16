@@ -876,7 +876,7 @@
                                                             <input type="file" class = "form-control" name="File" placeholder="File"value="{{$row->Oupload}}">
                                                         </div>
                                                     </div>
-                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 10Mb</div>
+                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 20Mb</div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
                                                     @enderror   
@@ -892,7 +892,7 @@
                                                             <input type="file" class="form-control" name="File"  placeholder="File"value="{{$row->Oupload}}">
                                                         </div>
                                                     </div> 
-                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 10Mb</div>
+                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 20Mb</div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
                                                     @enderror
@@ -979,6 +979,7 @@
                                                         <input type="file" class = "form-control" name="File" placeholder="File"value="{{$row->Oupload}}">
                                                         <br>  
                                                     </div>
+                                                    <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 20Mb</div>
                                                 </div>
                                             </div>
                                                 <div class="modal-footer">

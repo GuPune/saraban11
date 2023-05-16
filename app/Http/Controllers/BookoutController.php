@@ -448,15 +448,15 @@ public function statusbookout(Request $request,$id)
   {
 
      //ตรวจสอบข้อมูล
-    //  $request->validate(
-    //   [
-    //       'File'=>'required|mimes:pdf,jpg,jpeg,png'
-    //   ],
-    //   [
-    //       'File.required'=>"กรุณาเพิ่มไฟล์ PDF,JPG,JPEG,PNG",
-    //       'File.mimes'=>"ไม่สามารถเพิ่มข้อมูลได้กรุณาเพิ่มไฟล์ PDF,JPG,JPEG,PNG"
-    //   ]
-    //  );
+     $request->validate(
+      [
+          'File'=>'required|mimes:pdf,jpg,jpeg,png'
+      ],
+      [
+          'File.required'=>"กรุณาเพิ่มไฟล์ PDF,JPG,JPEG,PNG",
+          'File.mimes'=>"ไม่สามารถเพิ่มข้อมูลได้กรุณาเพิ่มไฟล์ PDF,JPG,JPEG,PNG"
+      ]
+     );
 
 
   //การเข้ารหัสรูปภาพ
