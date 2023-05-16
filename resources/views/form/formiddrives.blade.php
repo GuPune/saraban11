@@ -44,7 +44,8 @@
             <div class="card-body" style="margin: 20px" style="margin-top:-40px">
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
                                 @csrf      
-            <div class="d-flex justify-content-end">
+            <!-- <div class="d-flex justify-content-end"> -->
+            <div class="d-flex ">
 
             <!-- query Dpname in Departments table by Department in user table -->
             <?php $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');?> <!-- {{$shortname}} -->
@@ -393,7 +394,7 @@
             
 
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;"><!-- <div class="d-flex justify-content-center"> -->
             วันที่&nbsp;
             <input type="date" class="form-control"  style="width: 300px" value="<?php echo date("Y-m-d"); ?>" name="date">
             </div><br><br><br><br>
@@ -439,18 +440,20 @@
                         //<![CDATA[</script>
               <!-- /textarea -->
             </div><br><br><br>
-            
-            <div class="d-flex justify-content-center">
+            <div style="width:fit-content; position:relative; left:62.5%">
+            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
             </div>
-
-            <div class="d-flex justify-content-center">
+            <br>
+            <div style="text-align:center">
             .......................................................
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div style="text-align:center; line-height: 30px">
             (.........................................................)
-            </div><br><br><br><br><br>
+            </div>
+            </div>
+            <br><br><br><br><br>
 
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>

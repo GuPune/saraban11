@@ -30,24 +30,37 @@
         <div class="card" >
           <!-- headform -->
           <div class="card-header">
-          <div class="d-flex justify-content-center">
+
+          <div class="" style="text-align:center; margin-top: 20px">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
              </div><br>
-             <!-- ความจริงกว้างสูง 268x152 -->
-             <div class="d-flex justify-content-start" style="margin-left: 40px">
-             <h5>สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
-            </div>
-             <div class="d-flex justify-content-start" style="font-size:15px">
+             <div class="" >
+             <h5 style="text-align:center">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</h5>
+             <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+             <div class="" style="font-size:15px; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-             <br></div><hr noshade="noshade" size="2">
+             <br></div>
+            </div>
+             
+             
+             <!-- <div class="d-flex" style="margin: 20px">
+                <div class="py-5">
+                  <img src="{{ asset('dist/img/logoINS.png') }}" height="100">
+                </div>
+              <div class="p-2 py-5 flex-fill" style="margin-left:20px;">
+                  <h5> สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</h5>
+                  <p style="margin-bottom:0px"> บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531 </p>
+                  ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น <br> Tel : 043-228 899  www.iddrives.co.th  Email : idofficer@iddrives.co.th <br></div>
+              </div> -->
+
+             <hr noshade="noshade" size="2">
 
                   <!-- bodyform -->
             <?php //echo 'check 0'.$total;?> 
             <div class="card-body" style="margin: 20px" >
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
             @csrf      
-            <div class="d-flex justify-content-end">
+            <div class="d-flex ">
             เลขที่หนังสือ&nbsp; 
             INS/@if($ins==null){{ __('001') }}@elseif($ins<=8)00{{$ins+1}}@elseif($ins>=9)0{{$ins+1}}@elseif($ins>=99){{$ins+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
                 
@@ -79,7 +92,7 @@
             
 
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;">
             วันที่&nbsp;
             <input type="date" class="form-control"  style="width: 300px" value="<?php echo date("Y-m-d"); ?>" name="date">
             </div><br><br><br><br>
@@ -126,17 +139,21 @@
               <!-- /textarea -->
             </div><br><br><br>
             
-            <div class="d-flex justify-content-center">
+            <div style="width:fit-content; position:relative; left:62.5%">
+            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
             </div>
-
-            <div class="d-flex justify-content-center">
+            <br>
+            <div style="text-align:center">
             .......................................................
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div style="text-align:center; line-height: 30px">
             (.........................................................)
-            </div><br><br><br><br><br>
+            </div>
+            </div>
+            
+            <br><br><br><br><br>
 
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>

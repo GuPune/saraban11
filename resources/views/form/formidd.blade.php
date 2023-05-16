@@ -29,16 +29,33 @@
      <div class="font1">
       <div class="card" >
           <div class="card-header">
-          <div class="d-flex justify-content-center">
+          <!-- <div class="d-flex " style="width: fit-content">
              <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
-             </div><br>
-             <div class="d-flex justify-content-start" style="margin-left: 40px">
+             
+             <div>
+             <div class="d-flex justify-content-start" style="">
              <h5>โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
+             <br>
+             <p>บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
             </div>
              <div class="d-flex justify-content-start" style="font-size:15px">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-             <br></div><hr noshade="noshade" size="2"><br>
+             <br></div>
+              </div>
+              </div> -->
+              <div class="" style="text-align:center; margin-top: 20px">
+             <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
+             </div><br>
+             <div class="" >
+             <h5 style="text-align:center">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>
+             <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+             <div class="" style="font-size:15px; text-align:center">
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
+             <br></div>
+            </div>
+
+
+             <hr noshade="noshade" size="2"><br>
               <!-- /head-form -->
 
            <!-- bodyform -->
@@ -47,7 +64,7 @@
 
             <!-- <form action="{{url('/addsendbook')}}" method="post" enctype="multipart/form-data"> -->
             @csrf      
-            <div class="d-flex justify-content-end" style="margin-top: -40px">
+            <div class="d-flex " style="margin-top: -40px">
             เลขที่หนังสือ&nbsp; 
             IDD/@if($idd==null){{ __('001') }}@elseif($idd<=8)00{{$idd+1}}@elseif($idd>=9)0{{$idd+1}}@elseif($idd>=99){{$idd+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
             </div>
@@ -77,7 +94,7 @@
             
 
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;">
             วันที่&nbsp;
             <input type="date" class="form-control"  style="width: 300px" value="<?php echo date("Y-m-d"); ?>" name="date" required>
             </div><br><br><br><br>
@@ -124,17 +141,21 @@
               <!-- /textarea -->
             </div><br><br><br>
             
-            <div class="d-flex justify-content-center">
+            <div style="width:fit-content; position:relative; left:62.5%">
+            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
             </div>
-
-            <div class="d-flex justify-content-center">
+            <br>
+            <div style="text-align:center">
             .......................................................
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div style="text-align:center; line-height: 30px">
             (.........................................................)
-            </div><br><br><br><br><br>
+            </div>
+            </div>
+            
+            <br><br><br><br><br>
 
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
