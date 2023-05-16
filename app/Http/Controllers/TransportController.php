@@ -381,6 +381,7 @@ public function updatetransport(Request $request , $id)
           'trdate'=>$request->trdate,
           'tag_receive'=>$request->tag_receive,
           'tname_receive'=>$request->tname_receive,
+          'taddr_receive'=>$request->taddr_receive,
           'trdepositor'=>$request->trdepositor,
             'trdepartment'=>Auth::user()->Department,
             'trbranch'=>Auth::user()->Branch,
