@@ -97,6 +97,14 @@
     <input class="form-control"  name="tname_receive"  type="text" placeholder="กรุณากรอกชื่อผู้รับ" required>
     </div>
     </div>
+
+    <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">ที่อยู่ผู้รับ :</div>
+    <div class="col-sm-9">
+    <input class="form-control"  name="taddr_receive"  type="text" placeholder="กรุณากรอกที่อยู่ผู้รับ" required>
+    </div>
+    </div>
+
     
     <div class="mb-3 row">
         <div class="col-sm-2 col-form-label">ผู้ฝากส่งหนังสือ :</div>
