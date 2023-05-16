@@ -452,6 +452,12 @@
                                                         </div>
 
                                                         <div class="d-flex justify-content-center text-dark">
+                                                        <div class="col-4">ที่อยู่ผู้รับ : </div>
+                                                        <div class="col-7" style="margin-left:50px">{{$row->taddr_receive}}</div>
+                                                        </div>
+
+
+                                                        <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ส่งหนังสือ : </div>
                                                         <div class="col-7" style="margin-left:50px">{{$row->trsender}}</div>
                                                         </div>   

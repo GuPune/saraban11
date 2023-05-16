@@ -59,6 +59,7 @@ public function store(Request $request)
         $transport->trdepositor = $request->trdepositor;
         $transport->tag_receive = $request->tag_receive;
         $transport->tname_receive = $request->tname_receive;
+        $transport->taddr_receive = $request->taddr_receive;
         $transport->trtaye = $request->trtaye;
         $transport->trdepartment = Auth::user()->Department;
         $transport->trbranch= Auth::user()->Branch;
