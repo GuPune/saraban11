@@ -25,6 +25,7 @@ class transport extends Model
         'user_id', //รหัสไอดี
         'tag_receive',
         'tname_receive',
+        'taddr_receive',
         'trbearer',
         'trsid' //สถานะการส่ง
         
