@@ -171,11 +171,15 @@
             </div><br>
             </div><br><br>
 
+            <!-- <div class="d-flex justify-content-end">
+            FD-HO/HR-013/1 :00: 19-09-2563
+            </div> -->
+
+            <div class="d-flex justify-content-center">
+            <div>
             <div class="d-flex justify-content-end">
             FD-HO/HR-013/1 :00: 19-09-2563
             </div>
-
-            <div class="d-flex justify-content-center">
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->
             <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
@@ -185,6 +189,7 @@
             <img src="{{ asset('dist/img/logo5.png') }}" width="70px">
             <img src="{{ asset('dist/img/logo6.png') }}" width="252px">
             <img src="{{ asset('dist/img/logo7.png') }}" width="81px">
+            </div>
             </div>
             </div>
 
