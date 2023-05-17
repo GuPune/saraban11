@@ -80,7 +80,7 @@
              <div class="d-flex justify-content-center">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
-             <img src="{{ asset('dist/img/logoTZ2.png') }}"height="80">
+             <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
              </div><br>
              <div class="d-flex justify-content-start" style="margin-left: 40px;font-size:16px">
              <h5>ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</h5>&nbsp;

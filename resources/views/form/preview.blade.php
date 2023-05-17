@@ -53,16 +53,17 @@
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
              @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
-             <div class="d-flex justify-content-center"> 
-            <img src="{{ asset('dist/img/logoIDD.png') }}" height="80"> 
-            </div><br>
-             <div class="d-flex justify-content-start" style="margin-left: 40px">
-             <h5>โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
-            </div>
-             <div class="d-flex justify-content-start">
+             <div class="" style="text-align:center; margin-top: 20px">
+             <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
+             </div><br>
+             <div class="" >
+             <h5 style="text-align:center">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>
+             <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+             <div class="" style="font-size:15px; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-             <br></div><hr noshade="noshade" size="2"><br>
+             <br></div>
+            </div>
+             <hr noshade="noshade" size="2"><br>
            
              @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              <div class="d-flex">
@@ -75,38 +76,44 @@
             <hr noshade="noshade" size="2" style="margin-top:-10px"><br>
             
             @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
-            <div class="d-flex justify-content-center">
-             <img src="{{ asset('dist/img/logoINS.png') }}" width="158">
-             </div><br>
-            <div class="d-flex justify-content-start" style="margin-left: 40px">
-             <h5>สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
-            </div>
-             <div class="d-flex justify-content-start">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-             <br></div><hr noshade="noshade" size="2"><br>
+              <div class="" style="text-align:center; margin-top: 20px">
+              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
+              </div><br>
+              <div class="" >
+              <h5 style="text-align:center">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</h5>
+              <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+              <div class="" style="font-size:15px; text-align:center">
+              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
+              <br></div>
+              </div>
+             
+             <hr noshade="noshade" size="2"><br>
                       
              @elseif($type=='ศูนย์ฝึกอบรม')
-             <div class="d-flex justify-content-center">
-              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
-             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
-             <img src="{{ asset('dist/img/logoTZ2.png') }}"height="80">
-             </div><br>
-             <div class="d-flex justify-content-start" style="margin-left: 40px;font-size:16px">
-             <h5>ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
-            </div>
-             <div class="d-flex justify-content-start" style="font-size:16px">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัด Tel : 043-228 899   www.iddrives.co.th  Email : idofficer@iddrives.co.th           
-             <br></div><hr noshade="noshade" size="2"><br>
+              <div class="" style="text-align:center; margin-top: 20px">
+                <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+                <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
+                <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
+              </div>
+              <br>
+              <div class="" >
+                <h5 style="text-align:center">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</h5>
+                <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+                <div class="" style="font-size:15px; text-align:center">
+                  ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัด Tel : 043-228 899   www.iddrives.co.th  Email : idofficer@iddrives.co.th           
+                  <br>
+                </div>
+              </div>
+             
+             <hr noshade="noshade" size="2"><br>
              @endif
               <!-- /head-form -->
 
            <!-- bodyform -->
-            <div class="card-body" style="margin: 20px">
+            <div class="card-body" style="margin: 20px; margin-left:100px">
             <form action="{{url('/addsendbook')}}" method="post" enctype="multipart/form-data">
              @csrf  
-             <div class="d-flex justify-content-end" style="margin-top: -40px">
+             <div class="d-flex " style="margin-top: -40px">
             @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
             เลขที่หนังสือ&nbsp; 
             IDD/@if($idd==null){{ __('001') }}@elseif($idd<=8)00{{$idd+1}}@elseif($idd>=9)0{{$idd+1}}@elseif($idd>=99){{$idd+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
@@ -525,7 +532,7 @@
                             </div><br><br>
             
 
-            <div class="d-flex justify-content-center">
+            <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
             วันที่&nbsp;
             <?php
             $myDate= $date;
@@ -580,17 +587,21 @@
             <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">  
             </div><br><br><br>
             
-            <div class="d-flex justify-content-center">
+            <div style="width:fit-content; position:relative; left:62.5%">
+            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
             </div>
-
-            <div class="d-flex justify-content-center">
+            <br>
+            <div style="text-align:center">
             .......................................................
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div style="text-align:center; line-height: 30px">
             (.........................................................)
-            </div><br><br><br><br><br>
+            </div>
+            </div>
+            
+            <br><br><br><br><br>
 
             <div class=" footer">
             <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
@@ -611,11 +622,15 @@
             </div><br>
             </div><br><br>
 
-            <div class="d-flex justify-content-end" style="font-size:15px;">
+            <!-- <div class="d-flex justify-content-end" style="font-size:15px;">
             FD-HO/HR-013/1 :00: 19-09-2563
-            </div>
+            </div> -->
 
             <div class="d-flex justify-content-center">
+            <div>
+            <div class="d-flex justify-content-end">
+            FD-HO/HR-013/1 :00: 19-09-2563
+            </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
             <img src="{{ asset('dist/img/logo2.png') }}" width="81px">
@@ -624,6 +639,7 @@
             <img src="{{ asset('dist/img/logo5.png') }}" width="70px">
             <img src="{{ asset('dist/img/logo6.png') }}" width="252px">
             <img src="{{ asset('dist/img/logo7.png') }}" width="81px">
+            </div>
             </div>
             </div>
 

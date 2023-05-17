@@ -79,66 +79,89 @@
         float: left;
         clear:left;
       }
-      p {
-        margin-top:-15px;
-        margin-left:5px;
-      }
-      #p1 {
-        margin-top:-15px;
-      }
+
+p {
+  height:10px;
+}
 </style>
-<body>
+<body style="">
        
           @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
              <div class="text-center">
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-top:-25px;" width="108" height="50"/>
              </div>
-             <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
+
+             <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
              <b style="font-size:22px;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</b>&nbsp;
              <b style="font-size:18px;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</b>
             </div><p style="font-size:16px;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
+             </p> -->
+             <div class="" style="text-align:center;padding-left:unset;width:100%">
+             <p style="font-size:22px;font-weight: bold">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</p>
+             <p style="font-size:18px;font-weight: bold">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+            <p style="font-size:16px;width:100%"> ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899   www.iddrives.co.th Email : idofficer@iddrives.co.th           
              </p>
-             <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div>
+             </div>
+             <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div> -->
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-             <div class="box2"  style="margin-top:-20px;"><img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-left:10px;margin-top:-10px;" width="86px"/></div>
-              <p style="margin-top:-25px;"><b style="font-size:20px;" > บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </b></p>
-              <p style="font-size:18px;margin-top:-45px;">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
-              <p style="font-size:18px;margin-top:-25px;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
-              <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-10px;"></div>
+             <div class="box2"  style="margin-top:10px;"><img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-left:10px;margin-top:-10px;" width="86px"/></div>
+              <!-- <div>
+              <p style="font-size:20px;">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
+              <p style="font-size:18px;">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
+              <p style="font-size:18px;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
+              </div> -->
+              </div>
+             <div class="" style="text-align:left">
+             <p style="font-size:22px;font-weight: bold">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
+             <p style="font-size:18px;font-weight: bold">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
+            <p style="font-size:16px;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
+             </div>
+              <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;"></div> -->
             
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="text-center">
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoINS.png'))) }}" style="margin-top:-25px;" width="93"/>
              </div>
-             <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
+
+             <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
              <b style="font-size:22px;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</b>&nbsp;
              <b style="font-size:18px;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</b>
             </div> <p style="font-size:16px;">
             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-             </p><div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div>
+              -->
+              <div class="" style="text-align:center;padding-left:unset;width:100%">
+             <p style="font-size:22px;font-weight: bold">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</p>
+             <p style="font-size:18px;font-weight: bold">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+            <p style="font-size:16px;width:100%"> ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899   www.iddrives.co.th Email : idofficer@iddrives.co.th           
+             </p>
+             </div>
+
+            <!-- </p><div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div> -->
                       
              @elseif($form->type=='ศูนย์ฝึกอบรม')
              <div class="text-center">
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="35"/>
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="70"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoTZ2.png'))) }}" style="margin-top:-30px;"  height="53"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logotz2.png'))) }}" style="margin-top:-30px;"  height="53"/>
              </div>
-             <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
-             <b style="font-size:22px;">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</b>&nbsp;
-             <b style="font-size:18px;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</b>
-            </div><p style="font-size:16px;" style="margin-left:5px;">
-            ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัด Tel : 043-228 899   www.iddrives.co.th  Email : idofficer@iddrives.co.th           
+             <div class="" style="text-align:center;padding-left:unset;width:100%">
+             <p style="font-size:22px;font-weight: bold">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</p>
+             <p style="font-size:18px;font-weight: bold">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+            <p style="font-size:16px;width:100%"> ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899   www.iddrives.co.th Email : idofficer@iddrives.co.th           
              </p>
-             <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div>
+             </div>
+             <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:25px;"></div> -->
              @endif
 
-            <div class="text-end" style="font-size:18px;">
+             <div style="border: 0.5px solid #B4B4B4;margin:30px 10px 30px 10px;"></div>
+      <div style="padding-left:30px">
+             <div class="" style="font-size:18px;">
             เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
             </div>
 
-            <div class="text-center" style="font-size:18px;">
+            <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
             วันที่&nbsp;
             <?php
             $myDate= $form->date;
@@ -184,13 +207,15 @@
             </div>
 
 
-
+          
             <div class="footer" style="margin-bottom:-30px">
-            <div class="text-center" style="font-size:18px;"  style="margin-left:100px">
+            <div class="text-center" style="font-size:18px;width:fit-content; position:relative; left:40%;"  >
             ขอแสดงความนับถือ
-            <p>.......................................................</p>
-            (...........................................................)
-            </div> <br>
+            <p style="">.......................................................</p>
+            <p>(...........................................................)</p>
+            </div> 
+            
+            <br>
 
 
             <div style="border: 1px solid #000000; overflow: auto; width: 280px; height:auto;">
@@ -224,7 +249,7 @@
             </div>
             </div>
           </div>
-
+          </div>
 <!-- จบ -->
 </body>
 </html>
