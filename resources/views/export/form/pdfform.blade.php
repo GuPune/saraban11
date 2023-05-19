@@ -104,7 +104,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
              </p> -->
              <div style="text-align:center;" >
-              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ ({{$bName}})</p>
+              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา {{$bName}}</p>
               <p style="font-size:18px;text-align:center; margin:unset;margin-top:15px">ที่อยู่: {{$bAddr}}</p>
               <p style="font-size:14px;text-align:center; margin-top:15px;margin-bottom:0">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
               <p style="font-size:14px; text-align:center;margin-top:6px">ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
@@ -139,7 +139,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
               -->
 
               <div style="text-align:center;" >
-              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี ({{$bName}})</p>
+              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา {{$bName}}</p>
               <p style="font-size:18px;text-align:center; margin:unset;margin-top:15px">ที่อยู่: {{$bAddr}}</p>
               <p style="font-size:14px;text-align:center; margin-top:15px;margin-bottom:0">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
               <p style="font-size:14px; text-align:center;margin-top:6px">ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>

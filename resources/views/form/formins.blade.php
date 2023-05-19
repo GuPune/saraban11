@@ -37,7 +37,7 @@
              <div class="" >
              <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
-             <h5 style="text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี ({{$bName}})</h5>
+             <h5 style="text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา {{$bName}}</h5>
              <p style="text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
              <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
              <div class="" style="font-size:12px; text-align:center">
