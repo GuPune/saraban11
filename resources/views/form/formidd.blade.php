@@ -47,9 +47,12 @@
              <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
              </div><br>
              <div class="" >
-             <h5 style="text-align:center">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>
-             <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-             <div class="" style="font-size:15px; text-align:center">
+             <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
+                    $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+             <h5 style="text-align:center;font-weight:bold;margin-bottom:0">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ ({{$braname}})</h5>
+             <p style="text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+             <div class="" style="font-size:12px; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
              <br></div>
             </div>

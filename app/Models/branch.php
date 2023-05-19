@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class branch extends Model
 {
     protected $fillable = [
-        'branch_name',
-        'agency'
+        'branche_id',
+        'branche_name',
+        'agency',
+        'branche_addr'
     ];
 
     public function agency(){

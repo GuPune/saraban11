@@ -84,6 +84,12 @@ p {
   height:10px;
 }
 </style>
+<?php
+$bName = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bName'];
+$bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
+?>
+
+
 <body style="">
        
           @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
@@ -97,12 +103,12 @@ p {
             </div><p style="font-size:16px;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
              </p> -->
-             <div class="" style="text-align:center;padding-left:unset;width:100%">
-             <p style="font-size:22px;font-weight: bold">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</p>
-             <p style="font-size:18px;font-weight: bold">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-            <p style="font-size:16px;width:100%"> ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899   www.iddrives.co.th Email : idofficer@iddrives.co.th           
-             </p>
-             </div>
+             <div style="text-align:center;" >
+              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ ({{$bName}})</p>
+              <p style="font-size:18px;text-align:center; margin:unset;margin-top:15px">ที่อยู่: {{$bAddr}}</p>
+              <p style="font-size:14px;text-align:center; margin-top:15px;margin-bottom:0">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+              <p style="font-size:14px; text-align:center;margin-top:6px">ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
+              </div>
              <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div> -->
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
@@ -131,12 +137,13 @@ p {
             </div> <p style="font-size:16px;">
             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
               -->
-              <div class="" style="text-align:center;padding-left:unset;width:100%">
-             <p style="font-size:22px;font-weight: bold">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</p>
-             <p style="font-size:18px;font-weight: bold">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-            <p style="font-size:16px;width:100%"> ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899   www.iddrives.co.th Email : idofficer@iddrives.co.th           
-             </p>
-             </div>
+
+              <div style="text-align:center;" >
+              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี ({{$bName}})</p>
+              <p style="font-size:18px;text-align:center; margin:unset;margin-top:15px">ที่อยู่: {{$bAddr}}</p>
+              <p style="font-size:14px;text-align:center; margin-top:15px;margin-bottom:0">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+              <p style="font-size:14px; text-align:center;margin-top:6px">ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
+              </div>
 
             <!-- </p><div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div> -->
                       
