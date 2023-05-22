@@ -33,15 +33,17 @@
 
           <div class="" style="text-align:center; margin-top: 20px">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
+             <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >
              <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
-             <h5 style="text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา {{$bName}}</h5>
-             <p style="text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
-             <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+             <h5 style="font-size:20px;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
+                <span style="font-size:14px;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12px; text-align:center">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
              
@@ -180,8 +182,8 @@
 
             <div class="d-flex justify-content-center">
             <div>
-            <div class="d-flex justify-content-end">
-            FD-HO/HR-013/1 :00: 19-09-2563
+            <div class="d-flex justify-content-end" style="margin-bottom:10px">
+                FD-INS-005 :00: 20-5-2566    <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->

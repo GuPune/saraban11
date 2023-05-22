@@ -49,22 +49,24 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
      <div class="font1">
       <div class="card" >
           <div class="card-header">
-          <div class="d-flex justify-content-center">
-          
-             </div><br>
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
              
              @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
              <div class="" style="text-align:center; margin-top: 20px">
-             <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
-             </div><br>
+              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
+              <img src="{{ asset('dist/img/logopro.png') }}"height="80">
+            </div><br>
              <div class="" >
-             <h5 style="text-align:center;font-weight:bold;margin-bottom:0">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา {{$bName}}</h5>
-             <p style="text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
-             <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-             <div class="" style="font-size:12px; text-align:center">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
+             <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
+                    $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+             <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
+                <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
+             <div class="" style="font-size:12pt; text-align:center">
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
              <hr noshade="noshade" size="2"><br>
@@ -72,43 +74,49 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
              @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              <div class="d-flex">
              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="150">
-             <div class="p-2 py-5 flex-fill">
-             <h5 style="font-weight:bold;"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
+             <div class="p-2 py-5 flex-fill" style="font-size:14pt;">
+             <h5 style="font-size:16pt;font-weight:bold;"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co. </div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top:-10px"><br>
             
             @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
-              <div class="" style="text-align:center; margin-top: 20px">
-              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
-              </div><br>
-              <div class="" >
-              <h5 style="text-align:center;margin-bottom:0;font-weight:bold;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา {{$bName}}</h5>
-              <p style="text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
-              <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-              <div class="" style="font-size:12px; text-align:center">
-              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-              <br></div>
-              </div>
+            <div class="" style="text-align:center; margin-top: 20px">
+             <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
+             <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
+             </div><br>
+             <div class="" >
+             <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
+                    $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+             <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
+                <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+             <div class="" style="font-size:12pt; text-align:center">
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             <br></div>
+            </div>
              
              <hr noshade="noshade" size="2"><br>
                       
              @elseif($type=='ศูนย์ฝึกอบรม')
-              <div class="" style="text-align:center; margin-top: 20px">
-                <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
-                <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
-                <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
+             <div class="" style="text-align:center; margin-top: 20px">
+              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
+              <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
+            </div>
+            <br>
+            <div class="" >
+              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+              <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 Email: id.trainingcenter@iddrives.co.th
+                      Tel :082-7513888  www.trainingzenter.com</p>
+              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+              <div class="" style="font-size:12pt; text-align:center">
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                <br>
               </div>
-              <br>
-              <div class="" >
-                <h5 style="text-align:center;font-weight:bold;">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</h5>
-                <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-                <div class="" style="font-size:15px; text-align:center">
-                  ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัด Tel : 043-228 899   www.iddrives.co.th  Email : idofficer@iddrives.co.th           
-                  <br>
-                </div>
-              </div>
+            </div>
              
              <hr noshade="noshade" size="2"><br>
              @endif
@@ -633,8 +641,16 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
 
             <div class="d-flex justify-content-center">
             <div>
-            <div class="d-flex justify-content-end">
-            FD-HO/HR-013/1 :00: 19-09-2563
+            <div class="d-flex justify-content-end" style="margin-bottom:10px">
+              @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
+                FD-IDD-SCL-012:00: 20-05-2566
+              @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
+                FD-HO-015 :00: 20-05-2566
+              @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
+                FD-INS-005 :00: 20-5-2566
+              @elseif($type=='ศูนย์ฝึกอบรม')
+                FD-IDD-TZ-013 :00: 20-05-2566
+              @endif
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
@@ -661,6 +677,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
   <input type="hidden" value="{{$type}}" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 300px" name="type">
    </div><br>
 <!-- save cancel -->
+
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button class="btn btn-primary" type="button" style="margin-right:10px" data-bs-toggle="modal" data-bs-target="#confirm">บันทึก</button>
  @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์') 

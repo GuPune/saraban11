@@ -44,16 +44,19 @@
               </div>
               </div> -->
               <div class="" style="text-align:center; margin-top: 20px">
-             <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
-             </div><br>
+              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
+              <img src="{{ asset('dist/img/logopro.png') }}"height="80">
+            </div><br>
              <div class="" >
              <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
-             <h5 style="text-align:center;font-weight:bold;margin-bottom:0">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา {{$braname}}</h5>
-             <p style="text-align:center; margin:unset;">ที่อยู่: {{$braname}}</p>
-             <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
+             <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
+                <span style="font-size:13px;font-weight:400">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:16px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12px; text-align:center">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
 
@@ -182,8 +185,8 @@
 
             <div class="d-flex justify-content-center">
             <div>
-            <div class="d-flex justify-content-end">
-            FD-HO/HR-013/1 :00: 19-09-2563
+            <div class="d-flex justify-content-end" style="margin-bottom:10px">
+              FD-IDD-SCL-012:00: 20-05-2566  <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->

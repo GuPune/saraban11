@@ -37,13 +37,14 @@
             </div>
             <br>
             <div class="" >
-              <h5 style="text-align:center">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</h5>
-              <p style="text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-              <div class="" style="font-size:15px; text-align:center">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัด Tel : 043-228 899   www.iddrives.co.th  Email : idofficer@iddrives.co.th           
+              <h5 style="font-size:20px;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+              <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 Email: id.trainingcenter@iddrives.co.th
+                      Tel :082-7513888  www.trainingzenter.com</p>
+              <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+              <div class="" style="font-size:12px; text-align:center">
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
                 <br>
               </div>
-            
             </div>
             
              
@@ -169,8 +170,8 @@
 
             <div class="d-flex justify-content-center">
             <div>
-            <div class="d-flex justify-content-end">
-            FD-HO/HR-013/1 :00: 19-09-2563
+            <div class="d-flex justify-content-end" style="margin-bottom:10px">
+                FD-IDD-TZ-013 :00: 20-05-2566  <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->

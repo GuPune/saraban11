@@ -83,6 +83,8 @@
 p {
   height:10px;
 }
+
+
 </style>
 <?php
 $bName = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bName'];
@@ -90,11 +92,12 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 ?>
 
 
-<body style="">
-       
+<body style="margin-top:20px">
           @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
-             <div class="text-center">
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-top:-25px;" width="108" height="50"/>
+          <div class="text-center">
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="35"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="70"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style="margin-top:-30px;"  height="53"/>
              </div>
 
              <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
@@ -103,13 +106,16 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             </div><p style="font-size:16px;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
              </p> -->
-             <div style="text-align:center;" >
-              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา {{$bName}}</p>
-              <p style="font-size:18px;text-align:center; margin:unset;margin-top:15px">ที่อยู่: {{$bAddr}}</p>
-              <p style="font-size:14px;text-align:center; margin-top:15px;margin-bottom:0">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-              <p style="font-size:14px; text-align:center;margin-top:6px">ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
-              </div>
-             <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div> -->
+             <div style="display: flex; width: 100%;white-space: normal;" >
+             <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+                <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:16pt;text-align:center; margin-bottom:0; line-height: 11px;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12pt;text-align:center; margin-bottom:0; margin-top:10;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
+             <div class="" style="font-size:12pt; text-align:center;margin-top:5;">
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             <br></div>
+            </div>
+            <div style="border: 0.5px solid #B4B4B4;margin:10px 10px 30px 10px;"></div>
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              <div class="box2"  style="margin-top:10px;"><img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-left:10px;margin-top:-10px;" width="86px"/></div>
@@ -120,15 +126,16 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
               </div> -->
               </div>
              <div class="" style="text-align:left">
-             <p style="font-size:22px;font-weight: bold">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
-             <p style="font-size:18px;font-weight: bold">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
-            <p style="font-size:16px;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
+             <p style="font-size:16pt;font-weight: bold">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
+             <p style="font-size:14pt;">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
+            <p style="font-size:14pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
              </div>
-              <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;"></div> -->
+             <div style="border: 0.5px solid #B4B4B4;margin:30px 10px 30px 10px;"></div>
             
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="text-center">
-            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoINS.png'))) }}" style="margin-top:-25px;" width="93"/>
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoINS.png'))) }}" style="margin-top:-25px;margin-right:15px" width="93"/>
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoins.png'))) }}" style="margin-top:-25px;" width="90"/>
              </div>
 
              <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
@@ -138,14 +145,17 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
               -->
 
-              <div style="text-align:center;" >
-              <p style="font-size:22px;text-align:center;margin-bottom:0;font-weight:bold;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา {{$bName}}</p>
-              <p style="font-size:18px;text-align:center; margin:unset;margin-top:15px">ที่อยู่: {{$bAddr}}</p>
-              <p style="font-size:14px;text-align:center; margin-top:15px;margin-bottom:0">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-              <p style="font-size:14px; text-align:center;margin-top:6px">ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
-              </div>
+              <div class="" >
+             <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
+                <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:16pt;text-align:center; margin-bottom:0; line-height: 11px;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12pt;text-align:center; margin-bottom:0; margin-top:10;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+             <div class="" style="font-size:12pt; text-align:center;margin-top:5;">
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             <br></div>
+            </div>
 
-            <!-- </p><div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:-5px;"></div> -->
+            <div style="border: 0.5px solid #B4B4B4;margin:10px 10px 30px 10px;"></div>
                       
              @elseif($form->type=='ศูนย์ฝึกอบรม')
              <div class="text-center">
@@ -153,16 +163,22 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="70"/>
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logotz2.png'))) }}" style="margin-top:-30px;"  height="53"/>
              </div>
-             <div class="" style="text-align:center;padding-left:unset;width:100%">
-             <p style="font-size:22px;font-weight: bold">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</p>
-             <p style="font-size:18px;font-weight: bold">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</p>
-            <p style="font-size:16px;width:100%"> ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899   www.iddrives.co.th Email : idofficer@iddrives.co.th           
-             </p>
-             </div>
-             <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px;margin-top:25px;"></div> -->
+             <div class="" >
+              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+              <p style="font-size:14pt;text-align:center; margin-bottom:0;line-height: 10px;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 Email: id.trainingcenter@iddrives.co.th 
+                    Tel :082-7513888  www.trainingzenter.com</p>
+              <p style="font-size:12pt;text-align:center; margin-bottom:0; margin-top:10;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+              <div class="" style="font-size:12pt; text-align:center;margin-top:5;">
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                <br>
+              </div>
+            </div>
+            <div style="border: 0.5px solid #B4B4B4;margin:10px 10px 30px 10px;"></div>
              @endif
+             
+           
 
-             <div style="border: 0.5px solid #B4B4B4;margin:30px 10px 30px 10px;"></div>
+             <!-- <div style="border: 0.5px solid #B4B4B4;margin:10px 10px 30px 10px;"></div> -->
       <div style="padding-left:30px">
              <div class="" style="font-size:18px;">
             เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
@@ -240,11 +256,20 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             </div>
             </div>
 
-            <div class="text-end" style="font-size:15px;">
-            FD-HO/HR-013/1 :00: 19-09-2563
-            </div>
 
             <div class="text-center" style="margin-left:130px;font-size:18px;">
+            
+            <div style="margin-bottom:10px;margin-left:60%">
+              @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
+                FD-IDD-SCL-012:00: 20-05-2566
+              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
+                FD-HO-015 :00: 20-05-2566
+              @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
+                FD-INS-005 :00: 20-5-2566
+              @elseif($form->type=='ศูนย์ฝึกอบรม')
+                FD-IDD-TZ-013 :00: 20-05-2566
+              @endif
+            </div>
             <div style="border: 1px solid #000000; overflow: auto; width: 420px; height: auto; text-align: center; " >
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo1.png'))) }}" width="33px" style="margin-top: 5px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo2.png'))) }}" width="33px" style="margin-top: 5px"/>
@@ -254,6 +279,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo6.png'))) }}" width="162px" style="margin-top: 13px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo7.png'))) }}" width="38px" style="margin-top: 5px"/>
             </div>
+            
             </div>
           </div>
           </div>

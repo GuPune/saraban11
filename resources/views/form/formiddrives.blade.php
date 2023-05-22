@@ -30,12 +30,12 @@
         <div class="card" >
           <!-- headform -->
           <div class="card-header">
-            <div class="d-flex">
-             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="150">
+            <div class="d-flex" >
+             <img style="margin-top:20px" src="{{ asset('dist/img/logoiddrives.png') }}" height="150">
              <!-- ความจริงกว้างสูง 186x186 -->
-             <div class="p-2 py-5 flex-fill">
-             <h5> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
-             200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
+             <div class="p-2 py-5 flex-fill" style="font-size:14px">
+             <h5 style="font-weight:bold; font-size:16px"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
+             200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co. <br></div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top:-10px">
@@ -477,8 +477,8 @@
 
             <div class="d-flex justify-content-center">
             <div>
-            <div class="d-flex justify-content-end">
-            FD-HO/HR-013/1 :00: 19-09-2563
+            <div class="d-flex justify-content-end" style="margin-bottom:10px">
+            FD-HO-015 :00: 20-05-2566    <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->
