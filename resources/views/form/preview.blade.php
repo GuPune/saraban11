@@ -29,8 +29,18 @@
       body{
         font-size: 15px;
       }
+.text-details {
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: distribute;
+  text-indent:50px;
+}
 
 </style>
+
+<!-- 
+  layout หน้า  PDF preview ก่อนบันทึก
+ -->
 
 
 <!-- query Dpname in Departments table by Department in user table -->
@@ -59,8 +69,11 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
               <img src="{{ asset('dist/img/logopro.png') }}"height="80">
             </div><br>
              <div class="" >
+
+             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
              <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+
              <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
@@ -87,8 +100,11 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >
+
+             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
              <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+                    
              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
@@ -192,6 +208,9 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
 
                               @elseif($shortname=='บริหารงานโครงการ')
                               PM/@if($pm==null){{ __('001') }}@elseif($pm<=8)00{{$pm+1}}@elseif($pm>=9)0{{$pm+1}}@elseif($pm>=99){{$pm+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
+
+                              @elseif($shortname=='คลังสินค้า')
+                              IDS/@if($ids==null){{ __('001') }}@elseif($ids<=8)00{{$ids+1}}@elseif($ids>=9)0{{$ids+1}}@elseif($ids>=99){{$ids+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
 
                               @endif
 
@@ -468,6 +487,28 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                           
+                            @elseif($shortname=='คลังสินค้า')
+                            <input type="hidden" value="IDS" class="form-control" style="width: 60px" name="fdepartment">
+                            @if($ids==null)
+                            <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($ids<=8)
+                            <input type="hidden" value=<?php echo '00'.$ids+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($ids>=9)
+                            <input type="hidden" value=<?php echo '0'.$ids+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($ids>=99)
+                            <input type="hidden" value=<?php echo $ids+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @endif
+                            @if($total==null)
+                            <input type="hidden" value="001" class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total<=8)
+                            <input type="hidden" value=<?php echo '00'.$total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total>=9)
+                            <input type="hidden" value=<?php echo '0'.$total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total>=99)
+                            <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @endif
+                            <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
+                          
 
                             @elseif($shortname=='บริหารงานโครงการ')
                             <input type="hidden" value="PM" class="form-control" style="width: 60px" name="fdepartment">
@@ -595,7 +636,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
             </div>
             @endif <br>
             
-            <div class="d-flex flex-column" style="margin-left: 40px">
+            <div class="d-flex flex-column text-details" style="margin-left: 40px;margin-right: 40px;">
             <?= $details; ?> 
             <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">  
             </div><br><br><br>
