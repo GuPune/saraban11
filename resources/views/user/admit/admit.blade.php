@@ -99,7 +99,7 @@
                 @foreach($setallow as $export)
                     @if($export->id==18&&$export->userstatus==1)
                     <div class="p-2">
-                    <a href="{{url('/admit/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
+                    <a href="{{url('/admit/export')}}"  type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div>
                     @else
 

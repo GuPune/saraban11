@@ -183,6 +183,8 @@
                      หนังสือส่งออก
                     </div>
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
+                    
+                    <!-- ปุ่มสร้างหนังสือ -->
                         <a href="{{ route('form') }}" style="color:black">
                         <div class="iconDiv" tooltip="สร้างหนังสือ" tabindex="0">
                             <div class="iconSVG">
@@ -194,7 +196,7 @@
                     @foreach($setallow as $export)
                     @if($export->id==23&&$export->userstatus==1)
                     <div class="p-2">
-                    <a href="{{url('/bookout/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
+                    <a href="{{url('/bookout/export')}}"  type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div>
                     @else
 

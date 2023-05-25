@@ -134,6 +134,8 @@
                     <div class="p-2 flex-grow-1" style="font-size:25px">
                         รายงานการขนส่ง
                     </div>
+                    
+                    <!-- ปุ่มเพิ่มข้อมูล -->
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
                         <a href="{{ route('addtransport') }}" style="color:black">
                             <div class="iconDiv" tooltip="เพิ่มข้อมูลการขนส่ง" tabindex="0">
@@ -152,7 +154,7 @@
                     @foreach($setallow as $export)
                     @if($export->id==27&&$export->userstatus==1)
                     <div class="p-2">
-                    <a href="{{url('/transport/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
+                    <a href="{{url('/transport/export')}}"  type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div>
                     @else
 
