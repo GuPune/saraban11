@@ -30,7 +30,7 @@ use \PDF;
 class TransportController extends Controller
 {
 
-  public function addtransport(){
+  public function addtransport(Request $request){
     if (!Auth::check()) {
       // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
       return redirect()->route('lget');}
@@ -43,7 +43,26 @@ class TransportController extends Controller
     $abd=  agency_branch_department::all();
     $branch= branch::all();
     $depositor = depositor::all();
-    return view('transport.add',compact('transport','user','abd','branch','depositor','transport_type','department','agency'));
+
+    $bookoutrow = Bookout::
+        // Join('agencies', 'bookouts.Oag_receive', '=', 'agencies.agency_id')
+        // ->Join('forms', 'bookouts.formid', '=', 'forms.id')
+        where('Odepartment','LIKE',Auth::user()->Department)
+        ->Where(function($q) use ($request){
+          if($request->get('searchdate')&&$request->get('searchend')){
+              $q ->where('Odate','>=',$request->searchdate.'%')
+               ->where('Odate','<=',$request->searchend.'%') ;
+            }
+          elseif($request->get('search')){
+            $q ->where('Onumber','LIKE','%'.$request->search.'%')
+            ->orwhere('Oag_receive','LIKE','%'.$request->search.'%');
+          } 
+         else{}})
+        // ->whereNotIn('Odepartment', ['ธุรการ','จัดซื้อ','การเงิน','บัญชี','บุคคล','ไอที','บริหารพัฒนาผลิตภัณฑ์','เซลล์','กฏหมาย','ส่วนงานเลขานุการ','ส่วนงานบริหารงานคุณภาพ','บริหารงานโครงการ'])
+        ->orderby('bookouts.id','DESC')->paginate(15);
+
+
+    return view('transport.add',compact('transport','user','abd','branch','depositor','transport_type','department','agency','bookoutrow'));
 }
 
 public function store(Request $request)
