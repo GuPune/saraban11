@@ -110,7 +110,7 @@
 
 </style>
 <body>
-  <p  style="font-size:26px" class="txet-center"> <b > รายงานหนังสือจดหมายออก </b></p> 
+  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือส่งออก </b></p> 
   <table class="table">
                                 <thead>
                                     <tr>

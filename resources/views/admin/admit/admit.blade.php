@@ -96,6 +96,7 @@
 .iconDiv {
   width: 36px;
   border-radius: 8px;
+  padding-top:4px;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
@@ -110,7 +111,6 @@
 .iconDiv:hover,
 .iconDiv:focus-visible {
   width: 140px;  /* width of background */
-  padding-top:4px;
   background-color: var(--color-mid);
   transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
 }
@@ -161,8 +161,8 @@
                 <!-- cardhead -->
                 <div class="card-header"> 
                 <div class="d-flex">
-                    <div class="p-2 flex-grow-1">
-                    หนังสือรับเข้า
+                    <div class="p-2 flex-grow-1" style="font-size:20px; height:60px">
+                    ทะเบียนหนังสือรับเข้า
                     </div>
                     <!-- ออกรายงาน -->
                     @foreach($setallow as $export)
@@ -171,6 +171,8 @@
                     <a href="{{url('/admit/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div> -->
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
+
+                        <!-- ปุ่มเพิ่มข้อมูล บนขวา -->
                         <a href="{{route('addbook')}}" style="color:black">
                             <div class="iconDiv" tooltip="เพิ่มข้อมูล" tabindex="0">
                                 <div class="iconSVG">
@@ -178,6 +180,7 @@
                                 </div>
                             </div>
                         </a> 
+                        <!-- ปุ่มบันทึกข้อมูล บนขวา -->
                         <a href="{{url('/admit/export')}}"  style="color:black">
                             <div class="iconDiv" tooltip="บันทึกข้อมูล" tabindex="0">
                                 <div class="iconSVG">
@@ -253,7 +256,7 @@ function selectAll() {
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
                                             @else 
-                                            <div style="overflow-x:auto;">
+                                            <div style="overflow-x:auto;"> <!-- ไม่ให้ table เกินขอบ Object --> <!-- ไม่ให้ table เกินขอบ Object -->
                                             <table class="table table-bordered table-sm" >
                                                     <thead class="box1 text-white text-center">
                                                         <tr>
@@ -554,7 +557,7 @@ function selectAll() {
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
                                             @else
-                                            <div style="overflow-x:auto;"> 
+                                            <div style="overflow-x:auto;"> <!-- ไม่ให้ table เกินขอบ Object --> 
                                             <table class="table table-bordered table-sm" >
                                                     <thead class="box1 text-white text-center">
                                                         <tr>
@@ -879,7 +882,7 @@ function selectAll() {
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
                                       @else 
-                                    <div style="overflow-x:auto;">
+                                    <div style="overflow-x:auto;"> <!-- ไม่ให้ table เกินขอบ Object -->
                                     <table class="table table-bordered table-sm" >
                                     <thead class="box1 text-white text-center">
                                                         <tr>
@@ -1137,7 +1140,7 @@ function selectAll() {
                                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                                             </div>
                                             @else 
-                                    <div style="overflow-x:auto;">
+                                    <div style="overflow-x:auto;"> <!-- ไม่ให้ table เกินขอบ Object -->
                                     <table class="table table-bordered table-sm"  >
                                     <thead class="box1 text-white text-center">
                                                             <td>ลำดับ</td>

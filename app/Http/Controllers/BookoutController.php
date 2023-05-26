@@ -26,6 +26,7 @@ class BookoutController extends Controller
 public function bookoutadmin(Request $request)
   {
     if (!Auth::check()) {
+      // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
       return redirect()->route('lget');
   }
 

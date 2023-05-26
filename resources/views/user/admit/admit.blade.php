@@ -92,8 +92,8 @@
                 <!-- cardhead -->
                 <div class="card-header"> 
                 <div class="d-flex">
-                    <div class="p-2 flex-grow-1">
-                    หนังสือรับเข้า
+                    <div class="p-2 flex-grow-1" style="font-size:25px">
+                    ทะเบียนหนังสือรับเข้า
                     </div>
                     <!-- ออกรายงาน -->
                 @foreach($setallow as $export)

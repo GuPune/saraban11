@@ -28,6 +28,7 @@ class AdmitController extends Controller
 public function admituser(Request $request)
     {   
         if (!Auth::check()) {
+            // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
             return redirect()->route('lget');
         }
         $admit = admit::Join('statuses', 'admits.Estatus', '=', 'statuses.Sid')->select('admits.Estatus')->get();
@@ -132,6 +133,7 @@ public function statuswait(Request $request , $id)
   {
     $role=Auth::user()->role;
     if (!Auth::check()) {
+        // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
         return redirect()->route('lget');
     }
         foreach(request()->input('chk', []) as $index => $chk) {

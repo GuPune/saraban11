@@ -32,6 +32,7 @@ class TransportController extends Controller
 
   public function addtransport(){
     if (!Auth::check()) {
+      // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
       return redirect()->route('lget');}
 
     $transport =transport::all();
@@ -303,7 +304,7 @@ public function transportexport(Request $request)
                         ]
                     ])
                 );
-               return $pdf->download('รายงานการขนส่ง.pdf');  
+               return $pdf->download('รายงานทะเบียนขนส่ง.pdf');  
               // dd($pdf);
             }  
         }

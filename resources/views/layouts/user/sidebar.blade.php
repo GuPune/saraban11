@@ -133,7 +133,7 @@
 
           @endif
           @endforeach          
-          <!-- ข้อมูลหนังสือรับเข้า -->
+          <!-- ทะเบียนหนังสือรับเข้า -->
            @foreach($setallow as $dataadmit)
            @if($dataadmit->id==5&&$dataadmit->userstatus==1)
           <li class="nav-item">
@@ -146,7 +146,7 @@
             <!-- <i class="nav-icon bi bi-folder2-open"></i>    -->
             @endif
             @endforeach 
-              <p>ข้อมูลหนังสือรับเข้า</p>
+              <p>ทะเบียนหนังสือรับเข้า</p>
             </a>
           </li>
           @else
@@ -199,7 +199,7 @@
 
           @endif
           @endforeach
-            <!-- ข้อมูลหนังสือออก -->
+            <!-- ทะเบียนหนังสือส่งออก -->
             @foreach($setallow as $databookout)
             @if($databookout->id==9&&$databookout->userstatus==1)
               <li class="nav-item">
@@ -211,7 +211,7 @@
                   <i class="nav-icon bi bi-folder2"></i>   
                 @endif
                  @endforeach
-                  <p>ข้อมูลหนังสือออก</p>
+                  <p>ทะเบียนหนังสือส่งออก</p>
                 </a>
               </li>
               @else
@@ -276,7 +276,7 @@
                   <i class="nav-icon bi bi-box"></i>   
                 @endif
                  @endforeach
-                  <p>ข้อมูลขนส่ง</p>
+                  <p>ทะเบียนขนส่ง</p>
                 </a>
               </li>
               @else

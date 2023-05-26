@@ -20,6 +20,11 @@
     }
 </style>
 
+<!-- 
+  layout หน้า  PDF สร้างเอกสารของ โรงเรียนสอนขับรถไอดี
+ -->
+
+
 <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid py-4">
@@ -49,8 +54,11 @@
               <img src="{{ asset('dist/img/logopro.png') }}"height="80">
             </div><br>
              <div class="" >
+            
+             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
              <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+
              <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
                 <span style="font-size:13px;font-weight:400">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:16px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>

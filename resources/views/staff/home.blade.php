@@ -53,10 +53,10 @@
           <div class="col-lg-4 col-5">
             <!-- small box -->
             <div class="small-box bg-success">
-              <div class="inner">
+              <div class="inner" style="word-break: break-all;">
                 <!-- <h3>53<sup style="font-size: 20px">%</sup></h3> -->
                 <h4 class="py-2">หนังสือรับเข้า</h4>
-                <p>ข้อมูลหนังสือรับเข้า</p>
+                <p>ทะเบียนหนังสือรับเข้า</p>
               </div>
               <div class="icon">
                 <i class="bi bi-file-earmark-check"></i>
@@ -69,10 +69,10 @@
           <div class="col-lg-4 col-6 ">
             <!-- small box -->
             <div class="small-box bg-warning">
-              <div class="inner text-white">
+              <div class="inner text-white" style="word-break: break-all;">
               <h4 class="py-2">หนังสือส่งออก</h4>
                 <!-- <h3>44</h3>-->
-                <p>ข้อมูลหนังสือส่งออก</p>
+                <p>ทะเบียนหนังสือส่งออก</p>
               </div>
               <div class="icon">
                 <i class="bi bi-file-arrow-up"></i>
@@ -85,11 +85,11 @@
           <div class="col-lg-4 col-5">
             <!-- small box -->
             <div class="small-box bg-danger">
-              <div class="inner">
+              <div class="inner" style="word-break: break-all;">
               <h4 class="py-2">การส่งออก</h4>
                 <!-- <h3>65</h3>-->
 
-                <p>ข้อมูลรายงานการส่งออก</p>
+                <p>ทะเบียนขนส่ง</p>
               </div>
               <div class="icon">
                 <i class="bi bi-envelope-paper"></i>

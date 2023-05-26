@@ -20,6 +20,10 @@
     } 
 </style>
 
+<!-- 
+  layout หน้า  PDF สร้างเอกสารของ สถานตรวจสภาพรถ
+ -->
+
 <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid py-4">
@@ -36,8 +40,11 @@
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >
+
+              <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
              <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
+                    
              <h5 style="font-size:20px;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14px;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>

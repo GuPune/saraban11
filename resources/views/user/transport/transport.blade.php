@@ -132,7 +132,7 @@
                 <div class="card-header"> 
                     <div class="d-flex">
                     <div class="p-2 flex-grow-1" style="font-size:25px">
-                        รายงานการขนส่ง
+                        ทะเบียนขนส่ง
                     </div>
                     
                     <!-- ปุ่มเพิ่มข้อมูล -->

@@ -133,13 +133,15 @@
                 <div class="card-header">                    
                     <div class="d-flex">
                     <div class="p-2 flex-grow-1">
-                      รายงานการขนส่ง
+                      รายงานทะเบียนขนส่ง
                     </div>
                     @foreach($setallow as $export)
                     @if($export->id==27&&$export->adminstatus==1)
                     <!-- <div class="p-2">
                     <a href="{{url('/transport/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div> -->
+
+                    <!-- ปุ่มเพิ่มข้อมูล บนขวา -->
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
                         <a href="{{ route('addtransport') }}" style="color:black">
                             <div class="iconDiv" tooltip="เพิ่มข้อมูลการขนส่ง" tabindex="0">
@@ -148,6 +150,7 @@
                                 </div>
                             </div>
                         </a> 
+                        <!-- ปุ่มบันทึกข้อมูล บนขวา -->
                         <a href="{{url('/transport/export')}}"  style="color:black">
                             <div class="iconDiv" tooltip="บันทึกข้อมูล" tabindex="0">
                                 <div class="iconSVG">
@@ -198,7 +201,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div> 
                             @else 
-                <div style="overflow-x:auto;">
+                <div style="overflow-x:auto;">  <!-- ไม่ให้ table เกินขอบ object -->
                 <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>
@@ -539,7 +542,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div> 
                             @else 
-                            <div style="overflow-x:auto;">
+                            <div style="overflow-x:auto;">  <!-- ไม่ให้ table เกินขอบ object -->
                 <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>

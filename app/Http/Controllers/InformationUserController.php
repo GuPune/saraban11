@@ -21,6 +21,7 @@ class InformationUserController extends Controller
 {   // แก้ไขข้อมูลส่วนตัว profile admin
     public function editprofileadmin($id){
         if (!Auth::check()) {
+            // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
             return redirect()->route('lget');}
         $user = User::find($id);
         $prefix = Prefix::all();

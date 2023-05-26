@@ -97,7 +97,7 @@
                 <div class="card-header"> 
                     <div class="d-flex">
                     <div class="p-2 flex-grow-1">
-                       <h5> ออกรายงานหนังสือเข้า </h5>
+                       <h5> ออกรายงานทะเบียนหนังสือรับเข้า </h5>
                     </div>
                     <form action="/admit/export" method="POST">  
                     @csrf

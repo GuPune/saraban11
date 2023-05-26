@@ -10,6 +10,7 @@ class AllowController extends Controller
 {
     public function allow(){
         if (!Auth::check()) {
+            // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
             return redirect()->route('lget');
         }
 

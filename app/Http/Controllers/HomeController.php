@@ -17,8 +17,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class HomeController extends Controller
 {
+
     public function index(){
+        //dd(Auth::check());
         if (!Auth::check()) {
+            // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
             return redirect()->route('lget');}
 
        $role=Auth::user()->role;

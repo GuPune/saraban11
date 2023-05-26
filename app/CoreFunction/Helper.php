@@ -11,8 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Helper extends Model
 {
     public static  function Fun ($id) {
-
-
+        // return Department Name ตาม Dpmid จาก Database 
         $data = $id;
         $getmo = Depart::where('Dpmid',$data)->first();
 
@@ -20,7 +19,7 @@ class Helper extends Model
         return $getmo->Dpmname;
     }
     public static  function Bran ($id) {
-
+        // return Branche Name and Brance Address จาก brance id
 
         $data = $id;
         $getmo = branch::where('branche_id',$data)->first();
@@ -29,9 +28,5 @@ class Helper extends Model
 
         return compact('bName','bAddr');
     }
-    public static  function bWriterId ($id) {
-        $data = $id;
-        $getmo = Bookout::where('id',$data)->first();
-        return $getmo->Obranch;
-    }
+
 }

@@ -80,6 +80,7 @@
   height: 46px;
   width: 36px;
   border-radius: 8px;
+  padding-top:4px;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
@@ -94,7 +95,6 @@
 .iconDiv:hover,
 .iconDiv:focus-visible {
   width: 150px;
-  padding-top:4px;
   background-color: var(--color-mid);
   transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
 }
@@ -148,7 +148,7 @@
                 <div class="card-header">
                 <div class="d-flex">
                     <div class="p-2 flex-grow-1" style="font-size:20px">
-                     หนังสือส่งออก
+                     ทะเบียนหนังสือส่งออก
                     </div>
                     @foreach($setallow as $export)
                     @if($export->id==23&&$export->adminstatus==1)
@@ -156,6 +156,8 @@
                     <a href="{{url('/bookout/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div> -->
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
+
+                        <!-- ปุ่มสร้างหนังสือ บนขวา -->
                         <a href="{{ route('form') }}" style="color:black ">
                             <div class="iconDiv" tooltip="สร้างหนังสือ" tabindex="0">
                                 <div class="iconSVG">
@@ -163,6 +165,7 @@
                                 </div>
                             </div>
                         </a>  
+                        <!-- ปุ่มบันทึกข้อมูล บนขวา -->
                         <a href="{{url('/bookout/export')}}"  style="color:black">
                             <div class="iconDiv" tooltip="บันทึกข้อมูล" tabindex="0">
                                 <div class="iconSVG">
@@ -218,7 +221,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div>
                             @else 
-                        <div style="overflow-x:auto;">
+                        <div style="overflow-x:auto;">  <!-- ไม่ให้ table เกินขอบ object -->
                         <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>
@@ -530,7 +533,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div>
                             @else
-                            <div style="overflow-x:auto;">
+                            <div style="overflow-x:auto;">  <!-- ไม่ให้ table เกินขอบ object -->
                   <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>
@@ -751,7 +754,7 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div>
                             @else 
-                <div style="overflow-x:auto;">
+                <div style="overflow-x:auto;">  <!-- ไม่ให้ table เกินขอบ object -->
                 <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>

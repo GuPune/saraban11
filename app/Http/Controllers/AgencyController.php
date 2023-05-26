@@ -11,6 +11,7 @@ class AgencyController extends Controller
 {
     public function agency(){
         if (!Auth::check()) {
+            // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
             return redirect()->route('lget');
         }
         return view('agency.agency');

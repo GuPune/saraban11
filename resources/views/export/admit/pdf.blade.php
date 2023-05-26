@@ -70,7 +70,7 @@
 
 </style>
 <body>
-  <p  style="font-size:26px" class="txet-center"> <b > รายงานหนังสือเข้า </b></p> 
+  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือรับเข้า </b></p> 
   <table class="table">
                                 <thead>
                                     <tr>

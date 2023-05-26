@@ -69,6 +69,7 @@
 .iconDiv {
   height: 46px;
   width: 36px;
+  padding-top:4px;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
@@ -84,7 +85,6 @@
 .iconDiv:hover,
 .iconDiv:focus-visible {
   width: 150px;
-  padding-top:4px;
   background-color: var(--color-mid);
   transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
 }
@@ -134,13 +134,15 @@
                 <div class="card-header">                    
                     <div class="d-flex">
                     <div class="p-2 flex-grow-1" style="font-size:20px">
-                      รายงานขนส่ง
+                      ทะเบียนขนส่ง
                     </div>
                     @foreach($setallow as $export)
                     @if($export->id==27&&$export->staffstatus==1)
                     <!-- <div class="p-2">
                     <a href="{{url('/transport/export')}}" target="_blank" type="button" class="btn btn-outline-secondary">ออกรายงาน</a>
                     </div> -->
+
+                    <!-- ปุ่มบันทึกข้อมูล บนขวา -->
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
                         <a href="{{url('/transport/export')}}"  style="color:black">
                             <div class="iconDiv" tooltip="บันทึกข้อมูล" tabindex="0">

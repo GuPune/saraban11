@@ -97,7 +97,7 @@
                 <div class="card-header"> 
                     <div class="d-flex">
                     <div class="p-2 flex-grow-1">
-                       <h5> ออกรายงานการขนส่ง </h5>
+                       <h5> ออกรายงานทะเบียนขนส่ง </h5>
                     </div>
                     <form action="/transport/export" method="POST">  
                     @csrf

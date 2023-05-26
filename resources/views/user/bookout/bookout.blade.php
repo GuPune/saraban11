@@ -180,7 +180,7 @@
                 <div class="card-header">
                 <div class="d-flex">
                     <div class="p-2 flex-grow-1" style="font-size:25px">
-                     หนังสือส่งออก
+                     ทะเบียนหนังสือส่งออก
                     </div>
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
                     

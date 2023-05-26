@@ -70,7 +70,7 @@
 
 </style>
 <body>
-  <p  style="font-size:26px" class="txet-center"> <b > รายงานการขนส่ง </b></p> 
+  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนขนส่ง </b></p> 
   <table class="table">
                                 <thead>
                                     <tr>
