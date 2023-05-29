@@ -168,7 +168,7 @@
             <br><br><br><br><br>
 
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
-            <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
+            <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px">
             ติดต่อประสานงาน
             </div>

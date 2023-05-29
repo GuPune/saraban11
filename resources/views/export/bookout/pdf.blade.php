@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 </head>
 <style>
   .font1{
@@ -106,10 +107,39 @@
     width:6em; 
     word-wrap: break-word;
 }
-
+footer {
+  position: fixed;
+  color: #000;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size:14px;
+  line-height:0px;
+}
 
 </style>
-<body>
+<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >   
+
+
+    <div class="header" style="padding-bottom:20px;margin-bottom:30px ;border-bottom:2px solid #787878">
+                <div style="float: left; margin-right:10px">
+                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" height="100">
+                </div>
+                <div class="" style="font-size:16pt;line-height: 0.8;">
+                <h5 style="font-size:20pt;font-weight:bold;margin:0"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
+                200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
+                Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co. 
+                </div>
+
+    </div>
+
+
+
+
+
+
+
   <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือส่งออก </b></p> 
   <table class="table">
                                 <thead>
@@ -165,5 +195,14 @@
                             </table> <br>
 
 <!-- จบ -->
+
+<!-- Footer -->
+    <?php
+        date_default_timezone_set('Asia/Bangkok');
+        $currentDateTime = date("j/n/Y H:i:s");
+    ?>
+    <footer>
+        <p >Printed By : ............, Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?>, เลขที่ 123456789123456789</p>
+    </footer>
 </body>
 </html>
