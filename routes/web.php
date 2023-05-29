@@ -42,6 +42,7 @@ Route::get('/formtz',[FormController::class,'formTZ'])->name('formTZ');
 Route::get('/preview',[FormController::class,'preview'])->name('preview');
 Route::post('/form/add',[FormController::class,'store'])->name('addform');
 Route::get('/form/pdf/view/{id}',[FormController::class,'viewpdfform']);
+Route::get('/form/pdf/exview/{id}',[FormController::class,'exview']);
 Route::post('/form/pdf/{id}',[FormController::class,'pdfform'])->name('pdfform');
 Route::post('/addsendbook',[FormController::class,'add'])->name('addsendbook');
 Route::post('/bookout/getbranch',[FormController::class,'getbranch']);
