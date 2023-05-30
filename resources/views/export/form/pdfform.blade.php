@@ -75,8 +75,6 @@
         clear:left;
       }
       body {
-            margin: 0;
-            padding: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -94,17 +92,10 @@
             height: fit-content;
         }
 p {
-  height:10px;
+  height:auto;
 }
 
-.text-details {
-  font-size:18px;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  text-align: justify;
-  text-justify: distribute;
-  text-indent:50px;
-}
+
 
 
 </style>
@@ -125,7 +116,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 ?>
 
 
-<body style="padding: 1cm 1cm 1cm 1cm; line-height:12px">
+<body style="line-height:12px">
 <div class="container">
   <div class="content; height:fit-content">
           <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
@@ -253,11 +244,11 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             @if($form->enclosure==null)
             <br><div style="margin-top:-15px;"></div>
             @else
-            <div style="margin-top:10px">
-              <div style="float:left">
+            <div style="margin-top:5px">
+              <div style="">
                 <b >สิ่งที่ส่งมาด้วย</b>
               </div>
-              <div style="margin-top:-20px;margin-left:100px">
+              <div style="margin-top:-20px;margin-left:80px;text-align:justify;">
                 <p style=""><?php echo $form->enclosure ?></p>
               </div>
             </div>
@@ -269,15 +260,12 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
               $paragraphs = explode("\n", $parameter);
             ?>
 
-            <br>
-            <br>
-            <br>
-            <br>
+            
             <!-- margin-left:15px;margin-bottom:10px;margin-top:100px;line-height: 50px; -->
-            <div class="" style="text-indent:50px;margin-bottom:50px 0 50px 0; line-break: anywhere;width:100%;height:fit-content;">
+            <div class="" style="text-indent:50px; line-break: anywhere;width:100%;text-align:justify;">
                 <?php 
                   foreach ($paragraphs as $paragraph) {
-                    echo "<p style='height:fit-content; margin:30px 0 0 0'>" . $paragraph . "<br></p>";
+                    echo "<p style='margin-top:-30px'>" . $paragraph . "</p>";
                   } 
                 ?>
             </div>
@@ -286,7 +274,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
   
           
             <div class="footer" style=";display: inline-block;width:100%">
-            <div class="text-center" style="font-size:18px;width:fit-content; position:relative; left:10%;"  >
+            <div class="text-center" style="font-size:18px;width:fit-content; position:relative; left:6%;"  >
             ขอแสดงความนับถือ
             <p style="">.......................................................</p>
             <p>(...........................................................)</p>
