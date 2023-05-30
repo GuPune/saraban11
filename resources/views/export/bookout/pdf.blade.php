@@ -202,7 +202,7 @@ footer {
         $currentDateTime = date("j/n/Y H:i:s");
     ?>
     <footer>
-        <p >Printed By : ............, Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?>, เลขที่ 123456789123456789</p>
+        <p >Printed By : ............, Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?>, เลขที่ 123456789</p>
     </footer>
 </body>
 </html>

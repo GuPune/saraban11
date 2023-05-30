@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
 <style>
   .font1{
@@ -58,7 +59,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
         <!-- card -->       
      <div class="font1">
       <div class="card" >
-          <div class="card-header">
+          <div class="card-header" style="padding: 2cm 2cm 2cm 3cm">
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
              
@@ -71,12 +72,10 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
              <div class="" >
 
              <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
-             <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
-                    $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
-
-             <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
+             
+             <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:16pt;text-align:center; margin:unset;padding:0 250px 0 250px;">ที่อยู่: {{$bAddr}}</p>
              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12pt; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -85,29 +84,26 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
              <hr noshade="noshade" size="2"><br>
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-             <div class="d-flex">
-             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="150">
-             <div class="p-2 py-5 flex-fill" style="font-size:14pt;">
+             <div class=""  style="text-align: center;">
+             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100">
+             <div class="flex-fill" style="font-size:14pt; margin-top: 10px">
              <h5 style="font-size:16pt;font-weight:bold;"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co. </div>
             </div>
-            <hr noshade="noshade" size="2" style="margin-top:-10px"><br>
+            <hr noshade="noshade" size="2" style="margin-top:10px"><br>
             
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
-            <div class="" style="text-align:center; margin-top: 20px">
+            <div class="" style="text-align:center;">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >
 
-             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
-             <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
-                    $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];?>
-                    
+             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->   
              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:14pt;text-align:center; margin:unset;padding:0 250px 0 250px;">ที่อยู่: {{$bAddr}}</p>
              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12pt; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -117,7 +113,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
              <hr noshade="noshade" size="2"><br>
                       
              @elseif($form->type=='ศูนย์ฝึกอบรม')
-             <div class="" style="text-align:center; margin-top: 20px">
+             <div class="" style="text-align:center; ">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
               <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
@@ -125,7 +121,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
             <br>
             <div class="" >
               <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 Email: id.trainingcenter@iddrives.co.th
+              <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
                       Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:12pt; text-align:center">
@@ -139,7 +135,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
               <!-- /head-form -->
 
            <!-- bodyform -->
-            <div class="card-body" style="margin: 20px; margin-left:100px">
+            <div class="card-body" style="padding: 1cm 0 0 0;">
             <form action="{{url('/addsendbook')}}" method="post" enctype="multipart/form-data">
              @csrf  
             <div class="d-flex " style="margin-top: -40px">
@@ -210,7 +206,9 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
             <br><br><br><br><br>
 
             <div class=" footer">
-            <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
+
+            <!-- ติดต่อประสานงาน -->
+            <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px;font-size:16px;">
             ติดต่อประสานงาน
             </div>
@@ -223,7 +221,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
             <div class="d-flex justify-content-start"style="margin-left: 20px;font-size:16px;">
             E-mail &nbsp;{{$form->ctemail}} 
             </div><br>
-            </div><br><br>
+            </div><br><br> -->
 
             <!-- <div class="d-flex justify-content-end" style="font-size:15px;">
             FD-HO/HR-013/1 :00: 19-09-2563
@@ -266,13 +264,15 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
     <div class="d-flex justify-content-end">
   <input type="hidden" value="{{$form->type}}" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 300px" name="type">
    </div><br>
-<!-- save cancel -->
 
+
+<!-- Download and cancel button -->
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <!-- <button class="btn btn-primary" type="button" style="margin-right:10px" href="{{url('/pdf/form/pdf/'.$form->id)}}" >ดาวน์โหลด</button> -->
  
  <a href="{{ route('bookoutuser') }}" class="btn btn-secondary" type="button" style="margin-right:10px">ยกเลิก</a>
  <a href="{{url('/pdf/form/pdf/'.$form->id)}}" class="btn btn-primary" type="button">ดาวน์โหลด</a>
+ 
 </div>
 <!-- /save cancel -->
 

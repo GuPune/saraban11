@@ -171,9 +171,9 @@ public function pdfform(Request $request,$id)
             'quote'=>$request->quote,
             'enclosure'=>$request->enclosure,
             'details'=>$request->details,
-            'ctname'=>$request->ctname,
-            'ctphone'=>$request->ctphone,
-            'ctemail'=>$request->ctemail
+            // 'ctname'=>$request->ctname,
+            // 'ctphone'=>$request->ctphone,
+            // 'ctemail'=>$request->ctemail
             // ,'Odate'=>$request->date
         ]);
         // return view('user.bookout.pdfform',compact('user','form'));
@@ -325,9 +325,10 @@ public function add(Request $request)
         $forms->quote = $request->quote;
         $forms->enclosure = $request->enclosure;
         $forms->details = $request->details;
-        $forms->ctname = $request->ctname;
-        $forms->ctphone = $request->ctphone;
-        $forms->ctemail = $request->ctemail;
+        $forms->ctname = '-';
+        $forms->ctphone = '-';
+        $forms->ctemail = '-';
+        // $forms->ctemail = $request->ctemail;
         $forms->type = $request->type;
         $forms->formagency = Auth::user()->Agency;
         $forms->formbranch = Auth::user()->Branch;
@@ -346,9 +347,9 @@ public function add(Request $request)
         'quote' => $request->quote,
         'enclosure' => $request->enclosure,
         'details' => $request->details,
-        'ctname' => $request->ctname,
-        'ctphone' => $request->ctphone,
-        'ctemail' => $request->ctemaily,
+        // 'ctname' => $request->ctname,
+        // 'ctphone' => $request->ctphone,
+        // 'ctemail' => $request->ctemaily,
         'type' => $request->type
         ];
         $transport_type = transport_type::all();
@@ -380,9 +381,9 @@ public function store(Request $request)
             'quote' => $request->quote,
             'enclosure' => $request->enclosure,
             'details' => $request->details,
-            'ctname' => $request->ctname,
-            'ctphone' => $request->ctphone,
-            'ctemail' => $request->ctemail,
+            // 'ctname' => $request->ctname,
+            // 'ctphone' => $request->ctphone,
+            // 'ctemail' => $request->ctemail,
             'type' => $request->type
             ];
             
@@ -458,6 +459,7 @@ public function exportpdfform(Request $request,$id)
     );
     $fileName = $form->story;
     return $pdf->download($fileName . '.pdf');
+    //return view('export.form.pdfform', compact('form'));
  }
 
 public function getbranch(Request $request)
@@ -550,10 +552,10 @@ public function word($id)
     $templateProcessor->setValue('quote', $formiddrives->quote);
     $templateProcessor->setValue('enclosure', $formiddrives->enclosure);
     $templateProcessor->setValue('details', $formiddrives->details);
-    $templateProcessor->setValue('ctname', $formiddrives->ctname);
-    $templateProcessor->setValue('ctphone', $formiddrives->ctphone);
+    // $templateProcessor->setValue('ctname', $formiddrives->ctname);
+    // $templateProcessor->setValue('ctphone', $formiddrives->ctphone);
     $templateProcessor->setValue('cnumber', $formiddrives->cnumber);
-    $templateProcessor->setValue('ctemail', $formiddrives->ctemail);
+    // $templateProcessor->setValue('ctemail', $formiddrives->ctemail);
     $fileName = $formiddrives->story;
     $templateProcessor->saveAs($fileName . '.docx');
     return response()->download($fileName . '.docx')->deleteFileAfterSend(true);

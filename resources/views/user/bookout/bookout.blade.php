@@ -516,10 +516,10 @@
                                 <div class="col-7" style="margin-left:50px">{{$rowyes->Oname_receive}}</div>
                                 </div>
 
-                                <div class="d-flex justify-content-center text-dark">
+                                <!-- <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">หมายเลขติดต่อ : </div>
                                 <div class="col-7" style="margin-left:50px">{{$rowyes->form->ctphone}}</div>
-                                </div>
+                                </div> -->
 
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">หนังสือตอบกลับ : </div>
@@ -730,10 +730,10 @@
                                 <div class="col-7" style="margin-left:50px">{{$rowno->Oname_receive}}</div>
                                 </div>
 
-                                <div class="d-flex justify-content-center text-dark">
+                                <!-- <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">หมายเลขติดต่อ : </div>
                                 <div class="col-7" style="margin-left:50px">{{$rowno->form->ctphone}}</div>
-                                </div>
+                                </div> -->
 
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">หนังสือตอบกลับ : </div>
@@ -1068,10 +1068,10 @@
                                                             <div class="col-7" style="margin-left:50px">{{$row->Oname_receive}}</div>
                                                             </div>
 
-                                                            <div class="d-flex justify-content-center text-dark">
+                                                            <!-- <div class="d-flex justify-content-center text-dark">
                                                             <div class="col-4">หมายเลขติดต่อ : </div>
                                                             <div class="col-7" style="margin-left:50px">{{$row->form->ctphone}}</div>
-                                                            </div>
+                                                            </div> -->
 
                                                             <div class="d-flex justify-content-center text-dark">
                                                             <div class="col-4">หนังสือตอบกลับ : </div>

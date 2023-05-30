@@ -33,7 +33,7 @@
         <!-- card -->       
      <div class="font1">
       <div class="card" >
-          <div class="card-header">
+          <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
           <!-- <div class="d-flex " style="width: fit-content">
              <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
              
@@ -48,7 +48,7 @@
              <br></div>
               </div>
               </div> -->
-              <div class="" style="text-align:center; margin-top: 20px">
+              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
               <img src="{{ asset('dist/img/logopro.png') }}"height="80">
@@ -61,7 +61,7 @@
 
              <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
                 <span style="font-size:13px;font-weight:400">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:16px;text-align:center; margin:unset; padding:0 330px 0 330px;">ที่อยู่: {{$bAddr}}</p>
              <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12px; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -73,7 +73,7 @@
               <!-- /head-form -->
 
            <!-- bodyform -->
-            <div class="card-body" style="margin: 20px">
+            <div class="card-body" style="padding: unset; margin:1cm 0 0 0;">
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
 
             <!-- <form action="{{url('/addsendbook')}}" method="post" enctype="multipart/form-data"> -->
@@ -170,9 +170,9 @@
             </div>
             
             <br><br><br><br><br>
-
+            <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
-            <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
+            <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px">
             ติดต่อประสานงาน
             </div>
@@ -184,7 +184,7 @@
             </div>
             <div class="d-flex justify-content-start"style="margin-left: 20px">
             E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="ctemail" required>
-            </div><br>
+            </div><br> -->
             </div><br><br>
 
             <!-- <div class="d-flex justify-content-end">

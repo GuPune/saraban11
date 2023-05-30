@@ -83,13 +83,12 @@
     </div>
     </div>
 
-    <div class="mb-3 row">
+    <!-- <div class="mb-3 row">
     <div  class="col-sm-2 col-form-label">หมายเลขติดต่อ</div>
     <div class="col-sm-9">
-    <!-- <input class="form-control" name="Ophone" type="text" placeholder="กรุณากรอกหมายเลขติดต่อ" required> -->
-    <input class="form-control" value="{{ $ctphone}}"  type="text"  disabled>
+    <input class="form-control"  value="-" type="text"  >
     </div>
-    </div>
+    </div> -->
 
     <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">วันที่ออกหนังสือ</div>

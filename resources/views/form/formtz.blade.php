@@ -31,10 +31,10 @@
         <!-- card -->
         <div class="font1">
         <div class="card" >
-          <div class="card-header">
+          <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
 
           <!-- Header -->
-            <div class="" style="text-align:center; margin-top: 20px">
+            <div class="" style="text-align:center; ">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
               <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
@@ -42,7 +42,7 @@
             <br>
             <div class="" >
               <h5 style="font-size:20px;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 Email: id.trainingcenter@iddrives.co.th
+              <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
                       Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:12px; text-align:center">
@@ -57,7 +57,7 @@
              <hr noshade="noshade" size="2">
 
              <!-- bodyform -->
-            <div class="card-body" style="margin: 20px" >
+            <div class="card-body" style="margin: 1cm 0 0 0; padding: unset;" >
             <div class="d-flex ">
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
             @csrf 
@@ -152,8 +152,9 @@
             
             <br><br><br><br><br>
 
+            <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
-            <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
+            <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px">
             ติดต่อประสานงาน
             </div>
@@ -166,7 +167,7 @@
             <div class="d-flex justify-content-start"style="margin-left: 20px">
             E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="ctemail" required>
             </div><br>
-            </div><br><br>
+            </div><br><br> -->
 
             <!-- <div class="d-flex justify-content-end">
             FD-HO/HR-013/1 :00: 19-09-2563

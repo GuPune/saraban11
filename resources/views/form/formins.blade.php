@@ -33,9 +33,9 @@
         <div class="font1">
         <div class="card" >
           <!-- headform -->
-          <div class="card-header">
+          <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
 
-          <div class="" style="text-align:center; margin-top: 20px">
+          <div class="" style="text-align:center; ">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
@@ -47,7 +47,7 @@
                     
              <h5 style="font-size:20px;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14px;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:14px;text-align:center; margin:unset;padding:0 200px 0 200px;">ที่อยู่: {{$bAddr}}</p>
              <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12px; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -69,7 +69,7 @@
 
                   <!-- bodyform -->
             <?php //echo 'check 0'.$total;?> 
-            <div class="card-body" style="margin: 20px" >
+            <div class="card-body" style="margin:1cm 0 0 0; padding:unset;" >
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
             @csrf      
             <div class="d-flex ">
@@ -167,8 +167,9 @@
             
             <br><br><br><br><br>
 
+            <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
-            <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
+            <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px">
             ติดต่อประสานงาน
             </div>
@@ -181,7 +182,7 @@
             <div class="d-flex justify-content-start"style="margin-left: 20px">
             E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="ctemail" required>
             </div><br>
-            </div><br><br>
+            </div><br><br> -->
 
             <!-- <div class="d-flex justify-content-end">
             FD-HO/HR-013/1 :00: 19-09-2563

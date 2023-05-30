@@ -33,6 +33,11 @@
 
 </style>
 
+<?php
+$bName = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bName'];
+$bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
+?>
+
 <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid py-4">
@@ -41,40 +46,50 @@
         <!-- card -->       
      <div class="font1">
       <div class="card" >
-          <div class="card-header">
+          <div class="card-header" style="padding: 2cm 2cm 2cm 3cm;">
              @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')   
-             <div class="d-flex justify-content-center">
-             <img src="{{ asset('dist/img/logoIDD.png') }}" width="148" height="75"> 
-             </div><br>
-             <div class="d-flex justify-content-start" style="margin-left: 40px">
-             <h5>โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
-            </div>
-             <div class="d-flex justify-content-start">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrices.co.th Email : idofficer@iddrives.co.th
-             <br></div><hr noshade="noshade" size="2"><br>
+             <div class="" style="text-align:center;">
+              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
+              <img src="{{ asset('dist/img/logopro.png') }}"height="80">
+            </div><br>
+            <div class="" >
+              <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+                <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+              <p style="font-size:16pt;text-align:center; margin:unset;padding:0 250px 0 250px;">ที่อยู่: {{$bAddr}}</p>
+              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
+              <div class="" style="font-size:12pt; text-align:center">
+              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+              <br></div>
+              </div><hr noshade="noshade" size="2"><br>
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-             <div class="d-flex">
-             <img src="{{ asset('dist/img/logoiddrives.png') }}"  height="150">
-             <div class="p-2 py-5 flex-fill">
+             <div class="" style="text-align: center;">
+             <img src="{{ asset('dist/img/logoiddrives.png') }}"  height="100">
+             <div class="flex-fill" style="margin-top: 10px;">
              <h5> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrices.co.th Email : idofficer@iddrives.co.</div>
             </div>
-            <hr noshade="noshade" size="2" style="margin-top:-10px">
+            <hr noshade="noshade" size="2" style="margin-top:10px">
             
-            @elseif($form->type=='สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี')
-            <div class="d-flex justify-content-center">
-             <img src="{{ asset('dist/img/logoINS.png') }}" width="158">
+            @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
+            <div class="" style="text-align:center;">
+             <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
+             <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
-            <div class="d-flex justify-content-start" style="margin-left: 40px">
-             <h5>สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
+             <div class="" >
+
+             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->   
+             <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
+                <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:14pt;text-align:center; margin:unset;padding:0 250px 0 250px;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+             <div class="" style="font-size:12pt; text-align:center">
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             <br></div>
             </div>
-             <div class="d-flex justify-content-start">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrices.co.th Email : idofficer@iddrives.co.th
-             <br></div><hr noshade="noshade" size="2"><br>
+             <hr noshade="noshade" size="2"><br>
                       
              @elseif($form->type=='ศูนย์ฝึกอบรม')
              <div class="d-flex justify-content-center">
@@ -82,13 +97,17 @@
              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
              <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
              </div><br>
-             <div class="d-flex justify-content-start" style="margin-left: 40px;font-size:16px">
-             <h5>ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์</h5>&nbsp;
-             บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531
+             <div class="" >
+              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+              <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
+                      Tel :082-7513888  www.trainingzenter.com</p>
+              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+              <div class="" style="font-size:12pt; text-align:center">
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                <br>
+              </div>
             </div>
-             <div class="d-flex justify-content-start" style="font-size:16px">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัด Tel : 043-228 899   www.iddrices.co.th  Email : idofficer@iddrives.co.th           
-             <br></div><hr noshade="noshade" size="2"><br>
+             <hr noshade="noshade" size="2"><br>
              @endif
               <!-- /head-form -->
 
@@ -96,12 +115,12 @@
             @csrf   
 
            <!-- bodyform -->
-            <div class="card-body" style="margin: 20px">
-            <div class="d-flex justify-content-end">
+            <div class="card-body" style="padding: 1cm 0 0 0;">
+            <div class="d-flex ">
             เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
             </div><br><br>
             
-            <div class="d-flex justify-content-center">
+            <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;">
             วันที่&nbsp;<?php
              $myDate= $form->date;
              $myYear = date('Y', strtotime($myDate));
@@ -162,21 +181,28 @@
                         //<![CDATA[</script>
               <!-- /textarea -->
             </div><br><br>
-            <div class="d-flex justify-content-center">
+
+            <div style="width:fit-content; position:relative; left:62.5%">
+            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
             </div>
-
-            <div class="d-flex justify-content-center">
+            <br>
+            <div style="text-align:center">
             .......................................................
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div style="text-align:center; line-height: 30px">
             (.........................................................)
-            </div><br><br><br>
+            </div>
+            </div>
+            
+            <br><br><br>
 
             <div class=" footer">
+            
+            <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
-            <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
+            <!-- <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
             <div class="d-flex justify-content-start"  style="margin-left: 20px;font-size:16px;">
             ติดต่อประสานงาน
             </div>
@@ -189,14 +215,18 @@
             <div class="d-flex justify-content-start"style="margin-left: 20px;font-size:16px;">
             E-mail &nbsp;<input type="text" class="form-control" value="{{$form->ctemail}}" style="width: 200px" name="ctemail" placeholder="กรุณากรอกอีเมล" required>
             </div><br>
-            </div><br><br>
+            </div><br><br> -->
 
             
-            <div class="d-flex justify-content-end" style="font-size:15px;margin-right:150px">
+            <!-- <div class="d-flex justify-content-end" style="font-size:15px;margin-right:150px">
             FD-HO/HR-013/1 :00: 19-09-2563
-            </div>
+            </div> -->
 
             <div class="d-flex justify-content-center">
+            <div>
+            <div class="d-flex justify-content-end" style="margin-bottom:10px">
+              FD-IDD-SCL-012:00: 20-05-2566  <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
+            </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->
             <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
@@ -206,6 +236,7 @@
             <img src="{{ asset('dist/img/logo5.png') }}" width="70px">
             <img src="{{ asset('dist/img/logo6.png') }}" width="252px">
             <img src="{{ asset('dist/img/logo7.png') }}" width="81px">
+            </div>
             </div>
             </div>
 
