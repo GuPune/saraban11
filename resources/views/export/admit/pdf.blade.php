@@ -81,16 +81,15 @@
 </style>
 <body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >   
 
-
-    <div class="header" style="padding-bottom:20px;margin-bottom:30px ;border-bottom:2px solid #787878">
-                <div style="float: left; margin-right:10px">
-                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" height="100">
-                </div>
-                <div class="" style="font-size:16pt;line-height: 0.8;">
-                <h5 style="font-size:20pt;font-weight:bold;margin:0"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
-                200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
-                Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th 
-                </div>
+    <div class="header" style=";margin-bottom:20px ;border-bottom:2px solid #787878">
+            <div class=""  style="text-align: center;">
+                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-10px;margin-bottom:5px" width="80px"/>
+            <div class="" style="line-height:18px">
+                <p style="font-size:20pt;font-weight: bold;margin:unset;padding:unset">บริษัท ไอดีไดรฟ์ จำกัด สำนักงานใหญ่</p>
+                <p style="font-size:16pt;margin:unset;padding:unset">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
+                <p style="font-size:16pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
+            </div>
+            </div>
 
     </div>
 
@@ -157,7 +156,7 @@
         $currentDateTime = date("j/n/Y H:i:s");
     ?>
     <footer>
-        <p >Printed By : ............, Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?>, เลขที่ 123456789</p>
+        <p >Printed By : {{Auth::user()->email}} Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?></p>
     </footer>
 
 </body>

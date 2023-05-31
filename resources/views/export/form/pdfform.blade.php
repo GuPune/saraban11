@@ -120,14 +120,13 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 
 
 <body style="line-height:12px">
-<div class="container">
-  <div class="content; height:fit-content">
+  <div class="content" style="padding:0 1cm 0 2cm">
           <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
           @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
           <div class=""  style="text-align: center;">
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="35"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="70"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style="margin-top:-30px;"  height="53"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-right:15px;"  height="35"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style=""  height="53"/>
              
              <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
              <b style="font-size:22px;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</b>&nbsp;
@@ -151,25 +150,25 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              
              <div class=""  style="text-align: center;">
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-30px;" width="60px"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="" width="80px"/>
               <!-- <div>
               <p style="font-size:20px;">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
               <p style="font-size:18px;">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
               <p style="font-size:18px;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
               </div> -->
-             <div class="" style="margin-top: 10px; ">
-             <p style="font-size:16pt;font-weight: bold">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
-             <p style="font-size:14pt;margin: -5px 0 10px 0">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
-            <p style="font-size:14pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
-             </div>
-             </div>
-             <div style="border: 0.5px solid #B4B4B4;margin-top:10px;"></div>            
+             <div class="" style="margin-top: 15px; line-height:7px">
+              <p style="font-size:16pt;font-weight: bold">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
+              <p style="font-size:14pt;margin: -5px 0 10px 0">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
+              <p style="font-size:14pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
+            </div>
+            </div>
+            <div style="border: 0.5px solid #B4B4B4;"></div>            
 
              <!-- header เอกสาร สถานตรวจสภาพรถศูนย์ตรอ.ไอดี) -->
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="text-center">
-            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoINS.png'))) }}" style="margin-top:-25px;margin-right:15px" width="93"/>
-            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoins.png'))) }}" style="margin-top:-25px;" width="90"/>
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoINS.png'))) }}" style="margin-right:15px" width="80"/>
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoins.png'))) }}" style="" width="80"/>
              </div>
 
              <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
@@ -192,9 +191,9 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             <!-- header เอกสาร TZ -->
              @elseif($form->type=='ศูนย์ฝึกอบรม')
              <div class="text-center">
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="35"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-30px;margin-right:15px;"  height="70"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logotz2.png'))) }}" style="margin-top:-30px;"  height="53"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-right:15px;"  height="35"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
+             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logotz2.png'))) }}" style=""  height="53"/>
              </div>
              <div class="" style="text-align:center; margin-top:-10px">
               <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
@@ -277,7 +276,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
   
           
             
-            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:25%;margin-top:20px"  >
+            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:25%;margin-top:10px"  >
             ขอแสดงความนับถือ
             <p style="">.......................................................</p>
             <p>(...........................................................)</p>
@@ -326,7 +325,6 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo7.png'))) }}" width="38px" style="margin-top: 5px"/>
             </div>
             
-            </div>
             </div>
             </div>
             </div>
