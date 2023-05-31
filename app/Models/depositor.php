@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class depositor extends Model
 {
     protected $fillable = [
-        'depositor_name'
+        'depositor_name',
+        'depositors_branche'
     ];
 }

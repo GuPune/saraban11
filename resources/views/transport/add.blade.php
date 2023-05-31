@@ -283,57 +283,63 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script>
-$(document).ready(function(){
-        $.ajax({
-                    dataType: 'json',
-                    type:'GET',
-                    url: '/transport/depositor',
-                    success: function(datas){
-
-$.each(datas, function(i, item) {
-  $('#trdepositor').append($('<option>', {value:item.depositor_name, text:item.depositor_name}));
-});
-                    }
-                })
-    });
-    $('body').on('click', '.btn-save-depositor', function () {
-        var depositor_name = $('#depositor_name').val();
-        $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
+$(document).ready(function()
+{
+    $.ajax(
+    {
+        dataType: 'json',
+        type:'GET',
+        url: '/transport/depositor',
+        success: function(datas)
+        {
+            $.each(datas, function(i, item) 
+            {
+                    $('#trdepositor').append($('<option>', {value:item.depositor_name, text:item.depositor_name}));
             });
-            var token = '{{ csrf_token() }}';
-        $.ajax({
-                    dataType: 'json',
-                    type:'POST',
-                    data:{depositor_name:depositor_name,'_token': token},
-                    url: '/transport/depositor/save',
-                    success: function(datas){
-                        var depositor_name = $('#depositor_name').val('');
-                        newselect();
-                    }
-                })
-        $('#adddepositor').modal('hide');
-    });
+        }
+    })
+});
 
-function newselect(){
+$('body').on('click', '.btn-save-depositor', function () 
+{
+    var depositor_name = $('#depositor_name').val();
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    var token = '{{ csrf_token() }}';
+    $.ajax({
+        dataType: 'json',
+        type:'POST',
+        data:{depositor_name:depositor_name,'_token': token},
+        url: '/transport/depositor/save',
+        success: function(datas){
+            var depositor_name = $('#depositor_name').val('');
+            newselect();
+        }
+    })
+    $('#adddepositor').modal('hide');
+});
+
+function newselect()
+{
         $("#trdepositor").empty();
         $.ajax({
-                    dataType: 'json',
-                    type:'GET',
-                    url: '/transport/depositor',
-                    success: function(datas){
+            dataType: 'json',
+            type:'GET',
+            url: '/transport/depositor',
+            success: function(datas){
+                $('#trdepositor').append($('<option selected disabled>กรุณาเลือกผู้ฝากส่ง</option>'));
+                $.each(datas, function(i, item) {
+                    $('#trdepositor').append($('<option>', {value:item.depositor_name, text:item.depositor_name}));
+                });
+            }
+        })
+};
 
-$('#trdepositor').append($('<option selected disabled>กรุณาเลือกผู้ฝากส่ง</option>'));
-$.each(datas, function(i, item) {
-  $('#trdepositor').append($('<option>', {value:item.depositor_name, text:item.depositor_name}));
-});
-                    }
-                })
-    };
-
-$(document).ready(function() {
+$(document).ready(function() 
+{
     $('#myTable tbody tr').click(function() {
         // Deselect all other rows
         $('#myTable tbody tr').removeClass('selected');
@@ -343,12 +349,12 @@ $(document).ready(function() {
     });
 
     $('#searchInput').on('keyup', function() {
-            var searchValue = $(this).val().toLowerCase();
-            $('#myTable tbody tr').each(function() {
-                var rowText = $(this).text().toLowerCase();
-                $(this).toggle(rowText.indexOf(searchValue) > -1);
-            });
+        var searchValue = $(this).val().toLowerCase();
+        $('#myTable tbody tr').each(function() {
+            var rowText = $(this).text().toLowerCase();
+            $(this).toggle(rowText.indexOf(searchValue) > -1);
         });
+    });
 
     $('#okButton').click(function() {
         // Get the selected row

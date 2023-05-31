@@ -34,7 +34,7 @@ class TransportController extends Controller
     if (!Auth::check()) {
       // ถ้าไม่ได้ login (session timeout) redirect ไปที่หน้า login
       return redirect()->route('lget');}
-
+      
     $transport =transport::all();
     $user =User::all();
     $transport_type = transport_type::all();
@@ -364,18 +364,21 @@ public function transportexport(Request $request)
 public function depositor(Request $request)
       {
         if (!Auth::check()) {
-          return redirect()->route('lget');}
-          $depositor = depositor::all();
-          return response()->json($depositor);
+          return redirect()->route('lget');
+        }
+
+        $depositor = depositor::where('depositors_branche',Auth::user()->Branch)->get();
+        return response()->json($depositor);
       }
   
 public function savedepositor(Request $request)
       {
         if (!Auth::check()) {
           return redirect()->route('lget');}
-  $trdepositor = new depositor();
-  $trdepositor-> depositor_name = $request->depositor_name;
-  $trdepositor ->save();
+        $trdepositor = new depositor();
+        $trdepositor-> depositor_name = $request->depositor_name;
+        $trdepositor-> depositors_branche = Auth::user()->Branch;
+        $trdepositor ->save();
           return response()->json('success');
       }
 
