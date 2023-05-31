@@ -119,8 +119,8 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 ?>
 
 
-<body style="line-height:12px">
-  <div class="content" style="padding:0 1cm 0 2cm">
+<body style="line-height:12px;padding:0 0cm 0 1cm">
+  <div class="content" style="">
           <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
           @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
           <div class=""  style="text-align: center;">
@@ -276,7 +276,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
   
           
             
-            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:25%;margin-top:10px"  >
+            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px"  >
             ขอแสดงความนับถือ
             <p style="">.......................................................</p>
             <p>(...........................................................)</p>
@@ -302,7 +302,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             </div> -->
 
 
-            <div class="text-center" style="margin-left:10%;font-size:18px;">
+            <div class="text-center" style="margin-left:15%;font-size:18px;">
             
             <div style="margin-bottom:10px;margin-left:10%">
               @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
