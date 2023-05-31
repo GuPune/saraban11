@@ -18,8 +18,8 @@
  <aside class="main-sidebar sidebar-dark-light elevation-4 " style="opacity: 0.9;">
     <!-- Brand Logo --> 
     <a href="#" class="brand-link py-3">
-         <img src="{{ asset('dist/img/logo.png') }}" alt="Logo" class="brand-image img-circle elevation-3">
-     <div class="brand-text font-weight-light">ระบบสารบรรณ (User)</div>
+      <img style="margin-top:10px" src="{{ asset('dist/img/logo.png') }}" alt="Logo" class="brand-image img-circle elevation-3">
+      <div class="brand-text font-weight-light" style="text-align:center">ระบบสารบรรณ <br> (สำหรับผู้ใช้งาน)</div>
     </a>
 
 

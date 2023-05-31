@@ -41,7 +41,7 @@
              <div class="p-2 flex-fill" style="font-size:14px;margin-top:5px">
              <h5 style="font-weight:bold; font-size:16px"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 เลขที่ผู้เสียภาษี 0405536000531 <br>
-             Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co. <br></div>
+             Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th <br></div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top:10px">
            

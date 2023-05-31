@@ -90,7 +90,7 @@ $bAddr = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
              <div class="flex-fill" style="font-size:14pt; margin-top: 10px">
              <h5 style="font-size:16pt;font-weight:bold;"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
-             Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co. </div>
+             Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top: 20px"><br>
             
