@@ -202,7 +202,7 @@ footer {
         $currentDateTime = date("j/n/Y H:i:s");
     ?>
     <footer>
-        <p >Printed By : {{Auth::user()->email}} Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?></p>
+        <p style="margin-bottom:-20px">Printed By : {{Auth::user()->email}} Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?></p>
     </footer>
 </body>
 </html>
