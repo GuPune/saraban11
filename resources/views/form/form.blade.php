@@ -22,7 +22,7 @@
             <div class="col-2" style="margin-left:6%; min-width:min-content;">
             ชื่อแบบฟอร์ม
             </div>
-            <div class="col-2"style="margin-left:6%;min-width:min-content;">
+            <div class="col-2"style="right:4%;min-width:min-content;">
             สร้าง
             </div>
       </h4>     
