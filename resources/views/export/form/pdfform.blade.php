@@ -95,7 +95,10 @@ p {
   height:auto;
 }
 
-
+.text-details {
+  word-break: break-word;
+  text-justify: inter-character;
+}
 
 
 </style>
@@ -248,12 +251,12 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
               <div style="">
                 <b >สิ่งที่ส่งมาด้วย</b>
               </div>
-              <div style="margin-top:-20px;margin-left:80px;text-align:justify;">
+              <div class="text-details" style="margin-top:-20px;margin-left:80px;">
                 <p style=""><?php echo $form->enclosure ?></p>
               </div>
             </div>
             @endif
-
+            <br>
             
             <?php 
               $parameter = $form->details;
@@ -262,7 +265,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 
             
             <!-- margin-left:15px;margin-bottom:10px;margin-top:100px;line-height: 50px; -->
-            <div class="" style="text-indent:50px; line-break: anywhere;width:100%;text-align:justify;">
+            <div class="text-details" style="width:100%;">
                 <?php 
                   foreach ($paragraphs as $paragraph) {
                     echo "<p style='margin-top:-30px'>" . $paragraph . "</p>";
@@ -273,8 +276,8 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 
   
           
-            <div class="footer" style=";display: inline-block;width:100%">
-            <div class="text-center" style="font-size:18px;width:fit-content; position:relative; left:6%;"  >
+            
+            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:25%;margin-top:20px"  >
             ขอแสดงความนับถือ
             <p style="">.......................................................</p>
             <p>(...........................................................)</p>
@@ -282,7 +285,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
             
             <br>
             <br>
-
+            <div class="footer" style=";display: inline-block;width:100%">
             <!-- ติดต่อประสานงาน -->
             <!-- <div style="overflow: auto; width: 280px; height:auto;">
             <div class="d-flex justify-content-start"  style="margin-left: 10px;font-size:16px;">

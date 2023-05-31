@@ -270,7 +270,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <!-- <button class="btn btn-primary" type="button" style="margin-right:10px" href="{{url('/pdf/form/pdf/'.$form->id)}}" >ดาวน์โหลด</button> -->
  
- <a href="{{ route('bookoutuser') }}" class="btn btn-secondary" type="button" style="margin-right:10px">ยกเลิก</a>
+ <a href="{{ URL::previous() }}" class="btn btn-secondary" type="button" style="margin-right:10px">ยกเลิก</a>
  <a href="{{url('/pdf/form/pdf/'.$form->id)}}" class="btn btn-primary" type="button">ดาวน์โหลด</a>
  
 </div>
