@@ -277,7 +277,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
           
             
             <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px"  >
-            ขอแสดงความนับถือ
+            ขอแสดงความนับถือ <br><br>
             <p style="">.......................................................</p>
             <p>(...........................................................)</p>
             </div> 
