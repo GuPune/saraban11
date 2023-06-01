@@ -115,7 +115,9 @@ p {
 <!-- ดึงข้อมูล branche name และ address จากตาราง Branche  ด้วย brsnche id ของผู้บันทึก จากตาราง form -->
 <?php
 $bName = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bName'];
-$bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
+
+$bAddrA = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
+$bAddr = explode('Tel:', $bAddrA);
 ?>
 
 
@@ -137,7 +139,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
              <div class="" style="margin-top:-15px">
              <h5 style="font-weight:bold;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
                 <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt; margin-top:-10px;margin-bottom:0; height:auto;padding:0 50px 0 50px;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:16pt; margin-top:-10px;margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
              <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12pt;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -180,7 +182,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
               <div class="" style="text-align:center;margin-top:-20px">
              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt; margin-bottom:0; height:auto;padding:0 50px 0 50px;">ที่อยู่: {{$bAddr}}</p>
+             <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
              <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12pt;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -197,7 +199,7 @@ $bAddr = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
              </div>
              <div class="" style="text-align:center; margin-top:-10px">
               <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: 58/1 ม. 9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th 
+              <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th 
                     Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:12pt;">
