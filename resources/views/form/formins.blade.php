@@ -49,7 +49,7 @@
                     
              <h5 style="font-size:20px;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14px;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+             <p style="font-size:14px;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12px;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12px; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -163,7 +163,15 @@
             </div>
 
             <div style="text-align:center; line-height: 30px">
-            (.........................................................)
+              <p style="float:inline-start">(...</p>
+              <p style="float:inline-start">
+                <input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
+              </p>
+              <p style="float:inline-end">...)</p>
+            </div>
+            <div >
+              <input type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 250px" name="ctemail" required>
+            </div>
             </div>
             </div>
             

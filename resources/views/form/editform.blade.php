@@ -57,7 +57,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="" >
               <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+              <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
               <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
               <div class="" style="font-size:12pt; text-align:center">
               ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -84,7 +84,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->   
              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+             <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12pt; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -193,7 +193,15 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
 
             <div style="text-align:center; line-height: 30px">
-            (.........................................................)
+              <p style="float:inline-start">(...</p>
+              <p style="float:inline-start">
+                <input type="text" class="form-control" value="{{$form->ctname}}" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
+              </p>
+              <p style="float:inline-end">...)</p>
+            </div>
+            <div >
+              <input type="text" class="form-control" value="{{$form->ctemail}}" placeholder="กรุณากรอกตำแหน่ง" style="width: 250px" name="ctemail" required>
+            </div>
             </div>
             </div>
             

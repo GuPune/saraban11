@@ -76,7 +76,7 @@ $bAddr = explode('Tel:', $bAddrA);
              
              <h5 style="text-align:center;font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+             <p style="font-size:16pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12pt; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -104,7 +104,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->   
              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+             <p style="font-size:14pt;text-align:center; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12pt;text-align:center; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12pt; text-align:center">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -200,8 +200,11 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
 
             <div style="text-align:center; line-height: 30px">
-            (.........................................................)
+            (....
+            {{$form->ctname}}
+            ....)
             </div>
+            <div style="text-align:center">{{$form->ctemail}}</div>
             </div>
             
             <br><br><br><br><br>

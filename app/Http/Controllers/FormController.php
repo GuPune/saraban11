@@ -171,9 +171,9 @@ public function pdfform(Request $request,$id)
             'quote'=>$request->quote,
             'enclosure'=>$request->enclosure,
             'details'=>$request->details,
-            // 'ctname'=>$request->ctname,
+            'ctname'=>$request->ctname,
             // 'ctphone'=>$request->ctphone,
-            // 'ctemail'=>$request->ctemail
+            'ctemail'=>$request->ctemail
             // ,'Odate'=>$request->date
         ]);
         // return view('user.bookout.pdfform',compact('user','form'));
@@ -325,10 +325,10 @@ public function add(Request $request)
         $forms->quote = $request->quote;
         $forms->enclosure = $request->enclosure;
         $forms->details = $request->details;
-        $forms->ctname = '-';
+        $forms->ctname = $request->ctname;
         $forms->ctphone = '-';
-        $forms->ctemail = '-';
-        // $forms->ctemail = $request->ctemail;
+        // $forms->ctemail = '-';
+        $forms->ctemail = $request->ctemail;
         $forms->type = $request->type;
         $forms->formagency = Auth::user()->Agency;
         $forms->formbranch = Auth::user()->Branch;
@@ -347,9 +347,9 @@ public function add(Request $request)
         'quote' => $request->quote,
         'enclosure' => $request->enclosure,
         'details' => $request->details,
-        // 'ctname' => $request->ctname,
+        'ctname' => $request->ctname,
         // 'ctphone' => $request->ctphone,
-        // 'ctemail' => $request->ctemaily,
+        'ctemail' => $request->ctemaily,
         'type' => $request->type
         ];
         $transport_type = transport_type::all();
@@ -381,9 +381,9 @@ public function store(Request $request)
             'quote' => $request->quote,
             'enclosure' => $request->enclosure,
             'details' => $request->details,
-            // 'ctname' => $request->ctname,
-            // 'ctphone' => $request->ctphone,
-            // 'ctemail' => $request->ctemail,
+            'ctname' => $request->ctname,
+            'ctphone' => $request->ctphone,
+            'ctemail' => $request->ctemail,
             'type' => $request->type
             ];
             

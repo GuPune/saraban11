@@ -139,7 +139,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <div class="" style="margin-top:-15px">
              <h5 style="font-weight:bold;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
                 <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt; margin-top:-10px;margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+             <p style="font-size:16pt; margin-top:-10px;margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12pt;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -182,7 +182,7 @@ $bAddr = explode('Tel:', $bAddrA);
               <div class="" style="text-align:center;margin-top:-20px">
              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]}}</p>
+             <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12pt;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
@@ -278,10 +278,11 @@ $bAddr = explode('Tel:', $bAddrA);
   
           
             
-            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px"  >
+            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
             ขอแสดงความนับถือ <br><br>
             <p style="">.......................................................</p>
-            <p>(...........................................................)</p>
+            <p style="line-height:1px">(....{{$form->ctname}}....)</p>
+            <p style="text-align:center; line-height:1px">{{$form->ctemail}}</p>
             </div> 
             
             <br>

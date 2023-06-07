@@ -146,7 +146,15 @@
             </div>
 
             <div style="text-align:center; line-height: 30px">
-            (.........................................................)
+              <p style="float:inline-start">(...</p>
+              <p style="float:inline-start">
+                <input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
+              </p>
+              <p style="float:inline-end">...)</p>
+            </div>
+            <div >
+              <input type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 250px" name="ctemail" required>
+            </div>
             </div>
             </div>
             
