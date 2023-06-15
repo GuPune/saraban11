@@ -65,10 +65,10 @@ $bAddr = explode('Tel:', $bAddrA);
               </div><hr noshade="noshade" size="2"><br>
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-             <div class="" style="text-align: center;">
-             <img src="{{ asset('dist/img/logoiddrives.png') }}"  height="100">
+             <div class="d-flex">
+             <img src="{{ asset('dist/img/logoiddrives.png') }}" style="margin-right:10px"  height="100">
              <div class="flex-fill" style="margin-top: 10px;">
-             <h5> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
+             <h5><b> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</b> </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrices.co.th Email : idofficer@iddrives.co.th</div>
             </div>
@@ -192,7 +192,7 @@ $bAddr = explode('Tel:', $bAddrA);
             .......................................................
             </div>
 
-            <div style="text-align:center; line-height: 30px">
+            <div class="d-flex" style="text-align:center; line-height: 30px">
               <p style="float:inline-start">(...</p>
               <p style="float:inline-start">
                 <input type="text" class="form-control" value="{{$form->ctname}}" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
