@@ -197,10 +197,10 @@ $bAddr = explode('Tel:', $bAddrA);
             .......................................................
             </div>
 
-            <div style="text-align:center; line-height: 30px">
+            <div style="text-align:center; line-height: 30px;display: flex">
               <p style="float:inline-start">(</p>
-              <p style="float:inline-start">
-                <input type="text" class="form-control" value="{{$form->ctname}}" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
+              <p style="float:inline-start;width:100%">
+                <input type="text" class="form-control" value="{{$form->ctname}}" placeholder="กรุณากรอกชื่อ" name="ctname" required>
               </p>
               <p style="float:inline-end">)</p>
             </div>
