@@ -34,8 +34,8 @@
       <div class="font1">
         <div class="card" >
           <!-- headform -->
-          <div class="card-header" style="padding:2cm">
-            <div class="" style="text-align: center;" >
+          <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
+            <div class="d-flex">
              <img style="" src="{{ asset('dist/img/logoiddrives.png') }}" height="100">
              <!-- ความจริงกว้างสูง 186x186 -->
              <div class="p-2 flex-fill" style="font-size:14px;margin-top:5px">
@@ -46,7 +46,7 @@
             <hr noshade="noshade" size="2" style="margin-top:10px">
            
             <!-- bodyform -->
-            <div class="card-body" style="margin-left:1cm;margin-top:30px;padding:unset" >
+            <div class="card-body" style="margin-top:30px;padding:unset" >
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
                                 @csrf      
             <!-- <div class="d-flex justify-content-end"> -->
@@ -483,8 +483,13 @@
             .......................................................
             </div>
 
+<<<<<<< HEAD
             <div style="text-align:center; line-height: 30px">
               <p style="float:inline-start">(</p>
+=======
+            <div class="d-flex" style="line-height: 30px">
+              <p style="float:inline-start">(...</p>
+>>>>>>> e633a9bf06d1f2e8eab7effb9c83440f307e4589
               <p style="float:inline-start">
                 <input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
               </p>

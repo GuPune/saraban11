@@ -85,8 +85,8 @@ $bAddr = explode('Tel:', $bAddrA);
              <hr noshade="noshade" size="2"><br>
            
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-             <div class=""  style="text-align: center;">
-             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100">
+             <div class="d-flex">
+             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:20px">
              <div class="flex-fill" style="font-size:14pt; margin-top: 10px">
              <h5 style="font-size:16pt;font-weight:bold;"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
              200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
@@ -177,7 +177,7 @@ $bAddr = explode('Tel:', $bAddrA);
             @else
             <div class="d-flex" style="margin-right:10px;margin-top:5px;">
             <div class="flex-shrink-0">
-            สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
+            <b>สิ่งที่ส่งมาด้วย</b>&nbsp;&nbsp;
             </div>
             <div class="flex-grow-1 ms-3">
             <?php echo $form->enclosure ?>

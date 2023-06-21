@@ -121,7 +121,7 @@ $bAddr = explode('Tel:', $bAddrA);
 ?>
 
 
-<body style="line-height:12px;padding:0 0cm 0 1cm">
+<body style="line-height:12px;padding:0 1cm 0 2cm">
   <div class="content" style="">
           <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
           @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
@@ -151,14 +151,9 @@ $bAddr = explode('Tel:', $bAddrA);
             <!-- header เอกสาร บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่) -->
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              
-             <div class=""  style="text-align: center;">
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="" width="80px"/>
-              <!-- <div>
-              <p style="font-size:20px;">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
-              <p style="font-size:18px;">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
-              <p style="font-size:18px;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th</p>
-              </div> -->
-             <div class="" style="margin-top: 15px; line-height:7px">
+            <div class="d-flex justify-content-start">
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:10px;float: left;" width="80px"/>
+            <div class="" style="margin-top: 15px; line-height:7px;">
               <p style="font-size:16pt;font-weight: bold">บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</p>
               <p style="font-size:14pt;margin: -5px 0 10px 0">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
               <p style="font-size:14pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
