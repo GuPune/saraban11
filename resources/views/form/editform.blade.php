@@ -185,8 +185,9 @@ $bAddr = explode('Tel:', $bAddrA);
 
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
-            <select name="ctphone" class="form-select" aria-label="Default select example">
-              <option selected value="ขอแสดงความนับถือ">ขอแสดงความนับถือ</option>
+            <select class="form-control" name="ctphone" aria-label="Default select example" required="">
+              <option selected disabled value="">กรุณาเลือกคำลงท้าย</option>
+              <option value="ขอแสดงความนับถือ">ขอแสดงความนับถือ</option>
               <option value="จึงเรียนมาเพื่อทราบ">จึงเรียนมาเพื่อทราบ</option>
               <option value="จึงเรียนมาเพื่อโปรดพิจารณา">จึงเรียนมาเพื่อโปรดพิจารณา</option>
             </select>
@@ -196,13 +197,8 @@ $bAddr = explode('Tel:', $bAddrA);
             .......................................................
             </div>
 
-<<<<<<< HEAD
             <div style="text-align:center; line-height: 30px">
               <p style="float:inline-start">(</p>
-=======
-            <div class="d-flex" style="text-align:center; line-height: 30px">
-              <p style="float:inline-start">(...</p>
->>>>>>> e633a9bf06d1f2e8eab7effb9c83440f307e4589
               <p style="float:inline-start">
                 <input type="text" class="form-control" value="{{$form->ctname}}" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
               </p>
