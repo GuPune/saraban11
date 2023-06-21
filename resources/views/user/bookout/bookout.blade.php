@@ -425,7 +425,7 @@
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
-                                        <td class="text-center"><a class="btn btn-success " style="border-radius: 20px; padding: .25rem 1rem" href="{{url('/pdf/form/pdf/'.$rowyes->Form->id)}}" role="button">
+                                        <td class="text-center"><a class="btn btn-success " style="border-radius: 20px; padding: .25rem 1rem" target="_blank" href="{{url('/form/pdf/pre2load/'.$rowyes->Form->id)}}" role="button">
                                         <i class="bi bi-filetype-pdf" style="font-size:20px;"></i>
                                         </a></td>
                                         <!-- <div class="dropdown">
@@ -641,7 +641,7 @@
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
-                                        <td class="text-center"><a class="btn btn-success" style="border-radius: 20px; padding: .25rem 1rem" href="{{url('/pdf/form/pdf/'.$rowno->Form->id)}}" role="button">
+                                        <td class="text-center"><a class="btn btn-success" style="border-radius: 20px; padding: .25rem 1rem" target="_blank" href="{{url('/form/pdf/pre2load/'.$rowno->Form->id)}}" role="button">
                                         <i class="bi bi-filetype-pdf" style="font-size:20px;"></i>
                                         </a></td>
                                         <!-- <div class="dropdown">
@@ -950,7 +950,7 @@
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
                                         <!-- <td class="text-center"><a class="btn btn-success" style="border-radius: 20px; padding: .25rem 1rem" href="{{url('/pdf/form/pdf/'.$row->Form->id)}}" role="button"> -->
-                                        <td class="text-center"><a class="btn btn-success" style="border-radius: 20px; padding: .25rem 1rem" href="{{url('/form/pdf/exview/'.$row->Form->id)}}" role="button">
+                                        <td class="text-center"><a class="btn btn-success" style="border-radius: 20px; padding: .25rem 1rem" target="_blank" href="{{url('/form/pdf/pre2load/'.$row->Form->id)}}" role="button">
                                         <i class="bi bi-filetype-pdf" style="font-size:20px;"></i>
                                         </a></td>
                                         <!-- <div class="dropdown">

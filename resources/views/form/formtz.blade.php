@@ -138,7 +138,11 @@
             
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
-            ขอแสดงความนับถือ
+            <select name="ctphone" class="form-select" aria-label="Default select example">
+              <option selected value="ขอแสดงความนับถือ">ขอแสดงความนับถือ</option>
+              <option value="จึงเรียนมาเพื่อทราบ">จึงเรียนมาเพื่อทราบ</option>
+              <option value="จึงเรียนมาเพื่อโปรดพิจารณา">จึงเรียนมาเพื่อโปรดพิจารณา</option>
+            </select>
             </div>
             <br>
             <div style="text-align:center">
@@ -146,11 +150,11 @@
             </div>
 
             <div style="text-align:center; line-height: 30px">
-              <p style="float:inline-start">(...</p>
+              <p style="float:inline-start">(</p>
               <p style="float:inline-start">
                 <input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 220px" name="ctname" required>
               </p>
-              <p style="float:inline-end">...)</p>
+              <p style="float:inline-end">)</p>
             </div>
             <div >
               <input type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 250px" name="ctemail" required>

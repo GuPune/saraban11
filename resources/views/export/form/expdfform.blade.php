@@ -192,7 +192,7 @@ $bAddr = explode('Tel:', $bAddrA);
             
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
-            ขอแสดงความนับถือ
+            {{$form->ctphone}}
             </div>
             <br>
             <div style="text-align:center">
@@ -200,9 +200,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
 
             <div style="text-align:center; line-height: 30px">
-            (....
-            {{$form->ctname}}
-            ....)
+            ( {{$form->ctname}} )
             </div>
             <div style="text-align:center">{{$form->ctemail}}</div>
             </div>
