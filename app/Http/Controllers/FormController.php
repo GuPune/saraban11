@@ -139,14 +139,6 @@ public function preview()
         return view('form.preview',compact('user','year','form'));
         // return view('form.preview',compact('user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','form'));
     }
-public function exview(Request $request,$id)
-    {
-        if (!Auth::check()) {
-            return redirect()->route('lget');}
-        $form = Form::find($id);
-        return view('export.form.expdfform', compact('form'));
-        // return view('form.preview',compact('user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','form'));
-    }
 
 public function viewBeforDownload(Request $request,$id)
     {
@@ -179,7 +171,7 @@ public function pdfform(Request $request,$id)
             'enclosure'=>$request->enclosure,
             'details'=>$request->details,
             'ctname'=>$request->ctname,
-            'ctphone'=>$request->ctphone,
+            //'ctphone'=>$request->ctphone,
             'ctemail'=>$request->ctemail
             // ,'Odate'=>$request->date
         ]);
@@ -333,7 +325,7 @@ public function add(Request $request)
         $forms->enclosure = $request->enclosure;
         $forms->details = $request->details;
         $forms->ctname = $request->ctname;
-        $forms->ctphone = $request->ctphone;
+        $forms->ctphone = $request->ctphone ??'-';
         // $forms->ctemail = '-';
         $forms->ctemail = $request->ctemail;
         $forms->type = $request->type;

@@ -274,7 +274,7 @@ $bAddr = explode('Tel:', $bAddrA);
           
             
             <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
-            {{$form->ctphone}} <br><br>
+            ขอแสดงความนับถือ <br><br>
             <p style="">.......................................................</p>
             <p style="line-height:1px">( {{$form->ctname}} )</p>
             <p style="text-align:center; line-height:1px">{{$form->ctemail}}</p>

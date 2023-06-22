@@ -636,8 +636,7 @@ $bAddr = explode('Tel:', $bAddrA);
             
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
-            {{$ctphone}}
-            <input type="hidden" value="{{$ctphone}}" class="form-control" style="width: 150px" name="ctphone">
+            ขอแสดงความนับถือ
             </div>
             <br>
             <div style="text-align:center">
