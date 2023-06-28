@@ -69,7 +69,7 @@ class FormController extends Controller
         $manager = manager::all();
         $nameManager = [];
               foreach ($manager as $manager) {
-                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
                 
               }
@@ -97,7 +97,7 @@ class FormController extends Controller
         $manager = manager::all();
         $nameManager = [];
               foreach ($manager as $manager) {
-                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
                 
               }
@@ -124,7 +124,7 @@ class FormController extends Controller
         $manager = manager::all();
         $nameManager = [];
               foreach ($manager as $manager) {
-                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
                 
               }
@@ -152,7 +152,7 @@ class FormController extends Controller
         $manager = manager::all();
         $nameManager = [];
               foreach ($manager as $manager) {
-                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
                 
               }
@@ -190,7 +190,7 @@ public function viewpdfform(Request $request,$id)
         $manager = manager::all();
         $nameManager = [];
               foreach ($manager as $manager) {
-                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
                 
               }
