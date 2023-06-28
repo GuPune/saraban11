@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('forms', function (Blueprint $table) {
-            $table->renameColumn('sign', 'sign');
-            $table->renameColumn('sPosition', 'sPosition');
-            $table->renameColumn('sName', 'sName');
+            $table->renameColumn('ctphone', 'sign');
+            $table->renameColumn('ctemail', 'sPosition');
+            $table->renameColumn('ctname', 'sName');
         });
     }
 
@@ -28,9 +28,9 @@ return new class extends Migration
     public function down()
     {
         Schema::table('forms', function (Blueprint $table) {
-            $table->renameColumn('sign', 'sign');
-            $table->renameColumn('sPosition', 'sPosition');
-            $table->renameColumn('sName', 'sName');
+            $table->renameColumn('ctphone', 'sign');
+            $table->renameColumn('ctemail', 'sPosition');
+            $table->renameColumn('ctname', 'sName');
         });
     }
 };
