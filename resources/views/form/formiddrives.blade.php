@@ -18,12 +18,20 @@
         margin: 30mm 45mm 30mm 45mm;
         size: 21cm 29.7cm landscape;
     }
+    .dropdown {
+      display: none;
+      height: 90px;
+      overflow-y: scroll;
+
+    }
+    .dropdown.show{
+      display: block;
+    }
 </style>
 
 <!-- 
   layout หน้า  PDF สร้างเอกสารของ สำนักงานใหญ่
  -->
-
 
 <div class="content-wrapper">
     <div class="content-header">
@@ -476,24 +484,32 @@
             </div>
             <br>
             <div style="text-align:center">
-            .......................................................
+            <img id="selected-image" src="">
+            <input id="signName" type="text" style="display:none" name="ctphone">
+            <p>.......................................................</p>
             </div>
 
             <div style="text-align:center;display:flex; line-height: 30px">
               <p style="float:inline-start">(</p>
-              <p style="float:inline-start;width: 100%;">
-                <input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" name="ctname" required>
+              <p style="width: 100%;">
+                <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="ctname" required>
+                
               </p>
               <p style="float:inline-end">)</p>
             </div>
+            <div class="dropdown drowdown-menu" id="dmanager">
+                    <a class="dropdown-item" onclick="clearSign()"> Not sign </a>
+                  @foreach ($nameManager as $name)
+                    <a class="dropdown-item" value="{{ trim($name[1]) }}" positionSelected="{{ $name[2] }}" nameSelected="{{ $name[0] }}" onclick="selectOption(this)"> {{ $name[0] }} </a>
+                  @endforeach
+                </div>
             <div >
-              <input type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 250px" name="ctemail" required>
+              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="ctemail" required>
             </div>
           
             </div>
             </div>
             <br><br><br><br><br>
-            
             <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <!-- <div style="overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
@@ -557,4 +573,63 @@
       </div>
     </div>
 </div>
+
+<script> 
+  var textF = document.getElementById("textf");
+  var textPo = document.getElementById("position");
+  var dropd = document.getElementById("dmanager");
+
+  function selectOption (option) {
+    
+    var imageName = option.getAttribute("value");
+    var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
+    var selectedImage = document.getElementById("selected-image");
+        selectedImage.src = imagePath;
+    
+    textF.value = option.getAttribute("nameSelected");
+    textPo.value = option.getAttribute("positionSelected");
+    dropd.classList.remove("show");
+
+    // Check if the text field value is empty or doesn't match a specific condition
+    if (textFieldValue === "" || textFieldValue !== "specificCondition") {
+      selectedImage.style.display = "none"; // Hide the image
+    } else {
+      selectedImage.src = imagePath; // Show the image
+      selectedImage.style.display = "block"; // Make sure the image is visible
+    }
+  }
+
+  function clearSign(){
+    var selectedImage = document.getElementById("selected-image");
+        selectedImage.src = "";
+  }
+
+  textF.addEventListener("click", function(event) {
+    dropd.classList.add("show");
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function(){
+    dropd.classList.remove("show");
+  });
+  
+  var input = document.getElementById('textf');
+  var dropdown = document.getElementById('dmanager');
+  var options = dropdown.getElementsByTagName('a');
+  
+  input.addEventListener('input', function() {
+    var searchTerm = input.value.toUpperCase();
+    dropd.classList.add("show");
+    for (var i = 0; i < options.length; i++) {
+      var option = options[i];
+      var text = option.innerText.toUpperCase();
+      
+      if (text.indexOf(searchTerm) > -1) {
+        option.style.display = '';
+      } else {
+        option.style.display = 'none';
+      }
+    }
+  });
+</script>
 @endsection

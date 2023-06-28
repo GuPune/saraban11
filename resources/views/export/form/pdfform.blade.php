@@ -274,7 +274,12 @@ $bAddr = explode('Tel:', $bAddrA);
           
             
             <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
-            ขอแสดงความนับถือ <br><br>
+            ขอแสดงความนับถือ <br>
+            @if ($form->ctphone != null || $form->ctphone != "")
+              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->ctphone . '.png'))) }}"/>
+            @else
+            <br>
+            @endif
             <p style="">.......................................................</p>
             <p style="line-height:1px">( {{$form->ctname}} )</p>
             <p style="text-align:center; line-height:1px">{{$form->ctemail}}</p>

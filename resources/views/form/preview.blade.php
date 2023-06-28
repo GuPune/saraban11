@@ -638,9 +638,12 @@ $bAddr = explode('Tel:', $bAddrA);
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
             </div>
-            <br>
-            <div style="text-align:center">
-            .......................................................
+            <div style="text-align:center;">
+              <img src="{{ asset('dist/img/sign/' . $ctphone . '.png') }}">
+              <input type="hidden" value="{{$ctphone}}" class="form-control" style="width: 150px" name="ctphone">
+            </div>
+            <div style="text-align:center;">
+              .......................................................
             </div>
 
             <div style="text-align:center; line-height: 30px">
@@ -741,4 +744,6 @@ $bAddr = explode('Tel:', $bAddrA);
       </div>
     </div>
 </div>
+
+
 @endsection

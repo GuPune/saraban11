@@ -169,9 +169,9 @@
                         ?>
                     </div>
                     <div class="col-4">
-                    @if($rowtr->branch->branche_name=='-')
+                    @if($rowtr->branch->branche_name ??'-')
                     {{$rowtr->agency->agency_name}}
-                    @elseif($rowtr->Department->Dpmname=='-')
+                    @elseif($rowtr->Department->Dpmname ??'-')
                     {{$rowtr->agency->agency_name}}/{{$rowtr->branch->branche_name}}
                     @else
                     {{$rowtr->department->Dpmname}}/{{$rowtr->branch->branche_name}}

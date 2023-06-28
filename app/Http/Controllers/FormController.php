@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use App\Models\User;
 use App\Models\Form;
+use App\Models\manager;
 use App\Models\branch;
 use Illuminate\support\Facades\DB; 
 use App\Models\transport_type;
@@ -42,6 +43,7 @@ class FormController extends Controller
             return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
+        
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
         $ad = Form::where('fdepartment','AD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ธุรการ
         $pur = Form::where('fdepartment','PUR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//จัดซื้อ
@@ -63,7 +65,15 @@ class FormController extends Controller
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
         $year =mb_strimwidth($years+543 , -2, 2);
-        return view('form.formiddrives',compact('user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','ids','form'));
+
+        $manager = manager::all();
+        $nameManager = [];
+              foreach ($manager as $manager) {
+                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                array_push($nameManager,$isDecode);
+                
+              }
+        return view('form.formiddrives',compact('nameManager','manager','user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','ids','form'));
     }
 
     public function formIDD()
@@ -82,7 +92,16 @@ class FormController extends Controller
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
         $year =mb_strimwidth($years+543 , -2, 2);
-        return view('form.formidd',compact('user','form','total','year','idd'));
+
+
+        $manager = manager::all();
+        $nameManager = [];
+              foreach ($manager as $manager) {
+                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                array_push($nameManager,$isDecode);
+                
+              }
+        return view('form.formidd',compact('nameManager','user','form','total','year','idd'));
         // return view('form.formidd',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
     }
 
@@ -102,7 +121,14 @@ class FormController extends Controller
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
         $year =mb_strimwidth($years+543 , -2, 2);
-        return view('form.formins',compact('user','form','ins','total','year'));
+        $manager = manager::all();
+        $nameManager = [];
+              foreach ($manager as $manager) {
+                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                array_push($nameManager,$isDecode);
+                
+              }
+        return view('form.formins',compact('nameManager','user','form','ins','total','year'));
         // return view('form.formins',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
     }
 
@@ -122,7 +148,15 @@ class FormController extends Controller
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
         $year =mb_strimwidth($years+543 , -2, 2);
-        return view('form.formtz',compact('user','form','tz','total','year'));
+
+        $manager = manager::all();
+        $nameManager = [];
+              foreach ($manager as $manager) {
+                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                array_push($nameManager,$isDecode);
+                
+              }
+        return view('form.formtz',compact('nameManager','user','form','tz','total','year'));
         // return view('form.formtz',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
     }
 
@@ -153,7 +187,14 @@ public function viewpdfform(Request $request,$id)
             return redirect()->route('lget');}
         $user = User::all();
         $form = Form::find($id);
-        return view('form.editform',compact('user','form'));
+        $manager = manager::all();
+        $nameManager = [];
+              foreach ($manager as $manager) {
+                $isDecode = [json_decode('"'.trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                array_push($nameManager,$isDecode);
+                
+              }
+        return view('form.editform',compact('nameManager','user','form'));
     }
 
 public function pdfform(Request $request,$id)
@@ -171,7 +212,7 @@ public function pdfform(Request $request,$id)
             'enclosure'=>$request->enclosure,
             'details'=>$request->details,
             'ctname'=>$request->ctname,
-            //'ctphone'=>$request->ctphone,
+            'ctphone'=>$request->ctphone,
             'ctemail'=>$request->ctemail
             // ,'Odate'=>$request->date
         ]);
@@ -325,7 +366,7 @@ public function add(Request $request)
         $forms->enclosure = $request->enclosure;
         $forms->details = $request->details;
         $forms->ctname = $request->ctname;
-        $forms->ctphone = $request->ctphone ??'-';
+        $forms->ctphone = $request->ctphone;
         // $forms->ctemail = '-';
         $forms->ctemail = $request->ctemail;
         $forms->type = $request->type;
