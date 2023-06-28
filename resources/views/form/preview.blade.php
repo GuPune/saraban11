@@ -637,9 +637,9 @@ $bAddr = explode('Tel:', $bAddrA);
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
-            </div>
+            </div> <br>
             <div style="text-align:center;">
-              <img src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
+              <!-- <img src="{{ asset('dist/img/sign/' . $sign . '.png') }}"> -->
               <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
             </div>
             <div style="text-align:center;">

@@ -276,7 +276,8 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
             ขอแสดงความนับถือ <br>
             @if (!empty($form->sign) && strlen($form->sign) > 1 && file_exists(public_path('dist/img/sign/' . $form->sign . '.png')))
-              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->sign . '.png'))) }}" />
+              <br>
+              <!-- <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->sign . '.png'))) }}" /> -->
             @else
               <br>
             @endif

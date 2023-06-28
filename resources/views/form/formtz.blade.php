@@ -151,8 +151,8 @@
             </div>
             <br>
             <div style="text-align:center">
-            <img id="selected-image" src="">
-            <input id="signName" type="text" style="display:none" name="sign">
+            <!-- <img id="selected-image" src=""> -->
+            <input id="signName" type="text" style="display:none" name="ctphone">
             <p>.......................................................</p>
             </div>
 
@@ -171,7 +171,7 @@
                   @endforeach
                 </div>
             <div >
-              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
+              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="ctemail" required>
             </div>
             </div>
             </div>
@@ -188,10 +188,10 @@
             ชื่อ&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 200px" name="sName" required>
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px">
-            เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกเบอร์โทร" style="width: 200px" name="sign" required>
+            เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกเบอร์โทร" style="width: 200px" name="ctphone" required>
             </div>
             <div class="d-flex justify-content-start"style="margin-left: 20px">
-            E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="sPosition" required>
+            E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="ctemail" required>
             </div><br>
             </div><br><br> -->
 
@@ -249,8 +249,8 @@
     
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
-    var selectedImage = document.getElementById("selected-image");
-        selectedImage.src = imagePath;
+    // var selectedImage = document.getElementById("selected-image");
+    //     selectedImage.src = imagePath;
     
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
@@ -267,8 +267,8 @@
   }
 
   function clearSign(){
-    var selectedImage = document.getElementById("selected-image");
-        selectedImage.src = "";
+    // var selectedImage = document.getElementById("selected-image");
+    //     selectedImage.src = "";
   }
 
   textF.addEventListener("click", function(event) {
