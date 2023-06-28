@@ -275,14 +275,14 @@ $bAddr = explode('Tel:', $bAddrA);
             
             <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
             ขอแสดงความนับถือ <br>
-            @if (!empty($form->ctphone) && strlen($form->ctphone) > 1 && file_exists(public_path('dist/img/sign/' . $form->ctphone . '.png')))
-              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->ctphone . '.png'))) }}" />
+            @if (!empty($form->sign) && strlen($form->sign) > 1 && file_exists(public_path('dist/img/sign/' . $form->sign . '.png')))
+              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->sign . '.png'))) }}" />
             @else
               <br>
             @endif
             <p style="">.......................................................</p>
-            <p style="line-height:1px">( {{$form->ctname}} )</p>
-            <p style="text-align:center; line-height:1px">{{$form->ctemail}}</p>
+            <p style="line-height:1px">( {{$form->sName}} )</p>
+            <p style="text-align:center; line-height:1px">{{$form->sPosition}}</p>
             </div> 
             
             <br>
@@ -294,13 +294,13 @@ $bAddr = explode('Tel:', $bAddrA);
             ติดต่อประสานงาน
             </div>
             <div style="margin-left:10px;font-size:16px;">
-            ชื่อ&nbsp;{{$form->ctname}} 
+            ชื่อ&nbsp;{{$form->sName}} 
             </div>
             <div style="margin-left:10px;font-size:16px;">
-            เบอร์โทรศัพท์&nbsp;{{$form->ctphone}} 
+            เบอร์โทรศัพท์&nbsp;{{$form->sign}} 
             </div>
             <div style="margin-left:10px;font-size:16px;">
-            E-mail &nbsp;{{$form->ctemail}} 
+            E-mail &nbsp;{{$form->sPosition}} 
             </div>
             </div> -->
 

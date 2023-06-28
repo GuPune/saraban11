@@ -174,14 +174,14 @@
             <br>
             <div style="text-align:center">
             <img id="selected-image" src="">
-            <input id="signName" type="text" style="display:none" name="ctphone">
+            <input id="signName" type="text" style="display:none" name="sign">
             <p>.......................................................</p>
             </div>
 
             <div style="text-align:center;display:flex; line-height: 30px">
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
-                <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="ctname" required>
+                <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="sName" required>
                 
               </p>
               <p style="float:inline-end">)</p>
@@ -193,7 +193,7 @@
                   @endforeach
                 </div>
             <div >
-              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="ctemail" required>
+              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
             </div>
             </div>
             </div>
@@ -206,13 +206,13 @@
             ติดต่อประสานงาน
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px">
-            ชื่อ&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 200px" name="ctname" required>
+            ชื่อ&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 200px" name="sName" required>
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px">
-            เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกเบอร์โทร" style="width: 200px" name="ctphone" required>
+            เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกเบอร์โทร" style="width: 200px" name="sign" required>
             </div>
             <div class="d-flex justify-content-start"style="margin-left: 20px">
-            E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="ctemail" required>
+            E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="sPosition" required>
             </div><br> -->
             </div><br><br>
 

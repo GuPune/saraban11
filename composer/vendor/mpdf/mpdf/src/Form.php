@@ -1686,8 +1686,8 @@ f Q ';
 		$selectItem = false;
 		$selectIndex = false;
 		foreach ($form['OPT']['SEL'] as $selectKey => $selectVal) {
-			$selectName = $this->writer->string($form['OPT']['VAL'][$selectVal]);
-			$selectItem .= ' ' . $selectName . ' ';
+			$selesName = $this->writer->string($form['OPT']['VAL'][$selectVal]);
+			$selectItem .= ' ' . $selesName . ' ';
 			$selectIndex .= ' ' . $selectVal . ' ';
 		}
 		if ($selectItem) {

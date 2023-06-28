@@ -639,8 +639,8 @@ $bAddr = explode('Tel:', $bAddrA);
             ขอแสดงความนับถือ
             </div>
             <div style="text-align:center;">
-              <img src="{{ asset('dist/img/sign/' . $ctphone . '.png') }}">
-              <input type="hidden" value="{{$ctphone}}" class="form-control" style="width: 150px" name="ctphone">
+              <img src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
+              <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
             </div>
             <div style="text-align:center;">
               .......................................................
@@ -648,12 +648,12 @@ $bAddr = explode('Tel:', $bAddrA);
 
             <div style="text-align:center; line-height: 30px">
             (
-            {{$ctname}}
-            <input type="hidden" value="{{$ctname}}" class="form-control" style="width: 150px" name="ctname">
+            {{$sName}}
+            <input type="hidden" value="{{$sName}}" class="form-control" style="width: 150px" name="sName">
             )
             </div>
-            <div style="text-align:center;">{{$ctemail}}</div>
-            <input type="hidden" value="{{$ctemail}}" class="form-control" style="width: 150px" name="ctemail">
+            <div style="text-align:center;">{{$sPosition}}</div>
+            <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
             </div>
             
             <br><br><br><br><br>

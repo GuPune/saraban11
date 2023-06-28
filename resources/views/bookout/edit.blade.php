@@ -79,7 +79,7 @@
             <!-- <div class="mb-3 row">
                 <div  class="col-sm-2 col-form-label">หมายเลขติดต่อ</div>
                 <div class="col-sm-9">
-                <input class="form-control" value="{{ $bookout->form->ctphone}}" type="text" placeholder="กรุณากรอกหมายเลขติดต่อ" disabled>
+                <input class="form-control" value="{{ $bookout->form->sign}}" type="text" placeholder="กรุณากรอกหมายเลขติดต่อ" disabled>
                 </div>
             </div> -->
 

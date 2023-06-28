@@ -19,9 +19,9 @@ class Form extends Model
         'quote',   //เพิ่มเข้ามา             
         'enclosure',   //เพิ่มเข้ามา             
         'details',  //เพิ่มเข้ามา 
-        'ctname',
-        'ctphone',
-        'ctemail',
+        'sName',
+        'sign',
+        'sPosition',
         'type',
         'formagency',
         'formbranch',

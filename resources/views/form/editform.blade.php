@@ -198,15 +198,15 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
             <br>
             <div style="text-align:center">
-            <img id="selected-image" src="{{ asset('dist/img/sign/' . $form->ctphone . '.png') }}">
-            <input id="signName" type="text" style="display:none" value="{{$form->ctphone}}" name="ctphone">
+            <img id="selected-image" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
+            <input id="signName" type="text" style="display:none" value="{{$form->sign}}" name="sign">
             <p>.......................................................</p>
             </div>
 
             <div style="text-align:center;display:flex; line-height: 30px">
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
-                <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" value="{{$form->ctname}}" autocomplete="off" name="ctname" required>
+                <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" value="{{$form->sName}}" autocomplete="off" name="sName" required>
                 
               </p>
               <p style="float:inline-end">)</p>
@@ -218,7 +218,7 @@ $bAddr = explode('Tel:', $bAddrA);
                   @endforeach
                 </div>
             <div >
-              <input id="position" type="text" class="form-control" value="{{$form->ctemail}}" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="ctemail" required>
+              <input id="position" type="text" class="form-control" value="{{$form->sPosition}}" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
             </div>
             </div>
             </div>
@@ -234,13 +234,13 @@ $bAddr = explode('Tel:', $bAddrA);
             ติดต่อประสานงาน
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px;font-size:16px;">
-            ชื่อ&nbsp;<input type="text" class="form-control" value="{{$form->ctname}}" style="width: 200px" name="ctname" placeholder="กรุณากรอกชื่อ" required>
+            ชื่อ&nbsp;<input type="text" class="form-control" value="{{$form->sName}}" style="width: 200px" name="sName" placeholder="กรุณากรอกชื่อ" required>
             </div>
             <div class="d-flex justify-content-start" style="margin-left: 20px;font-size:16px;">
-            เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" value="{{$form->ctphone}}" style="width: 200px" name="ctphone" placeholder="กรุณากรอกเบอร์โทรศัพท์" required>
+            เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" value="{{$form->sign}}" style="width: 200px" name="sign" placeholder="กรุณากรอกเบอร์โทรศัพท์" required>
             </div>
             <div class="d-flex justify-content-start"style="margin-left: 20px;font-size:16px;">
-            E-mail &nbsp;<input type="text" class="form-control" value="{{$form->ctemail}}" style="width: 200px" name="ctemail" placeholder="กรุณากรอกอีเมล" required>
+            E-mail &nbsp;<input type="text" class="form-control" value="{{$form->sPosition}}" style="width: 200px" name="sPosition" placeholder="กรุณากรอกอีเมล" required>
             </div><br>
             </div><br><br> -->
 
