@@ -259,6 +259,7 @@
 </div>
 <script> 
   var textF = document.getElementById("textf");
+  var storSign = document.getElementById("signName");
   var textPo = document.getElementById("position");
   var dropd = document.getElementById("dmanager");
 
@@ -271,6 +272,7 @@
     
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
+    storSign.value = imageName;
     dropd.classList.remove("show");
 
     // Check if the text field value is empty or doesn't match a specific condition
