@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('managers')) {
-            Schema::create('managers', function (Blueprint $table) {
+        if (!Schema::hasTable('manager')) {
+            Schema::create('manager', function (Blueprint $table) {
                 $table->charset = 'utf8mb4';
                 $table->collation = 'utf8mb4_unicode_ci';
                 $table->bigIncrements('id');

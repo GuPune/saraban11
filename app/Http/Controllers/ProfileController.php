@@ -140,8 +140,8 @@ public function addclaim()
                     $prefix = Prefix::all();
                     $agency = agency::all();
                     $branch  = branch::orderby('agency','ASC')->get();
-                    $department = Department::orderby('branch','DESC')->orderby('Dpmname','ASC')->groupBy('Dpmname')->selectRaw('count(*) as total, Dpmname')->get();
-                    // $department = Department::all()->orderby('branch','DESC')->groupBy('Dpmname');
+                    //$department = Department::orderby('branch','DESC')->orderby('Dpmname','ASC')->groupBy('Dpmname')->selectRaw('count(*) as total, Dpmname')->get();
+                    $department = Department::all();
 
                     // $agency = agency::where('agency_name','บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)')->get();
                     // $branch  = branch::where('branche_name','สำนักงานใหญ่')->get();

@@ -105,6 +105,9 @@
                               @elseif($shortname =='คลังสินค้า')
                               IDS/@if($ids==null){{ __('001') }}@elseif($ids<=8)00{{$ids+1}}@elseif($ids>=9)0{{$ids+1}}@elseif($ids>=99){{$ids+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
+                              @elseif($shortname =='พัฒนาผลิตภัณฑ์')
+                              IDC/@if($idc==null){{ __('001') }}@elseif($idc<=8)00{{$idc+1}}@elseif($idc>=9)0{{$idc+1}}@elseif($idc>=99){{$idc+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
+
                               @endif
 
             </div>
@@ -383,6 +386,31 @@
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                           
+
+                            @elseif($shortname=='พัฒนาผลิตภัณฑ์')
+                            <input type="hidden" value="IDC" class="form-control" style="width: 60px" name="fdepartment">
+                            @if($idc==null)
+                            <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($idc<=8)
+                            <input type="hidden" value=<?php echo '00'.$idc+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($idc>=9)
+                            <input type="hidden" value=<?php echo '0'.$idc+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($idc>=99)
+                            <input type="hidden" value=<?php echo $idc+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @endif
+                            @if($total==null)
+                            <input type="hidden" value="001" class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total<=8)
+                            <input type="hidden" value=<?php echo '00'.$total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total>=9)
+                            <input type="hidden" value=<?php echo '0'.$total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total>=99)
+                            <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @endif
+                            <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
+
+
+
                             @elseif($shortname=='คลังสินค้า')
                             <input type="hidden" value="IDS" class="form-control" style="width: 60px" name="fdepartment">
                             @if($ids==null)

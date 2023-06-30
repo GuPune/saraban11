@@ -59,6 +59,7 @@ class FormController extends Controller
         $iso = Form::where('fdepartment','ISO')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ส่วนงานบริหารงานคุณภาพ
         $pm = Form::where('fdepartment','PM')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บริหารงานโครงการ
         $ids = Form::where('fdepartment','IDS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//คลังสินค้า
+        $idc = Form::where('fdepartment','IDC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//พัฒนาผลิตภัณฑ์
         // $total = Form::where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();
         $total = Form::count();
         $data10 = date("y-m-d");
@@ -73,7 +74,7 @@ class FormController extends Controller
                 array_push($nameManager,$isDecode);
                 
               }
-        return view('form.formiddrives',compact('nameManager','manager','user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','ids','form'));
+        return view('form.formiddrives',compact('nameManager','manager','user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','ids','form','idc'));
     }
 
     public function formIDD()
@@ -462,7 +463,8 @@ public function store(Request $request)
             $iso = Form::where('fdepartment','ISO')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ส่วนงานบริหารงานคุณภาพ
             $pm = Form::where('fdepartment','PM')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บริหารงานโครงการ
             $ids = Form::where('fdepartment','IDS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//คลังสินค้า
-            return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','total','year','ad','pur','fin','acc','hr','iti','mkt','itd','sale','leg','cs','iso','pm','ids'))->with($data,'abd',$abd,$agency,'agency');
+            $idc = Form::where('fdepartment','IDC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//พัฒนาผลิตภัณฑ์
+            return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','total','year','ad','pur','fin','acc','hr','iti','mkt','itd','sale','leg','cs','iso','pm','ids','idc'))->with($data,'abd',$abd,$agency,'agency');
 
         }
         elseif($request->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี'){
