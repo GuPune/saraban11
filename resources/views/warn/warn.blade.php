@@ -57,11 +57,11 @@
         @else
         @foreach($admit as $rowadmit) 
         @if(Auth::user()->role==0)  
-        <a href="{{route('admituser')}}" target ="_blank" class="text-dark">   
+        <a href="{{route('admituser')}}"  class="text-dark">   
         @elseif(Auth::user()->role==1)
-        <a href="{{route('admitstaff')}}" target ="_blank" class="text-dark">   
+        <a href="{{route('admitstaff')}}"  class="text-dark">   
         @elseif(Auth::user()->role==2)
-        <a href="{{route('admitadmin')}}" target ="_blank" class="text-dark">   
+        <a href="{{route('admitadmin')}}"  class="text-dark">   
         @endif       
            <div class="row justify-content-around">          
             <div class="col-4">
@@ -110,11 +110,11 @@
         @else
         @foreach($bookout as $rowbookout)  
         @if(Auth::user()->role==0)  
-        <a href="{{route('bookoutuser')}}" target ="_blank" class="text-dark">       
+        <a href="{{route('bookoutuser')}}"  class="text-dark">       
         @elseif(Auth::user()->role==1)
-        <a href="{{route('bookoutstaff')}}" target ="_blank" class="text-dark">       
+        <a href="{{route('bookoutstaff')}}"  class="text-dark">       
         @elseif(Auth::user()->role==2)
-        <a href="{{route('bookoutadmin')}}" target ="_blank" class="text-dark">       
+        <a href="{{route('bookoutadmin')}}"  class="text-dark">       
         @endif     
           <div class="row justify-content-around">
                     <div class="col-4">
@@ -151,11 +151,11 @@
         @else
          @foreach($transport as $rowtr)
          @if(Auth::user()->role==0)  
-         <a href="{{route('transportuser')}}" target ="_blank" class="text-dark">     
+         <a href="{{route('transportuser')}}"  class="text-dark">     
         @elseif(Auth::user()->role==1)
-        <a href="{{route('transportstaff')}}" target ="_blank" class="text-dark">     
+        <a href="{{route('transportstaff')}}"  class="text-dark">     
         @elseif(Auth::user()->role==2)
-        <a href="{{route('transportadmin')}}" target ="_blank" class="text-dark">     
+        <a href="{{route('transportadmin')}}"  class="text-dark">     
         @endif      
           <div class="row justify-content-around">
                     <div class="col-4">
