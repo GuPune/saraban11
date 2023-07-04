@@ -16,7 +16,7 @@ class Helper extends Model
         $getmo = Depart::where('Dpmid',$data)->first();
 
 
-        return $getmo->Dpmname;
+        return $getmo->Dpmname ?? 'DpmNotFound';
     }
     public static  function Bran ($id) {
         // return Branche Name and Brance Address จาก brance id
