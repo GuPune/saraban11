@@ -239,7 +239,7 @@ public function add(Request $request)
         if (!Auth::check()) {
             return redirect()->route('lget');}
 
-        // dd($request->story);
+        dd($request);
         $forms1 = new Form;
         $forms = new Form;
         $forms->user_id = Auth::user()->id;
