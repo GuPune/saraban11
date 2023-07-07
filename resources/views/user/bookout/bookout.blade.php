@@ -318,7 +318,7 @@
                                         ?></td>
                                         @if($rowyes->branch->branche_name=='-')
                                         <td class="dpmb">{{$rowyes->agency->agency_name}}</td>                                                            
-                                        @elseif($rowyes->Department->Dpmname ?? '-')
+                                        @elseif($rowyes->Department->Dpmname=='-')
                                         <td class="dpmb">{{$rowyes->agency->agency_name}}/{{$rowyes->branch->branche_name}}</td>
                                         @else
                                         <td class="dpmb">{{$rowyes->Department->Dpmname}}/{{$rowyes->branch->branche_name}}</td>                                                            

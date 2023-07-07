@@ -37,7 +37,7 @@
 
 <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">ระบบสารบรร สำหรับผู้ใช้งาน</h1>
+            <h1 class="m-0">ระบบสารบรรณ สำหรับผู้ใช้งาน</h1>
           </div><!-- /.col --> <br><br>
           <div class="col-sm-6">
           </div><!-- /.col -->
