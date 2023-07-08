@@ -222,7 +222,7 @@ $bAddr = explode('Tel:', $bAddrA);
             $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
             echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
             ?>     
-            </div><br>
+            </div><br><br>
 
             <div class="d-flex justify-content-start" style="font-size:18px;">
             <b>เรื่อง</b>&nbsp;&nbsp;{{$form->story}}
@@ -239,7 +239,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <b>อ้างถึง</b>&nbsp;&nbsp;{{$form->quote}}           
             </div>
              @endif
-
+             <br>
             @if($form->enclosure==null)
             <br><div style="margin-top:-15px;"></div>
             @else
