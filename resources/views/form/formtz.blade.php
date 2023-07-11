@@ -200,7 +200,7 @@
             </div> -->
 
             <div class="d-flex justify-content-center">
-            <div>
+            <div style="width:80%">
             <div class="d-flex justify-content-end" style="margin-bottom:10px">
                 FD-IDD-TZ-013 :00: 20-05-2566  <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>

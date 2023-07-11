@@ -186,19 +186,22 @@
               </p>
               <p style="float:inline-end">)</p>
             </div>
-            <div class="dropdown drowdown-menu" id="dmanager">
+                <div class="dropdown drowdown-menu" id="dmanager">
                     <a class="dropdown-item" onclick="clearSign()"> Not sign </a>
                   @foreach ($nameManager as $name)
                     <a class="dropdown-item" value="{{ trim($name[1]) }}" positionSelected="{{ $name[2] }}" nameSelected="{{ $name[0] }}" onclick="selectOption(this)"> {{ $name[0] }} </a>
                   @endforeach
                 </div>
-            <div >
-              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
+                <div >
+                  <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
+                </div>
             </div>
             </div>
-            </div>
+
+            
             
             <br><br><br><br><br>
+            
             <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
@@ -214,18 +217,17 @@
             <div class="d-flex justify-content-start"style="margin-left: 20px">
             E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="sPosition" required>
             </div><br> -->
-            </div><br><br>
+            <br><br>
 
             <!-- <div class="d-flex justify-content-end">
             FD-HO/HR-013/1 :00: 19-09-2563
             </div> -->
-
             <div class="d-flex justify-content-center">
-            <div>
+            <div style="width:80%">
             <div class="d-flex justify-content-end" style="margin-bottom:10px">
-              FD-IDD-SCL-012:00: 20-05-2566  <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
+            FD-HO-015 :00: 20-05-2566    <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>
-            <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
+            <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;width:100%">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->
             <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
             <img src="{{ asset('dist/img/logo2.png') }}" width="81px">
@@ -237,7 +239,7 @@
             </div>
             </div>
             </div>
-
+          
           
             <!-- /headform -->
         </div>

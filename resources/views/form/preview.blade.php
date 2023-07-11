@@ -690,7 +690,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div> -->
 
             <div class="d-flex justify-content-center">
-            <div>
+            <div style="width:80%">
             <div class="d-flex justify-content-end" style="margin-bottom:10px">
               @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
                 FD-IDD-SCL-012:00: 20-05-2566

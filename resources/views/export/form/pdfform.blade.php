@@ -306,9 +306,9 @@ $bAddr = explode('Tel:', $bAddrA);
             </div> -->
 
 
-            <div class="text-center" style="margin-left:15%;font-size:18px;">
-            
-            <div style="margin-bottom:10px;margin-left:10%">
+            <div class="text-center" style="font-size:18px;">
+            <div style="width:80%">
+            <div style="margin-bottom:10px;position: absolute;top: -30px; left: 450px;">
               @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
                 FD-IDD-SCL-012:00: 20-05-2566
               @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
@@ -319,7 +319,7 @@ $bAddr = explode('Tel:', $bAddrA);
                 FD-IDD-TZ-013 :00: 20-05-2566
               @endif
             </div>
-            <div style="border: 1px solid #000000; overflow: auto; width: 420px; height: auto; text-align: center; " >
+            <div style="border: 1px solid #000000; overflow: auto; width: 600px; height: auto; text-align: center; " >
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo1.png'))) }}" width="33px" style="margin-top: 5px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo2.png'))) }}" width="33px" style="margin-top: 5px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo3.png'))) }}" width="33px" style="margin-top: 9px"/>

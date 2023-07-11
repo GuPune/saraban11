@@ -561,11 +561,11 @@
             </div> -->
 
             <div class="d-flex justify-content-center">
-            <div>
+            <div style="width:80%">
             <div class="d-flex justify-content-end" style="margin-bottom:10px">
             FD-HO-015 :00: 20-05-2566    <!-- FD-HO/HR-013/1 :00: 19-09-2563 -->
             </div>
-            <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
+            <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;width:100%">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->
             <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
             <img src="{{ asset('dist/img/logo2.png') }}" width="81px">
