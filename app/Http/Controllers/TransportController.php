@@ -80,6 +80,7 @@ public function store(Request $request)
         $transport->tag_receive = $request->tag_receive;
         $transport->tname_receive = $request->tname_receive;
         $transport->taddr_receive = $request->taddr_receive;
+        $transport->trdelivery = $request->trdelivery;
         $transport->trtaye = $request->trtaye;
         $transport->trdepartment = Auth::user()->Department;
         $transport->trbranch= Auth::user()->Branch;
@@ -406,6 +407,7 @@ public function updatetransport(Request $request , $id)
           'tname_receive'=>$request->tname_receive,
           'taddr_receive'=>$request->taddr_receive,
           'trdepositor'=>$request->trdepositor,
+          'trdelivery'=>$request->trdelivery,
             'trdepartment'=>Auth::user()->Department,
             'trbranch'=>Auth::user()->Branch,
             'tragency'=>Auth::user()->Agency,

@@ -110,14 +110,22 @@
     </div>
 
     <div class="mb-3 row">
-    <div class="col-sm-2 col-form-label">ที่อยู่ผู้รับ :</div>
-    <div class="col-sm-9">
-    <input class="form-control"  name="taddr_receive"  type="text" value="{{$transport->taddr_receive}}" required>
-    </div>
+        <div class="col-sm-2 col-form-label">ที่อยู่ผู้รับ :</div>
+        <div class="col-sm-9">
+            <input class="form-control"  name="taddr_receive"  type="text" value="{{$transport->taddr_receive}}" required>
+        </div>
     </div>
 
-        <div class="mb-3 row">
+    <div class="mb-3 row">
         <div class="col-sm-2 col-form-label">ผู้ฝากส่งหนังสือ :</div>
+        <div class="col-sm-9">
+            <input class="form-control"  name="trdelivery"  type="text" value="{{$transport->trdelivery ?? ''}}"  required>
+        </div>
+    </div>
+
+
+        <div class="mb-3 row">
+        <div class="col-sm-2 col-form-label">ผู้นำส่งหนังสือ :</div>
             <div class="col-sm-9">
                 <select class="form-control" name="trdepositor" id="trdepositor" >
                 <option selected  value="{{$transport->trdepositor}}" >{{$transport->trdepositor}}</option>
@@ -160,14 +168,14 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title fs-5" id="byLabel">บันทึกข้อมูลผู้ฝากส่ง</h4>
+                                    <h4 class="modal-title fs-5" id="byLabel">บันทึกข้อมูลผู้นำส่ง</h4>
                                     <i class="bi bi-x-circle" type="button" data-bs-dismiss="modal" aria-label="Close" style='font-size:25px'></i>
                                 </div>
                                 <div class="modal-body">
                                 <div class="mb-3 row">
-                                    <div class="col-sm-4 col-form-label">ผู้ฝากส่งหนังสือ</div>
+                                    <div class="col-sm-4 col-form-label">ผู้นำส่งหนังสือ</div>
                                         <div class="col-sm-8">
-                                        <input class="form-control" name="depositor_name" id="depositor_name" type="text" placeholder="กรุณากรอกผู้ฝากส่ง" required>
+                                        <input class="form-control" name="depositor_name" id="depositor_name" type="text" placeholder="กรุณากรอกผู้นำส่ง" required>
                                         </div>
                                 </div>
                                 </div>
