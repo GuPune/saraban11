@@ -546,7 +546,7 @@
                                         <td>ประเภทการส่ง</td>
                                         <td>เลขขนส่ง</td>
                                         <td>วันที่ส่ง</td>   
-                                        <td>ผู้ส่ง</td>
+                                        <td>ผู้นำส่ง</td>
                                         <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)
                                         @if($editdetail->id==24&&$editdetail->staffstatus==1)
@@ -574,7 +574,7 @@
                                 <tr>
                                 <td >{{$transportwait->firstItem()+$loop->index}}</td>
                                         <td>{{$row1->trnumber}}</td>
-                                        <td>{{$row1->trdepositor}}</td>
+                                        <td>{{$row1->trdelivery}}</td>
                                         <td>{{$row1->tag_receive}}</td>
                                         <td>{{$row1->trtaye}}</td>
                                         <td>{{$row1->ttransport}}</td>
@@ -590,7 +590,7 @@
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?></td>
                                         @endif
-                                        <td>{{$row1->trdelivery}}</td>
+                                        <td>{{$row1->trdepositor}}</td>
 
                                         <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)
@@ -725,7 +725,7 @@
                                                         <div class="col-4">ผู้นำส่งหนังสือ : </div>
                                                         <div class="col-7" style="margin-left:50px">{{$row1->trdepositor}}</div>
                                                         </div>
-                                                        
+
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ให้บริการขนส่ง : </div>
                                                         <div class="col-7" style="margin-left:50px">{{$row1->trservice}}</div>

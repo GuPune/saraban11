@@ -232,7 +232,7 @@
                                 <tr>
                                         <td >{{$transport->firstItem()+$loop->index}}</td>
                                         <td>{{$row->trnumber}}</td>
-                                        <td>{{$row->trdepositor}}</td>
+                                        <td>{{$row->trdelivery}}</td>
                                         <td>{{$row->tag_receive}}</td>                                        <td>{{$row->trtaye}}</td>
                                         <td>{{$row->ttransport}}</td>    
                                         @if($row->trdatesent==null)
@@ -248,7 +248,7 @@
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?> </td>
                                         @endif
-                                        <td>{{$row->trdelivery}}</td>
+                                        <td>{{$row->trdepositor}}</td>
                                         
                                     <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)  
