@@ -435,7 +435,7 @@ public function transportadd(Request $request , $id)
       if (!Auth::check()) {
         return redirect()->route('lget');}
         $update = transport::find($id)->update([
-            'trdelivery'=>$request->trdelivery,
+            'trdepositor'=>$request->trdelivery,
             'trdatesent'=>$request->trdatesent,
             'ttransport'=>$request->ttransport,
             'trservice'=>$request->trservice,

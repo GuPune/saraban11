@@ -207,12 +207,12 @@
                                     <tr>
                                         <td>ลำดับ</td>
                                         <td>เลขที่หนังสือ</td>
-                                        <td>ผู้นำส่ง</td>
+                                        <td>ผู้ฝากส่ง</td>
                                         <td>หน่วยงานผู้รับ</td>
                                         <td>ประเภทการส่ง</td>
                                         <td>เลขขนส่ง</td>
                                         <td>วันที่ส่ง</td>   
-                                        <td>ผู้ฝากส่ง</td>  
+                                        <td>ผู้นำส่ง</td>  
                                          <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)
                                         @if($editdetail->id==24&&$editdetail->adminstatus==1)
@@ -248,7 +248,7 @@
                                 <tr>
                                 <td >{{$transport->firstItem()+$loop->index}}</td>
                                         <td>{{$row->trnumber}}</td>
-                                        <td>{{$row->trdepositor}}</td>
+                                        <td>{{$row->trdelivery}}</td>
                                         <td>{{$row->tag_receive}}</td>
                                         <td>{{$row->trtaye}}</td>
                                         <td>{{$row->ttransport}}</td>
@@ -264,7 +264,7 @@
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?></td>
                                         @endif
-                                        <td>{{$row->trdelivery}}</td>
+                                        <td>{{$row->trdepositor}}</td>
                                          <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)
                                         @if($editdetail->id==24&&$editdetail->adminstatus==1&&$row->trsid==3)
@@ -364,7 +364,7 @@
                                                     <div class="col-sm-3 col-form-label">ผู้นำส่ง</div>
                                                         <div class="col-sm-9">
                                                         <select class="form-control" name="trdelivery" aria-label="Default select example" required>
-                                                        <option selected="" value="{{ $row->trdelivery}}">{{ $row->trdelivery}}</option>
+                                                        <option selected="" value="{{ $row->trdepositor}}">{{ $row->trdepositor}}</option>
                                                         @foreach($depositor as $rowdeedit)
                                                         <option value="{{$rowdeedit->depositor_name}}">{{$rowdeedit->depositor_name}}</option>
                                                         @endforeach
@@ -467,7 +467,7 @@
                                                         
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ฝากส่งหนังสือ : </div>
-                                                        <div class="col-7" style="margin-left:50px">{{$row->trdepositor}}</div>
+                                                        <div class="col-7" style="margin-left:50px">{{$row->trdelivery}}</div>
                                                         </div>
 
                                                         <div class="d-flex justify-content-center text-dark">
@@ -477,7 +477,7 @@
 
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้นำส่งหนังสือ : </div>
-                                                        <div class="col-7" style="margin-left:50px">{{$row->trdelivery}}</div>
+                                                        <div class="col-7" style="margin-left:50px">{{$row->trdepositor}}</div>
                                                         </div>
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ให้บริการขนส่ง : </div>
@@ -720,7 +720,7 @@
                                                         
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ฝากส่งหนังสือ : </div>
-                                                        <div class="col-7" style="margin-left:50px">{{$row1->trdepositor}}</div>
+                                                        <div class="col-7" style="margin-left:50px">{{$row1->trdelivery}}</div>
                                                         </div>
 
                                                         <div class="d-flex justify-content-center text-dark">
@@ -730,7 +730,7 @@
 
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้นำส่งหนังสือ : </div>
-                                                        <div class="col-7" style="margin-left:50px">{{$row1->trdelivery}}</div>
+                                                        <div class="col-7" style="margin-left:50px">{{$row1->trdepositor}}</div>
                                                         </div>
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ให้บริการขนส่ง : </div>

@@ -191,12 +191,12 @@
                                     <tr>
                                         <td>ลำดับ</td>
                                         <td>เลขที่หนังสือ</td>
-                                        <td>ผู้นำส่ง</td>
+                                        <td>ผู้ฝากส่ง</td>
                                         <td>หน่วยงานผู้รับ</td>
                                         <td>ประเภทการส่ง</td>
                                         <td>เลขขนส่ง</td>
                                         <td>วันที่ส่ง</td>        
-                                        <td>ผู้ฝากส่ง</td>  
+                                        <td>ผู้นำส่ง</td>  
                                          <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)
                                         @if($editdetail->id==24&&$editdetail->userstatus==1)
@@ -453,9 +453,14 @@
                                                         <div class="col-4">ที่อยู่ผู้รับ : </div>
                                                         <div class="col-7" style="margin-left:50px">{{$row->taddr_receive}}</div>
                                                         </div> 
-                                                        
+
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ฝากส่งหนังสือ : </div>
+                                                        <div class="col-7" style="margin-left:50px">{{$row->trdelivery}}</div>
+                                                        </div>
+                                                        
+                                                        <div class="d-flex justify-content-center text-dark">
+                                                        <div class="col-4">ผู้นำส่งหนังสือ : </div>
                                                         <div class="col-7" style="margin-left:50px">{{$row->trdepositor}}</div>
                                                         </div>
 
@@ -464,10 +469,8 @@
                                                         <div class="col-7" style="margin-left:50px">{{$row->trtaye}}</div>
                                                         </div>
 
-                                                        <div class="d-flex justify-content-center text-dark">
-                                                        <div class="col-4">ผู้นำส่งหนังสือ : </div>
-                                                        <div class="col-7" style="margin-left:50px">{{$row->trdelivery}}</div>
-                                                        </div>
+                                                        
+
                                                         <div class="d-flex justify-content-center text-dark">
                                                         <div class="col-4">ผู้ให้บริการขนส่ง : </div>
                                                         <div class="col-7" style="margin-left:50px">{{$row->trservice}}</div>
