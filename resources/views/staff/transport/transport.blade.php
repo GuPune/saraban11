@@ -200,12 +200,12 @@
                                     <tr>
                                         <td>ลำดับ</td>
                                         <td>เลขที่หนังสือ</td>
-                                        <td>ผู้ฝากส่ง</td>
+                                        <td>ผู้นำส่ง</td>
                                         <td>หน่วยงานผู้รับ</td>
                                         <td>ประเภทการส่ง</td>
                                         <td>เลขขนส่ง</td>
                                         <td>วันที่ส่ง</td>   
-                                        <td>ผู้ส่ง</td>  
+                                        <td>ผู้ฝากส่ง</td>  
                                          <!-- แก้ไขรายละเอียด -->
                                         @foreach($setallow as $editdetail)
                                         @if($editdetail->id==24&&$editdetail->staffstatus==1)
