@@ -152,13 +152,13 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="d-flex justify-content-start"style="margin-top:5px;">
             เรียน&nbsp;&nbsp;
             <input type="text" class="form-control" value="{{$form->learn}}" placeholder="กรุณากรอกเรียนถึง" style="width: 800px" name="learn" required>
-            </div>
+            </div><br>
 
             
             <div class="d-flex justify-content-start"style="margin-top:5px;">
             อ้างถึง&nbsp;&nbsp;
             <input type="text" class="form-control" value="{{$form->quote}}" placeholder="กรุณากรอกอ้างถึง" style="width: 300px" name="quote">
-            </div>
+            </div><br>
 
             <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
             <div class="d-flex" style="margin-right:10px;margin-top:5px;">
