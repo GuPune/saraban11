@@ -147,7 +147,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="d-flex justify-content-start">
             เรื่อง&nbsp;&nbsp;
             <input type="text" class="form-control" value="{{$form->story}}" placeholder="กรุณากรอกเรื่อง" style="width: 800px" name="story" required>
-            </div>
+            </div><br>
 
             <div class="d-flex justify-content-start"style="margin-top:5px;">
             เรียน&nbsp;&nbsp;

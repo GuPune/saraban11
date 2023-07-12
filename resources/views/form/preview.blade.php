@@ -622,13 +622,13 @@ $bAddr = explode('Tel:', $bAddrA);
             เรื่อง&nbsp;&nbsp;
             {{$story}}
             <input type="hidden" value="{{$story}}" class="form-control" style="width: 150px" name="story">  
-            </div>
+            </div><br>
 
             <div class="d-flex justify-content-start"style="margin-top:5px;">
             เรียน&nbsp;&nbsp;
             {{$learn}}
             <input type="hidden" value="{{$learn}}" class="form-control" style="width: 150px" name="learn">  
-            </div>
+            </div><br>
 
             @if($quote==null)
 
@@ -637,7 +637,7 @@ $bAddr = explode('Tel:', $bAddrA);
             อ้างถึง&nbsp;&nbsp;
             {{$quote}}
             <input type="hidden" value="{{$quote}}" class="form-control" style="width: 150px" name="quote">  
-            </div>
+            </div><br>
             @endif
 
             @if($enclosure==null)

@@ -226,20 +226,19 @@ $bAddr = explode('Tel:', $bAddrA);
 
             <div class="d-flex justify-content-start" style="font-size:18px;">
             <b>เรื่อง</b>&nbsp;&nbsp;{{$form->story}}
-            </div>
+            </div><br>
 
             <div class="d-flex justify-content-start" style="font-size:18px;">
             <b>เรียน</b>&nbsp;&nbsp;{{$form->learn}}       
-            </div>
+            </div><br>
 
             @if($form->quote==null)
             @else
            
             <div class="d-flex justify-content-start" style="font-size:18px;">
             <b>อ้างถึง</b>&nbsp;&nbsp;{{$form->quote}}           
-            </div>
+            </div><br>
              @endif
-             <br>
             @if($form->enclosure==null)
             <br><div style="margin-top:-15px;"></div>
             @else
@@ -308,7 +307,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             <div class="text-center" style="font-size:18px;">
             <div style="width:80%">
-            <div style="margin-bottom:10px;position: absolute;top: -30px; left: 450px;">
+            <div style="margin-bottom:10px;position: absolute;top: -30px; left: 400px;">
               @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
                 FD-IDD-SCL-012:00: 20-05-2566
               @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')

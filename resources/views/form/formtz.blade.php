@@ -106,17 +106,17 @@
             <div class="d-flex justify-content-start">
             เรื่อง&nbsp;&nbsp;
             <input type="text" class="form-control" placeholder="กรุณากรอกเรื่อง" style="width: 500px" name="story" required>
-            </div>
+            </div><br>
 
             <div class="d-flex justify-content-start">
             เรียน&nbsp;&nbsp;
             <input type="text" class="form-control" placeholder="กรุณากรอกเรียน" style="width: 500px" name="learn" required>
-            </div>
+            </div><br>
 
             <div class="d-flex justify-content-start">
             อ้างถึง&nbsp;&nbsp;
             <input type="text" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 500px" name="quote">
-            </div>
+            </div><br>
 
             <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
             <div class="d-flex justify-content-start">
