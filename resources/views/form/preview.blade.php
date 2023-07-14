@@ -678,7 +678,7 @@ $bAddr = explode('Tel:', $bAddrA);
             )
             </div>
             <div style="text-align:center;">{{$sPosition}}</div>
-            <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
+              <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
             </div>
             
             <br><br><br><br><br>

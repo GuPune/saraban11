@@ -390,7 +390,7 @@ public function add(Request $request)
         'details' => $request->details,
         'sName' => $request->sName,
         'sign' => $request->sign,
-        'sPosition' => $request->sPositiony,
+        'sPosition' => $request->sPosition,
         'type' => $request->type
         ];
         $transport_type = transport_type::all();

@@ -171,7 +171,7 @@
                   @endforeach
                 </div>
             <div >
-              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="ctemail" required>
+              <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
             </div>
             </div>
             </div>
