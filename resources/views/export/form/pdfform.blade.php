@@ -192,8 +192,8 @@ $bAddr = explode('Tel:', $bAddrA);
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
              <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logotz2.png'))) }}" style=""  height="53"/>
              </div>
-             <div class="" style="text-align:center; margin-top:-10px">
-              <h5 style="font-size:20pt;text-align:center;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <div class="" style=" margin-top:-10px">
+              <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
               <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th 
                     Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
