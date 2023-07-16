@@ -96,10 +96,10 @@ p {
 }
 
 .text-details {
-  word-break: break-word;
-  text-justify: inter-character;
-}
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
+}
 
 </style>
 
@@ -123,33 +123,27 @@ $bAddr = explode('Tel:', $bAddrA);
 
 <body style="line-height:12px;padding:0 1cm 0 2cm">
   <div class="content" style="">
-          <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
-          @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
-          <div class=""  style="text-align: center;">
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-right:15px;"  height="35"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
-             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style=""  height="53"/>
-          </div>
-             <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
-             <b style="font-size:22px;">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</b>&nbsp;
-             <b style="font-size:18px;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</b>
-            </div><p style="font-size:16px;">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-             </p> -->
-             <div class="" style="margin-top:-15px">
-             <h5 style="font-weight:bold;font-size:18pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
-                <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14pt; margin-top:-10px;margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
-             <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
-             <div class="" style="font-size:12pt;">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
-             <br></div>
+    <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
+    @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
+    <div class=""  style="text-align: center;">
+      <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-right:15px;"  height="35"/>
+      <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
+      <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style=""  height="53"/>
+    </div>
+    <div class="" style="margin-top:-15px">
+      <h5 style="font-weight:bold;font-size:18pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+        <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+      <p style="font-size:14pt; margin-top:-10px;margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
+      <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
+      <div class="" style="font-size:12pt;">
+        ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th<br>
+      </div>
             
-            </div>
-            <div style="border: 0.5px solid #B4B4B4;margin-top:10px;"></div>           
-
-            <!-- header เอกสาร บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่) -->
-             @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
+    </div>
+    
+    <div style="border: 0.5px solid #B4B4B4;margin-top:10px;"></div>           
+    <!-- header เอกสาร บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่) -->
+      @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              
             <div class="d-flex justify-content-start">
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:10px;float: left;" width="80px"/>
@@ -168,12 +162,6 @@ $bAddr = explode('Tel:', $bAddrA);
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoins.png'))) }}" style="" width="80"/>
              </div>
 
-             <!-- <div class="d-flex justify-content-start" style="margin-left:40px;margin-bottom:3px;margin-top:-10px;">
-             <b style="font-size:22px;">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี</b>&nbsp;
-             <b style="font-size:18px;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด เลขที่ผู้เสียภาษี 0405536000531</b>
-            </div> <p style="font-size:16px;">
-            ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th
-              -->
               <div class="" style="margin-top:-20px">
              <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
@@ -224,54 +212,89 @@ $bAddr = explode('Tel:', $bAddrA);
             ?>     
             </div><br><br>
 
-            <div class="d-flex justify-content-start" style="font-size:18px;">
-            <b>เรื่อง</b>&nbsp;&nbsp;{{$form->story}}
-            </div><br>
-
-            <div class="d-flex justify-content-start" style="font-size:18px;">
-            <b>เรียน</b>&nbsp;&nbsp;{{$form->learn}}       
-            </div><br>
+            <div style="font-size:18px;">
+              <div class="fw-bold me-2" style="float: left;">
+                <p>เรื่อง</p>
+              </div>
+              <div >
+                <p class="mb-0">{{$form->story}}<br></p>
+              </div>
+            </div>
+            <br>
+            <div style="font-size:18px;">
+              <div class="fw-bold me-2" style="float: left;">
+                <p>เรียน</p>
+              </div>
+              <div>
+                <p class="mb-0">{{$form->learn}} </p>
+              </div>     
+            </div>
+            <br>
 
             @if($form->quote==null)
             @else
-           
-            <div class="d-flex justify-content-start" style="font-size:18px;">
-            <b>อ้างถึง</b>&nbsp;&nbsp;{{$form->quote}}           
-            </div><br>
+            <div style="font-size:18px;">
+              <div class="fw-bold me-2" style="float: left;">
+                <p>อ้างถึง</p>
+              </div>
+              <div>
+                <p class="mb-0">{{$form->quote}}</p>
+              </div>
+            </div>
+            <br>
              @endif
             @if($form->enclosure==null)
-            <br><div style="margin-top:-15px;"></div>
+
+            
+
             @else
-            <div style="margin-top:5px">
-              <div style="">
+            <div >
+              <div>
                 <b >สิ่งที่ส่งมาด้วย</b>
               </div>
-              <div class="text-details" style="margin-top:-20px;margin-left:80px;">
-                <p style=""><?php echo $form->enclosure ?></p>
+              <div class="text-details" style="margin-top:-20px;margin-left:80px;line-height: 16px;">
+                <?php 
+                  $enc = $form->enclosure;
+                  $enctext = str_replace(' ', '&nbsp;', $enc)
+                ?>
+                <p class="mb-0"> {!! $enctext !!}</p>
               </div>
             </div>
-            @endif
             <br>
-            
-            <?php 
+            @endif
+
+
+
+            <!-- <?php 
+                $parameter = $form->details;
+                $thaitext = str_replace(' ', '&nbsp;', $parameter);
+            ?> -->
+            <!-- <?php 
+                $parameter = $form->details;
+                $thaitext = preg_replace('/^(.*)$/m', '<span style="display:inline-block; text-indent: 2.5em;">$1</span>', $parameter);
+            ?> -->
+            <?php
+              // Your PHP logic here...
               $parameter = $form->details;
-              $paragraphs = explode("\n", $parameter);
+              $parameter = str_replace('thead', 'thead style="border-bottom:1px solid"', $parameter);
+              // Process each paragraph individually and add the custom text indent
+              $indentation = str_repeat('&nbsp;', 10); // You can change the number to adjust the indent level.
+              $thaitext = preg_replace('/<p>(.*?)<\/p>/', '<p>' . $indentation . '$1</p>', $parameter);
+
             ?>
 
-            
-            <!-- margin-left:15px;margin-bottom:10px;margin-top:100px;line-height: 50px; -->
-            <div class="text-details" style="width:100%;">
-                <?php 
-                  foreach ($paragraphs as $paragraph) {
-                    echo "<p style='margin-top:-30px'>" . $paragraph . "</p>";
-                  } 
-                ?>
-            </div>
+            <div style="line-height: 16px; overflow-wrap: break-word; word-wrap: break-word;">
+                <div>
+                    {!! $thaitext !!}
+                </div>
             </div>
 
-  
-          
-            
+
+
+
+
+            </div>
+
             <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
             ขอแสดงความนับถือ <br>
             @if (!empty($form->sign) && strlen($form->sign) > 1 && file_exists(public_path('dist/img/sign/' . $form->sign . '.png')))
@@ -287,23 +310,7 @@ $bAddr = explode('Tel:', $bAddrA);
             
             <br>
             <br>
-            <div class="footer" style=";display: inline-block;width:100%">
-            <!-- ติดต่อประสานงาน -->
-            <!-- <div style="overflow: auto; width: 280px; height:auto;">
-            <div class="d-flex justify-content-start"  style="margin-left: 10px;font-size:16px;">
-            ติดต่อประสานงาน
-            </div>
-            <div style="margin-left:10px;font-size:16px;">
-            ชื่อ&nbsp;{{$form->sName}} 
-            </div>
-            <div style="margin-left:10px;font-size:16px;">
-            เบอร์โทรศัพท์&nbsp;{{$form->sign}} 
-            </div>
-            <div style="margin-left:10px;font-size:16px;">
-            E-mail &nbsp;{{$form->sPosition}} 
-            </div>
-            </div> -->
-
+            <div class="footer" style="display: inline-block;width:100%">
 
             <div class="text-center" style="font-size:18px;">
             <div style="width:80%">

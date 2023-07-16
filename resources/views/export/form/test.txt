@@ -1,0 +1,22 @@
+<?php 
+    $parameter = $form->details;
+    $thaitext = str_replace(' ', '&nbsp;', $parameter);
+?>
+
+<div style="line-height: 16px; overflow-wrap: break-word; word-wrap: break-word;">
+    <div style="text-indent: 2.5em;">
+        {!! $thaitext !!}
+    </div>
+</div>
+
+
+<?php 
+    $parameter = $form->details;
+    $thaitext = preg_replace('/^(.*)$/m', '<span style="display:inline-block; text-indent: 2.5em;">$1</span>', $parameter);
+?>
+
+<div style="line-height: 16px; overflow-wrap: break-word; word-wrap: break-word;">
+    <div>
+        {!! $thaitext !!}
+    </div>
+</div>
