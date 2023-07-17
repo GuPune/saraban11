@@ -17,6 +17,7 @@
         /* margin: 2.5cm; */
         margin: 30mm 45mm 30mm 45mm;
         size: 21cm 29.7cm landscape;
+        max-width:26cm;
     }
     #box1 {
         float: left;
@@ -31,9 +32,7 @@
       }
 .text-details {
   word-wrap: break-word;
-  text-align: justify;
-  text-justify: distribute;
-  text-indent:50px;
+  text-indent:2.5em;
 }
 
 </style>
@@ -619,23 +618,23 @@ $bAddr = explode('Tel:', $bAddrA);
             </div><br><br>
 
             <div class="d-flex justify-content-start">
-            เรื่อง&nbsp;&nbsp;
-            {{$story}}
-            <input type="hidden" value="{{$story}}" class="form-control" style="width: 150px" name="story">  
+              <p style="float-left;font-weight:bold;">เรื่อง</p>
+              <p style="margin-left:10px; margin-bottom:0">{{$story}}</p>
+              <input type="hidden" value="{{$story}}" class="form-control" style="width: 150px" name="story">
             </div><br>
 
             <div class="d-flex justify-content-start"style="margin-top:5px;">
-            เรียน&nbsp;&nbsp;
-            {{$learn}}
-            <input type="hidden" value="{{$learn}}" class="form-control" style="width: 150px" name="learn">  
+              <p style="float-left; font-weight:bold;">เรียน</p>
+              <p style="margin-left:10px; margin-bottom:0">{{$learn}}</p>
+              <input type="hidden" value="{{$learn}}" class="form-control" style="width: 150px" name="learn">  
             </div><br>
 
             @if($quote==null)
 
             @else
             <div class="d-flex justify-content-start"style="margin-top:5px;">
-            อ้างถึง&nbsp;&nbsp;
-            {{$quote}}
+              <p style="width:60px;font-weight:bold;">อ้างถึง</p>
+              <p style="margin-left:10px; margin-bottom:0">{{$quote}}</p>
             <input type="hidden" value="{{$quote}}" class="form-control" style="width: 150px" name="quote">  
             </div><br>
             @endif
@@ -644,7 +643,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <br>
             @else
             <div class="d-flex" style="margin-right:10px;margin-top:5px;">
-            <div class="flex-shrink-0">
+            <div class="flex-shrink-0" style="font-weight:bold;">
             สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
             </div>
             <div class="flex-grow-1 ms-3">
@@ -654,7 +653,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
             @endif <br>
             
-            <div class="d-flex flex-column text-details" style="margin-left: 40px;margin-right: 40px;">
+            <div class="d-flex flex-column text-details" style="">
             <?= $details; ?> 
             <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">  
             </div><br><br><br>
@@ -703,13 +702,13 @@ $bAddr = explode('Tel:', $bAddrA);
               @endif
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
-            <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo2.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo3.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo4.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo5.png') }}" width="70px">
-            <img src="{{ asset('dist/img/logo6.png') }}" width="252px">
-            <img src="{{ asset('dist/img/logo7.png') }}" width="81px">
+            <img src="{{ asset('dist/img/logo1.png') }}" width="60px">
+            <img src="{{ asset('dist/img/logo2.png') }}" width="60px">
+            <img src="{{ asset('dist/img/logo3.png') }}" width="60px">
+            <img src="{{ asset('dist/img/logo4.png') }}" width="60px">
+            <img src="{{ asset('dist/img/logo5.png') }}" width="60px">
+            <img src="{{ asset('dist/img/logo6.png') }}" width="230px">
+            <img src="{{ asset('dist/img/logo7.png') }}" width="60px">
             </div>
             </div>
             </div>
