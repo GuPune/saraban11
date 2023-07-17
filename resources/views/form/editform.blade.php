@@ -198,7 +198,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
             <br>
             <div style="text-align:center">
-            <!-- <img id="selected-image" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}"> -->
+            <img style="width:100px" id="selected-image" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
             <input id="signName" type="text" style="display:none" value="{{$form->sign}}" name="sign">
             <p>.......................................................</p>
             </div>
@@ -306,8 +306,10 @@ $bAddr = explode('Tel:', $bAddrA);
     
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
-    // var selectedImage = document.getElementById("selected-image");
-    //     selectedImage.src = imagePath;
+    if (imageName === '20200109') {
+      var selectedImage = document.getElementById("selected-image");
+      selectedImage.src = imagePath;
+    }
     
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
@@ -324,8 +326,8 @@ $bAddr = explode('Tel:', $bAddrA);
   }
 
   function clearSign(){
-    // var selectedImage = document.getElementById("selected-image");
-    //     selectedImage.src = "";
+    var selectedImage = document.getElementById("selected-image");
+        selectedImage.src = "";
   }
 
   textF.addEventListener("click", function(event) {

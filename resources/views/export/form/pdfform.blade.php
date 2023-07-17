@@ -299,7 +299,7 @@ $bAddr = explode('Tel:', $bAddrA);
             ขอแสดงความนับถือ <br>
             @if (!empty($form->sign) && strlen($form->sign) > 1 && file_exists(public_path('dist/img/sign/' . $form->sign . '.png')))
               <br>
-              <!-- <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->sign . '.png'))) }}" /> -->
+              <img style="width:80px" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->sign . '.png'))) }}" />
             @else
               <br>
             @endif

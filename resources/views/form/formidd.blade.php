@@ -173,7 +173,7 @@
             </div>
             <br>
             <div style="text-align:center">
-            <!-- <img id="selected-image" src=""> -->
+            <img style="width:100px" id="selected-image" src="">
             <input id="signName" type="text" style="display:none" name="sign">
             <p>.......................................................</p>
             </div>
@@ -273,8 +273,10 @@
     
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
-    // var selectedImage = document.getElementById("selected-image");
-    //     selectedImage.src = imagePath;
+    if (imageName === '20200109') {
+      var selectedImage = document.getElementById("selected-image");
+      selectedImage.src = imagePath;
+    }
     
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
@@ -291,8 +293,10 @@
   }
 
   function clearSign(){
-    // var selectedImage = document.getElementById("selected-image");
-    //     selectedImage.src = "";
+    if (document.getElementById("selected-image")) {
+    var selectedImage = document.getElementById("selected-image");
+    selectedImage.src = "";
+    }
   }
 
   textF.addEventListener("click", function(event) {

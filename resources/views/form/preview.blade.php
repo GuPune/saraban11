@@ -663,7 +663,7 @@ $bAddr = explode('Tel:', $bAddrA);
             ขอแสดงความนับถือ
             </div> <br>
             <div style="text-align:center;">
-              <!-- <img src="{{ asset('dist/img/sign/' . $sign . '.png') }}"> -->
+              <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
               <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
             </div>
             <div style="text-align:center;">
