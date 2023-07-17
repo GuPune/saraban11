@@ -283,11 +283,11 @@
                                         </td>
                                         <!-- เรื่อง -->
                                         <td><?php 
-                                        if(strlen($rowyes->form->story) > 30){
-                                        echo mb_substr($rowyes->form->story, 0, 30).'...';
+                                        if(strlen($rowyes->form->story ?? '') > 30){
+                                        echo mb_substr($rowyes->form->story ?? '', 0, 30).'...';
                                         }
-                                        elseif(strlen($rowyes->form->story) <= 30){
-                                            echo mb_substr($rowyes->form->story, 0, 30);
+                                        elseif(strlen($rowyes->form->story ?? '') <= 30){
+                                            echo mb_substr($rowyes->form->story ?? '', 0, 30);
                                         }
                                         ?></td>
                                         <td><?php
@@ -447,7 +447,7 @@
 
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">เรื่อง : </div>
-                                <div class="col-7" style="margin-left:50px">{{$rowyes->form->story}}</div>
+                                <div class="col-7" style="margin-left:50px">{{$rowyes->form->story ?? ''}}</div>
                                 </div>
 
                                 <div class="d-flex justify-content-center text-dark" >
@@ -587,11 +587,11 @@
                                         </td>
                                         <!-- เรื่อง -->
                                         <td><?php 
-                                        if(strlen($rowno->form->story) > 30){
-                                        echo mb_substr($rowno->form->story, 0, 30).'...';
+                                        if(strlen($rowno->form->story ?? '') > 30){
+                                        echo mb_substr($rowno->form->story ?? '', 0, 30).'...';
                                         }
-                                        elseif(strlen($rowno->form->story) <= 30){
-                                            echo mb_substr($rowno->form->story, 0, 30);
+                                        elseif(strlen($rowno->form->story ?? '') <= 30){
+                                            echo mb_substr($rowno->form->story ?? '', 0, 30);
                                         }
                                         ?></td>
                                         <td><?php
@@ -668,7 +668,7 @@
 
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">เรื่อง : </div>
-                                <div class="col-7" style="margin-left:50px">{{$rowno->form->story}}</div>
+                                <div class="col-7" style="margin-left:50px">{{$rowno->form->story ?? ''}}</div>
                                 </div>
 
                                 <div class="d-flex justify-content-center text-dark" >
@@ -816,11 +816,11 @@
                                         </td>
                                         <!-- เรื่อง -->
                                         <td><?php 
-                                        if(strlen($row->form->story) > 30){
-                                        echo mb_substr($row->form->story, 0, 30).'...';
+                                        if(strlen($row->form->story ?? '') > 30){
+                                        echo mb_substr($row->form->story ?? '', 0, 30).'...';
                                         }
-                                        elseif(strlen($row->form->story) <= 30){
-                                            echo mb_substr($row->form->story, 0, 30);
+                                        elseif(strlen($row->form->story ?? '') <= 30){
+                                            echo mb_substr($row->form->story ?? '', 0, 30);
                                         }
                                         ?></td>
                                         <td><?php
@@ -1008,7 +1008,7 @@
 
                                                             <div class="d-flex justify-content-center text-dark">
                                                             <div class="col-4">เรื่อง : </div>
-                                                            <div class="col-7" style="margin-left:50px">{{$row->form->story}}</div>
+                                                            <div class="col-7" style="margin-left:50px">{{$row->form->story ?? ''}}</div>
                                                             </div>
 
                                                             <div class="d-flex justify-content-center text-dark" >
