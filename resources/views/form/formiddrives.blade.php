@@ -512,7 +512,7 @@
             </div>
             <br>
             <div style="text-align:center">
-            <!-- <img id="selected-image" src=""> -->
+            <img id="selected-image" src="">
             <input id="signName" type="text" style="display:none" name="sign">
             <p>.......................................................</p>
             </div>
@@ -612,8 +612,24 @@
     
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
-    // var selectedImage = document.getElementById("selected-image");
-    //     selectedImage.src = imagePath;
+    var selectedImage = document.getElementById("selected-image");
+    // Create a new Image object
+    var imageLoader = new Image();
+
+    // Add an event listener to handle image loading
+    imageLoader.onload = function() {
+      // If the image is successfully loaded, set the src of the selectedImage element
+      selectedImage.src = imagePath;
+    };
+    imageLoader.onerror = function() {
+      // If there's an error loading the image, you can handle it here (optional)
+      selectedImage.src = "";
+      // You can set a default image in case the image is not found:
+      // selectedImage.src = "path/to/default-image.png";
+    };
+
+    // Start loading the image
+    imageLoader.src = imagePath;
     
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
@@ -630,8 +646,10 @@
   }
 
   function clearSign(){
-    // var selectedImage = document.getElementById("selected-image");
-    //     selectedImage.src = "";
+    var selectedImage = document.getElementById("selected-image");
+    var storSign = document.getElementById("signName");
+      storSign.value = "";
+      selectedImage.src = "";
   }
 
   textF.addEventListener("click", function(event) {
