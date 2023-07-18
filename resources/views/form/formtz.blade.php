@@ -151,7 +151,7 @@
             </div>
             <br>
             <div style="text-align:center">
-            <!-- <img id="selected-image" src=""> -->
+            <img style="width:100px" id="selected-image" src="">
             <input id="signName" type="text" style="display:none" name="ctphone">
             <p>.......................................................</p>
             </div>
