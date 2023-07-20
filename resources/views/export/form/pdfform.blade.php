@@ -196,7 +196,7 @@ $bAddr = explode('Tel:', $bAddrA);
            
 
       <div style="padding: 1cm 0 0 0">
-             <div class="" style="font-size:18px;">
+             <div class="" style="font-size:20px;">
             เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
             </div><br>
 
@@ -212,7 +212,7 @@ $bAddr = explode('Tel:', $bAddrA);
             ?>     
             </div><br><br>
 
-            <div style="font-size:18px;">
+            <div style="font-size:20px;">
               <div class="fw-bold me-2" style="float: left;">
                 <p>เรื่อง</p>
               </div>
@@ -221,7 +221,7 @@ $bAddr = explode('Tel:', $bAddrA);
               </div>
             </div>
             <br>
-            <div style="font-size:18px;">
+            <div style="font-size:20px;">
               <div class="fw-bold me-2" style="float: left;">
                 <p>เรียน</p>
               </div>
@@ -233,7 +233,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             @if($form->quote==null)
             @else
-            <div style="font-size:18px;">
+            <div style="font-size:20px;">
               <div class="fw-bold me-2" style="float: left;">
                 <p>อ้างถึง</p>
               </div>
@@ -248,11 +248,11 @@ $bAddr = explode('Tel:', $bAddrA);
             
 
             @else
-            <div >
+            <div style="font-size:20px;">
               <div>
                 <b >สิ่งที่ส่งมาด้วย</b>
               </div>
-              <div class="text-details" style="margin-top:-20px;margin-left:80px;line-height: 16px;">
+              <div class="text-details" style="margin-top:-20px;margin-left:90px;line-height: 16px;">
                 <?php 
                   $enc = $form->enclosure;
                   $enctext = str_replace(' ', '&nbsp;', $enc)
@@ -283,7 +283,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             ?>
 
-            <div style="line-height: 16px; overflow-wrap: break-word; word-wrap: break-word;">
+            <div style="line-height: 16px; overflow-wrap: break-word; word-wrap: break-word;font-size:20px;">
                 <div>
                     {!! $thaitext !!}
                 </div>
@@ -295,7 +295,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             </div>
 
-            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;"  >
+            <div class="text-center" style="font-size:18px;width:100%; position:relative; padding-left:20%;margin-top:10px;font-size:20px;"  >
             ขอแสดงความนับถือ <br>
             @if (!empty($form->sign) && strlen($form->sign) > 1 && file_exists(public_path('dist/img/sign/' . $form->sign . '.png')))
               <br>
