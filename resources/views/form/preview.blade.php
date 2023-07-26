@@ -180,7 +180,7 @@ $bAddr = explode('Tel:', $bAddrA);
                               @elseif($shortname=='การเงิน')
                               FIN/@if($fin==null){{ __('001') }}@elseif($fin<=8)00{{$fin+1}}@elseif($fin>=9)0{{$fin+1}}@elseif($fin>=99){{$fin+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
                               
-                              @elseif($shortname=='มาร์เก็ตติ้ง')
+                              @elseif($shortname=='การตลาด')
                               MKT/@if($mkt==null){{ __('001') }}@elseif($mkt<=8)00{{$mkt+1}}@elseif($mkt>=9)0{{$mkt+1}}@elseif($mkt>=99){{$mkt+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
                               
                               @elseif($shortname=='บริหารงานพัฒนาผลิตภัณฑ์')
@@ -368,7 +368,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                             
 
-                            @elseif($shortname=='มาร์เก็ตติ้ง')
+                            @elseif($shortname=='การตลาด')
                             <input type="hidden" value="MKT" class="form-control" style="width: 60px" name="fdepartment">
                             @if($mkt==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">

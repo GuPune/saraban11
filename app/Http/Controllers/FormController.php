@@ -163,6 +163,7 @@ class FormController extends Controller
 
 public function preview()
     {
+
         if (!Auth::check()) {
             return redirect()->route('lget');}
         $user = User::all();
