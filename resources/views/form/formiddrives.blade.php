@@ -250,7 +250,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                             
 
-                            @elseif($shortname=='มาร์เก็ตติ้ง')
+                            @elseif($shortname=='การตลาด')
                             <input type="hidden" value="MKT" class="form-control" style="width: 60px" name="fdepartment">
                             @if($mkt==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
