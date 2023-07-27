@@ -301,7 +301,7 @@ $bAddr = explode('Tel:', $bAddrA);
               <br>
               <img style="width:80px" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/sign/' . $form->sign . '.png'))) }}" />
             @else
-              <br>
+              <br><br>
             @endif
             <p style="">.......................................................</p>
             <p style="line-height:1px">( {{$form->sName}} )</p>
