@@ -304,8 +304,8 @@ $bAddr = explode('Tel:', $bAddrA);
               <br><br>
             @endif
             <p style="">.......................................................</p>
-            <p style="line-height:1px">( {{$form->sName}} )</p>
-            <p style="text-align:center; line-height:1px">{{$form->sPosition}}</p>
+            <p style="line-height:5px">( {{$form->sName}} )</p>
+            <p style="text-align:center; line-height:5px">{{$form->sPosition}}</p>
             </div> 
             
             <br>
