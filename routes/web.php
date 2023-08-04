@@ -95,6 +95,7 @@ Route::post('/addsendbook/depositor',[BookoutController::class,'adddepositor'])-
 Route::post('/status/update/{id}',[BookoutController::class,'statusbookout'])->name('statusbookout');
 Route::get('/bookout/export',[BookoutController::class,'bookoutexport'])->name('bookoutexport');
 Route::post('/bookout/export',[BookoutController::class,'bookoutexport'])->name('bookoutexport');
+Route::post('/bookout/uploadFile',[BookoutController::class,'uploadFile']);
 
 // ขนส่ง
 Route::get('/transport/admin',[TransportController::class,'transportadmin'])->name('transportadmin');

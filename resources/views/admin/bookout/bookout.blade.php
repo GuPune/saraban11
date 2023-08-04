@@ -261,6 +261,7 @@
 
                                         @endif
                                         @endforeach
+                                        <td>สิ่งที่แนบมาด้วย</td>
                                         <td>รายละเอียด</td>
                                         </tr>
                                     @php($i=1)
@@ -421,6 +422,13 @@
                                         @endif
                                         @endforeach                                
                                         </div>
+
+                                        <!-- เอกสารที่แนบมาด้วย -->
+                                        @if ($rowyes->Ophone != null)
+                                        <td class="text-center"><button type="button" data-file-path="{{ asset('files/file/' . $rowyes->Ophone) }}" class="btn btn-info viewPdfBtn"><i class="bi bi-file-zip"></i></button></td>
+                                        @else
+                                        <td class="text-center"><button type="button" class="btn btn-info" id="checkbtn" value="{{$rowyes->id}}"><i class="bi bi-upload"></i></button></td>
+                                        @endif
              <!-- รายละเอียด --> 
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detailyes{{$rowyes->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detailyes{{$rowyes->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -566,6 +574,7 @@
 
                                         @endif
                                         @endforeach
+                                        <td>สิ่งที่แนบมาด้วย</td>
                                         <td>รายละเอียด</td>
                                     @php($i=1)
                                 </thead>
@@ -642,6 +651,13 @@
 
                                         @endif
                                         @endforeach
+
+                                        <!-- เอกสารที่แนบมาด้วย -->
+                                        @if ($rowno->Ophone != null)
+                                        <td class="text-center"><button type="button" data-file-path="{{ asset('files/file/' . $rowno->Ophone) }}" class="btn btn-info viewPdfBtn"><i class="bi bi-file-zip"></i></button></td>
+                                        @else
+                                        <td class="text-center"><button type="button" class="btn btn-info" id="checkbtn" value="{{$rowno->id}}"><i class="bi bi-upload"></i></button></td>
+                                        @endif
              <!-- รายละเอียด --> 
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detailno{{$rowno->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detailno{{$rowno->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -794,6 +810,7 @@
 
                                         @endif
                                         @endforeach
+                                        <td>สิ่งที่แนบมาด้วย</td>
                                         <td>รายละเอียด</td>           
                                         </tr>
                                     @php($i=1)
@@ -982,6 +999,15 @@
                                         </form>
                                         </div>
                                         <!-- / model อัปโหลด -->
+
+                                        <!-- เอกสารที่แนบมาด้วย -->
+                                        @if ($row->Ophone != null)
+                                        <td class="text-center"><button type="button" data-file-path="{{ asset('files/file/' . $row->Ophone) }}" class="btn btn-info viewPdfBtn"><i class="bi bi-file-zip"></i></button></td>
+                                        @else
+                                        <td class="text-center"><button type="button" class="btn btn-info" id="checkbtn" value="{{$row->id}}"><i class="bi bi-upload"></i></button></td>
+                                        @endif
+
+
                                         <!-- รายละเอียด --> 
                                         <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detail{{$row->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
                                         <div class="modal fade" id="detail{{$row->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -1097,7 +1123,7 @@
         </div>
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
   var url = document.location.toString();
   if (url.match('#')) {
@@ -1110,6 +1136,69 @@
       $('.nano').nanoScroller();
     }
   })
+
+    const pdfButtons = document.querySelectorAll('.viewPdfBtn');
+    pdfButtons.forEach((pdfbtn) => {
+        pdfbtn.addEventListener('click', function () {
+            const pdfUrl = this.getAttribute('data-file-path');
+
+            Swal.fire({
+                showConfirmButton: false,
+                width: '70%',
+                html: '<div style="height: 600px;">' +
+                    '<iframe src="' + pdfUrl + '" style="width: 100%; height: 100%;" frameborder="0"></iframe>' +
+                    '</div>'
+            });
+        });
+    });
+
+    const checkbtn = document.querySelectorAll('#checkbtn');
+    let statusValue;
+    checkbtn.forEach((ckbtn) => {
+        ckbtn.addEventListener('click', function () {
+            Swal.fire({
+                title: 'Select file',
+                input: 'file',
+                inputAttributes: {
+                    'accept': 'pdf/*',
+                    'aria-label': 'Upload your profile picture'
+                }
+            }).then((result) => {
+                const file = result.value; // Get the selected file from the result object
+                statusValue = ckbtn.value;
+                if (file) {
+                    saveData(file);
+                }
+            });
+        });
+    });
+
+
+    function saveData(file) {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('valueid', statusValue);
+
+        // Send data to Laravel controller using fetch API
+        fetch('/bookout/uploadFile', {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}', // Replace with the actual CSRF token
+            },
+            body: formData,
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            // Handle the response if needed
+            Swal.fire('File upload success!', 'success');
+            // You can also reload the page to see the changes, if required
+            // window.location.reload();
+        })
+        .catch((error) => {
+            // Handle errors if any
+            Swal.fire('Error!', 'An error occurred while saving the data.', 'error');
+        });
+    }
 </script>
 @endsection
 

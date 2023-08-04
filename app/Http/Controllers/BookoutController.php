@@ -551,6 +551,31 @@ public function getdepartment(Request $request)
      echo  $html;
     }}
 
+    public function uploadFile(Request $request) 
+    {
+      // Validate the request
+      $request->validate([
+        'file' => 'required|mimes:pdf,jpg,jpeg,png|max:2048', // Adjust the validation rules for PDF files
+        'valueid' => 'required',
+      ]);
+      $destinationPath = 'files/file/';
+      // Handle file upload
+      if ($request->hasFile('file')) {
+          $file = $request->file('file');
+          $fileName = $file->getClientOriginalName();
+          $file->move($destinationPath, $fileName);
+      } else {
+          return response()->json(['error' => 'File not found'], 400);
+      }
+
+      // Save the file name in the "Ophone" column of the database
+      $yourModel = Bookout::find($request->input('valueid'));
+      $yourModel->Ophone = $fileName;
+      $yourModel->save();
+
+      return response()->json(['success' => 'File not found'], 200);
+      
+    }
 
 
 
