@@ -263,6 +263,7 @@
 
                                         @endif
                                         @endforeach
+                                        <td>สิ่งที่แนบมาด้วย</td>
                                         <td>รายละเอียด</td>
                                         </tr>
                                     @php($i=1)
@@ -423,6 +424,8 @@
                                         @endif
                                         @endforeach                                
                                         </div>
+
+                                        <td class="text-center"><button type="button" data-file-path="{{ asset('files/file/' . $rowyes->Ophone) }}" class="btn btn-info viewPdfBtn"><i class="bi bi-file-zip"></i></button></td>
              <!-- รายละเอียด --> 
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detailyes{{$rowyes->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detailyes{{$rowyes->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -570,6 +573,7 @@
 
                                         @endif
                                         @endforeach
+                                        <td>สิ่งที่แนบมาด้วย</td>
                                         <td>รายละเอียด</td>
                                     @php($i=1)
                                 </thead>
@@ -646,6 +650,8 @@
 
                                         @endif
                                         @endforeach
+
+                                        <td class="text-center"><button type="button" data-file-path="{{ asset('files/file/' . $rowno->Ophone) }}" class="btn btn-info viewPdfBtn"><i class="bi bi-file-zip"></i></button></td>
                                          <!-- รายละเอียด --> 
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detailno{{$rowno->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detailno{{$rowno->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -798,6 +804,7 @@
 
                                         @endif
                                         @endforeach
+                                        <td>สิ่งที่แนบมาด้วย</td>
                                         <td>รายละเอียด</td>            
                                         </tr>
                                     @php($i=1)
@@ -990,6 +997,8 @@
                                         </div>
                                         <!-- / model อัปโหลด -->
 
+                                        <td class="text-center"><button type="button" data-file-path="{{ asset('files/file/' . $row->Ophone) }}" class="btn btn-info viewPdfBtn"><i class="bi bi-file-zip"></i></button></td>
+
              <!-- รายละเอียด --> 
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detail{{$row->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detail{{$row->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -1105,6 +1114,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
   var url = document.location.toString();
   if (url.match('#')) {
@@ -1117,5 +1127,20 @@
       $('.nano').nanoScroller();
     }
   })
+
+  const pdfButtons = document.querySelectorAll('.viewPdfBtn');
+    pdfButtons.forEach((pdfbtn) => {
+        pdfbtn.addEventListener('click', function () {
+            const pdfUrl = this.getAttribute('data-file-path');
+
+            Swal.fire({
+                showConfirmButton: false,
+                width: '70%',
+                html: '<div style="height: 600px;">' +
+                    '<iframe src="' + pdfUrl + '" style="width: 100%; height: 100%;" frameborder="0"></iframe>' +
+                    '</div>'
+            });
+        });
+    });
 </script>
 @endsection
