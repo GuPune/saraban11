@@ -555,7 +555,7 @@ public function getdepartment(Request $request)
     {
       // Validate the request
       $request->validate([
-        'file' => 'required|mimes:pdf,jpg,jpeg,png|max:2048', // Adjust the validation rules for PDF files
+        'file' => 'required|mimes:pdf,jpg,jpeg,png', // Adjust the validation rules for PDF files
         'valueid' => 'required',
       ]);
       $destinationPath = 'files/file/';
