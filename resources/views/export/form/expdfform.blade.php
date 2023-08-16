@@ -22,11 +22,12 @@
       }
 
       body{
-        font-size: 15px;
+        font-size: 18px;
       }
     .text-details {
       word-wrap: break-word;
       text-indent:2.5em;
+      line-height: 30px;
     }
 
 @page {
@@ -62,6 +63,7 @@
   width: 80%;
 }
 
+
 </style>
 
 <!-- 
@@ -83,7 +85,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
         <!-- card -->       
      <div class="font1">
-      <div class="card" style="border: 1px solid;padding:2cm 2cm 2cm 3cm;">
+      <div class="card" style="border: 1px solid;padding:2cm 2cm 2cm 3cm; width:300mm;">
           <div class="card-header" style="border: 0px;">
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
@@ -161,7 +163,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="card-body" style="padding: 1cm 0 0 1cm;">
               <div class="d-flex " style="margin-top: -40px">
                 เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
-              </div><br><br>
+              </div><br>
 
               <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
                 วันที่&nbsp;
