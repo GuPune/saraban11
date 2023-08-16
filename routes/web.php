@@ -49,7 +49,7 @@ Route::post('/bookout/getbranch',[FormController::class,'getbranch']);
 Route::post('/bookout/getdepartment',[FormController::class,'getdepartment']);
 Route::get('/pdf/form/pdf/{id}',[FormController::class,'exportpdfform']);
 Route::get('/bookout/wordExport/{id}',[FormController::class,'word']);
-
+Route::get('/form/pdf/exview/{id}', [FormController::class, 'exview']);
 
 // หนังสือเข้า
 Route::get('/admit/admin',[AdmitController::class,'admitadmin'])->name('admitadmin'); //หนังสือเข้าuser

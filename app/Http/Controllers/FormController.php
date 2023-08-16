@@ -178,6 +178,14 @@ public function preview()
         return view('form.preview',compact('user','year','form'));
         // return view('form.preview',compact('user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','form'));
     }
+public function exview (Request $request, $id)
+{
+    if (!(Auth::check())) {
+        return redirect()->route('lget');
+    }
+    $form = Form::find($id);
+    return view('export.form.expdfform', compact('form'));
+}
 
 public function viewBeforDownload(Request $request,$id)
     {
