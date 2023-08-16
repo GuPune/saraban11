@@ -216,7 +216,9 @@ $bAddr = explode('Tel:', $bAddrA);
                     ขอแสดงความนับถือ
                   </div> <br>
                   <div style="text-align:center;">
+                    @if ($form->sign)
                     <img style="width:100px" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
+                    @endif
                   </div>
                   <div style="text-align:center;">
                     .......................................................
