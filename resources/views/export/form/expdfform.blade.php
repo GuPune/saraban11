@@ -93,16 +93,16 @@ $bAddr = explode('Tel:', $bAddrA);
              @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
-              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
+              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80" style="margin-right:15px;">
               <img src="{{ asset('dist/img/logopro.png') }}"height="80">
             </div><br>
              <div class="" >
 
-             <h5 style="font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+             <h5 style="font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:16pt; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? '' ?? ''}}</p>
-             <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
-             <div class="" style="font-size:12pt; ">
+             <p style="font-size:18px; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? '' ?? ''}}</p>
+             <p style="font-size:16px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
+             <div class="" style="font-size:16px; ">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
