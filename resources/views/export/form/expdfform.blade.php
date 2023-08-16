@@ -125,11 +125,11 @@ $bAddr = explode('Tel:', $bAddrA);
              </div><br>
              <div class="" >
                     
-             <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
-                <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-             <p style="font-size:14pt; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
-             <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
-             <div class="" style="font-size:12pt;">
+             <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
+                <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+             <p style="font-size:18px; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
+             <p style="font-size:16px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+             <div class="" style="font-size:16px;">
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
