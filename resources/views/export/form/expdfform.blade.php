@@ -244,13 +244,13 @@ $bAddr = explode('Tel:', $bAddrA);
                         @endif
                       </div>
                       <div style="border: 2px solid #000000; overflow: auto; width: 200mm; height: auto; text-align: center; margin-left: 80px;">
-                        <img src="{{ asset('dist/img/logo1.png') }}" width="60px">
-                        <img src="{{ asset('dist/img/logo2.png') }}" width="60px">
-                        <img src="{{ asset('dist/img/logo3.png') }}" width="60px">
-                        <img src="{{ asset('dist/img/logo4.png') }}" width="60px">
-                        <img src="{{ asset('dist/img/logo5.png') }}" width="50px">
-                        <img src="{{ asset('dist/img/logo6.png') }}" width="200px">
-                        <img src="{{ asset('dist/img/logo7.png') }}" width="60px">
+                        <img src="{{ asset('dist/img/logo1.png') }}" width="40px">
+                        <img src="{{ asset('dist/img/logo2.png') }}" width="40px">
+                        <img src="{{ asset('dist/img/logo3.png') }}" width="40px">
+                        <img src="{{ asset('dist/img/logo4.png') }}" width="40px">
+                        <img src="{{ asset('dist/img/logo5.png') }}" width="40px">
+                        <img src="{{ asset('dist/img/logo6.png') }}" width="180px">
+                        <img src="{{ asset('dist/img/logo7.png') }}" width="40px">
                       </div>
                     </div>
                   </div>
