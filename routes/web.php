@@ -26,8 +26,9 @@ use App\Http\Controllers\AgencyController;
 */
 
 Route::get('/', function () {
+    Auth::logout();
     return view('welcome');
-})->name('lget');;
+})->name('lget');
 
 // Route::get('/home/user', function () {return view('user.home'); })->name('homeuser');;
 Route::get('/home',[HomeController::class,'home'])->name('home');
