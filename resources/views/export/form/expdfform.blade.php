@@ -66,7 +66,7 @@
 
 </style>
 
-<!-- 
+<!--
   layout หน้า  PDF preview ก่อนบันทึก
  -->
 
@@ -83,14 +83,14 @@ $bAddr = explode('Tel:', $bAddrA);
       <div class="container-fluid py-4">
         <!-- start -->
 
-        <!-- card -->       
+        <!-- card -->
      <div class="font1">
       <div class="card" style="padding:2cm 2cm 2cm 3cm; width:300mm;">
           <div class="card-header" style="border: 0px;">
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
-             
-             @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
+
+             @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80" style="margin-right:15px;">
@@ -98,7 +98,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div><br>
              <div class="" >
 
-             <h5 style="font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+             <h5 style="font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}}
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:18px; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? '' ?? ''}}</p>
              <p style="font-size:16px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
@@ -107,7 +107,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <br></div>
             </div>
              <hr noshade="noshade" size="2"><br>
-           
+
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              <div class="d-flex">
              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:20px">
@@ -117,14 +117,14 @@ $bAddr = explode('Tel:', $bAddrA);
              Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top: 20px"><br>
-            
+
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="" style="text-align:center;">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >
-                    
+
              <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:18px; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
@@ -133,9 +133,9 @@ $bAddr = explode('Tel:', $bAddrA);
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
-             
+
              <hr noshade="noshade" size="2"><br>
-                      
+
              @elseif($form->type=='ศูนย์ฝึกอบรม')
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
@@ -149,11 +149,11 @@ $bAddr = explode('Tel:', $bAddrA);
                       Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:16px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:16px;">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
                 <br>
               </div>
             </div>
-             
+
              <hr noshade="noshade" size="2"><br>
              @endif
           </div>
@@ -162,7 +162,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             <div class="card-body" style="padding: 1cm 0 0 1cm;">
               <div class="d-flex " style="margin-top: -40px">
-                เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
+                เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}}
               </div><br>
 
               <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
@@ -174,11 +174,11 @@ $bAddr = explode('Tel:', $bAddrA);
                 $thaimonth=array("มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
                 $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
                 echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
-                ?>     
+                ?>
                 </div><br><br>
 
                 <div class="d-flex justify-content-start">
-                  <b>เรื่อง</b>&nbsp;&nbsp;{{$form->story}}  
+                  <b>เรื่อง</b>&nbsp;&nbsp;{{$form->story}}
                 </div> <br>
 
                 <div class="d-flex justify-content-start"style="margin-top:5px;">
@@ -202,14 +202,14 @@ $bAddr = explode('Tel:', $bAddrA);
                     </div>
                     <div class="flex-grow-1 ms-3">
                       <?php echo $form->enclosure ?>
-                      <input type="hidden" value="{{$form->enclosure}}" class="form-control" style="width: 150px" name="enclosure">  
+                      <input type="hidden" value="{{$form->enclosure}}" class="form-control" style="width: 150px" name="enclosure">
                     </div>
                   </div>
                 @endif <br>
 
                 <div class="d-flex flex-column text-details" style="margin-left: 40px;margin-right: 40px;">
                   <?php echo $form->details ?></p>
-                </div><br><br><br>
+                </div><br>
 
                 <div style="width:fit-content; position:relative; left:62.5%">
                   <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
@@ -257,7 +257,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
 
             </div> <!-- end card body -->
-           
+
             <!-- /headform -->
         </div>
         <!--  /bodyform -->
@@ -265,7 +265,7 @@ $bAddr = explode('Tel:', $bAddrA);
       <!-- /card -->
     </div>
     <!-- /font1 -->
-    </div>   
+    </div>
     <button class="btn btn-success ms-2 downloadbtn" onclick="printDiv()">
       Print
   </button>

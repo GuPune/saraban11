@@ -37,7 +37,7 @@
 
 </style>
 
-<!-- 
+<!--
   layout หน้า  PDF preview ก่อนบันทึก
  -->
 
@@ -55,14 +55,14 @@ $bAddr = explode('Tel:', $bAddrA);
       <div class="container-fluid py-4">
         <!-- start -->
 
-        <!-- card -->       
+        <!-- card -->
      <div class="font1">
       <div class="card" >
           <div class="card-header" style="padding:2cm 2cm 2cm 3cm;">
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
-             
-             @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
+
+             @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
@@ -70,7 +70,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div><br>
              <div class="" >
 
-             <h5 style="font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+             <h5 style="font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}}
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:16pt; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? '' ?? ''}}</p>
              <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
@@ -79,7 +79,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <br></div>
             </div>
              <hr noshade="noshade" size="2"><br>
-           
+
              @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              <div class="d-flex">
              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:20px">
@@ -89,14 +89,14 @@ $bAddr = explode('Tel:', $bAddrA);
              Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top: 20px"><br>
-            
+
             @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="" style="text-align:center;">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >
-                    
+
              <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:14pt; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
@@ -105,9 +105,9 @@ $bAddr = explode('Tel:', $bAddrA);
              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
-             
+
              <hr noshade="noshade" size="2"><br>
-                      
+
              @elseif($type=='ศูนย์ฝึกอบรม')
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
@@ -121,11 +121,11 @@ $bAddr = explode('Tel:', $bAddrA);
                       Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:12pt;">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
                 <br>
               </div>
             </div>
-             
+
              <hr noshade="noshade" size="2"><br>
              @endif
               <!-- /head-form -->
@@ -133,10 +133,10 @@ $bAddr = explode('Tel:', $bAddrA);
            <!-- bodyform -->
             <div class="card-body" style="margin-top:1cm; padding: unset;">
             <form action="{{url('/addsendbook')}}" method="post" enctype="multipart/form-data">
-             @csrf  
+             @csrf
              <div class="d-flex " style="margin-top: -40px">
             @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
-            เลขที่หนังสือ&nbsp; 
+            เลขที่หนังสือ&nbsp;
             IDD/@if($idd==null){{ __('001') }}@elseif($idd<=8)00{{$idd+1}}@elseif($idd>=9)0{{$idd+1}}@elseif($idd>=99){{$idd+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
 
             <input type="hidden" value="IDD" class="form-control" style="width: 60px" name="fdepartment">
@@ -176,16 +176,16 @@ $bAddr = explode('Tel:', $bAddrA);
 
                               @elseif($shortname=='ธุรการ')
                               AD/@if($ad==null){{ __('001') }}@elseif($ad<=8)00{{$ad+1}}@elseif($ad>=9)0{{$ad+1}}@elseif($ad>=99){{$ad+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname=='การเงิน')
                               FIN/@if($fin==null){{ __('001') }}@elseif($fin<=8)00{{$fin+1}}@elseif($fin>=9)0{{$fin+1}}@elseif($fin>=99){{$fin+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname=='การตลาด')
                               MKT/@if($mkt==null){{ __('001') }}@elseif($mkt<=8)00{{$mkt+1}}@elseif($mkt>=9)0{{$mkt+1}}@elseif($mkt>=99){{$mkt+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname=='บริหารงานพัฒนาผลิตภัณฑ์')
                               ITD/@if($itd==null){{ __('001') }}@elseif($itd<=8)00{{$itd+1}}@elseif($itd>=9)0{{$itd+1}}@elseif($itd>=99){{$itd+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname=='เซลล์')
                               SALE/@if($sale==null){{ __('001') }}@elseif($sale<=8)00{{$sale+1}}@elseif($sale>=9)0{{$sale+1}}@elseif($sale>=99){{$sale+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
 
@@ -343,7 +343,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                            
+
 
                             @elseif($shortname=='การเงิน')
                             <input type="hidden" value="FIN" class="form-control" style="width: 60px" name="fdepartment">
@@ -366,7 +366,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                            
+
 
                             @elseif($shortname=='การตลาด')
                             <input type="hidden" value="MKT" class="form-control" style="width: 60px" name="fdepartment">
@@ -434,7 +434,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='กฎหมาย')
                             <input type="hidden" value="LEG" class="form-control" style="width: 60px" name="fdepartment">
@@ -457,7 +457,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='ส่วนงานเลขานุการ')
                             <input type="hidden" value="CS" class="form-control" style="width: 60px" name="fdepartment">
@@ -503,7 +503,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
                             @elseif($shortname=='คลังสินค้า')
                             <input type="hidden" value="IDS" class="form-control" style="width: 60px" name="fdepartment">
                             @if($ids==null)
@@ -525,7 +525,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='บริหารงานโครงการ')
                             <input type="hidden" value="PM" class="form-control" style="width: 60px" name="fdepartment">
@@ -549,10 +549,10 @@ $bAddr = explode('Tel:', $bAddrA);
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                             @endif
-            
+
                             @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
-                            เลขที่หนังสือ&nbsp; 
-                            
+                            เลขที่หนังสือ&nbsp;
+
                            INS/@if($ins==null){{ __('001') }}@elseif($ins<=8)00{{$ins+1}}@elseif($ins>=9)0{{$ins+1}}@elseif($ins>=99){{$ins+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
                            <input type="hidden" value="INS" class="form-control" style="width: 60px" name="fdepartment">
                             @if($ins==null)
@@ -574,11 +574,11 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                            
-                            
+
+
                             @elseif($type=='ศูนย์ฝึกอบรม')
                             เลขที่หนังสือ&nbsp;
-                             TZ/@if($tz==null){{ __('001') }}@elseif($tz<=8)00{{$tz+1}}@elseif($tz>=9)0{{$tz+1}}@elseif($tz>=99){{$tz+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}           
+                             TZ/@if($tz==null){{ __('001') }}@elseif($tz<=8)00{{$tz+1}}@elseif($tz>=9)0{{$tz+1}}@elseif($tz>=99){{$tz+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
                              <input type="hidden" value="TZ" class="form-control" style="width: 60px" name="fdepartment">
                             @if($tz==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
@@ -601,7 +601,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                              @endif
                             </div><br><br>
-            
+
 
             <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
             วันที่&nbsp;
@@ -612,8 +612,8 @@ $bAddr = explode('Tel:', $bAddrA);
             $thaimonth=array("มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
             $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
             echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
-            ?>            
-            <input type="hidden" value="{{$date}}" class="form-control" style="width: 150px" name="date">  
+            ?>
+            <input type="hidden" value="{{$date}}" class="form-control" style="width: 150px" name="date">
 
             </div><br><br>
 
@@ -626,7 +626,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="d-flex justify-content-start"style="margin-top:5px;">
               <p style="float-left; font-weight:bold;">เรียน</p>
               <p style="margin-left:10px; margin-bottom:0">{{$learn}}</p>
-              <input type="hidden" value="{{$learn}}" class="form-control" style="width: 150px" name="learn">  
+              <input type="hidden" value="{{$learn}}" class="form-control" style="width: 150px" name="learn">
             </div><br>
 
             @if($quote==null)
@@ -635,7 +635,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <div class="d-flex justify-content-start"style="margin-top:5px;">
               <p style="width:60px;font-weight:bold;">อ้างถึง</p>
               <p style="margin-left:10px; margin-bottom:0">{{$quote}}</p>
-            <input type="hidden" value="{{$quote}}" class="form-control" style="width: 150px" name="quote">  
+            <input type="hidden" value="{{$quote}}" class="form-control" style="width: 150px" name="quote">
             </div><br>
             @endif
 
@@ -647,17 +647,17 @@ $bAddr = explode('Tel:', $bAddrA);
             สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
             </div>
             <div class="flex-grow-1 ms-3">
-            <?php echo $enclosure; ?> 
-            <input type="hidden" value="{{$enclosure}}" class="form-control" style="width: 150px" name="enclosure">  
+            <?php echo $enclosure; ?>
+            <input type="hidden" value="{{$enclosure}}" class="form-control" style="width: 150px" name="enclosure">
             </div>
             </div>
             @endif <br>
-            
+
             <div class="d-flex flex-column text-details" style="">
-            <?= $details; ?> 
-            <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">  
-            </div><br><br><br>
-            
+            <?= $details; ?>
+            <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">
+            </div><br>
+
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
             ขอแสดงความนับถือ
@@ -679,10 +679,10 @@ $bAddr = explode('Tel:', $bAddrA);
             <div style="text-align:center;">{{$sPosition}}</div>
               <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
             </div>
-            
+
             <br><br><br><br><br>
-            
-            
+
+
 
             <!-- <div class="d-flex justify-content-end" style="font-size:15px;">
             FD-HO/HR-013/1 :00: 19-09-2563
@@ -721,7 +721,7 @@ $bAddr = explode('Tel:', $bAddrA);
       <!-- /card -->
     </div>
     <!-- /font1 -->
-    </div>   
+    </div>
     <div class="d-flex justify-content-end">
   <input type="hidden" value="{{$type}}" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 300px" name="type">
    </div><br>
@@ -729,7 +729,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button class="btn btn-primary" type="button" style="margin-right:10px" data-bs-toggle="modal" data-bs-target="#confirm">บันทึก</button>
- @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์') 
+ @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
  <a href="{{ route('formIDD') }}" class="btn btn-secondary" type="button">ยกเลิก</a>
  @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
  <a href="{{ route('formiddrives') }}" class="btn btn-secondary" type="button">ยกเลิก</a>
