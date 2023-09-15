@@ -72,9 +72,10 @@
 
 
 <!-- query Dpname in Departments table by Department in user table -->
-<?php $shortname = \App\CoreFunction\Helper::Fun(Auth::user()->Department ?? '0');
-$bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
-$bAddrA = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
+<?php
+$bName = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bName'];
+
+$bAddrA = \App\CoreFunction\Helper::Bran($form->formbranch ?? '21')['bAddr'];
 $bAddr = explode('Tel:', $bAddrA);
 ?>
 
