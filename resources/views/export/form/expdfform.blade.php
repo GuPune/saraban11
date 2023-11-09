@@ -86,7 +86,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
         <!-- card -->
      <div class="font1">
-      <div class="card" style="padding:2cm 2cm 2cm 1cm; width:300mm;">
+      <div class="card" style="padding:2cm 2cm 2cm 2cm; width:300mm;">
           <div class="card-header" style="border: 0px;">
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
@@ -208,7 +208,7 @@ $bAddr = explode('Tel:', $bAddrA);
                   </div>
                 @endif <br>
 
-                <div class="d-flex flex-column text-details" style="margin-left: 40px;margin-right: 40px;">
+                <div class="d-flex flex-column text-details" style="margin-left: 0px;margin-right: 40px;">
                   <?php echo $form->details ?></p>
                 </div><br>
 
