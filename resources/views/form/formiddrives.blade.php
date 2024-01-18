@@ -29,7 +29,7 @@
     }
 </style>
 
-<!-- 
+<!--
   layout หน้า  PDF สร้างเอกสารของ สำนักงานใหญ่
  -->
 
@@ -37,7 +37,7 @@
     <div class="content-header">
       <div class="container-fluid py-4">
       <!-- เริ่ม -->
-  
+
       <!-- card -->
       <div class="font1">
         <div class="card" >
@@ -48,15 +48,15 @@
              <!-- ความจริงกว้างสูง 186x186 -->
              <div class="p-2 flex-fill" style="font-size:14px;margin-top:5px">
              <h5 style="font-weight:bold; font-size:16px"> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่) </h5>
-             200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 เลขที่ผู้เสียภาษี 0405536000531 <br>
+             200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th <br></div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top:10px">
-           
+
             <!-- bodyform -->
             <div class="card-body" style="margin-top:30px;padding:unset" >
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
-                                @csrf      
+                                @csrf
             <!-- <div class="d-flex justify-content-end"> -->
             <div class="d-flex ">
 
@@ -77,16 +77,16 @@
 
                               @elseif($shortname =='ธุรการ')
                               AD/@if($ad==null){{ __('001') }}@elseif($ad<=8)00{{$ad+1}}@elseif($ad>=9)0{{$ad+1}}@elseif($ad>=99){{$ad+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname =='การเงิน')
                               FIN/@if($fin==null){{ __('001') }}@elseif($fin<=8)00{{$fin+1}}@elseif($fin>=9)0{{$fin+1}}@elseif($fin>=99){{$fin+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname =='การตลาด')
                               MKT/@if($mkt==null){{ __('001') }}@elseif($mkt<=8)00{{$mkt+1}}@elseif($mkt>=9)0{{$mkt+1}}@elseif($mkt>=99){{$mkt+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname=='บริหารงานพัฒนาผลิตภัณฑ์')
                               ITD/@if($itd==null){{ __('001') }}@elseif($itd<=8)00{{$itd+1}}@elseif($itd>=9)0{{$itd+1}}@elseif($itd>=99){{$itd+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname=='เซลล์')
                               SALE/@if($sale==null){{ __('001') }}@elseif($sale<=8)00{{$sale+1}}@elseif($sale>=9)0{{$sale+1}}@elseif($sale>=99){{$sale+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
@@ -101,7 +101,7 @@
 
                               @elseif($shortname =='บริหารงานโครงการ')
                               PM/@if($pm==null){{ __('001') }}@elseif($pm<=8)00{{$pm+1}}@elseif($pm>=9)0{{$pm+1}}@elseif($pm>=99){{$pm+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
-                              
+
                               @elseif($shortname =='คลังสินค้า')
                               IDS/@if($ids==null){{ __('001') }}@elseif($ids<=8)00{{$ids+1}}@elseif($ids>=9)0{{$ids+1}}@elseif($ids>=99){{$ids+1}}@endif/@if($total==null){{ __('001') }}@elseif($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total=99){{$total+1}}@endif/{{$year}}
 
@@ -225,7 +225,7 @@
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                            
+
 
                             @elseif($shortname=='การเงิน')
                             <input type="hidden" value="FIN" class="form-control" style="width: 60px" name="fdepartment">
@@ -248,7 +248,7 @@
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                            
+
 
                             @elseif($shortname=='การตลาด')
                             <input type="hidden" value="MKT" class="form-control" style="width: 60px" name="fdepartment">
@@ -316,7 +316,7 @@
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='กฎหมาย')
                             <input type="hidden" value="LEG" class="form-control" style="width: 60px" name="fdepartment">
@@ -339,7 +339,7 @@
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='ส่วนงานเลขานุการ')
                             <input type="hidden" value="CS" class="form-control" style="width: 60px" name="fdepartment">
@@ -385,7 +385,7 @@
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='พัฒนาผลิตภัณฑ์')
                             <input type="hidden" value="IDC" class="form-control" style="width: 60px" name="fdepartment">
@@ -432,7 +432,7 @@
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
-                          
+
 
                             @elseif($shortname=='บริหารงานโครงการ')
                             <input type="hidden" value="PM" class="form-control" style="width: 60px" name="fdepartment">
@@ -457,7 +457,7 @@
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                             @endif
             </div><br><br>
-            
+
 
 
             <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;"><!-- <div class="d-flex justify-content-center"> -->
@@ -521,7 +521,7 @@
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
                 <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="sName" required>
-                
+
               </p>
               <p style="float:inline-end">)</p>
             </div>
@@ -534,7 +534,7 @@
             <div >
               <input id="position" type="text" class="form-control" placeholder="กรุณากรอกตำแหน่ง" style="width: 350px" name="sPosition" required>
             </div>
-          
+
             </div>
             </div>
             <br><br><br><br><br>
@@ -553,7 +553,7 @@
             <div class="d-flex justify-content-start"style="margin-left: 20px">
             E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="sPosition" required>
             </div><br> </div>-->
-            
+
             <br><br>
 
             <!-- <div class="d-flex justify-content-end">
@@ -578,7 +578,7 @@
             </div>
             </div>
 
-          
+
             <!-- /headform -->
         </div>
         <!--  /bodyform -->
@@ -586,7 +586,7 @@
       <!-- /card -->
     </div>
     <!-- /font1 -->
-    </div>   
+    </div>
     <div class="d-flex justify-content-end">
 <input type="hidden" value="บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 300px" name="type">
    </div><br>
@@ -602,14 +602,14 @@
     </div>
 </div>
 
-<script> 
+<script>
   var textF = document.getElementById("textf");
   var storSign = document.getElementById("signName");
   var textPo = document.getElementById("position");
   var dropd = document.getElementById("dmanager");
 
   function selectOption (option) {
-    
+
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
     var selectedImage = document.getElementById("selected-image");
@@ -630,7 +630,7 @@
 
     // Start loading the image
     imageLoader.src = imagePath;
-    
+
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
     storSign.value = imageName;
@@ -660,18 +660,18 @@
   document.addEventListener("click", function(){
     dropd.classList.remove("show");
   });
-  
+
   var input = document.getElementById('textf');
   var dropdown = document.getElementById('dmanager');
   var options = dropdown.getElementsByTagName('a');
-  
+
   input.addEventListener('input', function() {
     var searchTerm = input.value.toUpperCase();
     dropd.classList.add("show");
     for (var i = 0; i < options.length; i++) {
       var option = options[i];
       var text = option.innerText.toUpperCase();
-      
+
       if (text.indexOf(searchTerm) > -1) {
         option.style.display = '';
       } else {
