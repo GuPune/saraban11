@@ -29,7 +29,7 @@
     }
 </style>
 
-<!-- 
+<!--
   layout หน้า  PDF สร้างเอกสารของ โรงเรียนสอนขับรถไอดี
  -->
 
@@ -39,13 +39,13 @@
       <div class="container-fluid py-4">
         <!-- start -->
 
-        <!-- card -->       
+        <!-- card -->
      <div class="font1">
       <div class="card" >
           <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
           <!-- <div class="d-flex " style="width: fit-content">
              <img src="{{ asset('dist/img/logoIDD.png') }}" height="80">
-             
+
              <div>
              <div class="d-flex justify-content-start" style="">
              <h5>โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์</h5>&nbsp;
@@ -63,20 +63,20 @@
               <img src="{{ asset('dist/img/logopro.png') }}"height="80">
             </div><br>
              <div class="" >
-            
+
              <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
              <?php $braname = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddrA = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
                     $bAddr = explode('Tel:', $bAddrA);
                     ?>
-                    
 
-             <h5 style=";font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}} 
+
+             <h5 style=";font-weight:bold;margin-bottom:0;font-size:20px">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$braname}}
                 <span style="font-size:13px;font-weight:400">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:16px; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1]  ?? ''}}</p>
              <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
              <div class="" style="font-size:12px;">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
 
@@ -89,9 +89,9 @@
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
 
             <!-- <form action="{{url('/addsendbook')}}" method="post" enctype="multipart/form-data"> -->
-            @csrf      
+            @csrf
             <div class="d-flex " style="margin-top: -40px">
-            เลขที่หนังสือ&nbsp; 
+            เลขที่หนังสือ&nbsp;
             IDD/@if($idd==null){{ __('001') }}@elseif($idd<=8)00{{$idd+1}}@elseif($idd>=9)0{{$idd+1}}@elseif($idd>=99){{$idd+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
             </div>
 
@@ -117,7 +117,7 @@
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
             </div><br><br>
-            
+
 
 
             <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;">
@@ -166,7 +166,7 @@
                         //<![CDATA[</script>
               <!-- /textarea -->
             </div><br><br><br>
-            
+
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
               ขอแสดงความนับถือ
@@ -182,7 +182,7 @@
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
                 <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="sName" required>
-                
+
               </p>
               <p style="float:inline-end">)</p>
             </div>
@@ -198,10 +198,10 @@
             </div>
             </div>
 
-            
-            
+
+
             <br><br><br><br><br>
-            
+
             <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
@@ -239,8 +239,8 @@
             </div>
             </div>
             </div>
-          
-          
+
+
             <!-- /headform -->
         </div>
         <!--  /bodyform -->
@@ -248,7 +248,7 @@
       <!-- /card -->
     </div>
     <!-- /font1 -->
-    </div>   
+    </div>
     <div class="d-flex justify-content-end">
   <input type="hidden" value="โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 300px" name="type">
    </div><br>
@@ -263,14 +263,14 @@
       </div>
     </div>
 </div>
-<script> 
+<script>
   var textF = document.getElementById("textf");
   var storSign = document.getElementById("signName");
   var textPo = document.getElementById("position");
   var dropd = document.getElementById("dmanager");
 
   function selectOption (option) {
-    
+
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
     var selectedImage = document.getElementById("selected-image");
@@ -291,7 +291,7 @@
 
     // Start loading the image
     imageLoader.src = imagePath;
-    
+
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
     storSign.value = imageName;
@@ -321,18 +321,18 @@
   document.addEventListener("click", function(){
     dropd.classList.remove("show");
   });
-  
+
   var input = document.getElementById('textf');
   var dropdown = document.getElementById('dmanager');
   var options = dropdown.getElementsByTagName('a');
-  
+
   input.addEventListener('input', function() {
     var searchTerm = input.value.toUpperCase();
     dropd.classList.add("show");
     for (var i = 0; i < options.length; i++) {
       var option = options[i];
       var text = option.innerText.toUpperCase();
-      
+
       if (text.indexOf(searchTerm) > -1) {
         option.style.display = '';
       } else {

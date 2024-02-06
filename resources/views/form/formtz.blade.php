@@ -25,10 +25,10 @@
     }
     .dropdown.show{
       display: block;
-    } 
+    }
 </style>
 
-<!-- 
+<!--
   layout หน้า  PDF สร้างเอกสารของ TZ
  -->
 
@@ -55,12 +55,12 @@
                       Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:14px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:14px;">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
                 <br>
               </div>
             </div>
-            
-             
+
+
 
 
              <hr noshade="noshade" size="2">
@@ -69,9 +69,9 @@
             <div class="card-body" style="margin: 1cm 0 0 0; padding: unset;" >
             <div class="d-flex ">
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
-            @csrf 
+            @csrf
             เลขที่หนังสือ&nbsp;
-            TZ/@if($tz==null){{ __('001') }}@elseif($tz<=8)00{{$tz+1}}@elseif($tz>=9)0{{$tz+1}}@elseif($tz>=99){{$tz+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}           
+            TZ/@if($tz==null){{ __('001') }}@elseif($tz<=8)00{{$tz+1}}@elseif($tz>=9)0{{$tz+1}}@elseif($tz>=99){{$tz+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
             <!-- <input type="hidden" class="form-control" placeholder="เลขที่หนังสือ" style="width: 300px"> -->
             </div>
 
@@ -144,7 +144,7 @@
                         //<![CDATA[</script>
               <!-- /textarea -->
             </div><br><br><br>
-            
+
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
               ขอแสดงความนับถือ
@@ -160,7 +160,7 @@
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
                 <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="sName" required>
-                
+
               </p>
               <p style="float:inline-end">)</p>
             </div>
@@ -175,7 +175,7 @@
             </div>
             </div>
             </div>
-            
+
             <br><br><br><br><br>
 
             <!-- Contact Us -->
@@ -216,7 +216,7 @@
             </div>
             </div>
             </div>
-  
+
             <!-- /headform  -->
         </div>
         <!-- /bodyform -->
@@ -239,14 +239,14 @@
 </div>
 
 
-<script> 
+<script>
   var textF = document.getElementById("textf");
   var storSign = document.getElementById("signName");
   var textPo = document.getElementById("position");
   var dropd = document.getElementById("dmanager");
 
   function selectOption (option) {
-    
+
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
     var selectedImage = document.getElementById("selected-image");
@@ -267,7 +267,7 @@
 
     // Start loading the image
     imageLoader.src = imagePath;
-    
+
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
     storSign.value = imageName;
@@ -297,18 +297,18 @@
   document.addEventListener("click", function(){
     dropd.classList.remove("show");
   });
-  
+
   var input = document.getElementById('textf');
   var dropdown = document.getElementById('dmanager');
   var options = dropdown.getElementsByTagName('a');
-  
+
   input.addEventListener('input', function() {
     var searchTerm = input.value.toUpperCase();
     dropd.classList.add("show");
     for (var i = 0; i < options.length; i++) {
       var option = options[i];
       var text = option.innerText.toUpperCase();
-      
+
       if (text.indexOf(searchTerm) > -1) {
         option.style.display = '';
       } else {

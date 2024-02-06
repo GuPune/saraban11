@@ -38,7 +38,7 @@
       .dropdown.show{
         display: block;
       }
-      
+
 
 </style>
 
@@ -53,36 +53,36 @@ $bAddr = explode('Tel:', $bAddrA);
       <div class="container-fluid py-4">
         <!-- start -->
 
-        <!-- card -->       
+        <!-- card -->
      <div class="font1">
       <div class="card" >
           <div class="card-header" style="padding: 2cm 2cm 2cm 3cm;">
-             @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')   
+             @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
               <img src="{{ asset('dist/img/logopro.png') }}"height="80">
             </div><br>
             <div class="" >
-              <h5 style="font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+              <h5 style="font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}}
                 <span style="font-size:13pt;font-weight:400;font-weight:bold;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
               <p style="font-size:16pt; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
               <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
               <div class="" style="font-size:12pt">
-              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+              ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
               <br></div>
               </div><hr noshade="noshade" size="2"><br>
-           
+
              @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
              <div class="d-flex">
              <img src="{{ asset('dist/img/logoiddrives.png') }}" style="margin-right:10px"  height="100">
              <div class="flex-fill" style="margin-top: 10px;">
              <h5><b> บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)</b> </h5>
-             200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
+             200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531 <br>
              Tel : 043-228 899 www.iddrices.co.th Email : idofficer@iddrives.co.th</div>
             </div>
             <hr noshade="noshade" size="2" style="margin-top:10px">
-            
+
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="" style="text-align:center;">
              <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
@@ -90,17 +90,17 @@ $bAddr = explode('Tel:', $bAddrA);
              </div><br>
              <div class="" >
 
-             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->   
+             <!-- ดึงข้อมูลสาขาและที่อยู่จาก Database  -->
              <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:14pt; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12pt;">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
              <hr noshade="noshade" size="2"><br>
-                      
+
              @elseif($form->type=='ศูนย์ฝึกอบรม')
              <div class="d-flex justify-content-center">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
@@ -113,7 +113,7 @@ $bAddr = explode('Tel:', $bAddrA);
                       Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12pt;margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:12pt; ">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
                 <br>
               </div>
             </div>
@@ -122,14 +122,14 @@ $bAddr = explode('Tel:', $bAddrA);
               <!-- /head-form -->
 
             <form action="{{url('/form/pdf/'.$form->id)}}" method="post" enctype="multipart/form-data">
-            @csrf   
+            @csrf
 
            <!-- bodyform -->
             <div class="card-body" style="padding: 1cm 0 0 0;">
             <div class="d-flex ">
-            เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
+            เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}}
             </div><br><br>
-            
+
             <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;">
             วันที่&nbsp;<?php
              $myDate= $form->date;
@@ -143,7 +143,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <!-- <input type="date" class="form-control" value="{{$form->date}}" style="width: 800px" name="date"> -->
             <input type="hidden" class="form-control" value="{{$form->date}}" style="width: 800px" name="date" required>
 
-            
+
             <div class="d-flex justify-content-start">
             เรื่อง&nbsp;&nbsp;
             <input type="text" class="form-control" value="{{$form->story}}" placeholder="กรุณากรอกเรื่อง" style="width: 800px" name="story" required>
@@ -154,7 +154,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <input type="text" class="form-control" value="{{$form->learn}}" placeholder="กรุณากรอกเรียนถึง" style="width: 800px" name="learn" required>
             </div><br>
 
-            
+
             <div class="d-flex justify-content-start"style="margin-top:5px;">
             อ้างถึง&nbsp;&nbsp;
             <input type="text" class="form-control" value="{{$form->quote}}" placeholder="กรุณากรอกอ้างถึง" style="width: 300px" name="quote">
@@ -173,7 +173,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <!-- <div class="d-flex flex-column" > -->
             <textarea  id="txtMessage1" name="details"> <?= $form->details; ?></textarea>
             <!-- </div> -->
-            
+
                <!-- teaxareasize -->
             <!-- สิ่งที่ส่งมาด้วย -->
             <script>CKEDITOR.replace( 'txtMessage',{
@@ -207,7 +207,7 @@ $bAddr = explode('Tel:', $bAddrA);
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
                 <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" value="{{$form->sName}}" autocomplete="off" name="sName" required>
-                
+
               </p>
               <p style="float:inline-end">)</p>
             </div>
@@ -222,11 +222,11 @@ $bAddr = explode('Tel:', $bAddrA);
             </div>
             </div>
             </div>
-            
+
             <br><br><br>
 
             <div class=" footer">
-            
+
             <!-- Contact Us -->
             <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
             <!-- <div style="border: 2px solid #000000; overflow: auto; width: 350px; height:auto;" style="margin: 10px"><br>
@@ -244,7 +244,7 @@ $bAddr = explode('Tel:', $bAddrA);
             </div><br>
             </div><br><br> -->
 
-            
+
             <!-- <div class="d-flex justify-content-end" style="font-size:15px;margin-right:150px">
             FD-HO/HR-013/1 :00: 19-09-2563
             </div> -->
@@ -275,7 +275,7 @@ $bAddr = explode('Tel:', $bAddrA);
       <!-- /card -->
     </div>
     <!-- /font1 -->
-    </div>   
+    </div>
 <!-- save cancel -->
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button class="btn btn-primary" type="submit" style="margin-right:10px">บันทึก</button>
@@ -296,14 +296,14 @@ $bAddr = explode('Tel:', $bAddrA);
 
 
 
-<script> 
+<script>
   var textF = document.getElementById("textf");
   var storSign = document.getElementById("signName");
   var textPo = document.getElementById("position");
   var dropd = document.getElementById("dmanager");
 
   function selectOption (option) {
-    
+
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
     var selectedImage = document.getElementById("selected-image");
@@ -324,7 +324,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
     // Start loading the image
     imageLoader.src = imagePath;
-    
+
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
     storSign.value = imageName;
@@ -354,18 +354,18 @@ $bAddr = explode('Tel:', $bAddrA);
   document.addEventListener("click", function(){
     dropd.classList.remove("show");
   });
-  
+
   var input = document.getElementById('textf');
   var dropdown = document.getElementById('dmanager');
   var options = dropdown.getElementsByTagName('a');
-  
+
   input.addEventListener('input', function() {
     var searchTerm = input.value.toUpperCase();
     dropd.classList.add("show");
     for (var i = 0; i < options.length; i++) {
       var option = options[i];
       var text = option.innerText.toUpperCase();
-      
+
       if (text.indexOf(searchTerm) > -1) {
         option.style.display = '';
       } else {

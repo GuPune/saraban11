@@ -26,10 +26,10 @@
     }
     .dropdown.show{
       display: block;
-    } 
+    }
 </style>
 
-<!-- 
+<!--
   layout หน้า  PDF สร้างเอกสารของ สถานตรวจสภาพรถ
  -->
 
@@ -54,18 +54,18 @@
              <?php $bName = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bName'];
                     $bAddrA = \App\CoreFunction\Helper::Bran(Auth::user()->Branch ?? '21')['bAddr'];
                     $bAddr = explode('Tel:', $bAddrA);?>
-                    
-                    
+
+
              <h5 style="font-size:20px;;font-weight:bold;margin-bottom:0">สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี สาขา{{$bName}}
                 <span style="font-size:14px;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
              <p style="font-size:14px; margin:unset;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
              <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
              <div class="" style="font-size:12px; ">
-             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
+             ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th
              <br></div>
             </div>
-             
-             
+
+
              <!-- <div class="d-flex" style="margin: 20px">
                 <div class="py-5">
                   <img src="{{ asset('dist/img/logoINS.png') }}" height="100">
@@ -79,14 +79,14 @@
              <hr noshade="noshade" size="2">
 
                   <!-- bodyform -->
-            <?php //echo 'check 0'.$total;?> 
+            <?php //echo 'check 0'.$total;?>
             <div class="card-body" style="margin:1cm 0 0 0; padding:unset;" >
             <form action="{{url('/form/add')}}" method="post" enctype="multipart/form-data">
-            @csrf      
+            @csrf
             <div class="d-flex ">
-            เลขที่หนังสือ&nbsp; 
+            เลขที่หนังสือ&nbsp;
             INS/@if($ins==null){{ __('001') }}@elseif($ins<=8)00{{$ins+1}}@elseif($ins>=9)0{{$ins+1}}@elseif($ins>=99){{$ins+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
-                
+
             <!-- <input type="hidden" class="form-control" placeholder="เลขที่หนังสือ" style="width: 300px"> -->
             </div>
 
@@ -112,7 +112,7 @@
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
             </div><br><br>
-            
+
 
 
             <div class="d-flex " style="width:fit-content; position:relative; left:62.5%;">
@@ -161,7 +161,7 @@
                         //<![CDATA[</script>
               <!-- /textarea -->
             </div><br><br><br>
-            
+
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
               ขอแสดงความนับถือ
@@ -177,7 +177,7 @@
               <p style="float:inline-start">(</p>
               <p style="width: 100%;">
                 <input id="textf" type="text" class="form-control" placeholder="กรุณากรอกชื่อ" autocomplete="off" name="sName" required>
-                
+
               </p>
               <p style="float:inline-end">)</p>
             </div>
@@ -192,7 +192,7 @@
             </div>
             </div>
             </div>
-            
+
             <br><br><br><br><br>
 
             <!-- Contact Us -->
@@ -234,7 +234,7 @@
             </div>
             </div>
 
-          
+
             <!-- /headform -->
         </div>
         <!--  /bodyform -->
@@ -242,7 +242,7 @@
       <!-- /card -->
     </div>
     <!-- /font1 -->
-    </div>   
+    </div>
     <div class="d-flex justify-content-end">
   <input type="hidden" value="สถานตรวจสภาพรถศูนย์ตรอ.ไอดี" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 300px" name="type">
    </div><br>
@@ -257,14 +257,14 @@
       </div>
     </div>
 </div>
-<script> 
+<script>
   var textF = document.getElementById("textf");
   var storSign = document.getElementById("signName");
   var textPo = document.getElementById("position");
   var dropd = document.getElementById("dmanager");
 
   function selectOption (option) {
-    
+
     var imageName = option.getAttribute("value");
     var imagePath = "{{ asset('dist/img/sign') }}/" + imageName + ".png";
     var selectedImage = document.getElementById("selected-image");
@@ -285,7 +285,7 @@
 
     // Start loading the image
     imageLoader.src = imagePath;
-    
+
     textF.value = option.getAttribute("nameSelected");
     textPo.value = option.getAttribute("positionSelected");
     storSign.value = imageName;
@@ -315,18 +315,18 @@
   document.addEventListener("click", function(){
     dropd.classList.remove("show");
   });
-  
+
   var input = document.getElementById('textf');
   var dropdown = document.getElementById('dmanager');
   var options = dropdown.getElementsByTagName('a');
-  
+
   input.addEventListener('input', function() {
     var searchTerm = input.value.toUpperCase();
     dropd.classList.add("show");
     for (var i = 0; i < options.length; i++) {
       var option = options[i];
       var text = option.innerText.toUpperCase();
-      
+
       if (text.indexOf(searchTerm) > -1) {
         option.style.display = '';
       } else {

@@ -49,7 +49,7 @@
         /* สลับสีแถว */
         /* tr:nth-of-type(odd) {
             background: #eee;
-        } */ 
+        } */
 
         th {
             background: #5A5E63;
@@ -70,7 +70,7 @@
         .story{
         width: 50px;
         display: flex;
-        overflow: auto; 
+        overflow: auto;
         clear:left;
              word-wrap: break-all;
             float:left;
@@ -80,31 +80,31 @@
             text-align:center;
         }
 .agency{
-    width: 9em; 
+    width: 9em;
     word-wrap: break-word;
 }
 .story1{
-    width: 5em; 
+    width: 5em;
     word-wrap: break-word;
 }
 .number{
-    width: 5em; 
+    width: 5em;
     word-wrap: break-word;
 }
 .db{
-    width: 8em; 
+    width: 8em;
     word-wrap: break-word;
 }
 .date{
-    width: 2em; 
+    width: 2em;
     word-wrap: break-word;
 }
 .index{
-    width:2em; 
+    width:2em;
     word-wrap: break-word;
 }
 .name{
-    width:6em; 
+    width:6em;
     word-wrap: break-word;
 }
 footer {
@@ -119,7 +119,7 @@ footer {
 }
 
 </style>
-<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >   
+<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >
 
 
     <div class="header" style=";margin-bottom:20px ;border-bottom:2px solid #787878">
@@ -127,7 +127,7 @@ footer {
                 <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-top:-10px;margin-bottom:5px" width="80px"/>
             <div class="" style="line-height:18px">
                 <p style="font-size:20pt;font-weight: bold;margin:unset;padding:unset">บริษัท ไอดีไดรฟ์ จำกัด สำนักงานใหญ่</p>
-                <p style="font-size:16pt;margin:unset;padding:unset">200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
+                <p style="font-size:16pt;margin:unset;padding:unset">200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น เลขที่ผู้เสียภาษี 0405536000531</p>
                 <p style="font-size:16pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
             </div>
             </div>
@@ -140,23 +140,23 @@ footer {
 
 
 
-  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือส่งออก </b></p> 
+  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือส่งออก </b></p>
   <table class="table">
                                 <thead>
                                     <tr>
                                         <th>ลำดับ</th>
                                         <th>วันที่หนังสือ</th>
-                                        <th>ฝ่าย/สาขา</th>   
+                                        <th>ฝ่าย/สาขา</th>
                                         <th>เลขที่หนังสือ</th>
                                         <th>ถึงหน่วยงาน</th>
-                                        <th>เรื่อง</th>     
+                                        <th>เรื่อง</th>
                                         <th>ผู้ออกจดหมาย</th>
-                                        </tr> 
+                                        </tr>
                                         @php($i=1)
                                 </thead>
                                 <tbody>
                                 @foreach($bookoutrow as $row)
-                                <tr>       
+                                <tr>
                                         <td class="index">{{$i++}}</td>
                                         <td class="date"><?php
                                         $myDate= $row->Odate;
@@ -173,13 +173,13 @@ footer {
                                         {{$row->agency->agency_name}}/{{$row->branch->branche_name}}
                                         @else
                                         {{$row->department->Dpmname}}/{{$row->branch->branche_name}}
-                                        @endif  
+                                        @endif
                                         </td>
                                         <td class="number">{{$row->Onumber}}</td>
                                         <td class="agency">{{$row->Oag_receive}}</td>
                                         <!-- <td class="story">{{$row->Ostory}} </td> -->
                                         <td class="story1">
-                                        <?php 
+                                        <?php
                                         if(strlen($row->form->story) > 60){
                                         echo mb_substr($row->form->story, 0, 60).'...';
                                         }
@@ -190,7 +190,7 @@ footer {
                                         </td>
                                         <td class="name">{{$row->Oname}}</td>
                                         </tr>
-                                </tbody>  
+                                </tbody>
                                @endforeach
                             </table> <br>
 
