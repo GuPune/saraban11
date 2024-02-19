@@ -159,7 +159,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             @elseif($form->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
                 <div class="d-flex justify-content-center" style="text-align:center; ">
-                    <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80">
+                    <img src="{{ asset('dist/img/intlogo.jpg') }}" height="80">
                     <div class="align-self-center mx-3">
                         <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน อินเตอร์บริบาลนานาชาติ</h5>
                         <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing Assistant School</h5>
@@ -236,25 +236,62 @@ $bAddr = explode('Tel:', $bAddrA);
                   <?php echo $form->details ?></p>
                 </div><br>
 
-                <div style="width:fit-content; position:relative; left:62.5%">
-                  <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
-                    ขอแสดงความนับถือ
-                  </div> <br>
-                  <div style="text-align:center;">
-                    @if ($form->sign)
-                        <img style="width:100px" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
-                    @else
-                        <br><br>
-                    @endif
-                  </div>
-                  <div style="text-align:center;">
-                    .......................................................
-                  </div>
-                  <div style="text-align:center; line-height: 30px">
-                    ({{$form->sName}})
-                  </div>
-                  <div style="text-align:center;">{{$form->sPosition}}</div>
-                </div>
+                @if($form->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                    <div class="d-flex justify-content-around ">
+                        <div style="width:fit-content; position:relative;">
+                            <div style="text-align:center; font-weight: bold">
+                                <!-- <div class="d-flex justify-content-center"> -->
+                                ติดต่อ นายยุทธศักดิ์ อริยะชัยประดิษฐ์
+                            </div>
+                            <br>
+                            <div style="text-align:center">
+                                ผู้จัดการ โรงเรียน อินเตอร์บริบาลนานาชาติ
+                            </div>
+                        </div>
+                        <div style="width:fit-content; position:relative;">
+                            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
+                                ขอแสดงความนับถือ
+                            </div>
+                            <br>
+                            <div style="text-align:center;">
+                                @if ($form->sign)
+                                    <img style="width:100px" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
+                                @else
+                                    <br><br>
+                                @endif
+                            </div>
+                            <div style="text-align:center;">
+                            .......................................................
+                            </div>
+
+                            <div style="text-align:center; line-height: 30px">
+                                ({{$form->sName}})
+                            </div>
+                            <div style="text-align:center;">{{$form->sPosition}}</div>
+                        </div>
+                    </div>
+                @else
+                    <div style="width:fit-content; position:relative; left:62.5%">
+                        <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
+                            ขอแสดงความนับถือ
+                        </div>
+                        <br>
+                        <div style="text-align:center;">
+                            @if ($form->sign)
+                                <img style="width:100px" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
+                            @else
+                                <br><br>
+                            @endif
+                        </div>
+                        <div style="text-align:center;">
+                            .......................................................
+                        </div>
+                        <div style="text-align:center; line-height: 30px">
+                            ({{$form->sName}})
+                        </div>
+                        <div style="text-align:center;">{{$form->sPosition}}</div>
+                    </div>
+                @endif
 
                 <div class=" footer" style="margin-top: 20px;">
                   <div class="d-flex justify-content-center">
@@ -268,6 +305,8 @@ $bAddr = explode('Tel:', $bAddrA);
                           FD-INS-005 :00: 20-5-2566
                         @elseif($form->type=='ศูนย์ฝึกอบรม')
                           FD-IDD-TZ-013 :00: 20-05-2566
+                        @elseif($form->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                            FD-HO/HR-013/1 :00: 19-09-2563
                         @endif
                       </div>
                       <div style="border: 2px solid #000000; overflow: auto; width: 200mm; height: auto; text-align: center; margin-left: 80px;">

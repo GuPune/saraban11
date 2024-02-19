@@ -122,7 +122,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
             @elseif($form->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
                 <div class="d-flex justify-content-center" style="text-align:center; ">
-                    <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80">
+                    <img src="{{ asset('dist/img/intlogo.jpg') }}" height="80">
                     <div class="align-self-center mx-3">
                         <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน อินเตอร์บริบาลนานาชาติ</h5>
                         <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing Assistant School</h5>
