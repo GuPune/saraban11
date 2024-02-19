@@ -137,26 +137,50 @@ $bAddr = explode('Tel:', $bAddrA);
 
              <hr noshade="noshade" size="2"><br>
 
-             @elseif($form->type=='ศูนย์ฝึกอบรม')
-             <div class="" style="text-align:center;">
-              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
-              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80" style="margin-right:25px;">&nbsp;&nbsp;
-              <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
-            </div>
-            <br>
-            <div class="" >
-              <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:18px; margin:unset;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
-                      Tel :082-7513888  www.trainingzenter.com</p>
-              <p style="font-size:16px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
-              <div class="" style="font-size:16px;">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
+            @elseif($form->type=='ศูนย์ฝึกอบรม')
+                <div class="" style="text-align:center;">
+                    <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+                    <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80" style="margin-right:25px;">&nbsp;&nbsp;
+                    <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
+                </div>
                 <br>
-              </div>
-            </div>
+                <div class="" >
+                    <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+                    <p style="font-size:18px; margin:unset;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
+                        Tel :082-7513888  www.trainingzenter.com</p>
+                    <p style="font-size:16px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+                    <div class="" style="font-size:16px;">
+                        ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
+                        <br>
+                    </div>
+                </div>
 
-             <hr noshade="noshade" size="2"><br>
-             @endif
+                <hr noshade="noshade" size="2"><br>
+
+            @elseif($form->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                <div class="d-flex justify-content-center" style="text-align:center; ">
+                    <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80">
+                    <div class="align-self-center mx-3">
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน อินเตอร์บริบาลนานาชาติ</h5>
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing Assistant School</h5>
+                    </div>
+                    &nbsp;&nbsp;
+                    <img src="{{ asset('dist/img/logoid_new.png') }}"height="80">
+                </div>
+                <div class="">
+                    <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง
+                        จ.ขอนแก่น 40000
+                        <br> Email:intnas@iddrives.co.th www.intnas.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
+                    </p>
+                    <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000</p>
+                    <div class="" style="font-size:12px;">
+                         Tel: 043-228 899 Email : idofficer@iddrives.co.th
+                        <br>
+                    </div>
+                </div>
+
+                <hr noshade="noshade" size="2"><br>
+            @endif
           </div>
               <!-- /head-form -->
 

@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\Form;
 use App\Models\manager;
 use App\Models\branch;
-use Illuminate\support\Facades\DB; 
+use Illuminate\support\Facades\DB;
 use App\Models\transport_type;
 use App\Models\agency;
 use Illuminate\Support\Facades\Auth;
@@ -46,7 +46,7 @@ class FormController extends Controller
             return redirect()->route('lget');}
         $user = User::all();
         $form = Form::all();
-        
+
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
         $ad = Form::where('fdepartment','AD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ธุรการ
         $pur = Form::where('fdepartment','PUR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//จัดซื้อ
@@ -75,7 +75,7 @@ class FormController extends Controller
               foreach ($manager as $manager) {
                 $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
-                
+
               }
         return view('form.formiddrives',compact('nameManager','manager','user','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm','ids','form','idc'));
     }
@@ -103,7 +103,7 @@ class FormController extends Controller
               foreach ($manager as $manager) {
                 $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
-                
+
               }
         return view('form.formidd',compact('nameManager','user','form','total','year','idd'));
         // return view('form.formidd',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
@@ -130,7 +130,7 @@ class FormController extends Controller
               foreach ($manager as $manager) {
                 $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
-                
+
               }
         return view('form.formins',compact('nameManager','user','form','ins','total','year'));
         // return view('form.formins',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
@@ -158,9 +158,37 @@ class FormController extends Controller
               foreach ($manager as $manager) {
                 $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
-                
+
               }
         return view('form.formtz',compact('nameManager','user','form','tz','total','year'));
+        // return view('form.formtz',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
+    }
+
+    public function formINAS()
+    {
+        if (!Auth::check()) {
+            return redirect()->route('lget');}
+        $user = User::all();
+        $form = Form::all();
+        // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
+
+        $inas = Form::where('formagency','LIKE',Auth::user()->Agency)
+        ->where('formbranch','LIKE',Auth::user()->Branch)
+        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนอินเตอร์บริบาลนานาชาติ')->count();
+        $total = Form::count();
+        $data10 = date("y-m-d");
+        $ec1 = explode("-", $data10);
+        $years = $ec1[0];
+        $year =mb_strimwidth($years+543 , -2, 2);
+
+        $manager = manager::all();
+        $nameManager = [];
+              foreach ($manager as $manager) {
+                $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
+                array_push($nameManager,$isDecode);
+
+              }
+        return view('form.forminas',compact('nameManager','user','form','inas','total','year'));
         // return view('form.formtz',compact('user','form','ad','pur','fin','acc','hr','iti','mkt','itd','total','year','sale','leg','cs','iso','pm'));
     }
 
@@ -205,7 +233,7 @@ public function viewpdfform(Request $request,$id)
               foreach ($manager as $manager) {
                 $isDecode = [json_decode('"'.trim($manager->prefix).trim($manager->fname)." ".trim($manager->lname).'"'), $manager->emID, $manager->position];
                 array_push($nameManager,$isDecode);
-                
+
               }
         return view('form.editform',compact('nameManager','user','form'));
     }
@@ -232,11 +260,11 @@ public function pdfform(Request $request,$id)
         // return view('user.bookout.pdfform',compact('user','form'));
         if($role=='0'){
             return redirect()->route('bookoutuser')->with('success',"อัพเดตข้อมูลเรียบร้อย") ;
-    
+
             }
             elseif($role=='1'){
             return redirect()->route('bookoutstaff')->with('success',"อัพเดตข้อมูลเรียบร้อย") ;
-    
+
             }
             elseif($role=='2'){
             return redirect()->route('bookoutadmin')->with('success',"อัพเดตข้อมูลเรียบร้อย") ;
@@ -255,7 +283,7 @@ public function add(Request $request)
         $forms1 = new Form;
         $forms = new Form;
         $forms->user_id = Auth::user()->id;
-        
+
         if($request->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์'){
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
@@ -368,6 +396,34 @@ public function add(Request $request)
                 $forms->cnumber = $cnumber;
             }
         }
+        elseif($request->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ'){
+            $fdepartment = $request->fdepartment;
+            $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
+            ->where('formbranch','LIKE',Auth::user()->Branch)
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนอินเตอร์บริบาลนานาชาติ')->count()+1;
+            $cnumber = Form::count()+1;
+            $forms->fdepartment = $fdepartment;
+             // แยกแผนก
+             if($dnumber<=9){
+                $forms->dnumber = '00'.$dnumber;
+            }
+            elseif($dnumber>=9){
+                $forms->dnumber = '0'.$dnumber;
+            }
+            elseif($dnumber>=99){
+                $forms->dnumber = $dnumber;
+            }
+            // ทั้งหมด
+            if($cnumber<=9){
+                $forms->cnumber = '00'.$cnumber;
+            }
+            elseif($cnumber>=9){
+                $forms->cnumber = '0'.$cnumber;
+            }
+            elseif($cnumber>=99){
+                $forms->cnumber = $cnumber;
+            }
+        }
         // $forms->fdepartment = $request->fdepartment;
         // $forms->dnumber = $request->dnumber;
         // $forms->cnumber = $request->cnumber;
@@ -413,9 +469,9 @@ public function add(Request $request)
         $depositor = depositor::all();
         // dd($data);
         return view('bookout.addsendbook',compact('forms','transport_type','department','agency','abd','branch','depositor'))->with($data,'abd',$abd,$agency,'agency');
-   
+
     }
-    
+
     //form/add
 public function store(Request $request)
     {
@@ -439,7 +495,7 @@ public function store(Request $request)
             'sPosition' => $request->sPosition,
             'type' => $request->type
             ];
-            
+
         $transport_type = transport_type::all();
         $department = Department::all();
         $agency = agency::all();
@@ -491,9 +547,14 @@ public function store(Request $request)
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','tz','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }
+        elseif($request->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ'){
+            $inas = Form::where('type','โรงเรียนอินเตอร์บริบาลนานาชาติ')->count();
+            return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','inas','total','year'))->with($data,'abd',$abd,$agency,'agency');
+
+        }
                // return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor'))->with($data,'abd',$abd,$agency,'agency');
         // return view('user.bookout.addsendbook',compact('forms','transport_type','department','agency','abd','branch','depositor'))->with($data,'abd',$abd,$agency,'agency');
-   
+
 }
 
 public function exportpdfform(Request $request,$id)
@@ -520,8 +581,8 @@ public function getbranch(Request $request)
     {
         if (!Auth::check()) {
             return redirect()->route('lget');}
-       
-     $cid=$request->post('cid'); 
+
+     $cid=$request->post('cid');
      if($cid=='1'){
         $branch= branch::where('agency',1)->get();
         $html='<option value="" >กรุณาเลือกสาขา</option>';
@@ -544,7 +605,7 @@ public function getbranch(Request $request)
      }
      echo  $html;
 }}
-   
+
 public function getdepartment(Request $request)
     {
         if (!Auth::check()) {
@@ -631,5 +692,5 @@ public function index(){
         // $years = $ec1[0];
         // $year =mb_strimwidth($years+543 , -2, 2);
         // return view('admin.contact.index',compact('user','staff','nakbin','pgm','admin','total','year'));
-    }  
+    }
 }

@@ -1,117 +1,158 @@
 <style>
-      .inner {
-  font-size: 25px;
-}
+    .inner {
+        font-size: 25px;
+    }
 </style>
 @extends('layouts.menu.app')
 @section('content')
 
- <div class="content-wrapper">
-    <div class="content-header">
-      <div class="container-fluid py-2">
-        <!-- เริ่ม -->
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid py-2">
+                <!-- เริ่ม -->
 
-<!-- card -->
-<div class="card">
-    <h4><div class="card-header"> <i class="bi bi-folder2-open" style="margin-right:5px"></i> แบบฟอร์มหนังสือ</div></h4>
-  <!-- card body -->
-  <div class="card-body" >
+                <!-- card -->
+                <div class="card">
+                    <h4>
+                        <div class="card-header"> <i class="bi bi-folder2-open" style="margin-right:5px"></i> แบบฟอร์มหนังสือ
+                        </div>
+                    </h4>
+                    <!-- card body -->
+                    <div class="card-body">
 
-      <h4 >    
-        <div class="row justify-content-around" style="text-align:center" >
-            <div class="col-2" style="margin-left:6%; min-width:min-content;">
-            ชื่อแบบฟอร์ม
+                        <h4>
+                            <div class="row justify-content-around" style="text-align:center">
+                                <div class="col-2" style="margin-left:6%; min-width:min-content;">
+                                    ชื่อแบบฟอร์ม
+                                </div>
+                                <div class="col-2"style="right:4%;min-width:min-content;">
+                                    สร้าง
+                                </div>
+                        </h4>
+                    </div><br>
+
+                    @if (Auth::user()->role == 2)
+                        <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
+                            <div class="col-4" style="text-align:center">
+                                แบบฟอร์ม บริษัท ไอดีไดรฟ์ จำกัด <br>(สำนักงานใหญ่)
+                            </div>
+                            <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                <a href="{{ 'formiddrives' }}" type="button" class="btn btn-info"><i
+                                        class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                    สร้างแบบฟอร์ม</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
+                            <div class="col-4" style="text-align:center">
+                                แบบฟอร์ม โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์
+                            </div>
+                            <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                <a href="{{ route('formIDD') }}" type="button" class="btn btn-info"><i
+                                        class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                    สร้างแบบฟอร์ม</a>
+                            </div>
+                        </div><br>
+
+                        <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
+                            <div class="col-4" style="text-align:center">
+                                แบบฟอร์ม สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี
+                            </div>
+                            <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                <a href="{{ route('formINS') }}" type="button" class="btn btn-info"><i
+                                        class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                    สร้างแบบฟอร์ม</a>
+                            </div>
+                        </div><br>
+
+                        <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
+                            <div class="col-4" style="text-align:center">
+                                แบบฟอร์ม ศูนย์ฝึกอบรม TZ
+                            </div>
+                            <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                <a href="{{ route('formTZ') }}" type="button" class="btn btn-info"><i
+                                        class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                    สร้างแบบฟอร์ม</a>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
+                            <div class="col-4" style="text-align:center">
+                                แบบฟอร์ม โรงเรียน อินเตอร์บริบาลนานาชาติ
+                            </div>
+                            <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                <a href="{{ route('formINAS') }}" type="button" class="btn btn-info"><i
+                                        class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                    สร้างแบบฟอร์ม</a>
+                            </div>
+                        </div>
+                        <br>
+                    @else
+                        @if (Auth::user()->agency->agency_name == 'โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์')
+                            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;">
+                                <div class="col-4" style="text-align:center">
+                                    แบบฟอร์ม โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์
+                                </div>
+                                <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                    <a href="{{ route('formIDD') }}" type="button" class="btn btn-info"><i
+                                            class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                        สร้างแบบฟอร์ม</a>
+                                </div>
+                            </div><br>
+                        @elseif(Auth::user()->agency->agency_name == 'สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี')
+                            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;">
+                                <div class="col-4" style="text-align:center">
+                                    แบบฟอร์ม สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี
+                                </div>
+                                <div class="col-3" style="margin-left:100px ;min-width:min-content;">
+                                    <a href="{{ route('formINS') }}" type="button" class="btn btn-info"><i
+                                            class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                        สร้างแบบฟอร์ม</a>
+                                </div>
+                            </div><br>
+                        @elseif(Auth::user()->agency->agency_name == 'โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
+                                <div class="col-4" style="text-align:center">
+                                    แบบฟอร์ม โรงเรียน อินเตอร์บริบาลนานาชาติ
+                                </div>
+                                <div class="col-3" style="margin-left:100px; min-width:min-content;">
+                                    <a href="{{ route('formINAS') }}" type="button" class="btn btn-info"><i
+                                            class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                        สร้างแบบฟอร์ม</a>
+                                </div>
+                            </div><br>
+                        @elseif(Auth::user()->agency->agency_name == 'ศูนย์ฝึกอบรม')
+                            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;">
+                                <div class="col-4" style="text-align:center">
+                                    แบบฟอร์ม ศูนย์ฝึกอบรม TZ
+                                </div>
+                                <div class="col-3" style="margin-left:100px min-width:min-content;">
+                                    <a href="{{ route('formTZ') }}" type="button" class="btn btn-info"><i
+                                            class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                        สร้างแบบฟอร์ม</a>
+                                </div>
+                            </div><br>
+                            @else(Auth::user()->agency->agency_name=='บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)')
+                            <div class="row justify-content-around"
+                                style="margin-left:30px;margin-bottom:15;text-align:center">
+                                <div class="col-4" style="text-align:center; ">
+                                    แบบฟอร์ม บริษัท ไอดีไดรฟ์ จำกัด <br>(สำนักงานใหญ่)
+                                </div>
+                                <div class="col-3" style="text-align:center;min-width:min-content;">
+                                    <a href="{{ 'formiddrives' }}" type="button" class="btn btn-info"><i
+                                            class="bi bi-pencil-square" style="color:white; font-size:20px;"></i>
+                                        สร้างแบบฟอร์ม</a>
+                                </div>
+                            </div> <br>
+                        @endif
+                    @endif
+                    <!-- card body -->
+                </div>
+                <!-- card -->
             </div>
-            <div class="col-2"style="right:4%;min-width:min-content;">
-            สร้าง
-            </div>
-      </h4>     
-    </div><br>    
-    
-    @if(Auth::user()->role==2)  
-    <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
-        <div class="col-4" style="text-align:center">
-            แบบฟอร์ม บริษัท ไอดีไดรฟ์ จำกัด <br>(สำนักงานใหญ่)
-        </div>
-        <div class="col-3" style="margin-left:100px; min-width:min-content;">
-            <a href="{{ ('formiddrives') }}"   type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-        </div>
-    </div> <br>
-    <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
-        <div class="col-4" style="text-align:center">
-            แบบฟอร์ม โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ 
-        </div>
-        <div class="col-3" style="margin-left:100px; min-width:min-content;">
-            <a href="{{ route('formIDD') }}"   type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-        </div>
-    </div><br>
-     
-    <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
-        <div class="col-4" style="text-align:center">
-            แบบฟอร์ม สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี
-        </div>
-        <div class="col-3" style="margin-left:100px; min-width:min-content;">
-            <a href="{{ route('formINS') }}"  type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-        </div>
-    </div><br>
 
-    <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
-        <div class="col-4" style="text-align:center">
-            แบบฟอร์ม ศูนย์ฝึกอบรม TZ
+            <!-- จบ -->
         </div>
-        <div class="col-3" style="margin-left:100px; min-width:min-content;">
-                <a href="{{ route('formTZ') }}"  type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-        </div>
-    </div><br>
-        @else
-            @if(Auth::user()->agency->agency_name=='โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์')
-            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;">
-                <div class="col-4" style="text-align:center">
-                    แบบฟอร์ม โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ 
-                </div>
-                <div class="col-3" style="margin-left:100px; min-width:min-content;">
-                    <a href="{{ route('formIDD') }}"   type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-                </div>
-            </div><br>
-            
-            @elseif(Auth::user()->agency->agency_name=='สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี')
-            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;">
-                <div class="col-4" style="text-align:center">
-                    แบบฟอร์ม สถานตรวจสภาพรถ ศูนย์ตรอ.ไอดี
-                </div>
-                <div class="col-3" style="margin-left:100px ;min-width:min-content;">
-                    <a href="{{ route('formINS') }}"  type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-                </div>
-            </div><br>
-
-            @elseif(Auth::user()->agency->agency_name=='ศูนย์ฝึกอบรม')
-            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;">
-                <div class="col-4" style="text-align:center">
-                    แบบฟอร์ม ศูนย์ฝึกอบรม TZ
-                </div>
-                <div class="col-3" style="margin-left:100px min-width:min-content;">
-                        <a href="{{ route('formTZ') }}"  type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-                </div>
-            </div><br>
-
-            @else(Auth::user()->agency->agency_name=='บริษัท ไอดีไดรฟ์ จำกัด (สำนักงานใหญ่)')
-            <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15;text-align:center">
-                <div class="col-4" style="text-align:center; ">
-                    แบบฟอร์ม บริษัท ไอดีไดรฟ์ จำกัด <br>(สำนักงานใหญ่)
-                </div>
-                <div class="col-3" style="text-align:center;min-width:min-content;">
-                    <a href="{{ ('formiddrives') }}"   type="button" class="btn btn-info"><i class="bi bi-pencil-square" style="color:white; font-size:20px;"></i> สร้างแบบฟอร์ม</a>
-                </div>
-            </div> <br>
-        @endif
-        @endif
-     <!-- card body -->
     </div>
-<!-- card -->
-</div>
-
-        <!-- จบ -->
-      </div>
     </div>
-</div>
 @endsection

@@ -40,6 +40,7 @@ Route::get('/formiddrives',[FormController::class,'formiddrives'])->name('formid
 Route::get('/formidd',[FormController::class,'formIDD'])->name('formIDD');
 Route::get('/formins',[FormController::class,'formINS'])->name('formINS');
 Route::get('/formtz',[FormController::class,'formTZ'])->name('formTZ');
+Route::get('/forminas',[FormController::class,'formINAS'])->name('formINAS');
 Route::get('/preview',[FormController::class,'preview'])->name('preview');
 Route::post('/form/add',[FormController::class,'store'])->name('addform');
 Route::get('/form/pdf/view/{id}',[FormController::class,'viewpdfform']);

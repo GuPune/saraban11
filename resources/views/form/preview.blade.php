@@ -108,26 +108,51 @@ $bAddr = explode('Tel:', $bAddrA);
 
              <hr noshade="noshade" size="2"><br>
 
-             @elseif($type=='ศูนย์ฝึกอบรม')
-             <div class="" style="text-align:center;">
-              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
-              <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
-              <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
-            </div>
-            <br>
-            <div class="" >
-              <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:14pt; margin:unset;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
-                      Tel :082-7513888  www.trainingzenter.com</p>
-              <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
-              <div class="" style="font-size:12pt;">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
+            @elseif($type=='ศูนย์ฝึกอบรม')
+                <div class="" style="text-align:center;">
+                    <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+                    <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:25px;">&nbsp;&nbsp;
+                    <img src="{{ asset('dist/img/logotz2.png') }}"height="80">
+                </div>
                 <br>
-              </div>
-            </div>
+                <div class="" >
+                    <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
+                    <p style="font-size:14pt; margin:unset;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
+                        Tel :082-7513888  www.trainingzenter.com</p>
+                    <p style="font-size:12pt; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
+                    <div class="" style="font-size:12pt;">
+                        ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
+                        <br>
+                    </div>
+                </div>
 
-             <hr noshade="noshade" size="2"><br>
-             @endif
+                <hr noshade="noshade" size="2"><br>
+
+            @elseif($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                <div class="d-flex justify-content-center" style="text-align:center; ">
+                    <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80">
+                    <div class="align-self-center mx-3">
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน อินเตอร์บริบาลนานาชาติ</h5>
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing Assistant School</h5>
+                    </div>
+                    &nbsp;&nbsp;
+                    <img src="{{ asset('dist/img/logoid_new.png') }}"height="80">
+                </div>
+                <br>
+                <div class="">
+                    <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง
+                        จ.ขอนแก่น 40000
+                        <br> Email:intnas@iddrives.co.th www.intnas.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
+                    </p>
+                    <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000</p>
+                    <div class="" style="font-size:12px;">
+                         Tel: 043-228 899 Email : idofficer@iddrives.co.th
+                        <br>
+                    </div>
+                </div>
+
+                <hr noshade="noshade" size="2"><br>
+            @endif
               <!-- /head-form -->
 
            <!-- bodyform -->
@@ -136,8 +161,8 @@ $bAddr = explode('Tel:', $bAddrA);
              @csrf
              <div class="d-flex " style="margin-top: -40px">
             @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
-            เลขที่หนังสือ&nbsp;
-            IDD/@if($idd==null){{ __('001') }}@elseif($idd<=8)00{{$idd+1}}@elseif($idd>=9)0{{$idd+1}}@elseif($idd>=99){{$idd+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
+                เลขที่หนังสือ&nbsp;
+                IDD/@if($idd==null){{ __('001') }}@elseif($idd<=8)00{{$idd+1}}@elseif($idd>=9)0{{$idd+1}}@elseif($idd>=99){{$idd+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
 
             <input type="hidden" value="IDD" class="form-control" style="width: 60px" name="fdepartment">
                             @if($idd==null)
@@ -599,6 +624,30 @@ $bAddr = explode('Tel:', $bAddrA);
                             <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
+
+                            @elseif($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                            เลขที่หนังสือ&nbsp;
+                             INT/@if($inas==null){{ __('001') }}@elseif($inas<=8)00{{$inas+1}}@elseif($inas>=9)0{{$inas+1}}@elseif($inas>=99){{$inas+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
+                             <input type="hidden" value="INT" class="form-control" style="width: 60px" name="fdepartment">
+                            @if($inas==null)
+                            <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($inas<=8)
+                            <input type="hidden" value=<?php echo '00'.$inas+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($inas>=9)
+                            <input type="hidden" value=<?php echo '0'.$inas+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @elseif($inas>=99)
+                            <input type="hidden" value=<?php echo $inas+1;?> class="form-control" style="width: 60px" name="dnumber">
+                            @endif
+                            @if($total==null)
+                            <input type="hidden" value="001" class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total<=8)
+                            <input type="hidden" value=<?php echo '00'.$total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total>=9)
+                            <input type="hidden" value=<?php echo '0'.$total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @elseif($total>=99)
+                            <input type="hidden" value=<?php echo $total+1;?> class="form-control" style="width: 60px" name="cnumber">
+                            @endif
+                            <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                              @endif
                             </div><br><br>
 
@@ -658,28 +707,65 @@ $bAddr = explode('Tel:', $bAddrA);
             <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">
             </div><br>
 
-            <div style="width:fit-content; position:relative; left:62.5%">
-            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
-            ขอแสดงความนับถือ
-            </div> <br>
-            <div style="text-align:center;">
-              <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
-              <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
-            </div>
-            <div style="text-align:center;">
-              .......................................................
-            </div>
+            @if($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                <div class="d-flex justify-content-around ">
+                    <div style="width:fit-content; position:relative;">
+                        <div style="text-align:center; font-weight: bold">
+                            <!-- <div class="d-flex justify-content-center"> -->
+                            ติดต่อ นายยุทธศักดิ์ อริยะชัยประดิษฐ์
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                            ผู้จัดการ โรงเรียน อินเตอร์บริบาลนานาชาติ
+                        </div>
+                    </div>
+                    <div style="width:fit-content; position:relative;">
+                        <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
+                            ขอแสดงความนับถือ
+                        </div>
+                        <br>
+                        <div style="text-align:center;">
+                            <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
+                            <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
+                        </div>
+                        <div style="text-align:center;">
+                        .......................................................
+                        </div>
 
-            <div style="text-align:center; line-height: 30px">
-            (
-            {{$sName}}
-            <input type="hidden" value="{{$sName}}" class="form-control" style="width: 150px" name="sName">
-            )
-            </div>
-            <div style="text-align:center;">{{$sPosition}}</div>
-              <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
-            </div>
+                        <div style="text-align:center; line-height: 30px">
+                            (
+                                {{$sName}}
+                                <input type="hidden" value="{{$sName}}" class="form-control" style="width: 150px" name="sName">
+                            )
+                        </div>
+                        <div style="text-align:center;">{{$sPosition}}</div>
+                        <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
+                    </div>
+                </div>
+            @else
+                <div style="width:fit-content; position:relative; left:62.5%">
+                    <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
+                        ขอแสดงความนับถือ
+                    </div>
+                    <br>
+                    <div style="text-align:center;">
+                        <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
+                        <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
+                    </div>
+                    <div style="text-align:center;">
+                    .......................................................
+                    </div>
 
+                    <div style="text-align:center; line-height: 30px">
+                        (
+                            {{$sName}}
+                            <input type="hidden" value="{{$sName}}" class="form-control" style="width: 150px" name="sName">
+                        )
+                    </div>
+                    <div style="text-align:center;">{{$sPosition}}</div>
+                    <input type="hidden" value="{{$sPosition}}" class="form-control" style="width: 150px" name="sPosition">
+                </div>
+            @endif
             <br><br><br><br><br>
 
 
@@ -689,28 +775,30 @@ $bAddr = explode('Tel:', $bAddrA);
             </div> -->
 
             <div class="d-flex justify-content-center">
-            <div style="width:80%">
-            <div class="d-flex justify-content-end" style="margin-bottom:10px">
-              @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
-                FD-IDD-SCL-012:00: 20-05-2566
-              @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-                FD-HO-015 :00: 20-05-2566
-              @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
-                FD-INS-005 :00: 20-5-2566
-              @elseif($type=='ศูนย์ฝึกอบรม')
-                FD-IDD-TZ-013 :00: 20-05-2566
-              @endif
-            </div>
-            <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
-            <img src="{{ asset('dist/img/logo1.png') }}" width="60px">
-            <img src="{{ asset('dist/img/logo2.png') }}" width="60px">
-            <img src="{{ asset('dist/img/logo3.png') }}" width="60px">
-            <img src="{{ asset('dist/img/logo4.png') }}" width="60px">
-            <img src="{{ asset('dist/img/logo5.png') }}" width="60px">
-            <img src="{{ asset('dist/img/logo6.png') }}" width="230px">
-            <img src="{{ asset('dist/img/logo7.png') }}" width="60px">
-            </div>
-            </div>
+                <div style="width:80%">
+                    <div class="d-flex justify-content-end" style="margin-bottom:10px">
+                    @if($type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
+                        FD-IDD-SCL-012:00: 20-05-2566
+                    @elseif($type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
+                        FD-HO-015 :00: 20-05-2566
+                    @elseif($type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
+                        FD-INS-005 :00: 20-5-2566
+                    @elseif($type=='ศูนย์ฝึกอบรม')
+                        FD-IDD-TZ-013 :00: 20-05-2566
+                    @elseif($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                        FD-HO/HR-013/1 :00: 19-09-2563
+                    @endif
+                    </div>
+                    <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;">
+                    <img src="{{ asset('dist/img/logo1.png') }}" width="60px">
+                    <img src="{{ asset('dist/img/logo2.png') }}" width="60px">
+                    <img src="{{ asset('dist/img/logo3.png') }}" width="60px">
+                    <img src="{{ asset('dist/img/logo4.png') }}" width="60px">
+                    <img src="{{ asset('dist/img/logo5.png') }}" width="60px">
+                    <img src="{{ asset('dist/img/logo6.png') }}" width="230px">
+                    <img src="{{ asset('dist/img/logo7.png') }}" width="60px">
+                    </div>
+                </div>
             </div>
 
             </div>
