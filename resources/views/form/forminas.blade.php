@@ -33,7 +33,7 @@
     </style>
 
     <!--
-          layout หน้า  PDF สร้างเอกสารของ INT
+          layout หน้า  PDF สร้างเอกสารของ IDSS
          -->
 
     <div class="content-wrapper">
@@ -48,12 +48,10 @@
 
                             <!-- Header -->
                             <div class="d-flex justify-content-center" style="text-align:center; ">
-                                <img src="{{ asset('dist/img/intlogo.jpg') }}" height="80">
+                                <img src="{{ asset('dist/img/logoschool.png') }}" height="80">
                                 <div class="align-self-center mx-3">
-                                    <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน
-                                        อินเตอร์บริบาลนานาชาติ</h5>
-                                    <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing
-                                        Assistant School</h5>
+                                    <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน ไอดีสอนทักษะอาชีพ</h5>
+                                    <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">ID Vocational Skill Training School</h5>
                                 </div>
                                 &nbsp;&nbsp;
                                 <img src="{{ asset('dist/img/logoid_new.png') }}"height="80">
@@ -62,7 +60,7 @@
                             <div class="">
                                 <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง
                                     จ.ขอนแก่น 40000
-                                    <br> Email:intnas@iddrives.co.th www.intnas.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
+                                    <br> Email:IDSS@iddrives.co.th www.idsschool.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
                                 </p>
                                 <p style="font-size:14px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
                                 <div class="" style="font-size:14px;">
@@ -83,7 +81,7 @@
                                     <form action="{{ url('/form/add') }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         เลขที่หนังสือ&nbsp;
-                                        INT/@if ($inas == null)
+                                        IDSS/@if ($inas == null)
                                             {{ __('001') }}
                                         @elseif($inas <= 8)
                                             00{{ $inas + 1 }}
@@ -102,7 +100,7 @@
                                 </div>
 
                                 <div class="d-flex justify-content-end">
-                                    <input type="hidden" value="INT" class="form-control" style="width: 60px"
+                                    <input type="hidden" value="IDSS" class="form-control" style="width: 60px"
                                         name="fdepartment">
                                     @if ($inas == null)
                                         <input type="hidden" value="001" class="form-control" style="width: 60px"
@@ -195,7 +193,7 @@
                                         </div>
                                         <br>
                                         <div style="text-align:center">
-                                            ผู้จัดการ โรงเรียน อินเตอร์บริบาลนานาชาติ
+                                            ผู้จัดการ โรงเรียน ไอดีสอนทักษะอาชีพ
                                         </div>
                                     </div>
                                     <div style="width:fit-content; position:relative;">
@@ -287,7 +285,7 @@
                 </div>
                 <!-- /font1 -->
             </div>
-            <input type="hidden" value="โรงเรียนอินเตอร์บริบาลนานาชาติ" class="form-control" placeholder="กรุณากรอกการอ้างถึง"
+            <input type="hidden" value="โรงเรียนไอดีสอนทักษะอาชีพ" class="form-control" placeholder="กรุณากรอกการอ้างถึง"
                 style="width: 300px" name="type">
             <!-- save cancel -->
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">

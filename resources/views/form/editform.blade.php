@@ -120,12 +120,12 @@ $bAddr = explode('Tel:', $bAddrA);
                 </div>
                 <hr noshade="noshade" size="2"><br>
 
-            @elseif($form->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+            @elseif($form->type=='โรงเรียนไอดีสอนทักษะอาชีพ')
                 <div class="d-flex justify-content-center" style="text-align:center; ">
-                    <img src="{{ asset('dist/img/intlogo.jpg') }}" height="80">
+                    <img src="{{ asset('dist/img/logoschool.png') }}" height="80">
                     <div class="align-self-center mx-3">
-                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน อินเตอร์บริบาลนานาชาติ</h5>
-                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing Assistant School</h5>
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน ไอดีสอนทักษะอาชีพ</h5>
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">ID Vocational Skill Training School</h5>
                     </div>
                     &nbsp;&nbsp;
                     <img src="{{ asset('dist/img/logoid_new.png') }}"height="80">
@@ -134,7 +134,7 @@ $bAddr = explode('Tel:', $bAddrA);
                 <div class="">
                     <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง
                         จ.ขอนแก่น 40000
-                        <br> Email:intnas@iddrives.co.th www.intnas.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
+                        <br> Email:IDSS@iddrives.co.th www.idsschool.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
                     </p>
                     <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000</p>
                     <div class="" style="font-size:12px;">

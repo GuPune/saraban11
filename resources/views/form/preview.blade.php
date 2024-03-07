@@ -128,12 +128,12 @@ $bAddr = explode('Tel:', $bAddrA);
 
                 <hr noshade="noshade" size="2"><br>
 
-            @elseif($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+            @elseif($type=='โรงเรียนไอดีสอนทักษะอาชีพ')
                 <div class="d-flex justify-content-center" style="text-align:center; ">
-                    <img src="{{ asset('dist/img/intlogo.jpg') }}" height="80">
+                    <img src="{{ asset('dist/img/logoschool.png') }}" height="80">
                     <div class="align-self-center mx-3">
-                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน อินเตอร์บริบาลนานาชาติ</h5>
-                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">International Nursing Assistant School</h5>
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน ไอดีสอนทักษะอาชีพ</h5>
+                        <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">ID Vocational Skill Training School</h5>
                     </div>
                     &nbsp;&nbsp;
                     <img src="{{ asset('dist/img/logoid_new.png') }}"height="80">
@@ -142,7 +142,7 @@ $bAddr = explode('Tel:', $bAddrA);
                 <div class="">
                     <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง
                         จ.ขอนแก่น 40000
-                        <br> Email:intnas@iddrives.co.th www.intnas.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
+                        <br> Email:IDSS@iddrives.co.th www.idsschool.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
                     </p>
                     <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000</p>
                     <div class="" style="font-size:12px;">
@@ -625,10 +625,10 @@ $bAddr = explode('Tel:', $bAddrA);
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
 
-                            @elseif($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                            @elseif($type=='โรงเรียนไอดีสอนทักษะอาชีพ')
                             เลขที่หนังสือ&nbsp;
-                             INT/@if($inas==null){{ __('001') }}@elseif($inas<=8)00{{$inas+1}}@elseif($inas>=9)0{{$inas+1}}@elseif($inas>=99){{$inas+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
-                             <input type="hidden" value="INT" class="form-control" style="width: 60px" name="fdepartment">
+                             IDSS/@if($inas==null){{ __('001') }}@elseif($inas<=8)00{{$inas+1}}@elseif($inas>=9)0{{$inas+1}}@elseif($inas>=99){{$inas+1}}@endif/@if($total<=8)00{{$total+1}}@elseif($total>=9)0{{$total+1}}@elseif($total>=99){{$total+1}}@endif/{{$year}}
+                             <input type="hidden" value="IDSS" class="form-control" style="width: 60px" name="fdepartment">
                             @if($inas==null)
                             <input type="hidden" value="001" class="form-control" style="width: 60px" name="dnumber">
                             @elseif($inas<=8)
@@ -707,7 +707,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <input type="hidden" value="{{$details}}" class="form-control" style="width: 150px" name="details">
             </div><br>
 
-            @if($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+            @if($type=='โรงเรียนไอดีสอนทักษะอาชีพ')
                 <div class="d-flex justify-content-around ">
                     <div style="width:fit-content; position:relative;">
                         <div style="text-align:center; font-weight: bold">
@@ -716,7 +716,7 @@ $bAddr = explode('Tel:', $bAddrA);
                         </div>
                         <br>
                         <div style="text-align:center">
-                            ผู้จัดการ โรงเรียน อินเตอร์บริบาลนานาชาติ
+                            ผู้จัดการ โรงเรียน ไอดีสอนทักษะอาชีพ
                         </div>
                     </div>
                     <div style="width:fit-content; position:relative;">
@@ -785,7 +785,7 @@ $bAddr = explode('Tel:', $bAddrA);
                         FD-INS-005 :00: 20-5-2566
                     @elseif($type=='ศูนย์ฝึกอบรม')
                         FD-IDD-TZ-013 :00: 20-05-2566
-                    @elseif($type=='โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                    @elseif($type=='โรงเรียนไอดีสอนทักษะอาชีพ')
                         FD-HO/HR-013/1 :00: 19-09-2563
                     @endif
                     </div>

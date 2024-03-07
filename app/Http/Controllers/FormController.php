@@ -174,7 +174,7 @@ class FormController extends Controller
 
         $inas = Form::where('formagency','LIKE',Auth::user()->Agency)
         ->where('formbranch','LIKE',Auth::user()->Branch)
-        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนอินเตอร์บริบาลนานาชาติ')->count();
+        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->count();
         $total = Form::count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
@@ -396,11 +396,11 @@ public function add(Request $request)
                 $forms->cnumber = $cnumber;
             }
         }
-        elseif($request->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ'){
+        elseif($request->type=='โรงเรียนไอดีสอนทักษะอาชีพ'){
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนอินเตอร์บริบาลนานาชาติ')->count()+1;
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->count()+1;
             $cnumber = Form::count()+1;
             $forms->fdepartment = $fdepartment;
              // แยกแผนก
@@ -547,8 +547,8 @@ public function store(Request $request)
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','tz','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }
-        elseif($request->type=='โรงเรียนอินเตอร์บริบาลนานาชาติ'){
-            $inas = Form::where('type','โรงเรียนอินเตอร์บริบาลนานาชาติ')->count();
+        elseif($request->type=='โรงเรียนไอดีสอนทักษะอาชีพ'){
+            $inas = Form::where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->count();
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','inas','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }

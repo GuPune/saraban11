@@ -78,7 +78,7 @@
 
                         <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
                             <div class="col-4" style="text-align:center">
-                                แบบฟอร์ม โรงเรียน อินเตอร์บริบาลนานาชาติ
+                                แบบฟอร์ม โรงเรียน ไอดีสอนทักษะอาชีพ
                             </div>
                             <div class="col-3" style="margin-left:100px; min-width:min-content;">
                                 <a href="{{ route('formINAS') }}" type="button" class="btn btn-info"><i
@@ -110,10 +110,10 @@
                                         สร้างแบบฟอร์ม</a>
                                 </div>
                             </div><br>
-                        @elseif(Auth::user()->agency->agency_name == 'โรงเรียนอินเตอร์บริบาลนานาชาติ')
+                        @elseif(Auth::user()->agency->agency_name == 'โรงเรียนไอดีสอนทักษะอาชีพ')
                             <div class="row justify-content-around" style="margin-left:30px;margin-bottom:15px;">
                                 <div class="col-4" style="text-align:center">
-                                    แบบฟอร์ม โรงเรียน อินเตอร์บริบาลนานาชาติ
+                                    แบบฟอร์ม โรงเรียน ไอดีสอนทักษะอาชีพ
                                 </div>
                                 <div class="col-3" style="margin-left:100px; min-width:min-content;">
                                     <a href="{{ route('formINAS') }}" type="button" class="btn btn-info"><i
