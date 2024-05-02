@@ -5,8 +5,8 @@
     <title>ระบบสารบรรณ</title>
 <!-- icon -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <style>
   .font1{
@@ -79,7 +79,7 @@
         }
 
 </style>
-<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >   
+<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >
 
 
     <div class="header" style=";margin-bottom:20px ;border-bottom:2px solid #787878">
@@ -94,7 +94,7 @@
 
     </div>
 
-  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนขนส่ง </b></p> 
+  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนขนส่ง </b></p>
   <table class="table">
                                 <thead>
                                     <tr>
@@ -103,7 +103,7 @@
                                         <th>ผู้ฝากส่ง</th>
                                         <th>ประเภทการส่ง</th>
                                         <th>เลขขนส่ง</th>
-                                        <th>วันที่ส่ง</th>        
+                                        <th>วันที่ส่ง</th>
                                         </tr>
                                     @php($i=1)
                                 </thead>
@@ -133,8 +133,8 @@
                                         $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?></td>
-                                        @endif                   
-                                    </tr>                         
+                                        @endif
+                                    </tr>
                                 </tbody>
                                 @endforeach
                             </table><br>
@@ -149,6 +149,6 @@
     <footer>
         <p style="margin-bottom:-20px">Printed By : {{Auth::user()->email}} Printed On: ระบบสารบรรณ <?php echo $currentDateTime; ?></p>
     </footer>
-    
+
 </body>
 </html>

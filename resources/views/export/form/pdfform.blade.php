@@ -5,8 +5,8 @@
     <title>ระบบสารบรรณ</title>
 <!-- icon -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <style>
   .font1{
@@ -66,9 +66,9 @@
       .box1 {
         display: flex;
         float: left;
-        overflow: auto; 
+        overflow: auto;
         clear:left;
-       
+
       }
       .box3 {
         float: left;
@@ -105,7 +105,7 @@ p {
 
 
 
-<!-- 
+<!--
  ------------------------ layout เอกสาร pdf ที่ดาวน์โหลด -----------------------------
  -->
 
@@ -124,27 +124,27 @@ $bAddr = explode('Tel:', $bAddrA);
 <body style="line-height:12px;padding:0 1cm 0 2cm">
   <div class="content" style="">
     <!-- header เอกสาร โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์ -->
-    @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')  
+    @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
     <div class=""  style="text-align: center;">
       <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-right:15px;"  height="35"/>
       <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
       <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style=""  height="53"/>
     </div>
     <div class="" style="margin-top:-15px">
-      <h5 style="font-weight:bold;font-size:18pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}} 
+      <h5 style="font-weight:bold;font-size:18pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}}
         <span style="font-size:13pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
       <p style="font-size:14pt; margin-top:-10px;margin-bottom:0; height:auto;">ที่อยู่: {{$bAddr[0]}} <br>Tel: {{$bAddr[1] ?? ''}}</p>
       <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด </p>
       <div class="" style="font-size:12pt;">
         ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899  Email : idofficer@iddrives.co.th<br>
       </div>
-            
+
     </div>
-    
-    <div style="border: 0.5px solid #B4B4B4;margin-top:10px;"></div>           
+
+    <div style="border: 0.5px solid #B4B4B4;margin-top:10px;"></div>
     <!-- header เอกสาร บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่) -->
       @elseif($form->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')
-             
+
             <div class="d-flex justify-content-start">
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:10px;float: left;" width="80px"/>
             <div class="" style="margin-top: 15px; line-height:7px;">
@@ -153,7 +153,7 @@ $bAddr = explode('Tel:', $bAddrA);
               <p style="font-size:14pt;">Tel : 043-228 899 www.iddrives.co.th Email : idofficer@iddrives.co.th </p>
             </div>
             </div>
-            <div style="border: 0.5px solid #B4B4B4;"></div>            
+            <div style="border: 0.5px solid #B4B4B4;"></div>
 
              <!-- header เอกสาร สถานตรวจสภาพรถศูนย์ตรอ.ไอดี) -->
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
@@ -182,22 +182,22 @@ $bAddr = explode('Tel:', $bAddrA);
              </div>
              <div class="" style=" margin-top:-10px">
               <h5 style="font-size:20pt;font-weight:bold;margin-bottom:0">ศูนย์ฝึกอบรมเทรนนิ่งเซนเตอร์  <span style="font-size:14pt;">เลขที่ผู้เสียภาษี 0405536000531</span></h5>
-              <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th 
+              <p style="font-size:16pt; margin-bottom:0; height:auto;">ที่อยู่: 58/1 ม.9 ถ.มิตรภาพ ต.ทับกวาง อ.แก่งคอย จ.สระบุรี 18260 <br> Email: id.trainingcenter@iddrives.co.th
                     Tel :082-7513888  www.trainingzenter.com</p>
               <p style="font-size:12pt; margin :unset;height:auto;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด</p>
               <div class="" style="font-size:12pt;">
-                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th           
+                ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 Tel : 043-228 899 Email : idofficer@iddrives.co.th
                 <br>
               </div>
             </div>
             <div style="border: 0.5px solid #B4B4B4;margin-top:10px;"></div>
              @endif
-             
-           
+
+
 
       <div style="padding: 1cm 0 0 0">
              <div class="" style="font-size:20px;">
-            เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}} 
+            เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}}
             </div><br>
 
             <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
@@ -209,7 +209,7 @@ $bAddr = explode('Tel:', $bAddrA);
             $thaimonth=array("มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
             $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
             echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
-            ?>     
+            ?>
             </div><br><br>
 
             <div style="font-size:20px;">
@@ -227,7 +227,7 @@ $bAddr = explode('Tel:', $bAddrA);
               </div>
               <div>
                 <p class="mb-0">{{$form->learn}} </p>
-              </div>     
+              </div>
             </div>
             <br>
 
@@ -245,7 +245,7 @@ $bAddr = explode('Tel:', $bAddrA);
              @endif
             @if($form->enclosure==null)
 
-            
+
 
             @else
             <div style="font-size:20px;">
@@ -253,7 +253,7 @@ $bAddr = explode('Tel:', $bAddrA);
                 <b >สิ่งที่ส่งมาด้วย</b>
               </div>
               <div class="text-details" style="margin-top:-20px;margin-left:90px;line-height: 16px;">
-                <?php 
+                <?php
                   $enc = $form->enclosure;
                   $enctext = str_replace(' ', '&nbsp;', $enc)
                 ?>
@@ -265,11 +265,11 @@ $bAddr = explode('Tel:', $bAddrA);
 
 
 
-            <!-- <?php 
+            <!-- <?php
                 $parameter = $form->details;
                 $thaitext = str_replace(' ', '&nbsp;', $parameter);
             ?> -->
-            <!-- <?php 
+            <!-- <?php
                 $parameter = $form->details;
                 $thaitext = preg_replace('/^(.*)$/m', '<span style="display:inline-block; text-indent: 2.5em;">$1</span>', $parameter);
             ?> -->
@@ -306,8 +306,8 @@ $bAddr = explode('Tel:', $bAddrA);
             <p style="">.......................................................</p>
             <p style="line-height:5px">( {{$form->sName}} )</p>
             <p style="text-align:center; line-height:5px">{{$form->sPosition}}</p>
-            </div> 
-            
+            </div>
+
             <br>
             <br>
             <div class="footer" style="display: inline-block;width:100%">
@@ -334,7 +334,7 @@ $bAddr = explode('Tel:', $bAddrA);
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo6.png'))) }}" width="162px" style="margin-top: 13px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo7.png'))) }}" width="38px" style="margin-top: 5px"/>
             </div>
-            
+
             </div>
             </div>
             </div>

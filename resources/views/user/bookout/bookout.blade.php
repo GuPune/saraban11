@@ -26,7 +26,7 @@
 .btn-3:hover,.btn-3:focus,.btn-3.focus{
 		color:#fff;
 		background:#F4354D;
-		} 
+		}
 .btn-4{
      color:#fff;
 	 	background-color:#299942;
@@ -34,8 +34,8 @@
 .btn-4:hover,.btn-4:focus,.btn-4.focus{
 		color:#fff;
 		background:#0E8929;
-		} 
-        
+		}
+
  #titleicon1{
     color:#ff8000;
     }
@@ -53,8 +53,8 @@
     width:40px;
     color: #fff;
     text-align: center;
-    background-color: #fc973f; 
-    border-color: #fc973f; 
+    background-color: #fc973f;
+    border-color: #fc973f;
 }
 .page-item .page-link {
     border-radius: 50px;
@@ -66,7 +66,7 @@
     border:none;
 }
 .dpmb{
-    width: 11em; 
+    width: 11em;
     word-wrap: break-word;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .hovertext:before {
-  
+
   content: attr(data-hover);
   visibility: hidden;
   opacity: 0;
@@ -97,7 +97,7 @@
   position: relative;
   z-index: 101;
   left: -1;
-  right: 2%; 
+  right: 2%;
   top: -15%;
 }
 
@@ -170,7 +170,7 @@
     <div class="content-header">
         <div class="container-fluid">
 
-            @error('File') 
+            @error('File')
             <br>
             <div class="text-danger text-center">{{$message}}</div>
             <br>
@@ -183,7 +183,7 @@
                      ทะเบียนหนังสือส่งออก
                     </div>
                     <div class="p-2 flex-grow-1 " style="text-align:right;">
-                    
+
                     <!-- ปุ่มสร้างหนังสือ -->
                         <a href="{{ route('form') }}" style="color:black">
                         <div class="iconDiv" tooltip="สร้างหนังสือ" tabindex="0">
@@ -191,7 +191,7 @@
                                 <i class='fas fa-folder-plus' style='font-size:28px'></i>
                             </div>
                         </div>
-                        </a>             
+                        </a>
                     </div>
                     @foreach($setallow as $export)
                     @if($export->id==23&&$export->userstatus==1)
@@ -201,11 +201,11 @@
                     @else
 
                     @endif
-                    @endforeach  
+                    @endforeach
                 </div>
                 </div>
                     <div class="card-body">
-                    <form action="/bookout/user" method="GET">          
+                    <form action="/bookout/user" method="GET">
                        <div class="mb-3 row">
                          <div class="container input-group" style="width: 30rem;">
                                  &nbsp;
@@ -216,7 +216,7 @@
                         </div>
 
                         <div class=" container input-group mb-3" style="width: 18rem;">
-                            วันที่ &nbsp;<input class="form-control form-control-sm" type="date" id="searchdate" style="width: 100px" name="searchdate" >&nbsp; 
+                            วันที่ &nbsp;<input class="form-control form-control-sm" type="date" id="searchdate" style="width: 100px" name="searchdate" >&nbsp;
                             <input class="form-control form-control-sm" type="date" id="searchend" style="width: 100px" name="searchend" >
                             </div>
                         </form>
@@ -243,7 +243,7 @@
                             <div class="alert alert-danger text-center" role="alert">
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div>
-                            @else 
+                            @else
                         <div style="overflow-x:auto;">
                         <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
@@ -251,31 +251,31 @@
                                     <td>ลำดับ</td>
                                         <td>เลขที่หนังสือ</td>
                                         <td>ชื่อหน่วยงาน</td>
-                                        <td>เรื่อง</td>     
-                                        <td>วันที่ออกหนังสือ</td>  
-                                        <td>ฝ่าย/สาขา</td> 
+                                        <td>เรื่อง</td>
+                                        <td>วันที่ออกหนังสือ</td>
+                                        <td>ฝ่าย/สาขา</td>
                                         <td>ชื่อผู้ออกหนังสือ</td>
                                         <!-- หนังสือตอบกลับ -->
                                         @foreach($setallow as $reply)
                                         @if($reply->id==19&&$reply->userstatus==1)
-                                        <td>หนังสือตอบกลับ</td> 
+                                        <td>หนังสือตอบกลับ</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขฟอร์ม -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==20&&$editform->userstatus==1)
                                         <td>หนังสือ</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขรายละเอียดหนังสือ -->
                                         @foreach($setallow as $editdetailbook)
                                         @if($editdetailbook->id==21&&$editdetailbook->userstatus==1)
                                         <td>แก้ไข</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
@@ -300,7 +300,7 @@
                                         </td>
                                         <!-- เรื่อง -->
                                         <td>
-                                        <?php 
+                                        <?php
                                         if(strlen($rowyes->form->story) > 30){
                                         echo mb_substr($rowyes->form->story, 0, 30).'...';
                                         }
@@ -318,17 +318,17 @@
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?></td>
                                         @if($rowyes->branch->branche_name=='-')
-                                        <td class="dpmb">{{$rowyes->agency->agency_name}}</td>                                                            
+                                        <td class="dpmb">{{$rowyes->agency->agency_name}}</td>
                                         @elseif($rowyes->Department->Dpmname=='-')
                                         <td class="dpmb">{{$rowyes->agency->agency_name}}/{{$rowyes->branch->branche_name}}</td>
                                         @else
-                                        <td class="dpmb">{{$rowyes->Department->Dpmname}}/{{$rowyes->branch->branche_name}}</td>                                                            
-                                        @endif                                            
+                                        <td class="dpmb">{{$rowyes->Department->Dpmname}}/{{$rowyes->branch->branche_name}}</td>
+                                        @endif
                                          <td>{{$rowyes->Oname}} </td>
                                         <!-- หนังสือตอบกลับ -->
                                         @foreach($setallow as $reply)
                                         @if($reply->id==19&&$reply->userstatus==1)
-                                        <td class="text-center"> 
+                                        <td class="text-center">
                                         @if($rowyes->Ostatus=='ต้องการหนังสือตอบกลับ')
                                         <button type="button" class="btn btn-info" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#bookstatus1Modal{{$rowyes->id}}"><i class="bi bi-journals" style="font-size:20px;"></i></button>
                                         <!--Modal upload-->
@@ -354,10 +354,10 @@
                                                         <div class="col-sm-8">
                                                             <input type="file" class = "form-control" name="File" placeholder="File"value="{{$rowyes->Oupload}}">
                                                         </div>
-                                                    </div>   
+                                                    </div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
-                                                    @enderror  
+                                                    @enderror
 
                                                     @else
                                                     <form action="{{url('/status/update/'.$rowyes->id)}}" method="post" enctype="multipart/form-data">
@@ -369,24 +369,24 @@
                                                         <div class="col-sm-8">
                                                             <input type="file" class="form-control" name="File"  placeholder="File"value="{{$rowyes->Oupload}}">
                                                         </div>
-                                                    </div>   
+                                                    </div>
 
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
-                                                    @enderror  
-                                                    
+                                                    @enderror
+
                                                     @endif
-                                                        <br>     
+                                                        <br>
                                                     </div>
                                                 </div>
-                                            </div> 
-                                          
+                                            </div>
+
                                                 @if($rowyes->Oupload==null)
                                                 <div class="modal-footer">
                                                 <input type="submit" name="File" class = "btn btn-success" value="อัปโหลด">
                                                 </div>
-                                                </form> 
-                                                                
+                                                </form>
+
                                                 @else
                                                 <div class="modal-footer"><div class="form-group">
                                                 <input type="submit" name="File" class ="btn btn-success" value="แก้ไขข้อมูล">
@@ -400,29 +400,29 @@
                                         </div>
                                         </div>
                                             @elseif($row->Ostatus=='ไม่ต้องการหนังสือตอบกลับ')
-                                                                                    
+
                                             @endif
-                                        </td> 
+                                        </td>
                                         @else($reply->id==19&&$reply->userstatus==1)
-                                        
+
 
                                         @endif
-                                        @endforeach 
+                                        @endforeach
 
                                         <!-- แก้ไขฟอร์ม -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==20&&$editform->userstatus==1)
-                                        <td class="text-center"><a href="{{url('/form/pdf/view/'.$rowyes->form->id)}}" type="button" class="btn btn-2" style ="border-radius: 20px; padding: .25rem 1rem"><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td> 
+                                        <td class="text-center"><a href="{{url('/form/pdf/view/'.$rowyes->form->id)}}" type="button" class="btn btn-2" style ="border-radius: 20px; padding: .25rem 1rem"><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขรายละเอียดหนังสือ -->
                                         @foreach($setallow as $editdetailbook)
                                         @if($editdetailbook->id==21&&$editdetailbook->userstatus==1)
                                         <td class="text-center "><a href="{{url('/bookout/edit/'.$rowyes->id)}}" type="button" class="btn btn-warning" style ="border-radius: 20px; padding: .25rem 1rem" ><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
@@ -440,7 +440,7 @@
                                         @else
 
                                         @endif
-                                        @endforeach                                
+                                        @endforeach
                                         </div>
 
                                         <!-- เอกสารที่แนบมาด้วย -->
@@ -449,7 +449,7 @@
                                         @else
                                         <td class="text-center"><button type="button" class="btn btn-info" id="checkbtn" value="{{$rowyes->id}}"><i class="bi bi-upload"></i></button></td>
                                         @endif
-             <!-- รายละเอียด --> 
+             <!-- รายละเอียด -->
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detailyes{{$rowyes->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detailyes{{$rowyes->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
@@ -458,11 +458,11 @@
                                 <h4 class="modal-title fs-5 " id="staticBackdropLabel">รายละเอียดหนังสือออก</h4>
                                     <i class="bi bi-x-circle" type="button" data-bs-dismiss="modal" aria-label="Close" style='font-size:25px'></i>
                                 </div>
-                                <div class="modal-body">                          
-                                    
+                                <div class="modal-body">
+
                                 <div class="icon text-center" style="margin-right:10px">
                                <i class="bi bi-file-arrow-up text-gray" style="font-size:80px;"></i></div> <br>
-              
+
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">เลขที่หนังสือ : </div>
                                 <div class="col-7" style="margin-left:50px">{{$rowyes->Onumber}}</div>
@@ -492,12 +492,12 @@
                                 <div class="col-4" >ฝ่าย/สาขาผู้บันทึก : </div>
                                 <div class="col-7"  style="margin-left:50px">
                                 @if($rowyes->branch->branche_name=='-')
-                                        -                                                            
+                                        -
                                         @elseif($rowyes->Department->Dpmname=='-')
                                         {{$rowyes->agency->agency_name}}/{{$rowyes->branch->branche_name}}
                                         @else
-                                        {{$rowyes->Department->Dpmname}}/{{$rowyes->branch->branche_name}}                                                          
-                                        @endif     
+                                        {{$rowyes->Department->Dpmname}}/{{$rowyes->branch->branche_name}}
+                                        @endif
                             </div>
                                 </div>
 
@@ -518,7 +518,7 @@
                                 <div class="col-7" style="margin-left:50px">{{$rowyes->Oag_receive}}</div>
                                 </div>
 
-                               
+
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">ชื่อ-นามสกุลผู้รับ : </div>
                                 <div class="col-7" style="margin-left:50px">{{$rowyes->Oname_receive}}</div>
@@ -549,19 +549,19 @@
                             </table>
                             </div>
                             <div class="d-flex justify-content-center">
-                            {{$bookoutrowyes->links() }} 
-                            </div> 
+                            {{$bookoutrowyes->links() }}
+                            </div>
                             @endif
                         </div>
                             <!-- /ต้องการตอบกลับ  -->
-                  
+
                             <!-- ไม่ต้องการ -->
                   <div class="tab-pane fade" id="custom-tabs-five-overlay-dark" role="tabpanel" aria-labelledby="custom-tabs-five-overlay-dark-tab">
                   @if($bookoutrownocount <= 0)
                             <div class="alert alert-danger text-center" role="alert">
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div>
-                            @else 
+                            @else
                     <div style="overflow-x:auto;">
                   <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
@@ -569,24 +569,24 @@
                                     <td>ลำดับ</td>
                                         <td>เลขที่หนังสือ</td>
                                         <td>ชื่อหน่วยงาน</td>
-                                        <td>เรื่อง</td>     
-                                        <td>วันที่ออกหนังสือ</td>  
-                                        <td>ฝ่าย/สาขา</td> 
-                                        <td>ชื่อผู้ออกหนังสือ</td>                 
+                                        <td>เรื่อง</td>
+                                        <td>วันที่ออกหนังสือ</td>
+                                        <td>ฝ่าย/สาขา</td>
+                                        <td>ชื่อผู้ออกหนังสือ</td>
                                         <!-- แก้ไขฟอร์ม -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==20&&$editform->userstatus==1)
                                         <td>หนังสือ</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขรายละเอียดหนังสือ -->
                                         @foreach($setallow as $editdetailbook)
                                         @if($editdetailbook->id==21&&$editdetailbook->userstatus==1)
                                         <td>แก้ไข</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
@@ -609,7 +609,7 @@
                                         {{$rowno->Oag_receive}}
                                         </td>
                                         <!-- เรื่อง -->
-                                        <td><?php 
+                                        <td><?php
                                         if(strlen($rowno->form->story) > 30){
                                         echo mb_substr($rowno->form->story, 0, 30).'...';
                                         }
@@ -626,27 +626,27 @@
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?></td>
                                         @if($rowno->branch->branche_name=='-')
-                                        <td class="dpmb">{{$rowno->agency->agency_name}}</td>                                                            
+                                        <td class="dpmb">{{$rowno->agency->agency_name}}</td>
                                         @elseif($rowno->Department->Dpmname=='-')
                                         <td class="dpmb">{{$rowno->agency->agency_name}}/{{$rowno->branch->branche_name}}</td>
                                         @else
-                                        <td class="dpmb">{{$rowno->Department->Dpmname}}/{{$rowno->branch->branche_name}}</td>                                                            
-                                        @endif                                         
+                                        <td class="dpmb">{{$rowno->Department->Dpmname}}/{{$rowno->branch->branche_name}}</td>
+                                        @endif
                                         <td>{{$rowno->Oname}} </td>
                                         <!-- แก้ไขฟอร์ม -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==20&&$editform->userstatus==1)
-                                        <td class="text-center"><a href="{{url('/form/pdf/view/'.$rowno->form->id)}}" type="button" class="btn btn-2" style ="border-radius: 20px; padding: .25rem 1rem"><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td> 
+                                        <td class="text-center"><a href="{{url('/form/pdf/view/'.$rowno->form->id)}}" type="button" class="btn btn-2" style ="border-radius: 20px; padding: .25rem 1rem"><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขรายละเอียดหนังสือ -->
                                         @foreach($setallow as $editdetailbook)
                                         @if($editdetailbook->id==21&&$editdetailbook->userstatus==1)
                                         <td class="text-center"><a href="{{url('/bookout/edit/'.$rowno->id)}}" type="button" class="btn btn-warning" style ="border-radius: 20px; padding: .25rem 1rem" ><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
@@ -672,7 +672,7 @@
                                         @else
                                         <td class="text-center"><button type="button" class="btn btn-info" id="checkbtn" value="{{$rowno->id}}"><i class="bi bi-upload"></i></button></td>
                                         @endif
-             <!-- รายละเอียด --> 
+             <!-- รายละเอียด -->
             <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detailno{{$rowno->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
             <div class="modal fade" id="detailno{{$rowno->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
@@ -681,11 +681,11 @@
                                 <h4 class="modal-title fs-5 " id="staticBackdropLabel">รายละเอียดหนังสือออก</h4>
                                     <i class="bi bi-x-circle" type="button" data-bs-dismiss="modal" aria-label="Close" style='font-size:25px'></i>
                                 </div>
-                                <div class="modal-body">                          
-                                    
+                                <div class="modal-body">
+
                                 <div class="icon text-center" style="margin-right:10px"><font></font>
                                <i class="bi bi-file-arrow-up text-gray" style="font-size:80px;"></i></div> <br>
-              
+
                                 <div class="d-flex justify-content-center text-dark">
                                 <div class="col-4">เลขที่หนังสือ : </div>
                                 <div class="col-7" style="margin-left:50px">{{$rowno->Onumber}}</div>
@@ -715,12 +715,12 @@
                                 <div class="col-4" >ฝ่าย/สาขาผู้บันทึก : </div>
                                 <div class="col-7"  style="margin-left:50px">
                                 @if($rowno->branch->branche_name=='-')
-                                        -                                                           
+                                        -
                                         @elseif($rowno->Department->Dpmname=='-')
                                         {{$rowno->branch->branche_name}}
                                         @else
-                                        {{$rowno->Department->Dpmname}}/{{$rowno->branch->branche_name}}                                                           
-                                        @endif 
+                                        {{$rowno->Department->Dpmname}}/{{$rowno->branch->branche_name}}
+                                        @endif
                             </div>
                                 </div>
 
@@ -767,13 +767,13 @@
                     </div>
                     <!-- /modal -->
                                         </tr>
-                                </tbody>  
+                                </tbody>
                      @endforeach
-                            </table> 
+                            </table>
                             </div>
                             <div class="d-flex justify-content-center">
-                            {{$bookoutrowyes->links() }} 
-                            </div> 
+                            {{$bookoutrowyes->links() }}
+                            </div>
                             @endif
                          </div>
               <!-- /ไม่ต้องการ -->
@@ -785,38 +785,38 @@
                             <i class="bi bi-exclamation-triangle-fill"></i> ไม่มีข้อมูลในตาราง ณ ขณะนี้
                             </div>
                             @else
-                <div style="overflow-x:auto;"> 
+                <div style="overflow-x:auto;">
                 <table class="table table-bordered table-sm" >
                                 <thead class="box1 text-white text-center">
                                     <tr>
                                         <td>ลำดับ</td>
                                         <td>เลขที่หนังสือ</td>
                                         <td>ชื่อหน่วยงาน</td>
-                                        <td>เรื่อง</td>     
-                                        <td>วันที่ออกหนังสือ</td>  
-                                        <td>ฝ่าย/สาขา</td> 
+                                        <td>เรื่อง</td>
+                                        <td>วันที่ออกหนังสือ</td>
+                                        <td>ฝ่าย/สาขา</td>
                                         <td>ชื่อผู้ออกหนังสือ</td>
                                          <!-- หนังสือตอบกลับ -->
                                          @foreach($setallow as $reply)
                                         @if($reply->id==19&&$reply->userstatus==1)
-                                        <td>หนังสือตอบกลับ</td> 
+                                        <td>หนังสือตอบกลับ</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขฟอร์ม -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==20&&$editform->userstatus==1)
                                         <td>หนังสือ</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขรายละเอียดหนังสือ -->
                                         @foreach($setallow as $editdetailbook)
                                         @if($editdetailbook->id==21&&$editdetailbook->userstatus==1)
                                         <td>แก้ไข</td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
@@ -824,9 +824,9 @@
                                         @else
 
                                         @endif
-                                        @endforeach  
+                                        @endforeach
                                         <td>สิ่งที่แนบมาด้วย</td>
-                                        <td>รายละเอียด</td>           
+                                        <td>รายละเอียด</td>
                                         </tr>
                                     @php($i=1)
                                 </thead>
@@ -839,7 +839,7 @@
                                         <td>{{$row->Oag_receive}}</td>
                                         <!-- เรื่อง -->
                                         <td>
-                                        <?php 
+                                        <?php
                                         if(strlen($row->form->story) > 30){
                                         echo mb_substr($row->form->story, 0, 30).'...';
                                         }
@@ -857,17 +857,17 @@
                                         echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                         ?></td>
                                         @if($row->branch->branche_name=='-')
-                                        <td class="dpmb">{{$row->agency->agency_name}}</td>                                                            
+                                        <td class="dpmb">{{$row->agency->agency_name}}</td>
                                         @elseif($row->Department->Dpmname=='-')
                                         <td class="dpmb">{{$row->agency->agency_name}}/{{$row->branch->branche_name}}</td>
                                         @else
-                                        <td class="dpmb">{{$row->Department->Dpmname}}/{{$row->branch->branche_name}}</td>                                                            
-                                        @endif 
+                                        <td class="dpmb">{{$row->Department->Dpmname}}/{{$row->branch->branche_name}}</td>
+                                        @endif
                                         <td>{{$row->Oname}} </td>
                                          <!-- หนังสือตอบกลับ -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==19&&$editform->userstatus==1)
-                                        <td class="text-center"> 
+                                        <td class="text-center">
                                         @if($row->Ostatus=='ต้องการหนังสือตอบกลับ')
                                         <button type="button" class="btn btn-info" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#bookstatusModal1{{$row->id}}"><i class="bi bi-journals" style="font-size:20px;"></i></button>
                                         <!--Modal upload-->
@@ -898,7 +898,7 @@
                                                     <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 20Mb</div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
-                                                    @enderror   
+                                                    @enderror
 
                                                     @else
                                                     <form action="{{url('/status/update/'.$row->id)}}" method="post" enctype="multipart/form-data">
@@ -910,24 +910,24 @@
                                                         <div class="col-sm-8">
                                                             <input type="file" class="form-control" name="File"  placeholder="File"value="{{$row->Oupload}}">
                                                         </div>
-                                                    </div> 
+                                                    </div>
                                                     <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 20Mb</div>
                                                     @error('File')
                                                         <div class="text-danger text-center" style="font-size:10px">{{$message}}</div>
                                                     @enderror
 
                                                     @endif
-                                                        <br>     
+                                                        <br>
                                                     </div>
                                                 </div>
-                                            </div> 
-                                          
+                                            </div>
+
                                                 @if($row->Oupload==null)
                                                 <div class="modal-footer">
                                                 <input type="submit" name="File" class = "btn btn-success" value="อัปโหลด">
                                                 </div>
-                                                </form> 
-                                                                
+                                                </form>
+
                                                 @else
                                                 <div class="modal-footer"><div class="form-group">
                                                 <input type="submit" name="File" class ="btn btn-success" value="แก้ไขข้อมูล">
@@ -942,19 +942,19 @@
                                         </div>
                                         </div>
                                         @elseif($row->Ostatus=='ไม่ต้องการหนังสือตอบกลับ')
-                                                                                
+
                                         @endif
-                                        </td>   
+                                        </td>
                                         @else
                                         @endif
-                                        @endforeach  
+                                        @endforeach
                                         <!-- แก้ไขฟอร์ม -->
                                         @foreach($setallow as $editform)
                                         @if($editform->id==20&&$editform->userstatus==1)
-                                        <td class="text-center"><a href="{{url('/form/pdf/view/'.$row->formid)}}" type="button" class="btn btn-2" style ="border-radius: 20px; padding: .25rem 1rem"><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td> 
+                                        <td class="text-center"><a href="{{url('/form/pdf/view/'.$row->formid)}}" type="button" class="btn btn-2" style ="border-radius: 20px; padding: .25rem 1rem"><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td>
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- แก้ไขรายละเอียดหนังสือ -->
                                         @foreach($setallow as $editdetailbook)
                                         @if($editdetailbook->id==21&&$editdetailbook->userstatus==1)
@@ -962,7 +962,7 @@
                                         <!-- <td class="text-center"><a href="{{url('/bookout/edit/'.$row->form['id'])}}" type="button" class="btn btn-warning" style ="border-radius: 20px; padding: .25rem 1rem" ><i class="bi bi-pencil-square text-white" style="font-size:20px;"></i></a></td> -->
                                         @else
                                         @endif
-                                        @endforeach    
+                                        @endforeach
                                         <!-- ดาวน์โหลด -->
                                         @foreach($setallow as $download)
                                         @if($download->id==22&&$download->userstatus==1)
@@ -981,8 +981,8 @@
                                         @else
 
                                         @endif
-                                        @endforeach   
-                                        
+                                        @endforeach
+
                                         <div class="modal fade" id="addModal{{$row->id}}" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
                                         <form action="{{url('/status/update/'.$row->id)}}" method="post" enctype="multipart/form-data">
                                         @csrf
@@ -997,7 +997,7 @@
                                                 <div class="col-sm-3 col-form-label">อัปโหลด</div>
                                                     <div class="col-sm-9">
                                                         <input type="file" class = "form-control" name="File" placeholder="File"value="{{$row->Oupload}}">
-                                                        <br>  
+                                                        <br>
                                                     </div>
                                                     <div class="text-danger text-center">#ขนาดไฟล์ไม่เกิน 20Mb</div>
                                                 </div>
@@ -1019,7 +1019,7 @@
                                         <td class="text-center"><button type="button" class="btn btn-info" id="checkbtn" value="{{$row->id}}"><i class="bi bi-upload"></i></button></td>
                                         @endif
 
-                                        <!-- รายละเอียด --> 
+                                        <!-- รายละเอียด -->
                                         <td class="text-center"><button type="button" class="btn btn-dark" style ="border-radius: 20px; padding: .25rem 1rem" data-bs-toggle="modal" data-bs-target="#detail{{$row->id}}"><i class="bi bi-eye" style="font-size:20px;"></i></button></td>
                                         <div class="modal fade" id="detail{{$row->id}}" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-scrollable">
@@ -1028,11 +1028,11 @@
                                                             <h4 class="modal-title fs-5 " id="staticBackdropLabel">รายละเอียดหนังสือออก</h4>
                                                                 <i class="bi bi-x-circle" type="button" data-bs-dismiss="modal" aria-label="Close" style='font-size:25px'></i>
                                                             </div>
-                                                            <div class="modal-body">                          
-                                                                
+                                                            <div class="modal-body">
+
                                                             <div class="icon text-center" style="margin-right:10px"><font></font>
                                                         <i class="bi bi-file-arrow-up text-gray" style="font-size:80px;"></i></div> <br>
-                                        
+
                                                             <div class="d-flex justify-content-center text-dark">
                                                             <div class="col-4">เลขที่หนังสือ : </div>
                                                             <div class="col-7" style="margin-left:50px">{{$row->Onumber}}</div>
@@ -1061,13 +1061,13 @@
                                                             <div class="d-flex justify-content-center text-dark" >
                                                             <div class="col-4" >ฝ่าย/สาขาผู้บันทึก : </div>
                                                             <div class="col-7"  style="margin-left:50px">
-                                                            @if($row->branch->branche_name=='-')  
-                                                            -                                                 
+                                                            @if($row->branch->branche_name=='-')
+                                                            -
                                                             @elseif($row->Department->Dpmname=='-')
                                                             {{$row->branch->branche_name}}
                                                             @else
-                                                            {{$row->Department->Dpmname}}/{{$row->branch->branche_name}}                                                            
-                                                            @endif 
+                                                            {{$row->Department->Dpmname}}/{{$row->branch->branche_name}}
+                                                            @endif
                                                             </div>
                                                             </div>
 
@@ -1112,14 +1112,14 @@
                                                           </div>
                                                         </div>
                                                 <!-- /modal -->
-                                                                </tr>                      
+                                                                </tr>
                                                             </tbody>
                                                             @endforeach
                                                         </table>
                                                         </div>
                                                         <div class="d-flex justify-content-center">
-                                                        {{$bookoutrow->links() }} 
-                                                        </div> 
+                                                        {{$bookoutrow->links() }}
+                                                        </div>
                                                         @endif
                                                     </div>
                                                     <!-- /ทั้งหมด -->
@@ -1133,12 +1133,12 @@
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://fastly.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
   var url = document.location.toString();
   if (url.match('#')) {
     $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
-  } 
+  }
 
   $('.nav-tabs a').on('shown.bs.tab', function (e) {
     window.location.hash = e.target.hash;

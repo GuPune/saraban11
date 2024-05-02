@@ -5,8 +5,8 @@
     <title>ระบบสารบรรณ</title>
 <!-- icon -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <style>
   .font1{
@@ -79,7 +79,7 @@
         }
 
 </style>
-<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >   
+<body  style="border:2px solid #787878;padding: 20px ;margin:-10px; padding-bottom:0px" >
 
     <div class="header" style=";margin-bottom:20px ;border-bottom:2px solid #787878">
             <div class=""  style="text-align: center;">
@@ -93,7 +93,7 @@
 
     </div>
 
-  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือรับเข้า </b></p> 
+  <p  style="font-size:26px" class="txet-center"> <b > รายงานทะเบียนหนังสือรับเข้า </b></p>
   <table class="table">
                                 <thead>
                                     <tr>
@@ -106,7 +106,7 @@
                                         <th>ผู้รับหนังสือฝ่าย/สาขา</th>
                                         <th>ชื่อผู้ลงรับ</th>
                                         <th>วันที่ลงรับ</th>
-                                        <th>เวลาลงรับ</th>    
+                                        <th>เวลาลงรับ</th>
                                         </tr>
                                     @php($i=1)
                                 </thead>
@@ -127,12 +127,12 @@
                                         <td>{{$row->Esubject}}</td>
                                         <td>{{$row->Ebook_receipt}}</td>
                                         @if($row->branch->branche_name=='-')
-                                        <td>{{$row->agency->agency_name}}</td>                                                            
+                                        <td>{{$row->agency->agency_name}}</td>
                                         @elseif($row->Department->Dpmname=='-')
                                         <td>{{$row->agency->agency_name}}/{{$row->branch->branche_name}}</td>
                                         @else
-                                        <td>{{$row->Department->Dpmname}}/{{$row->branch->branche_name}}</td>                                                            
-                                        @endif                                   
+                                        <td>{{$row->Department->Dpmname}}/{{$row->branch->branche_name}}</td>
+                                        @endif
                                         <td>{{$row->Enamereply}}</td>
                                         <td><?php
                                             $myDate= $row->Edate_out;
@@ -142,8 +142,8 @@
                                             $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
                                             echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                                             ?></td>
-                                            <td>{{$row->Etimereply}}</td>                                                         
-                                             </tr>                    
+                                            <td>{{$row->Etimereply}}</td>
+                                             </tr>
                                 </tbody>
                                 @endforeach
                             </table><br>
