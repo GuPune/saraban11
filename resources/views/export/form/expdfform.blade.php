@@ -165,7 +165,7 @@ $bAddr = explode('Tel:', $bAddrA);
                         <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">ID Vocational Skill Training School</h5>
                     </div>
                     &nbsp;&nbsp;
-                    <img src="{{ asset('dist/img/logoid_new.png') }}"height="80">
+                    <img src="{{ asset('dist/img/logoiddrives.png') }}"height="80">
                 </div>
                 <div class="mt-2">
                     <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง

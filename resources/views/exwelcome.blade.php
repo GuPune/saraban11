@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-        <link rel="icon" type="image/png" href="{{ asset('dist/img/logo.png') }}"  />
+        <link rel="icon" type="image/png" href="{{ asset('dist/img/logoiddrives.png') }}"  />
         <!-- Bootsap nav -->
         <link href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Scripts -->
