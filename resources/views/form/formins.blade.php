@@ -45,7 +45,7 @@
           <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
 
           <div class="" style="text-align:center; ">
-             <img src="{{ asset('dist/img/logoINS.png') }}" height="80">
+             <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80">
              <img style="margin-left:20px" src="{{ asset('dist/img/logoins.png') }}" height="80">
              </div><br>
              <div class="" >

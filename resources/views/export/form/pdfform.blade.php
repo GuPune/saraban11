@@ -158,7 +158,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <!-- header เอกสาร สถานตรวจสภาพรถศูนย์ตรอ.ไอดี) -->
             @elseif($form->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
             <div class="text-center">
-            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoINS.png'))) }}" style="margin-right:15px" width="80"/>
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px" width="80"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoins.png'))) }}" style="" width="80"/>
              </div>
 
