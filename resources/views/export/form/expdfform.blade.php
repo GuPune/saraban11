@@ -214,7 +214,8 @@ $bAddr = explode('Tel:', $bAddrA);
 
                 @else
                   <div class="d-flex justify-content-start"style="margin-top:5px;">
-                    <b>อ้างถึง</b>&nbsp;&nbsp;{{$form->quote}}
+                    <p class="text-nowrap" style="margin-right: 10px"><b>อ้างถึง</b></p>
+                    <p>{{$form->quote}}</p>
                   </div> <br>
                 @endif
 
