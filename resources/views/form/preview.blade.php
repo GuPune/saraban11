@@ -743,7 +743,7 @@ $bAddr = explode('Tel:', $bAddrA);
                     </div>
                 </div>
             @else
-                <div style="width:fit-content; position:relative; left:62.5%">
+                <div style="width:fit-content; position:relative; left:58%">
                     <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
                         ขอแสดงความนับถือ
                     </div>
