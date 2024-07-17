@@ -649,7 +649,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             @endif
                             <input type="hidden" value=<?php echo $year;?> class="form-control" style="width: 50px" name="year">
                              @endif
-                            </div><br><br>
+                            </div><br>
 
 
             <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
@@ -664,42 +664,42 @@ $bAddr = explode('Tel:', $bAddrA);
             ?>
             <input type="hidden" value="{{$date}}" class="form-control" style="width: 150px" name="date">
 
-            </div><br><br>
+            </div><br>
 
             <div class="d-flex justify-content-start">
               <p style="float-left;font-weight:bold;">เรื่อง</p>
               <p style="margin-left:10px; margin-bottom:0">{{$story}}</p>
               <input type="hidden" value="{{$story}}" class="form-control" style="width: 150px" name="story">
-            </div><br>
+            </div>
 
-            <div class="d-flex justify-content-start"style="margin-top:5px;">
+            <div class="d-flex justify-content-start"style="">
               <p style="float-left; font-weight:bold;">เรียน</p>
               <p style="margin-left:10px; margin-bottom:0">{{$learn}}</p>
               <input type="hidden" value="{{$learn}}" class="form-control" style="width: 150px" name="learn">
-            </div><br>
+            </div>
 
             @if($quote==null)
 
             @else
-            <div class="d-flex justify-content-start"style="margin-top:5px;">
+            <div class="d-flex justify-content-start"style="">
               <p style="width:60px;font-weight:bold;">อ้างถึง</p>
               <p style="margin-left:10px; margin-bottom:0">{{$quote}}</p>
             <input type="hidden" value="{{$quote}}" class="form-control" style="width: 150px" name="quote">
-            </div><br>
+            </div>
             @endif
 
             @if($enclosure==null)
-            <br>
+                <br>
             @else
-            <div class="d-flex" style="margin-right:10px;margin-top:5px;">
-            <div class="flex-shrink-0" style="font-weight:bold;">
-            สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
-            </div>
-            <div class="flex-grow-1 ms-3">
-            <?php echo $enclosure; ?>
-            <input type="hidden" value="{{$enclosure}}" class="form-control" style="width: 150px" name="enclosure">
-            </div>
-            </div>
+                <div class="d-flex" style="margin-right:10px;">
+                <div class="flex-shrink-0" style="font-weight:bold;">
+                สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
+                </div>
+                <div class="flex-grow-1 ms-3">
+                <?php echo $enclosure; ?>
+                <input type="hidden" value="{{$enclosure}}" class="form-control" style="width: 150px" name="enclosure">
+                </div>
+                </div>
             @endif <br>
 
             <div class="d-flex flex-column text-details" style="">

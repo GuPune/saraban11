@@ -186,7 +186,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
 
             <div class="card-body" style="padding: 1cm 0 0 1cm;">
-              <div class="d-flex " style="margin-top: -40px">
+              <div class="d-flex " style="margin-top: -50px">
                 เลขที่หนังสือ&nbsp;{{$form->fdepartment}}/{{$form->dnumber}}/{{$form->cnumber}}/{{$form->year}}
               </div><br>
 
@@ -200,29 +200,29 @@ $bAddr = explode('Tel:', $bAddrA);
                 $myMonth = $thaimonth[date(" m ", strtotime($myDate))-1];
                 echo date("d $myMonth ",strtotime($myDate)).$myYearBuddhist;
                 ?>
-                </div><br><br>
+                </div><br>
 
                 <div class="d-flex justify-content-start">
                   <b>เรื่อง</b>&nbsp;&nbsp;{{$form->story}}
-                </div> <br>
+                </div>
 
-                <div class="d-flex justify-content-start"style="margin-top:5px;">
+                <div class="d-flex justify-content-start"style="margin-top:15px;">
                   <b>เรียน</b>&nbsp;&nbsp;{{$form->learn}}
-                </div> <br>
+                </div>
 
                 @if($form->quote==null)
 
                 @else
-                  <div class="d-flex justify-content-start"style="margin-top:5px;">
+                  <div class="d-flex justify-content-start"style="margin-top:15px;">
                     <p class="text-nowrap" style="margin-right: 10px"><b>อ้างถึง</b></p>
                     <p>{{$form->quote}}</p>
-                  </div> <br>
+                  </div>
                 @endif
 
                 @if($form->enclosure==null)
                   <br>
                 @else
-                  <div class="d-flex" style="margin-right:10px;margin-top:5px;">
+                  <div class="d-flex" style="margin-right:10px;margin-top:15px;">
                     <div class="flex-shrink-0">
                       <b>สิ่งที่ส่งมาด้วย</b>&nbsp;&nbsp;
                     </div>
