@@ -86,7 +86,7 @@ $bAddr = explode('Tel:', $bAddrA);
 
         <!-- card -->
      <div class="font1">
-      <div class="card" style="padding:2cm 2cm 2cm 2cm; width:300mm;">
+      <div class="card" style="padding:2cm 2cm 2cm 3cm; width:300mm;">
           <div class="card-header" style="border: 0px;">
              <!-- ความจริงกว้างสูง 268x152 -->
              <!-- head-form -->
