@@ -185,7 +185,6 @@ $bAddr = explode('Tel:', $bAddrA);
             <input type="text" class="form-control" value="{{$form->quote}}" placeholder="กรุณากรอกอ้างถึง" style="width: 300px" name="quote">
             </div><br>
 
-            <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
             <div class="d-flex" style="margin-right:10px;margin-top:5px;">
             <div class="flex-shrink-0">
             สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
@@ -199,22 +198,6 @@ $bAddr = explode('Tel:', $bAddrA);
             <textarea  id="txtMessage1" name="details"> <?= $form->details; ?></textarea>
             <!-- </div> -->
 
-               <!-- teaxareasize -->
-            <!-- สิ่งที่ส่งมาด้วย -->
-            <script>CKEDITOR.replace( 'txtMessage',{
-                        height : 150,
-                        width : 630
-                        } )
-            // รายละเอียด
-                        CKEDITOR.replace( 'txtMessage1',{
-                        height : 150,
-                        width : 830
-                        } );
-                        //]]>
-                        </script>
-                        <script type="text/javascript">
-                        //<![CDATA[</script>
-              <!-- /textarea -->
             </div><br><br>
 
             <div style="width:fit-content; position:relative; left:62.5%">

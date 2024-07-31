@@ -26,8 +26,8 @@
       }
     .text-details {
       word-wrap: break-word;
-      text-indent:2.5em;
       line-height: 30px;
+      text-align: justify;
     }
 
 @page {
@@ -222,19 +222,19 @@ $bAddr = explode('Tel:', $bAddrA);
                 @if($form->enclosure==null)
                   <br>
                 @else
-                  <div class="d-flex" style="margin-right:10px;margin-top:15px;">
+                  <div class="d-flex" style="margin-right:10px;margin-top:10px;">
                     <div class="flex-shrink-0">
                       <b>สิ่งที่ส่งมาด้วย</b>&nbsp;&nbsp;
                     </div>
-                    <div class="flex-grow-1 ms-3">
+                    <div class="flex-grow-1 ms-3" style="text-align: justify;">
                       <?php echo $form->enclosure ?>
                       <input type="hidden" value="{{$form->enclosure}}" class="form-control" style="width: 150px" name="enclosure">
                     </div>
                   </div>
                 @endif <br>
 
-                <div class="d-flex flex-column text-details" style="margin-left: 0px;margin-right: 40px;">
-                  <?php echo $form->details ?></p>
+                <div class="d-flex flex-column text-details" style="margin-left: 0px;margin-right: 0px;">
+                    <p><?php echo $form->details ?></p>
                 </div><br>
 
                 @if($form->type=='โรงเรียนไอดีสอนทักษะอาชีพ')

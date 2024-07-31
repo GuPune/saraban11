@@ -480,31 +480,13 @@
             <input type="text" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 500px" name="quote">
             </div><br>
 
-            <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
             <div class="d-flex justify-content-start">
             สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
-            <textarea id="txtMessage" name="enclosure"></textarea>
+            <textarea class="editor" id="txtMessage" name="enclosure"></textarea>
             </div><br><br><br>
 
-            <div class="d-flex justify-content-start" style="margin-left: 40px">
-            <textarea  id="txtMessage1" name="details"></textarea>
-
-            <!-- teaxareasize -->
-            <!-- สิ่งที่ส่งมาด้วย -->
-                        <script>CKEDITOR.replace( 'txtMessage',{
-                        height : 100,
-                        width : 650
-                        } )
-            // รายละเอียด
-                        CKEDITOR.replace( 'txtMessage1',{
-                        height : 100,
-                        width : 950
-                        } );
-                        //]]>
-                        </script>
-                        <script type="text/javascript">
-                        //<![CDATA[</script>
-              <!-- /textarea -->
+            <div class="d-flex justify-content-start">
+            <textarea class="editor"  id="txtMessage1" name="details"></textarea>
             </div><br><br><br>
             <div style="width:fit-content; position:relative; left:62.5%">
             <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->

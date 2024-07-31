@@ -156,33 +156,14 @@
                                         style="width: 500px" name="quote">
                                 </div><br>
 
-                                <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
                                 <div class="d-flex justify-content-start">
                                     สิ่งที่ส่งมาด้วย&nbsp;&nbsp;
                                     <textarea id="txtMessage" name="enclosure"></textarea>
                                 </div><br><br><br>
 
-                                <div class="d-flex justify-content-start" style="margin-left: 40px">
+                                <div class="d-flex justify-content-start">
                                     <textarea id="txtMessage1" name="details"></textarea>
 
-                                    <!-- teaxareasize -->
-                                    <!-- สิ่งที่ส่งมาด้วย -->
-                                    <script>
-                                        CKEDITOR.replace('txtMessage', {
-                                            height: 100,
-                                            width: 700
-                                        })
-                                        // รายละเอียด
-                                        CKEDITOR.replace('txtMessage1', {
-                                            height: 100,
-                                            width: 950
-                                        });
-                                        //]]>
-                                    </script>
-                                    <script type="text/javascript">
-                                        //<![CDATA[
-                                    </script>
-                                    <!-- /textarea -->
                                 </div><br><br><br>
 
                                 <div class="d-flex justify-content-around ">
@@ -236,28 +217,6 @@
                             </div>
 
                             <br><br><br><br><br>
-
-                            <!-- Contact Us -->
-                            <!-- <div style="border: 2px solid #ff0000; overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br> -->
-                            <!-- <div style=" overflow: auto; width: 350px; height:auto;" style="margin: 20px"><br>
-                    <div class="d-flex justify-content-start"  style="margin-left: 20px">
-                    ติดต่อประสานงาน
-                    </div>
-                    <div class="d-flex justify-content-start" style="margin-left: 20px">
-                    ชื่อ&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกชื่อ" style="width: 200px" name="sName" required>
-                    </div>
-                    <div class="d-flex justify-content-start" style="margin-left: 20px">
-                    เบอร์โทรศัพท์&nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกเบอร์โทร" style="width: 200px" name="ctphone" required>
-                    </div>
-                    <div class="d-flex justify-content-start"style="margin-left: 20px">
-                    E-mail &nbsp;<input type="text" class="form-control" placeholder="กรุณากรอกอีเมล" style="width: 200px" name="ctemail" required>
-                    </div><br>
-                    </div><br><br> -->
-
-                            <!-- <div class="d-flex justify-content-end">
-                    FD-HO/HR-013/1 :00: 19-09-2563
-                    </div> -->
-
                             <div class="d-flex justify-content-center">
                                 <div style="width:80%">
                                     <div class="d-flex justify-content-end" style="margin-bottom:10px">
