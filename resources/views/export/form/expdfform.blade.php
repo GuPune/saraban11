@@ -170,7 +170,7 @@ $bAddr = explode('Tel:', $bAddrA);
                 <div class="mt-2">
                     <p style="font-size:16px; margin:unset;">ที่อยู่: 150/11-12 ม.7 ถ.มิตรภาพ ต.ในเมือง อ.เมือง
                         จ.ขอนแก่น 40000
-                        <br> Email:IDSS@iddrives.co.th www.idsschool.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
+                        <br>Tel:094-2637979 Email:IDSS@iddrives.co.th www.idsschool.com Line:@099kcyha เลขที่ผู้เสียภาษี 0405536000531
                     </p>
                     <p style="font-size:12px; margin:unset;">บริหารงานโดย บริษัท ไอดีไดรฟ์ จำกัด ที่อยู่ 200/222 หมู่2 ถนนชัยพฤกษ์ ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000</p>
                     <div class="" style="font-size:12px;">
