@@ -281,7 +281,7 @@ $bAddr = explode('Tel:', $bAddrA);
                             @if ($form->sign && file_exists(public_path('dist/img/sign/' . $form->sign . '.png')))
                                 <img style="width:100px" src="{{ asset('dist/img/sign/' . $form->sign . '.png') }}">
                             @else
-                                <br><br>
+                                <br>
                             @endif
                         </div>
                         <div style="text-align:center;">
