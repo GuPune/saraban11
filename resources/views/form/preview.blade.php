@@ -724,10 +724,14 @@ $bAddr = explode('Tel:', $bAddrA);
                             ขอแสดงความนับถือ
                         </div>
                         <br>
-                        <div style="text-align:center;">
-                            <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
-                            <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
-                        </div>
+                        @if ($sign && file_exists(public_path('dist/img/sign/' . $sign . '.png')))
+                            <div style="text-align:center;">
+                                <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
+                                <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
+                            </div>
+                        @else
+                            <br>
+                        @endif
                         <div style="text-align:center;">
                         .......................................................
                         </div>
@@ -748,7 +752,7 @@ $bAddr = explode('Tel:', $bAddrA);
                         ขอแสดงความนับถือ
                     </div>
                     <br>
-                    @if (file_exists(public_path('dist/img/sign/' . $sign . '.png')))
+                    @if ($sign && file_exists(public_path('dist/img/sign/' . $sign . '.png')))
                         <div style="text-align:center;">
                             <img style="width:100px" src="{{ asset('dist/img/sign/' . $sign . '.png') }}">
                             <input type="hidden" value="{{$sign}}" class="form-control" style="width: 150px" name="sign">
