@@ -40,7 +40,8 @@
         <!-- start -->
 
         <!-- card -->
-     <div class="font1">
+     {{-- <div class="font1"> --}}
+     <div >
       <div class="card" >
           <div class="card-header" style="padding:2cm 2cm 2cm 3cm">
           <!-- <div class="d-flex " style="width: fit-content">
