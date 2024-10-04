@@ -128,7 +128,7 @@ $bAddr = explode('Tel:', $bAddrA);
     <div class=""  style="text-align: center;">
       <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoIDD.png'))) }}" style="margin-right:15px;"  height="35"/>
       <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logoiddrives.png'))) }}" style="margin-right:15px;"  height="70"/>
-      <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style=""  height="53"/>
+      {{-- <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logopro.png'))) }}" style=""  height="53"/> --}}
     </div>
     <div class="" style="margin-top:-15px">
       <h5 style="font-weight:bold;font-size:18pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}}

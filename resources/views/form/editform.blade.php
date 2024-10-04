@@ -61,7 +61,7 @@ $bAddr = explode('Tel:', $bAddrA);
              <div class="" style="text-align:center;">
               <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="100" style="margin-right:15px;">
-              <img src="{{ asset('dist/img/logopro.png') }}"height="80">
+              {{-- <img src="{{ asset('dist/img/logopro.png') }}"height="80"> --}}
             </div><br>
             <div class="" >
               <h5 style="font-weight:bold;margin-bottom:0;font-size:20pt">โรงเรียนสอนขับรถไอดี ไดร์ฟเวอร์ สาขา{{$bName}}
