@@ -93,9 +93,9 @@ $bAddr = explode('Tel:', $bAddrA);
 
              @if($form->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
              <div class="" style="text-align:center;">
-              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="50" style="margin-right:30px;margin-top:15px">
+              <img src="{{ asset('dist/img/logoIDD.png') }}"  height="60" style="margin-right:30px;margin-top:15px">
               <img src="{{ asset('dist/img/logoiddrives.png') }}" height="80" style="margin-right:15px;">
-              <img src="{{ asset('dist/img/logopro.png') }}"height="80">
+              {{-- <img src="{{ asset('dist/img/logopro.png') }}"height="80"> --}}
             </div><br>
              <div class="" >
 
