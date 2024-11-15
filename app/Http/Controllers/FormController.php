@@ -48,23 +48,23 @@ class FormController extends Controller
         $form = Form::all();
 
         // $ad = Form::where('	fdepartment','AD'&&'','')->count();//เงื่อนไขแบบสองข้อ
-        $ad = Form::where('fdepartment','AD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ธุรการ
-        $pur = Form::where('fdepartment','PUR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//จัดซื้อ
-        $fin = Form::where('fdepartment','FIN')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//การเงิน
-        $acc = Form::where('fdepartment','AC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บัญชี
-        $hr = Form::where('fdepartment','HR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บุคคล
-        $iti = Form::where('fdepartment','ITI')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ไอที
-        $mkt = Form::where('fdepartment','MKT')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//มาร์เก็ตติ้ง
-        $itd = Form::where('fdepartment','ITD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บริหารงานพัฒนาผลิตภัณฑ์
-        $sale = Form::where('fdepartment','SALE')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//เซลล์
-        $leg = Form::where('fdepartment','LEG')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//กฎหมาย
-        $cs = Form::where('fdepartment','CS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ส่วนงานเลขานุการ
-        $iso = Form::where('fdepartment','ISO')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ส่วนงานบริหารงานคุณภาพ
-        $pm = Form::where('fdepartment','PM')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บริหารงานโครงการ
-        $ids = Form::where('fdepartment','IDS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//คลังสินค้า
-        $idc = Form::where('fdepartment','IDC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//พัฒนาผลิตภัณฑ์
+        $ad = Form::where('fdepartment','AD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ธุรการ
+        $pur = Form::where('fdepartment','PUR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//จัดซื้อ
+        $fin = Form::where('fdepartment','FIN')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//การเงิน
+        $acc = Form::where('fdepartment','AC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บัญชี
+        $hr = Form::where('fdepartment','HR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บุคคล
+        $iti = Form::where('fdepartment','ITI')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ไอที
+        $mkt = Form::where('fdepartment','MKT')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//มาร์เก็ตติ้ง
+        $itd = Form::where('fdepartment','ITD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บริหารงานพัฒนาผลิตภัณฑ์
+        $sale = Form::where('fdepartment','SALE')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//เซลล์
+        $leg = Form::where('fdepartment','LEG')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//กฎหมาย
+        $cs = Form::where('fdepartment','CS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ส่วนงานเลขานุการ
+        $iso = Form::where('fdepartment','ISO')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ส่วนงานบริหารงานคุณภาพ
+        $pm = Form::where('fdepartment','PM')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บริหารงานโครงการ
+        $ids = Form::where('fdepartment','IDS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//คลังสินค้า
+        $idc = Form::where('fdepartment','IDC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//พัฒนาผลิตภัณฑ์
         // $total = Form::where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();
-        $total = Form::count();
+        $total = Form::whereYear('created_at', date('Y'))->count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
@@ -90,8 +90,11 @@ class FormController extends Controller
 
         $idd = Form::where('formagency','LIKE',Auth::user()->Agency)
         ->where('formbranch','LIKE',Auth::user()->Branch)
-        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')->count();
-        $total = Form::count();
+        ->where('formdepartment','LIKE',Auth::user()->Department)
+        ->where('type','โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')
+        ->whereYear('created_at', date('Y'))
+        ->count();
+        $total = Form::whereYear('created_at', date('Y'))->count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
@@ -119,8 +122,10 @@ class FormController extends Controller
 
         $ins = Form::where('formagency','LIKE',Auth::user()->Agency)
         ->where('formbranch','LIKE',Auth::user()->Branch)
-        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')->count();
-        $total = Form::count();
+        ->where('formdepartment','LIKE',Auth::user()->Department)
+        ->where('type','สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')
+        ->whereYear('created_at', date('Y'))->count();
+        $total = Form::whereYear('created_at', date('Y'))->count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
@@ -146,8 +151,10 @@ class FormController extends Controller
 
         $tz = Form::where('formagency','LIKE',Auth::user()->Agency)
         ->where('formbranch','LIKE',Auth::user()->Branch)
-        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','ศูนย์ฝึกอบรม')->count();//ธุรการ
-        $total = Form::count();
+        ->where('formdepartment','LIKE',Auth::user()->Department)
+        ->where('type','ศูนย์ฝึกอบรม')
+        ->whereYear('created_at', date('Y'))->count();//ธุรการ
+        $total = Form::whereYear('created_at', date('Y'))->count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
@@ -174,8 +181,10 @@ class FormController extends Controller
 
         $inas = Form::where('formagency','LIKE',Auth::user()->Agency)
         ->where('formbranch','LIKE',Auth::user()->Branch)
-        ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->count();
-        $total = Form::count();
+        ->where('formdepartment','LIKE',Auth::user()->Department)
+        ->where('type','โรงเรียนไอดีสอนทักษะอาชีพ')
+        ->whereYear('created_at', date('Y'))->count();
+        $total = Form::whereYear('created_at', date('Y'))->count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
@@ -288,8 +297,8 @@ public function add(Request $request)
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')->count()+1;
-            $cnumber = Form::count()+1;
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')->whereYear('created_at', date('Y'))->count()+1;
+            $cnumber = Form::whereYear('created_at', date('Y'))->count()+1;
             $forms->fdepartment = $fdepartment;
             // แยกแผนก
             if($dnumber<=9){
@@ -316,8 +325,8 @@ public function add(Request $request)
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count()+1;
-            $cnumber = Form::count()+1;
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count()+1;
+            $cnumber = Form::whereYear('created_at', date('Y'))->count()+1;
             $forms->fdepartment = $fdepartment;
             // แยกแผนก
             if($dnumber<=9){
@@ -344,8 +353,8 @@ public function add(Request $request)
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')->count()+1;
-            $cnumber = Form::count()+1;
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')->whereYear('created_at', date('Y'))->count()+1;
+            $cnumber = Form::whereYear('created_at', date('Y'))->count()+1;
             $forms->fdepartment = $fdepartment;
              // แยกแผนก
              if($dnumber<=9){
@@ -372,8 +381,8 @@ public function add(Request $request)
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','ศูนย์ฝึกอบรม')->count()+1;
-            $cnumber = Form::count()+1;
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','ศูนย์ฝึกอบรม')->whereYear('created_at', date('Y'))->count()+1;
+            $cnumber = Form::whereYear('created_at', date('Y'))->count()+1;
             $forms->fdepartment = $fdepartment;
              // แยกแผนก
              if($dnumber<=9){
@@ -400,8 +409,8 @@ public function add(Request $request)
             $fdepartment = $request->fdepartment;
             $dnumber = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->count()+1;
-            $cnumber = Form::count()+1;
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->whereYear('created_at', date('Y'))->count()+1;
+            $cnumber = Form::whereYear('created_at', date('Y'))->count()+1;
             $forms->fdepartment = $fdepartment;
              // แยกแผนก
              if($dnumber<=9){
@@ -503,7 +512,7 @@ public function store(Request $request)
         $branch= branch::all();
         $depositor = depositor::all();
 
-        $total = Form::count();
+        $total = Form::whereYear('created_at', date('Y'))->count();
         $data10 = date("y-m-d");
         $ec1 = explode("-", $data10);
         $years = $ec1[0];
@@ -512,43 +521,43 @@ public function store(Request $request)
         if($request->type=='โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์'){
             $idd = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')->count();
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','โรงเรียนสอนขับรถไอดีไดร์ฟเวอร์')->whereYear('created_at', date('Y'))->count();
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','idd','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }
         elseif($request->type=='บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)'){
-            $ad = Form::where('fdepartment','AD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ธุรการ
-            $pur = Form::where('fdepartment','PUR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//จัดซื้อ
-            $fin = Form::where('fdepartment','FIN')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//การเงิน
-            $acc = Form::where('fdepartment','AC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บัญชี
-            $hr = Form::where('fdepartment','HR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บุคคล
-            $iti = Form::where('fdepartment','ITI')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ไอที
-            $mkt = Form::where('fdepartment','MKT')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//มาร์เก็ตติ้ง
-            $itd = Form::where('fdepartment','ITD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บริหารงานพัฒนาผลิตภัณฑ์
-            $sale = Form::where('fdepartment','SALE')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//เซลล์
-            $leg = Form::where('fdepartment','LEG')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//กฎหมาย
-            $cs = Form::where('fdepartment','CS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ส่วนงานเลขานุการ
-            $iso = Form::where('fdepartment','ISO')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//ส่วนงานบริหารงานคุณภาพ
-            $pm = Form::where('fdepartment','PM')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//บริหารงานโครงการ
-            $ids = Form::where('fdepartment','IDS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//คลังสินค้า
-            $idc = Form::where('fdepartment','IDC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->count();//พัฒนาผลิตภัณฑ์
+            $ad = Form::where('fdepartment','AD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ธุรการ
+            $pur = Form::where('fdepartment','PUR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//จัดซื้อ
+            $fin = Form::where('fdepartment','FIN')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//การเงิน
+            $acc = Form::where('fdepartment','AC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บัญชี
+            $hr = Form::where('fdepartment','HR')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บุคคล
+            $iti = Form::where('fdepartment','ITI')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ไอที
+            $mkt = Form::where('fdepartment','MKT')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//มาร์เก็ตติ้ง
+            $itd = Form::where('fdepartment','ITD')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บริหารงานพัฒนาผลิตภัณฑ์
+            $sale = Form::where('fdepartment','SALE')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//เซลล์
+            $leg = Form::where('fdepartment','LEG')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//กฎหมาย
+            $cs = Form::where('fdepartment','CS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ส่วนงานเลขานุการ
+            $iso = Form::where('fdepartment','ISO')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//ส่วนงานบริหารงานคุณภาพ
+            $pm = Form::where('fdepartment','PM')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//บริหารงานโครงการ
+            $ids = Form::where('fdepartment','IDS')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//คลังสินค้า
+            $idc = Form::where('fdepartment','IDC')->where('type','บริษัทไอดีไดรฟ์จำกัด(สำนักงานใหญ่)')->whereYear('created_at', date('Y'))->count();//พัฒนาผลิตภัณฑ์
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','total','year','ad','pur','fin','acc','hr','iti','mkt','itd','sale','leg','cs','iso','pm','ids','idc'))->with($data,'abd',$abd,$agency,'agency');
 
         }
         elseif($request->type=='สถานตรวจสภาพรถศูนย์ตรอ.ไอดี'){
             $ins = Form::where('formagency','LIKE',Auth::user()->Agency)
             ->where('formbranch','LIKE',Auth::user()->Branch)
-            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')->count();
+            ->where('formdepartment','LIKE',Auth::user()->Department)->where('type','สถานตรวจสภาพรถศูนย์ตรอ.ไอดี')->whereYear('created_at', date('Y'))->count();
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','ins','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }
         elseif($request->type=='ศูนย์ฝึกอบรม'){
-            $tz = Form::where('type','ศูนย์ฝึกอบรม')->count();
+            $tz = Form::where('type','ศูนย์ฝึกอบรม')->whereYear('created_at', date('Y'))->count();
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','tz','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }
         elseif($request->type=='โรงเรียนไอดีสอนทักษะอาชีพ'){
-            $inas = Form::where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->count();
+            $inas = Form::where('type','โรงเรียนไอดีสอนทักษะอาชีพ')->whereYear('created_at', date('Y'))->count();
             return view('form.preview',compact('transport_type','department','agency','abd','branch','depositor','year','form','inas','total','year'))->with($data,'abd',$abd,$agency,'agency');
 
         }
