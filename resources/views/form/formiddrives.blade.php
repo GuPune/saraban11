@@ -549,16 +549,16 @@
             </div>
             <div style="border: 2px solid #000000; overflow: auto; width: auto; height: auto; text-align: center;width:100%">
             <!-- <div style="border: 2px solid #e46c0a; overflow: auto; width: auto; height: auto; text-align: center;"> -->
-            <img src="{{ asset('dist/img/logo1.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo2.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo3.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo4.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo5.png') }}" width="70px">
+            <img src="{{ asset('dist/img/logo1.png') }}" width="71px">
+            <img src="{{ asset('dist/img/logo2.png') }}" width="71px">
+            <img src="{{ asset('dist/img/logo3.png') }}" width="71px">
+            <img src="{{ asset('dist/img/logo4.png') }}" width="71px">
+            <img src="{{ asset('dist/img/logo5.png') }}" width="60px">
             {{-- <img src="{{ asset('dist/img/logo6.png') }}" width="252px"> --}}
-            <img src="{{ asset('dist/img/logo7.png') }}" width="81px">
+            <img src="{{ asset('dist/img/logo7.png') }}" width="121px">
             <img src="{{ asset('dist/img/logo8.jpg') }}" width="100px">
             <img src="{{ asset('dist/img/logo9.png') }}" width="81px">
-            <img src="{{ asset('dist/img/logo10.png') }}" width="70px">
+            <img src="{{ asset('dist/img/logo10.png') }}" width="60px">
             </div>
             </div>
             </div>
