@@ -14,6 +14,7 @@ use App\Http\Controllers\AllowController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationUserController;
 use App\Http\Controllers\AgencyController;
+use App\Http\Controllers\SignController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -166,6 +167,8 @@ Route::get('/add/department/{Dpmid}',[AgencyController::class,'destroydepartment
 Route::post('/add/datadepartment',[AgencyController::class,'storedepartment'])->name('adddatadepartment');
 Route::get('/data/department',[AgencyController::class,'showdepartment'])->name('showdepartment');
 
+//ตั้งค่าลายเซ็น
+Route::get('/setsign',[SignController::class,'setsign'])->name('setsign');
 
 Route::middleware([
     'auth:sanctum',

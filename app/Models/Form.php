@@ -14,18 +14,20 @@ class Form extends Model
         'cnumber',
         'year',
         'date',
-        'story',   //เพิ่มเข้ามา             
-        'learn',   //เพิ่มเข้ามา             
-        'quote',   //เพิ่มเข้ามา             
-        'enclosure',   //เพิ่มเข้ามา             
-        'details',  //เพิ่มเข้ามา 
+        'story',   //เพิ่มเข้ามา
+        'learn',   //เพิ่มเข้ามา
+        'quote',   //เพิ่มเข้ามา
+        'enclosure',   //เพิ่มเข้ามา
+        'details',  //เพิ่มเข้ามา
         'sName',
         'sign',
         'sPosition',
         'type',
         'formagency',
         'formbranch',
-        'formdepartment'
+        'formdepartment',
+        'copy_to',
+        'regard',
     ];
-   
+
 }

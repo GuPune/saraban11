@@ -263,7 +263,9 @@ public function pdfform(Request $request,$id)
             'details'=>$request->details,
             'sName'=>$request->sName,
             'sign'=>$request->sign,
-            'sPosition'=>$request->sPosition
+            'sPosition'=>$request->sPosition,
+            'copy_to'=>$request->copy_to,
+            'regard'=>$request->regard,
             // ,'Odate'=>$request->date
         ]);
         // return view('user.bookout.pdfform',compact('user','form'));
@@ -288,7 +290,6 @@ public function add(Request $request)
         if (!Auth::check()) {
             return redirect()->route('lget');}
 
-        //dd($request);
         $forms1 = new Form;
         $forms = new Form;
         $forms->user_id = Auth::user()->id;
@@ -451,6 +452,8 @@ public function add(Request $request)
         $forms->formagency = Auth::user()->Agency;
         $forms->formbranch = Auth::user()->Branch;
         $forms->formdepartment = Auth::user()->Department;
+        $forms->copy_to = $request->copy_to;
+        $forms->regard = $request->regard;
         $forms ->save();
         $data = [
         'id' => $forms->id,
@@ -493,6 +496,8 @@ public function store(Request $request)
             // 'dnumber' => $request->dnumber,
             // 'cnumber' => $request->cnumber,
             // 'year' => $request->year,
+            'copy_to' => $request->copy_to,
+            'regard' => $request->regard,
             'date' => $request->date,
             'story' => $request->story,
             'learn' => $request->learn,

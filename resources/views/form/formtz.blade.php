@@ -114,6 +114,12 @@
             </div><br>
 
             <div class="d-flex justify-content-start">
+                สำเนาถึง&nbsp;&nbsp;
+                <input type="text" class="form-control" placeholder="กรุณากรอกสำเนาถึง"
+                    style="width: 500px" name="copy_to" required>
+            </div><br>
+
+            <div class="d-flex justify-content-start">
             อ้างถึง&nbsp;&nbsp;
             <input type="text" class="form-control" placeholder="กรุณากรอกการอ้างถึง" style="width: 500px" name="quote">
             </div><br>
@@ -128,8 +134,13 @@
             </div><br><br><br>
 
             <div style="width:fit-content; position:relative; left:62.5%">
-            <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
+            {{-- <div  style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->
               ขอแสดงความนับถือ
+            </div> --}}
+            <div style="text-align:center;display:flex; line-height: 30px">
+                <input id="regard" type="text" class="form-control" value="ขอแสดงความนับถือ"
+                        placeholder="กรุณากรอกแสดงความนับถือ" autocomplete="off" name="regard"
+                        required>
             </div>
             <br>
             <div style="text-align:center">
