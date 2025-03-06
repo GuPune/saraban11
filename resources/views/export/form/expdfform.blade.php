@@ -236,14 +236,14 @@
                         </div><br>
 
                         <div class="d-flex " style="width:fit-content; position:relative; left:63.5%;">
-                            วันที่&nbsp;
+                            วันที่
                             <?php
-                            $myDate = $form->date;
+                            $myDate = $form->date; // "2025-03-05"
                             $myYear = date('Y', strtotime($myDate));
                             $myYearBuddhist = $myYear + 543;
                             $thaimonth = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
                             $myMonth = $thaimonth[date(' m ', strtotime($myDate)) - 1];
-                            echo date("d $myMonth ", strtotime($myDate)) . $myYearBuddhist;
+                            echo date("j $myMonth ", strtotime($myDate)) . $myYearBuddhist;
                             ?>
                         </div><br>
 
@@ -436,7 +436,7 @@
                                     <img src="{{ asset('dist/img/logo4.png') }}" width="50px">
                                     <img src="{{ asset('dist/img/logo5.png') }}" width="40px">
                                     {{-- <img src="{{ asset('dist/img/logo6.png') }}" width="180px"> --}}
-                                    <img src="{{ asset('dist/img/logo7.png') }}" width="81px">
+                                    <img src="{{ asset('dist/img/logo7.png') }}" width="101px">
                                     <img src="{{ asset('dist/img/logo8.jpg') }}" width="70px">
                                     <img src="{{ asset('dist/img/logo9.png') }}" width="61px">
                                     <img src="{{ asset('dist/img/logo10.png') }}" width="45px">
