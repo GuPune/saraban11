@@ -78,7 +78,7 @@
 
         .card {
             min-height: 420mm;
-            padding:2cm 2cm 2cm 3cm;
+            padding:2cm 2cm 1cm 3cm;
             width:300mm;
         }
 
