@@ -153,7 +153,7 @@
                                 <div class="d-flex justify-content-start">
                                     สำเนาถึง&nbsp;&nbsp;
                                     <input type="text" class="form-control" placeholder="กรุณากรอกสำเนาถึง"
-                                        style="width: 500px" name="copy_to" required>
+                                        style="width: 500px" name="copy_to">
                                 </div><br>
 
                                 <div class="d-flex justify-content-start">
