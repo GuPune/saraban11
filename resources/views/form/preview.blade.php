@@ -1940,7 +1940,9 @@
                                             <div style="width:fit-content; position:relative;">
                                                 <div style="text-align:center">
                                                     <!-- <div class="d-flex justify-content-center"> -->
-                                                    ขอแสดงความนับถือ
+                                                    {{ $regard }}
+                                                    <input type="hidden" value="{{ $regard }}"
+                                                            class="form-control" style="width: 150px" name="regard">
                                                 </div>
                                                 <br>
                                                 @if ($sign && file_exists(public_path('dist/img/sign/' . $sign . '.png')))
