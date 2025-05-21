@@ -200,7 +200,7 @@
                             <hr noshade="noshade" size="2"><br>
                         @elseif($form->type == 'โรงเรียนไอดีสอนทักษะอาชีพ')
                             <div class="d-flex justify-content-center" style="text-align:center; ">
-                                <img src="{{ asset('dist/img/logoschool.png') }}" height="80">
+                                <img src="{{ asset('dist/img/logoschool.jpg') }}" height="80">
                                 <div class="align-self-center mx-3">
                                     <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน ไอดีสอนทักษะอาชีพ
                                     </h5>
@@ -291,15 +291,22 @@
 
                         @if ($form->type == 'โรงเรียนไอดีสอนทักษะอาชีพ')
                             <div class="d-flex justify-content-around ">
-                                <div style="width:fit-content; position:relative;">
-                                    <div style="text-align:center; font-weight: bold">
-                                        <!-- <div class="d-flex justify-content-center"> -->
-                                        ติดต่อ นายยุทธศักดิ์ อริยะชัยประดิษฐ์
-                                    </div>
-                                    <br>
-                                    <div style="text-align:center">
-                                        ผู้จัดการ โรงเรียน ไอดีสอนทักษะอาชีพ
-                                    </div>
+                                <div style="width:fit-content; position:relative; line-height: 0.8rem;">
+                                    <p>
+                                        ฝ่ายบริหารงานโรงเรียน
+                                    </p>
+                                    <p>
+                                        โรงเรียน ไอดีสอนทักษะอาชีพ
+                                    </p>
+                                    <p>
+                                        คุณยุทธศักดิ์ อริยะชัยประดิษฐ์
+                                    </p>
+                                    <p>
+                                        โทรศัพท์ 094-263-7979
+                                    </p>
+                                    <p>
+                                        E-mail: idss@iddrives.co.th
+                                    </p>
                                 </div>
                                 <div style="width:fit-content; position:relative;">
                                     <div style="text-align:center"><!-- <div class="d-flex justify-content-center"> -->

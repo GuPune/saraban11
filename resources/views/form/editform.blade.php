@@ -143,7 +143,7 @@
                                 <hr noshade="noshade" size="2"><br>
                             @elseif($form->type == 'โรงเรียนไอดีสอนทักษะอาชีพ')
                                 <div class="d-flex justify-content-center" style="text-align:center; ">
-                                    <img src="{{ asset('dist/img/logoschool.png') }}" height="80">
+                                    <img src="{{ asset('dist/img/logoschool.jpg') }}" height="80">
                                     <div class="align-self-center mx-3">
                                         <h5 style="font-size:20px;font-weight:bold;margin-bottom:0">โรงเรียน
                                             ไอดีสอนทักษะอาชีพ</h5>
