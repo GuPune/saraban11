@@ -329,7 +329,9 @@ $bAddr = explode('Tel:', $bAddrA);
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo1.png'))) }}" width="33px" style="margin-top: 5px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo2.png'))) }}" width="33px" style="margin-top: 5px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo3.png'))) }}" width="33px" style="margin-top: 9px"/>
-            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo4.png'))) }}" width="33px" style="margin-top: 5px"/>
+            {{-- <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo4.png'))) }}" width="33px" style="margin-top: 5px"/> --}}
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo11.jfif'))) }}" width="33px" style="margin-top: 5px"/>
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo12.png'))) }}" width="33px" style="margin-top: 5px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo5.png'))) }}" width="28px" style="margin-top: 8px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo6.png'))) }}" width="162px" style="margin-top: 13px"/>
             <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('dist/img/logo7.png'))) }}" width="38px" style="margin-top: 5px"/>

@@ -440,7 +440,9 @@
                                     <img src="{{ asset('dist/img/logo1.png') }}" width="50px">
                                     <img src="{{ asset('dist/img/logo2.png') }}" width="50px">
                                     <img src="{{ asset('dist/img/logo3.png') }}" width="50px">
-                                    <img src="{{ asset('dist/img/logo4.png') }}" width="50px">
+                                    {{-- <img src="{{ asset('dist/img/logo4.png') }}" width="50px"> --}}
+                                    <img src="{{ asset('dist/img/logo11.jfif') }}" width="60px">
+                                    <img src="{{ asset('dist/img/logo12.png') }}" width="60px">
                                     <img src="{{ asset('dist/img/logo5.png') }}" width="40px">
                                     {{-- <img src="{{ asset('dist/img/logo6.png') }}" width="180px"> --}}
                                     <img src="{{ asset('dist/img/logo7.png') }}" width="101px">
