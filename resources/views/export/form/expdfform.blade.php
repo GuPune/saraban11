@@ -447,6 +447,7 @@
                                     {{-- <img src="{{ asset('dist/img/logo6.png') }}" width="180px"> --}}
                                     <img src="{{ asset('dist/img/logo7.png') }}" width="101px">
                                     <img src="{{ asset('dist/img/logo8.jpg') }}" width="70px">
+                                    <img src="{{ asset('dist/img/logo13.jpg') }}" width="61px">
                                     <img src="{{ asset('dist/img/logo9.png') }}" width="61px">
                                     <img src="{{ asset('dist/img/logo10.png') }}" width="45px">
                                 </div>
